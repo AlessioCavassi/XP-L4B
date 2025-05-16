@@ -208,7 +208,7 @@ const AboutSection: React.FC = () => {
                   >1</motion.div>
                   <div>
                     <h5 className="font-heading text-[var(--purple-deep)] mb-3 text-xl">Analisi del mercato delle competenze e fabbisogno aziendale</h5>
-                    <p className="text-[var(--purple-deep)]/70 mb-3">Iniziamo con un'analisi dettagliata del vostro contesto aziendale, identificando:</p>
+                    <p className="text-[var(--purple-deep)]/70 mb-3">Iniziamo con un&apos;analisi dettagliata del vostro contesto aziendale, identificando:</p>
                     <ul className="list-disc list-inside text-[var(--purple-deep)]/70 ml-2 space-y-2">
                       <li>Gap di competenze critiche nel vostro team</li>
                       <li>Obiettivi strategici di business da supportare</li>
