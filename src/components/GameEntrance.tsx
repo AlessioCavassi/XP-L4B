@@ -1,8 +1,7 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 
 // Componente per un dado D20 interattivo (versione 2D)
 const D20Tile = ({ position, onClick, isActive, isCompleted }: {
@@ -44,7 +43,7 @@ const D20Tile = ({ position, onClick, isActive, isCompleted }: {
           />
         </svg>
         <span className="absolute text-white font-heading text-xl">
-          {isCompleted ? "✓" : ""}
+          {isCompleted ? "" : ""}
         </span>
       </div>
     </motion.div>
@@ -73,11 +72,11 @@ const GameEntrance: React.FC<{ onComplete: () => void }> = ({ onComplete }) => {
   
   // Testi per i vari stati del gioco
   const instructionTexts = [
-    "Clicca sui dadi nella giusta sequenza per entrare",
-    "Ottimo! Continuiamo...",
-    "Stai andando bene!",
-    "Quasi fatto!",
-    "Puzzle completato! Caricamento del sito..."
+    "Click on the D20 dice in the correct order to unlock the full experience.",
+    "Great job! Keep going...",
+    "You're doing well!",
+    "Almost there!",
+    "Puzzle completed! Loading the site..."
   ];
   
   // Funzione per gestire il click su un dado
@@ -129,9 +128,9 @@ const GameEntrance: React.FC<{ onComplete: () => void }> = ({ onComplete }) => {
             BENVENUTO IN XP-L4B
           </h1>
           
-          <p className="text-lg md:text-xl text-white mb-10 max-w-2xl mx-auto">
-            Inizia l'esperienza interattiva risolvendo un semplice puzzle, oppure accedi direttamente al sito.
-          </p>
+          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+          We're glad you're here! Let's make this fun. Click on the D20 dice in the correct order to unlock the full experience. Or, if you prefer, you can skip to the corporate mode.
+        </p>
           
           <div className="flex flex-col sm:flex-row gap-4">
             <motion.button 

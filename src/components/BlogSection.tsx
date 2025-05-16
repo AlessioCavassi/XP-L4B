@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { FaCalendarAlt, FaUser, FaTag } from 'react-icons/fa';
+import { FaCalendarAlt, FaClock, FaArrowRight } from 'react-icons/fa';
 
 interface BlogPost {
   id: number;
@@ -95,6 +95,7 @@ const BlogSection: React.FC = () => {
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading text-[var(--purple-deep)] mb-4">BLOG & RISORSE</h2>
           <div className="w-24 h-1 bg-[var(--aqua-green)] mx-auto mb-6"></div>
+          <p className="text-gray-400">Don't miss our latest articles and insights.</p>
           <p className="text-lg text-[var(--purple-deep)]/70 max-w-2xl mx-auto">
             Approfondimenti, guide e tendenze su gamification, VR, AR e formazione interattiva.
           </p>
@@ -137,7 +138,7 @@ const BlogSection: React.FC = () => {
                     <span>{post.date}</span>
                   </div>
                   <div className="flex items-center">
-                    <FaUser className="mr-1" />
+                    <span className="mr-1">By</span>
                     <span>{post.author}</span>
                   </div>
                 </div>

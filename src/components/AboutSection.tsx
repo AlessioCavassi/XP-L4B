@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
+// Immagine rimossa in quanto non utilizzata
 import { FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa';
 
 interface TeamMember {
@@ -21,50 +21,100 @@ const AboutSection: React.FC = () => {
   const teamMembers: TeamMember[] = [
     {
       id: 1,
-      name: 'Riccardo Mangano',
-      role: 'CEO & Fondatore',
-      bio: 'Visionario nel campo della gamification e dell\'engagement digitale, guida XP-L4B con l\'obiettivo di trasformare ogni attività in un\'esperienza coinvolgente.',
-      image: '/team/ceo.jpg',
+      name: 'Alessio Cavatassi',
+      role: 'Founder & CEO',
+      bio: 'Alessio is a passionate designer with over 10 years of experience in creating beautiful and functional user experiences. He loves to solve complex problems with simple, elegant solutions.',
+      image: '/placeholder-profile.jpg',
       social: {
         linkedin: 'https://linkedin.com',
         twitter: 'https://twitter.com',
-        email: 'info@riccardomangano.org'
+        email: 'alessio@example.com'
       }
     },
     {
       id: 2,
-      name: 'Alessio Cavatassi',
-      role: 'AI Expert',
-      bio: 'Specialista in intelligenza artificiale e machine learning, sviluppa soluzioni avanzate che integrano AI con gamification ed esperienze immersive.',
-      image: '/team/ai-specialist.jpg',
+      name: 'Jane Smith',
+      role: 'Lead Developer',
+      bio: 'Jane is a full-stack developer with expertise in modern web technologies. She enjoys building robust and scalable applications that delight users.',
+      image: '/placeholder-profile.jpg',
       social: {
         linkedin: 'https://linkedin.com',
-        email: 'alessio@xp-l4b.com'
+        twitter: 'https://twitter.com',
+        email: 'jane@example.com'
       }
     },
     {
       id: 3,
-      name: 'Bianca Surdu',
-      role: 'Content Creator',
-      bio: 'Creativa e specialista di gamification, trasforma concetti complessi in contenuti coinvolgenti che catturano l\'attenzione e migliorano l\'apprendimento.',
-      image: '/team/content-creator.jpg',
+      name: 'Michael Johnson',
+      role: 'UX Designer',
+      bio: 'Michael specializes in creating intuitive user interfaces and engaging user experiences. He believes in the power of design to make technology more accessible.',
+      image: '/placeholder-profile.jpg',
       social: {
         linkedin: 'https://linkedin.com',
         twitter: 'https://twitter.com',
-        email: 'bianca@xp-l4b.com'
+        email: 'michael@example.com'
       }
     },
     {
       id: 4,
-      name: 'Team Tecnico',
-      role: 'Sviluppatori & Designers',
-      bio: 'Un gruppo di talenti specializzati in VR/AR, programming, UX/UI design e 3D modeling che danno vita alle visioni più innovative di XP-L4B.',
-      image: '/team/tech-team.jpg',
+      name: 'Sarah Williams',
+      role: 'Marketing Director',
+      bio: 'Sarah leads our marketing efforts and helps tell the story of our work. She\'s passionate about connecting with our audience and building meaningful relationships.',
+      image: '/placeholder-profile.jpg',
       social: {
         linkedin: 'https://linkedin.com',
-        email: 'team@xp-l4b.com'
+        twitter: 'https://twitter.com',
+        email: 'sarah@example.com'
       }
     },
+    {
+      id: 5,
+      name: 'David Kim',
+      role: 'Product Manager',
+      bio: 'David works closely with our team and clients to define product vision and strategy. He\'s dedicated to delivering solutions that exceed expectations.',
+      image: '/placeholder-profile.jpg',
+      social: {
+        linkedin: 'https://linkedin.com',
+        twitter: 'https://twitter.com',
+        email: 'david@example.com'
+      }
+    },
+    {
+      id: 6,
+      name: 'Emily Chen',
+      role: 'Frontend Developer',
+      bio: 'Emily specializes in building responsive and accessible web applications. She\'s passionate about creating seamless user experiences across all devices.',
+      image: '/placeholder-profile.jpg',
+      social: {
+        linkedin: 'https://linkedin.com',
+        twitter: 'https://twitter.com',
+        email: 'emily@example.com'
+      }
+    },
+    {
+      id: 7,
+      name: 'Robert Taylor',
+      role: 'Backend Developer',
+      bio: 'Robert focuses on building scalable and secure backend systems. He\'s passionate about writing clean, efficient code that powers our applications.',
+      image: '/placeholder-profile.jpg',
+      social: {
+        linkedin: 'https://linkedin.com',
+        twitter: 'https://twitter.com',
+        email: 'robert@example.com'
+      }
+    },
+    {
+      id: 8,
+      name: 'Lisa Wong',
+      role: 'UI/UX Designer',
+      bio: 'Lisa creates beautiful and intuitive interfaces that enhance user experience. She\'s passionate about design systems and creating consistent visual languages.',
+      image: '/placeholder-profile.jpg',
+      social: {
+        linkedin: 'https://linkedin.com',
+        twitter: 'https://twitter.com',
+        email: 'lisa@example.com'
+      }
+    }
   ];
 
   // Animation variants
