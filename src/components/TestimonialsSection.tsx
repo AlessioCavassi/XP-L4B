@@ -157,7 +157,7 @@ const TestimonialsSection: React.FC = () => {
                       </div>
                       
                       <p className="text-[var(--purple-deep)]/80 italic mb-6">
-                        "{testimonials[current].content}"
+                        &quot;{testimonials[current].content}&quot;
                       </p>
                       
                       <div>

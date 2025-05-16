@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-// Image rimosso in quanto non utilizzato
 
 interface CaseStudy {
   id: number;

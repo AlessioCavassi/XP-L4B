@@ -20,9 +20,9 @@ const AboutSection: React.FC = () => {
   const teamMembers: TeamMember[] = [
     {
       id: 1,
-      name: 'Alessio Cavatassi',
+      name: 'Riccardo Mangano',
       role: 'Founder & CEO',
-      bio: 'Alessio is a passionate designer with over 10 years of experience in creating beautiful and functional user experiences. He loves to solve complex problems with simple, elegant solutions.',
+      bio: 'Riccardo loves to solve complex problems with simple, elegant solutions.',
       image: '/placeholder-profile.jpg',
       social: {
         linkedin: 'https://linkedin.com',
@@ -32,9 +32,9 @@ const AboutSection: React.FC = () => {
     },
     {
       id: 2,
-      name: 'Jane Smith',
-      role: 'Lead Developer',
-      bio: 'Jane is a full-stack developer with expertise in modern web technologies. She enjoys building robust and scalable applications that delight users.',
+      name: 'Bianca',
+      role: 'Social Media Strategist',
+      bio: 'Bianca is a ',
       image: '/placeholder-profile.jpg',
       social: {
         linkedin: 'https://linkedin.com',
@@ -44,9 +44,9 @@ const AboutSection: React.FC = () => {
     },
     {
       id: 3,
-      name: 'Michael Johnson',
+      name: 'Alessio Cavatassi',
       role: 'UX Designer',
-      bio: 'Michael specializes in creating intuitive user interfaces and engaging user experiences. He believes in the power of design to make technology more accessible.',
+      bio: 'Alessio specializes in .',
       image: '/placeholder-profile.jpg',
       social: {
         linkedin: 'https://linkedin.com',
@@ -212,7 +212,7 @@ const AboutSection: React.FC = () => {
                     <ul className="list-disc list-inside text-[var(--purple-deep)]/70 ml-2 space-y-2">
                       <li>Gap di competenze critiche nel vostro team</li>
                       <li>Obiettivi strategici di business da supportare</li>
-                      <li>Punti di attrito nell'engagement attuale</li>
+                      <li>Punti di attrito nell&apos;engagement attuale</li>
                       <li>Stile di apprendimento prevalente nei destinatari</li>
                     </ul>
                   </div>
@@ -234,7 +234,7 @@ const AboutSection: React.FC = () => {
                     <h5 className="font-heading text-[var(--purple-deep)] mb-3 text-xl">Progettazione di soluzioni personalizzate</h5>
                     <p className="text-[var(--purple-deep)]/70 mb-3">Creiamo il percorso ideale, combinando le nostre tecnologie proprietarie con contenuti su misura:</p>
                     <ul className="list-disc list-inside text-[var(--purple-deep)]/70 ml-2 space-y-2">
-                      <li>Architettura dell'esperienza e meccaniche di engagement</li>
+                      <li>Architettura dell&apos;esperienza e meccaniche di engagement</li>
                       <li>Selezione delle tecnologie più adatte (VR, AR, gamification)</li>
                       <li>Sviluppo di contenuti formativi specifici per il vostro settore</li>
                       <li>Integrazione con i sistemi aziendali esistenti</li>
@@ -256,11 +256,11 @@ const AboutSection: React.FC = () => {
                   >3</motion.div>
                   <div>
                     <h5 className="font-heading text-[var(--purple-deep)] mb-3 text-xl">Implementazione e supporto continuo</h5>
-                    <p className="text-[var(--purple-deep)]/70 mb-3">Gestiamo l'intero processo di erogazione per massimizzare i risultati:</p>
+                    <p className="text-[var(--purple-deep)]/70 mb-3">Gestiamo l&apos;intero processo di erogazione per massimizzare i risultati:</p>
                     <ul className="list-disc list-inside text-[var(--purple-deep)]/70 ml-2 space-y-2">
                       <li>Formazione degli amministratori interni sulla piattaforma</li>
                       <li>Lancio guidato con sessioni di onboarding per gli utenti</li>
-                      <li>Monitoraggio in tempo reale dell'adozione e dell'engagement</li>
+                      <li>Monitoraggio in tempo reale dell&apos;adozione e dell&apos;engagement</li>
                       <li>Supporto tecnico e assistenza continua</li>
                     </ul>
                   </div>
@@ -280,7 +280,7 @@ const AboutSection: React.FC = () => {
                   >4</motion.div>
                   <div>
                     <h5 className="font-heading text-[var(--purple-deep)] mb-3 text-xl">Misurazione e ottimizzazione continua</h5>
-                    <p className="text-[var(--purple-deep)]/70 mb-3">Analizziamo sistematicamente i risultati e perfezioniamo l'esperienza:</p>
+                    <p className="text-[var(--purple-deep)]/70 mb-3">Analizziamo sistematicamente i risultati e perfezioniamo l&apos;esperienza:</p>
                     <ul className="list-disc list-inside text-[var(--purple-deep)]/70 ml-2 space-y-2">
                       <li>Dashboard personalizzate con KPI specifici per il vostro business</li>
                       <li>Report periodici con analisi dei trend e benchmark di settore</li>
@@ -308,12 +308,12 @@ const AboutSection: React.FC = () => {
                   Il nostro impegno verso i risultati
                 </motion.h5>
                 <p className="text-[var(--purple-deep)]/70">
-                  Questo approccio metodico ci permette di garantire non solo esperienze coinvolgenti, ma soprattutto risultati tangibili per il vostro business. Ogni fase è progettata per massimizzare il ROI dell'investimento formativo, superando le statistiche che mostrano come il 70% degli investimenti tradizionali in formazione risultino inefficaci.
+                  Questo approccio metodico ci permette di garantire non solo esperienze coinvolgenti, ma soprattutto risultati tangibili per il vostro business. Ogni fase è progettata per massimizzare il ROI dell&apos;investimento formativo, superando le statistiche che mostrano come il 70% degli investimenti tradizionali in formazione risultino inefficaci.
                 </p>
               </motion.div>
             </div>
             <p className="text-[var(--purple-deep)]/70 mb-4">
-              Fondata nel 2018 da un gruppo di appassionati di tecnologia e videogiochi con esperienza nel settore corporate, XP-L4B unisce competenze tecniche all'avanguardia con una profonda comprensione delle dinamiche aziendali.
+              Fondata nel 2018 da un gruppo di appassionati di tecnologia e videogiochi con esperienza nel settore corporate, XP-L4B unisce competenze tecniche all&apos;avanguardia con una profonda comprensione delle dinamiche aziendali.
             </p>
             <p className="text-[var(--purple-deep)]/70">
               Il nostro approccio si basa sul connubio perfetto tra esperienza ludica e obiettivi aziendali, creando soluzioni su misura che non solo intrattengono, ma generano risultati tangibili e misurabili.

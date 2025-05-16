@@ -201,7 +201,7 @@ const ContactSection: React.FC = () => {
                 </div>
 
                 <div className="pt-4">
-                  <p className="text-white/80 text-sm mb-4">Compila il form per ricevere una consulenza gratuita su come migliorare l'engagement nella tua azienda!</p>
+                  <p className="text-white/80 text-sm mb-4">Compila il form per ricevere una consulenza gratuita su come migliorare l&apos;engagement nella tua azienda!</p>
                   <motion.button
                     type="submit"
                     className="bg-[var(--aqua-green)] hover:bg-[var(--blue)] text-[var(--purple-deep)] font-heading py-3 px-8 rounded-full transition-all duration-300 text-lg interactive w-full"
