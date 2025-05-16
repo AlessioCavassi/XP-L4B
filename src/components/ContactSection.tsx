@@ -230,7 +230,7 @@ const ContactSection: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="text-lg font-heading mb-1">Sede principale</h4>
-                  <p className="text-white/80">Via dell'Innovazione, 42<br />20129 Milano, Italia</p>
+                  <p className="text-white/80">Via dell&apos;Innovazione, 42<br />20129 Milano, Italia</p>
                 </div>
               </div>
               
@@ -294,7 +294,7 @@ const ContactSection: React.FC = () => {
               </div>
               
               <div className="mt-8 bg-white/10 p-6 rounded-lg border border-[var(--aqua-green)]/30">
-                <h4 className="text-lg font-heading mb-2 text-center text-[var(--aqua-green)]">PRONTI A TRASFORMARE L'ENGAGEMENT?</h4>
+                <h4 className="text-lg font-heading mb-2 text-center text-[var(--aqua-green)]">PRONTI A TRASFORMARE L&apos;ENGAGEMENT?</h4>
                 <p className="text-white/90 text-center">Scopri come possiamo aiutarti a passare dal 5% al 90% di coinvolgimento del tuo team</p>
               </div>
             </div>
