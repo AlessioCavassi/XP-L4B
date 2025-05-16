@@ -1,26 +1,181 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Sulphur+Point:wght@400;700&display=swap');
 
 :root {
+  /* XP-L4B Brand Colors */
+  --purple-deep: #2D2655;
+  --purple-light: #594694;
+  --blue: #2F92B3;
+  --aqua-green: #65BFB0;
+  --gray: #B3B3B3;
+  
+  /* Default theme variables */
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: var(--purple-deep);
+  
+  /* Layout variables */
+  --header-height: 80px;
+  --footer-height: 300px;
 }
 
-@theme inline {
+/* Theme variables */
+:root {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: var(--purple-deep);
+  --color-secondary: var(--purple-light);
+  --color-accent: var(--blue);
+  --color-highlight: var(--aqua-green);
+  --color-neutral: var(--gray);
+  
+  /* Fonts */
+  --font-heading: 'Orbitron', sans-serif;
+  --font-body: 'Sulphur Point', sans-serif;
 }
 
+/* Dark mode */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #1a1528;
+    --foreground: #ffffff;
   }
 }
 
+/* Play mode (will be toggled via JS) */
+.play-mode {
+  --background: #2D2655;
+  --foreground: #ffffff;
+  /* Animazioni più accentuate */
+  --transition-speed: 0.3s;
+  --border-radius: 12px;
+  --card-shadow: 0 8px 25px rgba(101, 191, 176, 0.25);
+  --card-hover-transform: translateY(-10px) scale(1.03);
+  cursor: none !important; /* Forza il custom cursor in Play Mode */
+}
+
+/* Play Mode specifici stili per elementi interattivi */
+.play-mode .interactive {
+  transform: scale(1.02);
+  transition: all 0.35s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+}
+
+.play-mode .interactive:hover {
+  transform: translateY(-12px) scale(1.07);
+  box-shadow: 0 15px 35px rgba(101, 191, 176, 0.4);
+}
+
+.play-mode button, 
+.play-mode a {
+  transition: transform 0.4s cubic-bezier(0.17, 0.67, 0.83, 0.67), 
+              background-color 0.3s ease, 
+              box-shadow 0.3s ease;
+}
+
+.play-mode button:hover, 
+.play-mode a:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 20px rgba(101, 191, 176, 0.4);
+}
+
+/* Corporate Mode - stile più sobrio e professionale */
+body:not(.play-mode) {
+  --transition-speed: 0.5s;
+  --border-radius: 4px;
+  --card-shadow: 0 5px 15px rgba(45, 38, 85, 0.1);
+  --card-hover-transform: translateY(-5px);
+}
+
+body:not(.play-mode) .interactive {
+  transition: all 0.5s ease;
+}
+
+body:not(.play-mode) .interactive:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(45, 38, 85, 0.15);
+}
+
+/* Base styles */
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Custom cursor */
+.custom-cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  mix-blend-mode: difference;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  transition: width 0.3s, height 0.3s, background-color 0.3s;
+}
+
+/* Interactive elements */
+.interactive {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.interactive:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Polygon background patterns */
+.polygon-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.1;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23594694' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Animation keyframes */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.floating {
+  animation: float 6s ease-in-out infinite;
+}
+
+.pulsing {
+  animation: pulse 4s ease-in-out infinite;
+}
+
+/* Scrolling animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
 }
