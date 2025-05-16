@@ -24,7 +24,7 @@ const TestimonialsSection: React.FC = () => {
       name: 'Andrea Colombo',
       position: 'HR Director',
       company: 'TechInnovate',
-      content: 'La formazione in VR sviluppata da XP-L4B ha trasformato il nostro programma di onboarding. I nuovi assunti sono più coinvolti e i tempi di inserimento si sono ridotti del 35%. Un investimento che ha generato risultati immediati e misurabili.',
+      content: 'La formazione &ldquo;L&apos;approccio di XP-L4B ha rivoluzionato il nostro programma di formazione aziendale. I dipendenti sono pi&ugrave; coinvolti e i risultati sono eccezionali.&rdquo; sono ridotti del 35%. Un investimento che ha generato risultati immediati e misurabili.',
       rating: 5,
       image: '/testimonials/testimonial1.jpg'
     },

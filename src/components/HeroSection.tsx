@@ -102,7 +102,7 @@ const HeroSection: React.FC = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.5 }}
         >
-          Rivoluzioniamo formazione e coinvolgimento aziendale con tecnologie VR/AR e gamification, trasformando le sfide quotidiane in esperienze memorabili che generano risultati misurabili.
+          Siamo esperti nella creazione di esperienze coinvolgenti che fondono gamification, realtà virtuale e intelligenza artificiale per formare, coinvolgere e ispirare il tuo pubblico. Creiamo esperienze memorabili che generano risultati misurabili.
         </motion.p>
         
         <motion.div 

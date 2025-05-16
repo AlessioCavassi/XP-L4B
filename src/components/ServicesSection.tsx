@@ -113,7 +113,7 @@ const ServicesSection: React.FC = () => {
         >
           <h3 className="text-2xl font-heading text-[var(--aqua-green)] mb-4">PERCHÉ LA GAMIFICATION FUNZIONA</h3>
           <p className="text-white/90 mb-4">
-            Il gioco è parte della natura umana. Integrando elementi ludici nei processi formativi sfruttiamo meccanismi psicologici fondamentali che stimolano motivazione, collaborazione e apprendimento.
+            Il gioco è parte della natura umana. Integrando elementi ludici nei processi formativi sfruttiamo meccanismi psicologici fondamentali che stimolano motivazione, collaborazione e apprendimento. Corsi coinvolgenti che sfruttano meccaniche di gioco per aumentare la partecipazione e la ritenzione delle conoscenze, rendendo l&apos;apprendimento un&apos;esperienza piacevole ed efficace.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
             <div className="bg-white/5 p-4 rounded-lg">

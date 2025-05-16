@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
               <span className="ml-3 text-2xl font-heading">XP-L4B</span>
             </div>
             <p className="text-white/70 mb-6">
-              Innoviamo l'engagement digitale con esperienze ludiche e soluzioni VR/AR che trasformano la formazione aziendale.
+              Siamo qui per trasformare la tua visione in realtà. Contattaci per scoprire come possiamo aiutarti a creare esperienze straordinarie per il tuo pubblico.
             </p>
             <div className="flex space-x-3">
               <a 

@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-// Immagine rimossa in quanto non utilizzata
 import { FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa';
 
 interface TeamMember {

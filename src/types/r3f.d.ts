@@ -4,9 +4,9 @@ import * as THREE from 'three';
 declare global {
   namespace JSX {
     interface IntrinsicElements {
-      group: any;
-      mesh: any;
-      icosahedronGeometry: any;
+      group: ReactThreeFiber.Object3DNode<THREE.Group, typeof THREE.Group>;
+      mesh: ReactThreeFiber.Object3DNode<THREE.Mesh, typeof THREE.Mesh>;
+      icosahedronGeometry: ReactThreeFiber.BufferGeometryNode<THREE.IcosahedronGeometry, typeof THREE.IcosahedronGeometry>;
       meshBasicMaterial: ReactThreeFiber.Object3DNode<THREE.MeshBasicMaterial, typeof THREE.MeshBasicMaterial>;
       meshStandardMaterial: ReactThreeFiber.Object3DNode<THREE.MeshStandardMaterial, typeof THREE.MeshStandardMaterial>;
       meshPhongMaterial: ReactThreeFiber.Object3DNode<THREE.MeshPhongMaterial, typeof THREE.MeshPhongMaterial>;
@@ -18,8 +18,8 @@ declare global {
       lineBasicMaterial: ReactThreeFiber.Object3DNode<THREE.LineBasicMaterial, typeof THREE.LineBasicMaterial>;
       lineDashedMaterial: ReactThreeFiber.Object3DNode<THREE.LineDashedMaterial, typeof THREE.LineDashedMaterial>;
       material: ReactThreeFiber.Object3DNode<THREE.Material, typeof THREE.Material>;
-      ambientLight: any;
-      directionalLight: any;
+      ambientLight: ReactThreeFiber.Object3DNode<THREE.AmbientLight, typeof THREE.AmbientLight>;
+      directionalLight: ReactThreeFiber.Object3DNode<THREE.DirectionalLight, typeof THREE.DirectionalLight>;
     }
   }
 }

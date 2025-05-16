@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
 
 // Componente per un dado D20 interattivo (versione 2D)
@@ -79,8 +79,13 @@ const GameEntrance: React.FC<{ onComplete: () => void }> = ({ onComplete }) => {
     "Puzzle completed! Loading the site..."
   ];
   
+  // Funzione per saltare il gioco e andare direttamente al sito
+  const handleSkip = useCallback(() => {
+    onComplete();
+  }, [onComplete]);
+  
   // Funzione per gestire il click su un dado
-  const handleDiceClick = (index: number) => {
+  const handleDiceClick = useCallback((index: number) => {
     // Ignora se il gioco è completato
     if (gameCompleted) return;
     
@@ -112,7 +117,7 @@ const GameEntrance: React.FC<{ onComplete: () => void }> = ({ onComplete }) => {
       setShakeError(true);
       setTimeout(() => setShakeError(false), 500);
     }
-  };
+  }, [gameCompleted, completedDice, correctSequence, onComplete]);
   
   return (
     <div className="fixed inset-0 z-50 bg-[var(--purple-deep)]">
@@ -128,6 +133,7 @@ const GameEntrance: React.FC<{ onComplete: () => void }> = ({ onComplete }) => {
             BENVENUTO IN XP-L4B
           </h1>
           
+          <p className="text-sm text-gray-400 mt-4">Can't solve it? <button onClick={handleSkip} className="text-blue-400 hover:text-blue-300 underline">Skip to corporate mode</button></p>
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
           We're glad you're here! Let's make this fun. Click on the D20 dice in the correct order to unlock the full experience. Or, if you prefer, you can skip to the corporate mode.
         </p>
