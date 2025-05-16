@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { FaCalendarAlt, FaClock, FaArrowRight } from 'react-icons/fa';
+import { FaCalendarAlt } from 'react-icons/fa';
 
 interface BlogPost {
   id: number;
@@ -95,7 +95,7 @@ const BlogSection: React.FC = () => {
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading text-[var(--purple-deep)] mb-4">BLOG & RISORSE</h2>
           <div className="w-24 h-1 bg-[var(--aqua-green)] mx-auto mb-6"></div>
-          <p className="text-gray-400">Don't miss our latest articles and insights.</p>
+          <p className="text-gray-400">Don&apos;t miss our latest articles and insights.</p>
           <p className="text-lg text-[var(--purple-deep)]/70 max-w-2xl mx-auto">
             Approfondimenti, guide e tendenze su gamification, VR, AR e formazione interattiva.
           </p>
@@ -156,7 +156,7 @@ const BlogSection: React.FC = () => {
                   href={`/blog/${post.slug}`}
                   className="text-[var(--blue)] hover:text-[var(--purple-light)] inline-flex items-center text-sm font-medium transition-colors duration-300 mt-auto"
                 >
-                  <span>Leggi l'articolo completo</span>
+                  <span>Leggi l&apos;articolo completo</span>
                   <svg className="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                   </svg>
