@@ -84,7 +84,7 @@ const HeroSection: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          TRASFORMIAMO OGNI ATTIVITÀ IN UN'ESPERIENZA COINVOLGENTE
+          TRASFORMIAMO OGNI ATTIVITÀ IN UN&apos;ESPERIENZA COINVOLGENTE
         </motion.h1>
         
         <motion.p 
@@ -93,7 +93,7 @@ const HeroSection: React.FC = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          <span className="font-bold text-[var(--aqua-green)]">La nostra missione:</span> Elevare il potenziale umano nelle organizzazioni attraverso l'innovazione digitale e il potere del gioco.
+          <span className="font-bold text-[var(--aqua-green)]">La nostra missione:</span> Elevare il potenziale umano nelle organizzazioni attraverso l&apos;innovazione digitale e il potere del gioco.
         </motion.p>
         
         <motion.p 

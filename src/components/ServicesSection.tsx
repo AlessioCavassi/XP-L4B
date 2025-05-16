@@ -100,7 +100,7 @@ const ServicesSection: React.FC = () => {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading text-white mb-4">I NOSTRI SERVIZI</h2>
           <div className="w-24 h-1 bg-[var(--aqua-green)] mx-auto mb-6"></div>
           <p className="text-lg text-white/80 max-w-3xl mx-auto mb-4">
-            Innoviamo l'engagement digitale con soluzioni che trasformano formazione e comunicazione in esperienze memorabili.
+            Innoviamo l&apos;engagement digitale con soluzioni che trasformano formazione e comunicazione in esperienze memorabili.
           </p>
         </motion.div>
         

@@ -58,7 +58,7 @@ const AboutSection: React.FC = () => {
       id: 4,
       name: 'Sarah Williams',
       role: 'Marketing Director',
-      bio: 'Sarah leads our marketing efforts and helps tell the story of our work. She\'s passionate about connecting with our audience and building meaningful relationships.',
+      bio: 'Sarah leads our marketing efforts and helps tell the story of our work. She&apos;s passionate about connecting with our audience and building meaningful relationships.',
       image: '/placeholder-profile.jpg',
       social: {
         linkedin: 'https://linkedin.com',
@@ -70,7 +70,7 @@ const AboutSection: React.FC = () => {
       id: 5,
       name: 'David Kim',
       role: 'Product Manager',
-      bio: 'David works closely with our team and clients to define product vision and strategy. He\'s dedicated to delivering solutions that exceed expectations.',
+      bio: 'David works closely with our team and clients to define product vision and strategy. He&apos;s dedicated to delivering solutions that exceed expectations.',
       image: '/placeholder-profile.jpg',
       social: {
         linkedin: 'https://linkedin.com',
@@ -82,7 +82,7 @@ const AboutSection: React.FC = () => {
       id: 6,
       name: 'Emily Chen',
       role: 'Frontend Developer',
-      bio: 'Emily specializes in building responsive and accessible web applications. She\'s passionate about creating seamless user experiences across all devices.',
+      bio: 'Emily specializes in building responsive and accessible web applications. She&apos;s passionate about creating seamless user experiences across all devices.',
       image: '/placeholder-profile.jpg',
       social: {
         linkedin: 'https://linkedin.com',
@@ -94,7 +94,7 @@ const AboutSection: React.FC = () => {
       id: 7,
       name: 'Robert Taylor',
       role: 'Backend Developer',
-      bio: 'Robert focuses on building scalable and secure backend systems. He\'s passionate about writing clean, efficient code that powers our applications.',
+      bio: 'Robert focuses on building scalable and secure backend systems. He&apos;s passionate about writing clean, efficient code that powers our applications.',
       image: '/placeholder-profile.jpg',
       social: {
         linkedin: 'https://linkedin.com',
@@ -106,7 +106,7 @@ const AboutSection: React.FC = () => {
       id: 8,
       name: 'Lisa Wong',
       role: 'UI/UX Designer',
-      bio: 'Lisa creates beautiful and intuitive interfaces that enhance user experience. She\'s passionate about design systems and creating consistent visual languages.',
+      bio: 'Lisa creates beautiful and intuitive interfaces that enhance user experience. She&apos;s passionate about design systems and creating consistent visual languages.',
       image: '/placeholder-profile.jpg',
       social: {
         linkedin: 'https://linkedin.com',
@@ -166,7 +166,7 @@ const AboutSection: React.FC = () => {
           >
             <h3 className="text-2xl font-heading text-[var(--purple-deep)] mb-6">LA NOSTRA FILOSOFIA</h3>
             <p className="text-[var(--purple-deep)]/70 mb-4">
-              In XP-L4B crediamo che l'apprendimento e l'engagement siano esperienze che possono e devono essere coinvolgenti. La nostra mission è trasformare il modo in cui le aziende formano, coinvolgono e comunicano attraverso l'uso strategico di meccaniche di gioco ed esperienze immersive.
+              In XP-L4B crediamo che l&apos;apprendimento e l&apos;engagement siano esperienze che possono e devono essere coinvolgenti. La nostra mission è trasformare il modo in cui le aziende formano, coinvolgono e comunicano attraverso l&apos;uso strategico di meccaniche di gioco ed esperienze immersive.
             </p>
             
             <motion.h4 
@@ -187,7 +187,7 @@ const AboutSection: React.FC = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.7, delay: 0.1 }}
               >
-                Abbiamo sviluppato un processo strutturato che garantisce risultati concreti e misurabili per ogni progetto. Questo metodo sistematico ci permette di trasformare qualsiasi sfida aziendale in un'opportunità di crescita attraverso esperienze coinvolgenti.
+                Abbiamo sviluppato un processo strutturato che garantisce risultati concreti e misurabili per ogni progetto. Questo metodo sistematico ci permette di trasformare qualsiasi sfida aziendale in un&apos;opportunità di crescita attraverso esperienze coinvolgenti.
               </motion.p>
               
               {/* Journey path connecting the cards */}

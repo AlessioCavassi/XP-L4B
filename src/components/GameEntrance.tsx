@@ -133,9 +133,9 @@ const GameEntrance: React.FC<{ onComplete: () => void }> = ({ onComplete }) => {
             BENVENUTO IN XP-L4B
           </h1>
           
-          <p className="text-sm text-gray-400 mt-4">Can't solve it? <button onClick={handleSkip} className="text-blue-400 hover:text-blue-300 underline">Skip to corporate mode</button></p>
+          <p className="text-sm text-gray-400 mt-4">Can&apos;t solve it? <button onClick={handleSkip} className="text-blue-400 hover:text-blue-300 underline">Skip to corporate mode</button></p>
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-          We're glad you're here! Let's make this fun. Click on the D20 dice in the correct order to unlock the full experience. Or, if you prefer, you can skip to the corporate mode.
+          We&apos;re glad you&apos;re here! Let&apos;s make this fun. Click on the D20 dice in the correct order to unlock the full experience. Or, if you prefer, you can skip to the corporate mode.
         </p>
           
           <div className="flex flex-col sm:flex-row gap-4">

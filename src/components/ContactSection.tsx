@@ -69,7 +69,7 @@ const ContactSection: React.FC = () => {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading text-white mb-4">CONTATTACI</h2>
           <div className="w-24 h-1 bg-[var(--aqua-green)] mx-auto mb-6"></div>
           <p className="text-lg text-white/80 max-w-3xl mx-auto">
-            In Italia solo il <span className="font-bold text-[var(--aqua-green)]">5% dei lavoratori</span> si sente coinvolto rispetto alla media mondiale del 37%. Parliamo di come possiamo trasformare questa sfida in un'opportunità per la tua azienda.
+            In Italia solo il <span className="font-bold text-[var(--aqua-green)]">5% dei lavoratori</span> si sente coinvolto rispetto alla media mondiale del 37%. Parliamo di come possiamo trasformare questa sfida in un&apos;opportunità per la tua azienda.
           </p>
         </motion.div>
 
@@ -81,8 +81,8 @@ const ContactSection: React.FC = () => {
             transition={{ duration: 0.6 }}
           >
             <div className="bg-[var(--aqua-green)]/20 p-6 rounded-lg mb-6">
-              <h3 className="text-2xl font-heading mb-3">TRASFORMA L'ENGAGEMENT DELLA TUA AZIENDA</h3>
-              <p className="text-white/90 mb-4">L'83% dei dipendenti che partecipano a programmi gamificati mostrano una maggiore motivazione. Contattaci oggi per iniziare il tuo percorso verso un'esperienza formativa rivoluzionaria.</p>
+              <h3 className="text-2xl font-heading mb-3">TRASFORMA L&apos;ENGAGEMENT DELLA TUA AZIENDA</h3>
+              <p className="text-white/90 mb-4">L&apos;83% dei dipendenti che partecipano a programmi gamificati mostrano una maggiore motivazione. Contattaci oggi per iniziare il tuo percorso verso un&apos;esperienza formativa rivoluzionaria.</p>
             </div>
             
             {formStatus.submitted && formStatus.success ? (

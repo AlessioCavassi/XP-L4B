@@ -24,7 +24,7 @@ const TestimonialsSection: React.FC = () => {
       name: 'Andrea Colombo',
       position: 'HR Director',
       company: 'TechInnovate',
-      content: 'La formazione &ldquo;L&apos;approccio di XP-L4B ha rivoluzionato il nostro programma di formazione aziendale. I dipendenti sono pi&ugrave; coinvolti e i risultati sono eccezionali.&rdquo; sono ridotti del 35%. Un investimento che ha generato risultati immediati e misurabili.',
+      content: 'La formazione ha rivoluzionato il nostro programma di onboarding. I nuovi assunti sono più coinvolti e i tempi di inserimento si sono ridotti del 35%. Un investimento che ha generato risultati immediati e misurabili.',
       rating: 5,
       image: '/testimonials/testimonial1.jpg'
     },
@@ -33,7 +33,7 @@ const TestimonialsSection: React.FC = () => {
       name: 'Sofia Martinelli',
       position: 'Marketing Manager',
       company: 'RetailGroup',
-      content: 'Il progetto di gamification per la nostra campagna di lancio ha superato ogni aspettativa. L\'engagement è stato 3 volte superiore rispetto alle campagne tradizionali e l\'app ha ricevuto recensioni entusiastiche dagli utenti.',
+      content: 'Il progetto di gamification per la nostra campagna di lancio ha superato ogni aspettativa. L&apos;engagement è stato 3 volte superiore rispetto alle campagne tradizionali e l&apos;app ha ricevuto recensioni entusiastiche dagli utenti.',
       rating: 5,
       image: '/testimonials/testimonial2.jpg'
     },
@@ -42,7 +42,7 @@ const TestimonialsSection: React.FC = () => {
       name: 'Luca Ferretti',
       position: 'CEO',
       company: 'StartupInnovation',
-      content: 'Abbiamo scelto XP-L4B per creare un\'esperienza AR per il nostro prodotto e il risultato è stato eccezionale. Il team ha saputo tradurre la nostra visione in un\'applicazione che ha impressionato i nostri clienti e rafforzato la nostra immagine innovativa.',
+      content: 'Abbiamo scelto XP-L4B per creare un&apos;esperienza AR per il nostro prodotto e il risultato è stato eccezionale. Il team ha saputo tradurre la nostra visione in un&apos;applicazione che ha impressionato i nostri clienti e rafforzato la nostra immagine innovativa.',
       rating: 4,
       image: '/testimonials/testimonial3.jpg'
     },
