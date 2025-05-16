@@ -122,7 +122,7 @@ const CustomCursor: React.FC = () => {
         observer.disconnect();
       };
     }
-  }, []);
+  }, [isPlayMode]);
 
   // Only render if we're showing the custom cursor
   if (!visible) return null;

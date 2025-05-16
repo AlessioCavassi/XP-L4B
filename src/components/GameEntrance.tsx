@@ -60,7 +60,7 @@ const GameEntrance: React.FC<{ onComplete: () => void }> = ({ onComplete }) => {
   const [shakeError, setShakeError] = useState(false);
   
   // La sequenza corretta (può essere randomizzata o fissa)
-  const correctSequence = [2, 0, 3, 1]; // sopra, sinistra, sotto, destra
+  const correctSequence = React.useMemo(() => [2, 0, 3, 1], []); // sopra, sinistra, sotto, destra
   
   // Posizioni per i dadi 2D
   const dicePositions = [
@@ -145,7 +145,7 @@ const GameEntrance: React.FC<{ onComplete: () => void }> = ({ onComplete }) => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              INIZIA L'ESPERIENZA
+              INIZIA L&apos;ESPERIENZA
             </motion.button>
             
             <motion.button 

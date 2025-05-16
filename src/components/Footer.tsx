@@ -130,7 +130,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-4">
               <li className="flex items-start">
                 <FaMapMarkerAlt className="text-[var(--aqua-green)] mt-1 mr-3" />
-                <span className="text-white/70">Via dell'Innovazione, 42<br />20129 Milano, Italia</span>
+                <span className="text-white/70">Via dell&apos;Innovazione, 42<br />20129 Milano, Italia</span>
               </li>
               <li className="flex items-center">
                 <FaPhone className="text-[var(--aqua-green)] mr-3" />
