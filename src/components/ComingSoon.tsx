@@ -89,7 +89,7 @@ const ComingSoon = () => {
       {/* Content */}
       <div className="relative z-10 text-center px-4">
         <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-300">
-          XP Lab
+          XP-L4B
         </h1>
         <h2 className="text-3xl md:text-5xl font-bold mb-6">
           Sito in Costruzione

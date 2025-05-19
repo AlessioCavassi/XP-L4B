@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="630" viewBox="0 0 1200 630" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#1a0b2e" />
+            <stop offset="100%" stop-color="#2a0b3a" />
+        </linearGradient>
+    </defs>
+    <rect width="1200" height="630" fill="url(#gradient)" />
+    <text x="50%" y="50%" font-family="Arial, sans-serif" font-size="90" font-weight="bold" fill="white" text-anchor="middle" dominant-baseline="middle">XP-L4B</text>
+    <text x="50%" y="58%" font-family="Arial, sans-serif" font-size="30" fill="rgba(255,255,255,0.8)" text-anchor="middle" dominant-baseline="middle">Esperienza &amp; Innovazione</text>
+</svg>
