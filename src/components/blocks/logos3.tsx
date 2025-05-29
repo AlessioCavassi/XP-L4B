@@ -4,6 +4,7 @@
 "use client";
 
 import AutoScroll from "embla-carousel-auto-scroll";
+import Image from "next/image";
 
 import {
   Carousel,
@@ -118,10 +119,13 @@ const Logos3 = ({
                 >
                   <div className="mx-10 flex shrink-0 items-center justify-center">
                     <div>
-                      <img
+                      <Image
                         src={logo.image}
                         alt={logo.description}
+                        width={160}
+                        height={80}
                         className={logo.className || "h-16 w-auto"}
+                        style={{ objectFit: "contain" }}
                         data-component-name="Logos3"
                       />
                     </div>

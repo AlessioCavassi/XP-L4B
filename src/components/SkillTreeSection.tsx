@@ -80,7 +80,7 @@ const SkillTreeSection: React.FC = () => {
                     
                     {/* Content - improved spacing and readability */}
                     <div className="px-4 text-left">
-                      <p className="text-white mt-2 leading-relaxed">Iniziamo con un'analisi dettagliata del vostro contesto aziendale.</p>
+                      <p className="text-white mt-2 leading-relaxed">Iniziamo con un&apos;analisi dettagliata del vostro contesto aziendale.</p>
                       
                       <div className="space-y-3">
                         {/* Skill points - improved presentation */}
@@ -147,7 +147,7 @@ const SkillTreeSection: React.FC = () => {
                       <div className="space-y-3">
                         <div className="text-white text-sm flex items-center bg-[var(--purple-deep)]/30 py-2 px-4 rounded-md mb-2">
                           <div className="w-2.5 h-2.5 rounded-full bg-[var(--aqua-green)] mr-3 flex-shrink-0"></div>
-                          <p>Architettura dell'esperienza</p>
+                          <p>Architettura dell&apos;esperienza</p>
                         </div>
                       </div>
                     </div>
@@ -188,12 +188,12 @@ const SkillTreeSection: React.FC = () => {
                         <h4 className="text-xl font-heading text-white mb-1">
                           <span className="text-white">DELIVERY</span>
                         </h4>
-                        <h5 className="text-white text-base font-semibold mb-2">DELL'ESPERIENZA</h5>
+                        <h5 className="text-white text-base font-semibold mb-2">DELL&apos;ESPERIENZA</h5>
                       </div>
                     </div>
                     
                     <div className="px-4 text-left">
-                      <p className="text-white mt-2 leading-relaxed">Gestiamo l'intero processo di erogazione per massimizzare risultati e successo.</p>
+                      <p className="text-white mt-2 leading-relaxed">Gestiamo l&apos;intero processo di erogazione per massimizzare risultati e successo.</p>
                       
                       <div className="space-y-3">
                         <div className="text-white text-sm flex items-center bg-[var(--purple-deep)]/30 py-2 px-4 rounded-md mb-2">
@@ -244,7 +244,7 @@ const SkillTreeSection: React.FC = () => {
                     </div>
                     
                     <div className="px-4 text-left">
-                      <p className="text-white mt-2 leading-relaxed">Analizziamo i risultati e perfezionamo l'esperienza con il nostro sistema avanzato.</p>
+                      <p className="text-white mt-2 leading-relaxed">Analizziamo i risultati e perfezionamo l&apos;esperienza con il nostro sistema avanzato.</p>
                       
                       <div className="space-y-3">
                         <div className="text-white text-sm flex items-center bg-[var(--purple-deep)]/30 py-2 px-4 rounded-md mb-2">

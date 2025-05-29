@@ -17,6 +17,12 @@ const partnerLogos = {
       description: "NOVO Esports",
       image: "/images/logos/NOVO_Esports_2024_full_allmode.png",
       className: "h-16 w-auto"
+    },
+    {
+      id: "levelup-mta",
+      description: "LevelUP MTA",
+      image: "/images/logos/LevelUP_MTA_LogoBianco.png",
+      className: "h-16 w-auto bg-[var(--purple-deep)] p-2 rounded-lg"
     }
   ]
 };

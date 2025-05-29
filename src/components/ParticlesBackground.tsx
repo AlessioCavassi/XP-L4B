@@ -32,10 +32,8 @@ const ParticlesBackground: React.FC = () => {
     // Generate random game items - numero ridotto
     const newItems = Array.from({ length: 15 }).map(() => {
       const type = types[Math.floor(Math.random() * types.length)];
-      let color;
-      
       // Tutti gli elementi usano la palette in bianco e nero
-      color = monochromeColors[Math.floor(Math.random() * monochromeColors.length)];
+      const color = monochromeColors[Math.floor(Math.random() * monochromeColors.length)];
       
       // Make dice smaller than other elements
       return {

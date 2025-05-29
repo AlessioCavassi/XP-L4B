@@ -72,12 +72,11 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
                 <PiThreadsLogoBold size={18} />
               </a>
               <a 
-                href="#" 
+                href="https://www.youtube.com/@XP-L4B" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="bg-[var(--purple-light)]/20 p-2 rounded-full hover:bg-[var(--purple-light)]/40 transition-colors duration-300 text-[var(--purple-deep)] opacity-50"
-                aria-label="YouTube (presto disponibile)"
-                title="YouTube - Presto disponibile"
+                className="bg-[var(--purple-light)]/20 p-2 rounded-full hover:bg-[var(--purple-light)]/40 transition-colors duration-300 text-[var(--purple-deep)]"
+                aria-label="YouTube"
                 data-component-name="Footer"
               >
                 <FaYoutube size={18} />
