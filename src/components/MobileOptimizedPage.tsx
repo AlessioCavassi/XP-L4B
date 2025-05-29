@@ -3,7 +3,7 @@ import MobileServiceCards from './MobileServiceCards';
 import ExpandableContent from './ExpandableContent';
 import FlipCard from './FlipCard';
 import MobileParticlesBackground from './MobileParticlesBackground';
-import { FaGamepad, FaVrCardboard, FaUsers, FaRocket, FaLaptopCode, FaChalkboardTeacher, FaChartLine } from 'react-icons/fa';
+import { FaGamepad, FaUsers, FaRocket, FaChartLine } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 // Servizi completi dal sito originale
@@ -59,10 +59,10 @@ const aboutSections = [
     content: (
       <div className="space-y-3">
         <p className="text-sm font-bold text-white bg-[var(--purple-deep)]/90 p-3 rounded-lg shadow-sm" data-component-name="MobileOptimizedPage">
-          "Trasformare ogni attività in una esperienza coinvolgente" - questa è la missione che guida XP-L4B.
+          &quot;Trasformare ogni attività in una esperienza coinvolgente&quot; - questa è la missione che guida XP-L4B.
         </p>
         <p className="text-sm font-bold text-white bg-[var(--purple-deep)]/90 p-3 rounded-lg shadow-sm" data-component-name="MobileOptimizedPage">
-          L'83% dei dipendenti che partecipano ad attività ludiche sono più motivati. Le nostre sessioni formative gamificate aumentano il coinvolgimento e la produttività in azienda del 50-60%.
+          L&apos;83% dei dipendenti che partecipano ad attività ludiche sono più motivati. Le nostre sessioni formative gamificate aumentano il coinvolgimento e la produttività in azienda del 50-60%.
         </p>
       </div>
     ),
@@ -76,13 +76,13 @@ const aboutSections = [
         <div className="flex items-start gap-2">
           <span className="text-[var(--aqua-green)] text-lg">•</span>
           <div className="text-white bg-[var(--purple-deep)]/90 p-2 rounded-lg shadow-sm flex-1">
-            <strong className="emerald-text">Innovazione</strong>: Esploriamo costantemente nuove tecnologie e metodologie per offrire esperienze all'avanguardia.
+            <strong className="emerald-text">Innovazione</strong>: Esploriamo costantemente nuove tecnologie e metodologie per offrire esperienze all&apos;avanguardia.
           </div>
         </div>
         <div className="flex items-start gap-2">
           <span className="text-[var(--aqua-green)] text-lg">•</span>
           <div className="text-white bg-[var(--purple-deep)]/90 p-2 rounded-lg shadow-sm flex-1">
-            <strong className="emerald-text">Coinvolgimento</strong>: Crediamo che l'apprendimento e la crescita avvengano attraverso esperienze coinvolgenti e memorabili.
+            <strong className="emerald-text">Coinvolgimento</strong>: Crediamo che l&apos;apprendimento e la crescita avvengano attraverso esperienze coinvolgenti e memorabili.
           </div>
         </div>
         <div className="flex items-start gap-2">
@@ -143,7 +143,7 @@ const flipCardsData = [
       <>
         <div className="text-4xl mb-4">👨‍💼</div>
         <h3 className="text-xl font-bold text-white mb-2">Employer Branding</h3>
-        <p className="text-sm font-medium text-white/90">Scopri come migliorare l'immagine aziendale e il coinvolgimento</p>
+        <p className="text-sm font-medium text-white/90">Scopri come migliorare l&apos;immagine aziendale e il coinvolgimento</p>
       </>
     ),
     back: (
@@ -151,7 +151,7 @@ const flipCardsData = [
         <h3 className="text-xl font-bold mb-3 text-accent" data-component-name="FlipCard">Employer Branding</h3>
         <p className="text-sm font-medium text-white" data-component-name="FlipCard">
           Il 95% delle persone in Italia non si sente coinvolto sul lavoro. 
-          Le nostre soluzioni gamificate migliorano l'immagine aziendale e aumentano il senso di appartenenza del 60%.
+          Le nostre soluzioni gamificate migliorano l&apos;immagine aziendale e aumentano il senso di appartenenza del 60%.
         </p>
       </>
     ),
@@ -163,7 +163,7 @@ const flipCardsData = [
       <>
         <div className="text-4xl mb-4">🎓</div>
         <h3 className="text-xl font-bold text-white mb-2">SVILUPPO COMPETENZE</h3>
-        <p className="text-sm font-medium text-white/90">Trasforma la formazione in un'esperienza coinvolgente</p>
+        <p className="text-sm font-medium text-white/90">Trasforma la formazione in un&apos;esperienza coinvolgente</p>
       </>
     ),
     back: (
@@ -171,7 +171,7 @@ const flipCardsData = [
         <h3 className="text-xl font-bold mb-3 text-accent" data-component-name="FlipCard">Formazione Efficace</h3>
         <p className="text-sm font-medium text-white" data-component-name="FlipCard">
           Il 70% degli investimenti in formazione è inefficiente. 
-          I nostri percorsi gamificati aumentano l'efficacia dell'apprendimento del 50-60% e migliorano la ritenzione delle informazioni.
+          I nostri percorsi gamificati aumentano l&apos;efficacia dell&apos;apprendimento del 50-60% e migliorano la ritenzione delle informazioni.
         </p>
       </>
     ),
@@ -183,7 +183,7 @@ const flipCardsData = [
       <>
         <div className="text-4xl mb-4">🤖</div>
         <h3 className="text-xl font-bold text-white mb-2">AI Prompting</h3>
-        <p className="text-sm font-medium text-white/90">Sviluppa competenze nell'era dell'intelligenza artificiale</p>
+        <p className="text-sm font-medium text-white/90">Sviluppa competenze nell&apos;era dell&apos;intelligenza artificiale</p>
       </>
     ),
     back: (
@@ -266,7 +266,7 @@ const MobileOptimizedPage: React.FC = () => {
           style={{ color: 'var(--aqua-green)' }}
           data-component-name="MotionComponent"
         >
-          TRASFORMIAMO OGNI ATTIVITÀ IN UN'ESPERIENZA COINVOLGENTE
+          TRASFORMIAMO OGNI ATTIVITÀ IN UN&apos;ESPERIENZA COINVOLGENTE
         </motion.h1>
         
         <motion.p
@@ -410,9 +410,9 @@ const MobileOptimizedPage: React.FC = () => {
         <div className="absolute bottom-0 left-0 w-32 h-32 bg-[var(--aqua-green)]/20 rounded-full blur-xl"></div>
         
         <div className="text-center relative z-10">
-          <h2 className="text-2xl font-bold mb-4 text-[var(--aqua-green)] drop-shadow-lg">Pronti a Rivoluzionare l'Engagement?</h2>
+          <h2 className="text-2xl font-bold mb-4 text-[var(--aqua-green)] drop-shadow-lg">Pronti a Rivoluzionare l&apos;Engagement?</h2>
           <p className="text-white mb-8 text-base font-medium max-w-xs mx-auto" style={{ textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>
-            L'83% dei dipendenti che partecipano ai nostri programmi gamificati mostrano una maggiore motivazione e produttività.
+            L&apos;83% dei dipendenti che partecipano ai nostri programmi gamificati mostrano una maggiore motivazione e produttività.
           </p>
           
           <motion.button

@@ -25,7 +25,7 @@ const FlipCard: React.FC<FlipCardProps> = ({
   return (
     <div 
       className="w-full perspective-1000 cursor-pointer" 
-      style={{ height }}
+      style={{ height, background: isFlipped ? 'transparent' : frontBgColor }}
       onClick={toggleFlip}
     >
       <motion.div

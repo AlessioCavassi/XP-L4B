@@ -2,12 +2,12 @@
 
 import React from 'react';
 import Header from '@/components/Header';
-import BlogSection from '@/components/BlogSection';
 import Footer from '@/components/Footer';
 import CustomCursor from '@/components/CustomCursor';
 import ParticlesBackground from '@/components/ParticlesBackground';
 import MobileNavSwipe from '@/components/MobileNavSwipe';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 export default function BlogPage() {
   return (
@@ -42,9 +42,9 @@ export default function BlogPage() {
                 transition={{ delay: 0.4 }}
                 className="mt-8"
               >
-                <a href="/" className="bg-[var(--aqua-green)] text-[var(--purple-deep)] font-heading py-3 px-8 rounded-full transition-all duration-300 inline-block text-lg hover:bg-[var(--blue)] shadow-lg hover:shadow-xl">
+                <Link href="/" className="bg-[var(--aqua-green)] text-[var(--purple-deep)] font-heading py-3 px-8 rounded-full transition-all duration-300 inline-block text-lg hover:bg-[var(--blue)] shadow-lg hover:shadow-xl">
                   TORNA ALLA HOME
-                </a>
+                </Link>
               </motion.div>
             </motion.div>
           </div>

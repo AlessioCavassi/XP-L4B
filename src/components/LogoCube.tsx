@@ -9,7 +9,6 @@ interface LogoCubeProps {
 const LogoCube: React.FC<LogoCubeProps> = ({ className = '' }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [hover, setHover] = useState(false);
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   
   // Auto-rotation state
   const autoRotateX = useMotionValue(0);
@@ -52,15 +51,12 @@ const LogoCube: React.FC<LogoCubeProps> = ({ className = '' }) => {
     const handleMouseMove = (e: MouseEvent) => {
       if (!containerRef.current || !hover) return;
       
-      const rect = containerRef.current.getBoundingClientRect();
-      const centerX = rect.left + rect.width / 2;
-      const centerY = rect.top + rect.height / 2;
+      const centerX = containerRef.current.offsetLeft + containerRef.current.offsetWidth / 2;
+      const centerY = containerRef.current.offsetTop + containerRef.current.offsetHeight / 2;
       
       // Get mouse position relative to center of cube
       const x = (e.clientX - centerX) / 25; // Divisor controls sensitivity
       const y = (e.clientY - centerY) / 25;
-      
-      setMousePosition({ x, y });
       
       // Set rotation based on mouse position
       rotateX.set(-y); // Invert Y for natural movement
@@ -79,7 +75,6 @@ const LogoCube: React.FC<LogoCubeProps> = ({ className = '' }) => {
     const handleScroll = () => {
       if (!containerRef.current) return;
       
-      const rect = containerRef.current.getBoundingClientRect();
       const scrollY = window.scrollY;
       
       // Add very subtle rotation based on scroll position

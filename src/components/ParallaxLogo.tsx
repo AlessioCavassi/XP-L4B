@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { motion, useScroll, useTransform, useAnimation } from 'framer-motion';
+import { motion, useAnimation } from 'framer-motion';
+import Image from 'next/image';
 
 interface ParallaxLogoProps {
   opacity?: number;
@@ -60,9 +61,11 @@ const ParallaxLogo: React.FC<ParallaxLogoProps> = ({ opacity = 0.15 }) => {
             }
           }}
         >
-          <img 
+          <Image 
             src="/logo_XP_L4B_rgb_trasp_vert_col_payoff.png" 
             alt="XP-L4B Logo" 
+            width={500}
+            height={350}
             className="w-full h-auto"
             style={{
               filter: 'drop-shadow(0 0 20px rgba(101, 191, 176, 0.4))',

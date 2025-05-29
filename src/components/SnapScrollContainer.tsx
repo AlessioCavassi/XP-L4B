@@ -93,7 +93,7 @@ const SnapScrollContainer: React.FC<SnapScrollContainerProps> = ({ sections }) =
       >
         {sections.map((section, index) => (
           <div
-            key={section.id}
+            key={`section-${section.id}-${index}`}
             id={section.id}
             className="h-screen w-full snap-start snap-always"
             style={{ 

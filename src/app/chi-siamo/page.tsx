@@ -35,7 +35,7 @@ export default function ChiSiamoPage() {
               </h1>
               <div className="w-24 h-1 bg-[var(--aqua-green)] mx-auto mb-6"></div>
               <p className="text-xl text-white/80 max-w-3xl mx-auto">
-                Un team appassionato di esperti in formazione, gaming e tecnologie immersive.
+                Un team appassionato di esperti in formazione, gaming e tecnologie immersive. L&#39;azienda supporta la creazione di eventi gaming aziendali, sia digitali che in presenza.
               </p>
             </motion.div>
           </div>
@@ -65,11 +65,11 @@ export default function ChiSiamoPage() {
               >
                 <h3 className="text-2xl font-heading mb-4 text-[var(--purple-deep)]">La Nostra Missione</h3>
                 <p className="mb-4 text-gray-700">
-                  "Trasformare ogni attività in una esperienza coinvolgente" - questa è la missione che guida XP-L4B. 
+                  &quot;Trasformare ogni attività in una esperienza coinvolgente&quot; - questa è la missione che guida XP-L4B. 
                   Crediamo fermamente che attraverso il gioco e le tecnologie immersive si possano risolvere problematiche aziendali reali.
                 </p>
                 <p className="text-gray-700">
-                  Il nostro approccio permette di aumentare l'engagement e migliorare i risultati formativi, 
+                  Il nostro approccio permette di aumentare l&apos;engagement e migliorare i risultati formativi, 
                   creando un ambiente di lavoro più stimolante e produttivo.
                 </p>
               </motion.div>
@@ -87,14 +87,14 @@ export default function ChiSiamoPage() {
                     <span className="text-[var(--aqua-green)] mr-3 text-xl">●</span>
                     <div>
                       <h4 className="font-bold mb-1">Innovazione</h4>
-                      <p className="text-gray-700">Esploriamo costantemente nuove tecnologie e metodologie per offrire esperienze all'avanguardia.</p>
+                      <p className="text-gray-700">Esploriamo costantemente nuove tecnologie e metodologie per offrire esperienze all&apos;avanguardia.</p>
                     </div>
                   </li>
                   <li className="flex items-start">
                     <span className="text-[var(--aqua-green)] mr-3 text-xl">●</span>
                     <div>
                       <h4 className="font-bold mb-1">Coinvolgimento</h4>
-                      <p className="text-gray-700">Crediamo che l'apprendimento e la crescita avvengano attraverso esperienze coinvolgenti e memorabili.</p>
+                      <p className="text-gray-700">Crediamo che l&apos;apprendimento e la crescita avvengano attraverso esperienze coinvolgenti e memorabili.</p>
                     </div>
                   </li>
                   <li className="flex items-start">

@@ -35,7 +35,7 @@ export default function ServiziPage() {
               </h1>
               <div className="w-24 h-1 bg-[var(--aqua-green)] mx-auto mb-6"></div>
               <p className="text-xl text-white/80 max-w-3xl mx-auto">
-                Trasformiamo ogni attività in un'esperienza coinvolgente attraverso tecnologie innovative e approcci gamificati.
+                Trasformiamo ogni attività in un&apos;esperienza coinvolgente attraverso tecnologie innovative e approcci gamificati.
               </p>
             </motion.div>
           </div>
@@ -65,7 +65,7 @@ export default function ServiziPage() {
               >
                 <h3 className="text-2xl font-heading mb-4 text-[var(--purple-deep)]">Formazione Gamificata</h3>
                 <p className="mb-4 text-gray-700">
-                  L'83% dei dipendenti che partecipano ad attività ludiche sono più motivati. Le nostre sessioni formative gamificate aumentano il coinvolgimento e la produttività in azienda del 50-60%.
+                  L&apos;83% dei dipendenti che partecipano ad attività ludiche sono più motivati. Le nostre sessioni formative gamificate aumentano il coinvolgimento e la produttività in azienda del 50-60%.
                 </p>
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-start">

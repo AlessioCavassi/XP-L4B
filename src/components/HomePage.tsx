@@ -10,7 +10,6 @@ import Footer from './Footer';
 import CustomCursor from './CustomCursor';
 import ParticlesBackground from './ParticlesBackground';
 import ParallaxLogo from './ParallaxLogo';
-import LogoCube from './LogoCube';
 import LogosSection from './blocks/LogosSection';
 import MobileNavSwipe from './MobileNavSwipe';
 import MobileOptimizedPage from './MobileOptimizedPage';
@@ -66,7 +65,7 @@ const HomePage: React.FC = () => {
             >
               <h2 className="text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[var(--purple-deep)] to-[var(--purple-light)]">I Nostri Servizi</h2>
               <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-                Trasformiamo ogni attività in un'esperienza coinvolgente attraverso tecnologie innovative e approcci gamificati.
+                Trasformiamo ogni attività in un&apos;esperienza coinvolgente attraverso tecnologie innovative e approcci gamificati.
               </p>
             </motion.div>
             <ServicesSection />
