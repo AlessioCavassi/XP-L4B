@@ -6,7 +6,13 @@ export function OrganizationJsonLd() {
     '@type': 'Organization',
     name: 'XP-L4B',
     url: 'https://www.xpl4b.com',
-    logo: 'https://www.xpl4b.com/logo_XP_L4B_rgb_trasp_vert_col_payoff.png',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://www.xpl4b.com/logo_XP_L4B_rgb_trasp_vert_col_payoff.png',
+      width: '500',
+      height: '350',
+      caption: 'XP-L4B - enhance & engage'
+    },
     slogan: 'enhance & engage',
     description: 'XP-L4B è leader in formazione gamificata e tecnologie VR/AR. Trasformiamo ogni attività in un\'esperienza coinvolgente con soluzioni innovative che aumentano il coinvolgimento e la produttività del 50-60%.',
     address: {
@@ -51,11 +57,7 @@ export function WebSiteJsonLd() {
     url: 'https://www.xpl4b.com',
     potentialAction: {
       '@type': 'SearchAction',
-      target: {
-        '@type': 'EntryPoint',
-        urlTemplate: 'https://www.xpl4b.com/search?q={search_term_string}'
-      },
-      'query-input': 'required name=search_term_string'
+      target: 'https://www.xpl4b.com/search?q={search_term_string}'
     },
     description: 'XP-L4B è leader in formazione gamificata e tecnologie VR/AR che aumentano il coinvolgimento e la produttività del 50-60%',
     inLanguage: 'it-IT'

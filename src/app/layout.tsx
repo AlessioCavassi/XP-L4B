@@ -42,9 +42,9 @@ export const metadata: Metadata = {
     siteName: "XP-L4B",
     images: [
       {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
+        url: "/logo_XP_L4B_rgb_trasp_vert_col_payoff.png",
+        width: 500,
+        height: 350,
         alt: "XP-L4B Logo e Slogan: enhance & engage",
       },
     ],
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     title: "XP-L4B | Formazione Gamificata & Tecnologie VR/AR",
     description: "Trasformiamo ogni attività in un'esperienza coinvolgente con tecnologie innovative VR/AR e formazione gamificata",
     creator: "@XPL4B",
-    images: ["/og-image.png"],
+    images: ["/logo_XP_L4B_rgb_trasp_vert_col_payoff.png"],
   },
   robots: {
     index: true,
