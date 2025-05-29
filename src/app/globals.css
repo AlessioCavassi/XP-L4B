@@ -1,75 +1,24 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Sulphur+Point:wght@400;700&display=swap');
 
-:root {
-  /* XP-L4B Brand Colors */
-  --purple-deep: #2D2655;
-  --purple-light: #594694;
-  --blue: #2F92B3;
-  --aqua-green: #65BFB0;
-  --gray: #B3B3B3;
-  
-  /* Default theme variables */
-  --background: #ffffff;
-  --foreground: var(--purple-deep);
-  
-  /* Layout variables */
-  --header-height: 80px;
-  --footer-height: 300px;
-}
+/* Importa i file CSS organizzati */
+@import "../styles/theme.css";
+@import "../styles/base.css";
+@import "../styles/desktop.css";
+@import "../styles/mobile.css";
+@import "../styles/components.css";
 
-/* Theme variables */
-:root {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-primary: var(--purple-deep);
-  --color-secondary: var(--purple-light);
-  --color-accent: var(--blue);
-  --color-highlight: var(--aqua-green);
-  --color-neutral: var(--gray);
-  
-  /* Fonts */
-  --font-heading: 'Orbitron', sans-serif;
-  --font-body: 'Sulphur Point', sans-serif;
-}
-
-/* Dark mode */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #1a1528;
-    --foreground: #ffffff;
-  }
-}
-
-/* Play mode (will be toggled via JS) */
-.play-mode {
-  --background: #2D2655;
-  --foreground: #ffffff;
-  /* Animazioni più accentuate */
-  --transition-speed: 0.3s;
-  --border-radius: 12px;
-  --card-shadow: 0 8px 25px rgba(101, 191, 176, 0.25);
-  --card-hover-transform: translateY(-10px) scale(1.03);
-  cursor: none !important; /* Forza il custom cursor in Play Mode */
-}
-
-/* Play Mode specifici stili per elementi interattivi */
-.play-mode .interactive {
-  transform: scale(1.02);
-  transition: all 0.35s cubic-bezier(0.17, 0.67, 0.83, 0.67);
-}
-
-.play-mode .interactive:hover {
-  transform: translateY(-12px) scale(1.07);
-  box-shadow: 0 15px 35px rgba(101, 191, 176, 0.4);
-}
-
-.play-mode button, 
-.play-mode a {
-  transition: transform 0.4s cubic-bezier(0.17, 0.67, 0.83, 0.67), 
-              background-color 0.3s ease, 
-              box-shadow 0.3s ease;
-}
+/* 
+ * Sistema CSS organizzato per XP-Lab
+ * -----------------------------
+ * 1. theme.css: Variabili CSS e tema
+ * 2. base.css: Stili di base per tutti i dispositivi
+ * 3. desktop.css: Stili specifici per desktop
+ * 4. mobile.css: Stili specifici per mobile
+ * 5. components.css: Stili specifici per componenti e animazioni
+ * 
+ * Questa organizzazione permette una manutenzione più semplice
+ * e risolve i conflitti tra stili desktop e mobile.
+ */
 
 .play-mode button:hover, 
 .play-mode a:hover {
@@ -99,12 +48,43 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-body);
-  overflow-x: hidden;
+  font-size: 16px;
+  line-height: 1.5;
   transition: background-color 0.5s ease, color 0.5s ease;
 }
 
+/* Classi di utilità per i font */
+.font-heading {
+  font-family: var(--font-heading) !important;
+}
+
+.font-body {
+  font-family: var(--font-body) !important;
+}
+
+/* Applicazione tipografica strategica */
+h1, h2, h3, .heading-text, button.cta, .tech-title {
+  font-family: var(--font-heading) !important;
+  letter-spacing: 0.02em;
+}
+
+p, .body-text, span:not(.tech-text), div.text-content {
+  font-family: var(--font-body) !important;
+}
+
+/* Font specifici per elementi tech/futuristici */
+.tech-text, .stat-number, .feature-title, .title, .service-title {
+  font-family: var(--font-heading) !important;
+}
+
+/* Override per garantire che Oxanium sia usato nei titoli */
+[class*="text-xl"][class*="font-bold"],
+[class*="text-2xl"],
+[class*="text-3xl"] {
+  font-family: var(--font-heading) !important;
+}
+
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading);
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -178,4 +158,199 @@ h1, h2, h3, h4, h5, h6 {
 .reveal.active {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Cyber Team Cards Styling */
+.cyber-card {
+  box-shadow: 0 7px 25px rgba(43, 38, 85, 0.4);
+  transition: all 0.3s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  position: relative;
+}
+
+.cyber-glitch {
+  position: relative;
+  text-shadow: 0 0 8px rgba(101, 191, 176, 0.6);
+}
+
+.cyber-glitch::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: calc(100% + 6px);
+  height: calc(100% + 6px);
+  background: linear-gradient(90deg, var(--aqua-green), var(--blue), var(--purple-light), var(--aqua-green));
+  background-size: 300% 100%;
+  border-radius: 5px;
+  z-index: -2;
+  animation: cyber-border 5s ease alternate infinite;
+  opacity: 0.5;
+}
+
+.cyber-line {
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--aqua-green), transparent);
+  margin: 0.5rem auto 2rem;
+  position: relative;
+}
+
+.cyber-line::before {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--aqua-green);
+  top: -2px;
+  left: calc(50% - 3px);
+  box-shadow: 0 0 10px 2px rgba(101, 191, 176, 0.8);
+}
+
+/* Cyberpunk grid backgrounds */
+.cyberpunk-grid {
+  background-image: linear-gradient(rgba(47, 146, 179, 0.2) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(47, 146, 179, 0.2) 1px, transparent 1px);
+  background-size: clamp(10px, 1.5vw, 25px) clamp(10px, 1.5vw, 25px);
+  background-position: center;
+  background-repeat: repeat;
+  width: 100%;
+  height: 100%;
+}
+
+.grid-overlay {
+  background-size: 30px 30px;
+  background-image: 
+    linear-gradient(to right, var(--purple-light) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--purple-light) 1px, transparent 1px);
+}
+
+/* Social icon cyber style */
+.social-icon-cyber {
+  width: 36px;
+  height: 36px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.2s;
+  overflow: hidden;
+  border: 1px solid var(--aqua-green);
+}
+
+.social-icon-cyber:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px rgba(101, 191, 176, 0.5);
+}
+
+.cyber-icon-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent, var(--blue), transparent);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.social-icon-cyber:hover .cyber-icon-bg {
+  opacity: 0.2;
+}
+
+/* Animation effects */
+.pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.pulse-subtle {
+  animation: pulse-subtle 3s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.7; box-shadow: 0 0 5px var(--aqua-green); }
+  50% { opacity: 1; box-shadow: 0 0 12px var(--aqua-green); }
+}
+
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.7; }
+}
+
+@keyframes cyber-border {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+/* Hexagon shape for profile images */
+.hexagon-shape {
+  clip-path: polygon(50% 0%, 90% 25%, 90% 75%, 50% 100%, 10% 75%, 10% 25%);
+}
+
+/* Skill Tree / Tech Tree animations and effects */
+.skill-node-panel {
+  transition: all 0.4s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+}
+
+.skill-node-panel:hover {
+  transform: translateY(-5px);
+}
+
+.glow-line {
+  box-shadow: 0 0 15px rgba(101, 191, 176, 0.5);
+}
+
+/* Analytics dashboard effects */
+.analytics-line {
+  stroke-dasharray: 150;
+  stroke-dashoffset: 150;
+  animation: draw-line 2s ease-out forwards;
+}
+
+.analytics-point {
+  opacity: 0;
+  animation: fade-in 0.5s ease-out forwards;
+  animation-delay: 1.5s;
+}
+
+.shimmer-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-effect::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  animation: shimmer 2s infinite;
+}
+
+/* Tech Tree Animations */
+@keyframes draw-line {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes shimmer {
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes animate-pulse {
+  0%, 100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
 }

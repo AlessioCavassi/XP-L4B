@@ -1,12 +1,14 @@
 import React from 'react';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 interface LogoProps {
   className?: string;
   animated?: boolean;
+  useHorizontal?: boolean;
 }
 
-const Logo: React.FC<LogoProps> = ({ className = '', animated = true }) => {
+const Logo: React.FC<LogoProps> = ({ className = '', animated = true, useHorizontal = false }) => {
   // Define animation variants
   const logoVariants = {
     initial: { scale: 0.9, opacity: 0.8 },
@@ -24,7 +26,41 @@ const Logo: React.FC<LogoProps> = ({ className = '', animated = true }) => {
     ease: "easeInOut",
   };
 
-  // D20 dice shape as SVG
+  if (useHorizontal) {
+    return (
+      <div className={`logo-container ${className}`}>
+        {animated ? (
+          <motion.div
+            initial="initial"
+            animate="animate"
+            variants={logoVariants}
+            transition={logoTransition}
+            className="logo-wrapper relative"
+          >
+            <Image 
+              src="/logo_XP_L4B_rgb_trasp_oriz_col_payoff.png" 
+              alt="XP-L4B Logo" 
+              width={200} 
+              height={60} 
+              className="w-auto h-auto" 
+            />
+          </motion.div>
+        ) : (
+          <div className="logo-wrapper relative">
+            <Image 
+              src="/logo_XP_L4B_rgb_trasp_oriz_col_payoff.png" 
+              alt="XP-L4B Logo" 
+              width={200} 
+              height={60} 
+              className="w-auto h-auto" 
+            />
+          </div>
+        )}
+      </div>
+    );
+  }
+
+  // D20 dice shape as SVG for small icon
   return (
     <div className={`logo-container ${className}`}>
       {animated ? (
@@ -100,7 +136,6 @@ const Logo: React.FC<LogoProps> = ({ className = '', animated = true }) => {
           </svg>
         </div>
       )}
-
     </div>
   );
 };

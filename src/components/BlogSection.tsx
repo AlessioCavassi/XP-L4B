@@ -86,20 +86,6 @@ const BlogSection: React.FC = () => {
       <div className="polygon-bg opacity-5"></div>
       
       <div className="container mx-auto px-4 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading text-[var(--purple-deep)] mb-4">BLOG & RISORSE</h2>
-          <div className="w-24 h-1 bg-[var(--aqua-green)] mx-auto mb-6"></div>
-          <p className="text-gray-400">Don&apos;t miss our latest articles and insights.</p>
-          <p className="text-lg text-[var(--purple-deep)]/70 max-w-2xl mx-auto">
-            Approfondimenti, guide e tendenze su gamification, VR, AR e formazione interattiva.
-          </p>
-        </motion.div>
 
         <motion.div
           variants={containerVariants}

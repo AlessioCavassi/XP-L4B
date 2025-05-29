@@ -1,0 +1,37 @@
+/* XP-LAB Theme Variables */
+:root {
+  /* Brand Colors */
+  --purple-deep: #2D2655;
+  --purple-light: #594694;
+  --blue: #2F92B3;
+  --aqua-green: #65BFB0;
+  --gray: #B3B3B3;
+  
+  /* Semantic Colors */
+  --background: #ffffff;
+  --foreground: #2D2655;
+  --text-on-dark: #ffffff;
+  --text-on-light: #2D2655;
+  --accent: #65BFB0;
+  --accent-secondary: #594694;
+  
+  /* Typography */
+  --font-heading: 'Oxanium', sans-serif;
+  --font-body: 'Exo 2', sans-serif;
+  
+  /* Layout */
+  --header-height: 80px;
+  --footer-height: 300px;
+  
+  /* Effects */
+  --text-shadow-dark: 0 1px 2px rgba(0,0,0,0.3);
+  --card-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #1a1528;
+    --foreground: #ffffff;
+  }
+}

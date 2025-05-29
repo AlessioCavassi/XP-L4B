@@ -1,0 +1,57 @@
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  /* Base typography for mobile */
+  * {
+    -webkit-text-size-adjust: 100%;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    text-shadow: var(--text-shadow-dark);
+  }
+  
+  p {
+    font-weight: 500;
+  }
+  
+  /* Container adjustments */
+  .container {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+  }
+  
+  /* Mobile hero section */
+  .hero-section p,
+  .hero-section span:not(.text-accent) {
+    color: white !important;
+    text-shadow: var(--text-shadow-dark);
+  }
+  
+  /* Service cards on mobile */
+  .service-card p,
+  .flip-card p {
+    color: white !important;
+    text-shadow: var(--text-shadow-dark);
+  }
+  
+  /* Mobile service section specific */
+  [data-component-name="MobileServiceCards"],
+  #mobileServiceSection p,
+  #mobileServiceSection div p,
+  .mobile-service-desc {
+    color: white !important;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.7) !important;
+    -webkit-text-fill-color: white !important;
+  }
+  
+  /* Headers with accent color on mobile */
+  [data-component-name="MotionComponent"] h1,
+  [data-component-name="MobileOptimizedPage"] h2 {
+    color: var(--accent) !important;
+    text-shadow: var(--text-shadow-dark);
+  }
+}

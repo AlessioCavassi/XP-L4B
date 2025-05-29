@@ -2,7 +2,11 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa';
 
-const ContactSection: React.FC = () => {
+interface ContactSectionProps {
+  isInPopup?: boolean;
+}
+
+const ContactSection: React.FC<ContactSectionProps> = ({ isInPopup = false }) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -50,7 +54,10 @@ const ContactSection: React.FC = () => {
   };
 
   return (
-    <section id="contatti" className="py-20 relative bg-[var(--purple-deep)] text-white overflow-hidden">
+    <section 
+      id={!isInPopup ? "contatti" : undefined}
+      className={`relative ${isInPopup ? 'py-12' : 'py-20'} bg-[var(--purple-deep)] text-white overflow-hidden`}
+    >
       {/* Background elements */}
       <div className="polygon-bg opacity-10"></div>
       
@@ -58,20 +65,13 @@ const ContactSection: React.FC = () => {
       <div className="absolute top-0 right-0 w-0 h-0 border-t-[100px] border-r-[100px] border-t-transparent border-r-[var(--aqua-green)] opacity-40"></div>
       <div className="absolute bottom-0 left-0 w-0 h-0 border-b-[100px] border-l-[100px] border-b-transparent border-l-[var(--blue)] opacity-40"></div>
       
-      <div className="container mx-auto px-4 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading text-white mb-4">CONTATTACI</h2>
-          <div className="w-24 h-1 bg-[var(--aqua-green)] mx-auto mb-6"></div>
-          <p className="text-lg text-white/80 max-w-3xl mx-auto">
-            In Italia solo il <span className="font-bold text-[var(--aqua-green)]">5% dei lavoratori</span> si sente coinvolto rispetto alla media mondiale del 37%. Parliamo di come possiamo trasformare questa sfida in un&apos;opportunità per la tua azienda.
-          </p>
-        </motion.div>
+      <div className={`${isInPopup ? 'px-4' : 'container mx-auto px-4'} relative z-10`}>
+        {isInPopup && (
+          <div className="text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-heading mb-4 text-white">CONTATTACI</h2>
+            <div className="w-24 h-1 bg-[var(--aqua-green)] mx-auto mb-6"></div>
+          </div>
+        )}
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <motion.div
@@ -168,7 +168,7 @@ const ContactSection: React.FC = () => {
                     <option value="vr">Realtà Virtuale</option>
                     <option value="ar">Realtà Aumentata</option>
                     <option value="gamification">Gamification</option>
-                    <option value="training">Formazione Interattiva</option>
+                    <option value="training">Reskilling e Upskilling</option>
                     <option value="team-building">Team Building Digitale</option>
                     <option value="other">Altro</option>
                   </select>
@@ -224,15 +224,7 @@ const ContactSection: React.FC = () => {
             <h3 className="text-2xl font-heading mb-6">CONTATTA IL TEAM XP-L4B</h3>
             
             <div className="space-y-8">
-              <div className="flex items-start">
-                <div className="bg-[var(--purple-light)] p-3 rounded-full mr-4">
-                  <FaMapMarkerAlt size={24} />
-                </div>
-                <div>
-                  <h4 className="text-lg font-heading mb-1">Sede principale</h4>
-                  <p className="text-white/80">Via dell&apos;Innovazione, 42<br />20129 Milano, Italia</p>
-                </div>
-              </div>
+              {/* Elemento di posizione rimosso */}
               
               <div className="flex items-start">
                 <div className="bg-[var(--purple-light)] p-3 rounded-full mr-4">
@@ -240,7 +232,7 @@ const ContactSection: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="text-lg font-heading mb-1">Telefono</h4>
-                  <p className="text-white/80">+39 02 1234 5678</p>
+                  <p className="text-white/80">+39 3518800106</p>
                 </div>
               </div>
               
@@ -250,7 +242,7 @@ const ContactSection: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="text-lg font-heading mb-1">Email</h4>
-                  <p className="text-white/80">info@riccardomangano.org</p>
+                  <p className="text-white/80">riccardo@xpl4b.com</p>
                 </div>
               </div>
 
@@ -258,26 +250,20 @@ const ContactSection: React.FC = () => {
                 <h4 className="text-lg font-heading mb-4">Seguici sui social</h4>
                 <div className="flex space-x-4">
                   <a 
-                    href="https://linkedin.com" 
+                    href="https://www.linkedin.com/company/xp-l4b/" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="bg-[var(--purple-light)] p-3 rounded-full hover:bg-[var(--aqua-green)] transition-colors duration-300"
+                    aria-label="LinkedIn XP-L4B"
                   >
                     <FaLinkedin size={20} />
                   </a>
                   <a 
-                    href="https://twitter.com" 
+                    href="https://www.instagram.com/xpl4b/" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="bg-[var(--purple-light)] p-3 rounded-full hover:bg-[var(--aqua-green)] transition-colors duration-300"
-                  >
-                    <FaTwitter size={20} />
-                  </a>
-                  <a 
-                    href="https://instagram.com" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="bg-[var(--purple-light)] p-3 rounded-full hover:bg-[var(--aqua-green)] transition-colors duration-300"
+                    aria-label="Instagram XP-L4B"
                   >
                     <FaInstagram size={20} />
                   </a>
@@ -288,7 +274,7 @@ const ContactSection: React.FC = () => {
                 <h4 className="text-lg font-heading mb-4">Orari di disponibilità</h4>
                 <div className="space-y-2 text-white/80">
                   <p>Lunedì - Venerdì: 9:00 - 18:00</p>
-                  <p>Sabato - Domenica: Chiuso</p>
+                  <p>Sabato - Domenica: Su appuntamento</p>
                 </div>
                 <p className="text-white/80 mt-4 text-sm italic">Risposta garantita entro 24 ore lavorative</p>
               </div>

@@ -18,44 +18,44 @@ const ServicesSection: React.FC = () => {
     {
       id: 1,
       title: 'Realtà Virtuale',
-      description: 'SafetyVR trasforma la formazione sulla sicurezza riducendo incidenti del 70%. Ideale per settori ad alto rischio: manifatturiero, sanitario, edile. Compatibile con Vision Pro per simulazioni immersive senza rischi reali.',
+      description: 'Collaboriamo con aziende partner per produrre ed utilizzare tecnologie inversive di realtà virtuale. SafetyVR è una piattaforma innovativa progettata per rivoluzionare la formazione sulla sicurezza sul lavoro attraverso la Realtà Virtuale (VR). Coinvolge i dipendenti in ambienti realistici e privi di rischi, dove possono esercitarsi epadroneggiare le procedure di sicurezza essenziali.',
       icon: <FaVrCardboard size={40} />,
-      color: 'var(--purple-light)'
+      color: 'var(--aqua-green)' // Cambiato da purple-light ad aqua-green per migliore contrasto
     },
     {
       id: 2,
       title: 'Realtà Aumentata',
-      description: 'ARStudio e Object Recognition arricchiscono l\'ambiente fisico con overlay informativi. Applicazioni: manutenzione industriale, training tecnico, eventi e marketing. ROI tipico: +300% engagement rispetto ai metodi tradizionali.',
+      description: 'Forniamo e ideamo soluzione di realtà aumentata 3DToMe, ARStudio e Object Recognition arricchiscono l\'ambiente fisico con overlay informativi. Applicazioni: manutenzione industriale, training tecnico, eventi e marketing. ROI tipico: +300% engagement rispetto ai metodi tradizionali.',
       icon: <FaGamepad size={40} />,
-      color: 'var(--blue)'
+      color: 'var(--aqua-green)' // Mantenuto aqua-green per coerenza con il tema tecnologico
     },
     {
       id: 3,
       title: 'Gamification',
       description: 'Meccaniche di gioco applicate ai processi aziendali: sistemi di punti, badge, classifiche e ricompense. Casi d\'uso: onboarding, corsi formativi, incentivazione team. Risultato: +83% motivazione e +72% performance misurabile.',
       icon: <FaLaptopCode size={40} />,
-      color: 'var(--aqua-green)'
+      color: 'var(--blue)' // Mantenuto blu per differenziare le categorie
     },
     {
       id: 4,
-      title: 'Formazione Interattiva',
-      description: 'Programmi formativi in competenze critiche: AI prompting, team work, problem solving e time management. Approccio: microcorsi, sessioni dal vivo e simulazioni interattive. Ritenzione informazioni: fino al 90% vs 20% formazione tradizionale.',
+      title: 'Percorsi di reskilling e upskilling',
+      description: 'Analizziamo il mercato del lavoro e delle competenze e creiamo percorsi di reskilling e upskilling.',
       icon: <FaChalkboardTeacher size={40} />,
-      color: 'var(--purple-deep)'
+      color: 'var(--blue)' // Cambiato da purple-deep a blue per migliore leggibilità
     },
     {
       id: 5,
       title: 'Team Building Digitale',
-      description: '3DToMe e Spatial Assistance creano ambienti virtuali condivisi per team remoti o ibridi. Ideale per: kick-off progetti, brainstorming, collaborative problem solving. Riduzione del 30% nel turnover dei dipendenti nei team partecipanti.',
+      description: 'Spatial Assistance creano ambienti virtuali condivisi per team remoti o ibridi. Ideale per: kick-off progetti, brainstorming, collaborative problem solving. Riduzione del 30% nel turnover dei dipendenti nei team partecipanti.',
       icon: <FaUsers size={40} />,
-      color: 'var(--purple-light)'
+      color: 'var(--aqua-green)' // Cambiato da purple-light ad aqua-green per migliore contrasto
     },
     {
       id: 6,
       title: 'Digital Engagement',
       description: 'Portal Gate integra elementi ludici nei processi aziendali quotidiani. Applicazioni: formazione continua, gestione progetti, comunicazione interna. Sfrutta l\'affinità con il gaming dell\'85-95% della forza lavoro under 40.',
       icon: <FaChartLine size={40} />,
-      color: 'var(--blue)'
+      color: 'var(--blue)' // Mantenuto blu per coerenza con il tema digitale
     },
   ];
 
@@ -90,19 +90,7 @@ const ServicesSection: React.FC = () => {
       <div className="polygon-bg opacity-5"></div>
 
       <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading text-white mb-4">I NOSTRI SERVIZI</h2>
-          <div className="w-24 h-1 bg-[var(--aqua-green)] mx-auto mb-6"></div>
-          <p className="text-lg text-white/80 max-w-3xl mx-auto mb-4">
-            Innoviamo l&apos;engagement digitale con soluzioni che trasformano formazione e comunicazione in esperienze memorabili.
-          </p>
-        </motion.div>
+        {/* Titolo e descrizione rimossi come richiesto */}
         
         <motion.div
           initial={{ opacity: 0, y: -10 }}
@@ -111,22 +99,22 @@ const ServicesSection: React.FC = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-center mb-16 bg-white/10 backdrop-blur-md rounded-xl p-6 max-w-4xl mx-auto"
         >
-          <h3 className="text-2xl font-heading text-[var(--aqua-green)] mb-4">PERCHÉ LA GAMIFICATION FUNZIONA</h3>
-          <p className="text-white/90 mb-4">
-            Il gioco è parte della natura umana. Integrando elementi ludici nei processi formativi sfruttiamo meccanismi psicologici fondamentali che stimolano motivazione, collaborazione e apprendimento. Corsi coinvolgenti che sfruttano meccaniche di gioco per aumentare la partecipazione e la ritenzione delle conoscenze, rendendo l&apos;apprendimento un&apos;esperienza piacevole ed efficace.
+          <h3 className="text-2xl font-heading text-white mb-4"> GAMIFICATION E SERIOUS GAMES</h3>
+          <p className="text-white !important mb-4">
+            Il <span className="text-[var(--aqua-green)]">gioco</span> è parte della <span className="text-[var(--aqua-green)]">natura umana</span>. Integrando elementi <span className="text-[var(--aqua-green)]">ludici e videoludici</span> nei contesti che di solito non li prevedono sfruttiamo meccanismi psicologici e neurologici che stimolano <span className="text-[var(--aqua-green)]">motivazione</span>, <span className="text-[var(--aqua-green)]">coinvolgimento</span> ed <span className="text-[var(--aqua-green)]">apprendimento</span>. Se <span className="text-[var(--aqua-green)]">ci divertiamo</span> quando facciamo qualcosa lo facciamo <span className="text-[var(--aqua-green)]">più volentieri</span>.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
             <div className="bg-white/5 p-4 rounded-lg">
-              <h4 className="text-[var(--aqua-green)] text-xl font-heading mb-2">83%</h4>
-              <p className="text-white/80 text-sm">Dei dipendenti in aziende con attività ludiche mostra maggiore motivazione</p>
+              <h4 className="text-white text-xl font-heading mb-2">83%</h4>
+              <p className="text-white !important text-sm">Dei dipendenti in aziende con <span className="text-[var(--aqua-green)]">attività ludiche</span> mostra <span className="text-[var(--aqua-green)]">maggiore motivazione</span></p>
             </div>
             <div className="bg-white/5 p-4 rounded-lg">
-              <h4 className="text-[var(--aqua-green)] text-xl font-heading mb-2">72%</h4>
-              <p className="text-white/80 text-sm">Registra un significativo aumento delle performance lavorative</p>
+              <h4 className="text-white text-xl font-heading mb-2">72%</h4>
+              <p className="text-white !important text-sm">Registra un <span className="text-[var(--aqua-green)]">significativo aumento</span> delle <span className="text-[var(--aqua-green)]">performance lavorative</span></p>
             </div>
             <div className="bg-white/5 p-4 rounded-lg">
-              <h4 className="text-[var(--aqua-green)] text-xl font-heading mb-2">90%</h4>
-              <p className="text-white/80 text-sm">Miglioramento nella ritenzione delle informazioni rispetto alla formazione tradizionale</p>
+              <h4 className="text-white text-xl font-heading mb-2">90%</h4>
+              <p className="text-white !important text-sm"><span className="text-[var(--aqua-green)]">Miglioramento dei risultati</span> rispetto alla formazione traadizionale</p>
             </div>
           </div>
         </motion.div>
@@ -164,7 +152,34 @@ const ServicesSection: React.FC = () => {
                 </div>
 
                 <h3 className="text-xl font-heading text-white mb-4">{service.title}</h3>
-                <p className="text-white/70">{service.description}</p>
+                <p className="text-white !important">
+                  {service.description.split(' ').map((word, i) => {
+                    // Parole da evidenziare per ciascun servizio
+                    const keywordsMap: Record<number, string[]> = {
+                      1: ['SafetyVR', 'Realtà Virtuale', 'formazione', 'sicurezza', 'realistici', 'privi di rischi'],
+                      2: ['Realtà Aumentata', '3DToMe', 'ARStudio', 'Object Recognition', '+300%', 'engagement'],
+                      3: ['Gamification', 'punti', 'badge', 'classifiche', 'ricompense', '+83%', 'motivazione', '+72%', 'performance'],
+                      4: ['reskilling', 'upskilling', 'competenze', 'mercato del lavoro'],
+                      5: ['Spatial Assistance', 'ambienti virtuali condivisi', 'team remoti', 'kick-off', 'brainstorming', '30%', 'turnover'],
+                      6: ['Portal Gate', 'ludici', 'processi aziendali', 'gaming', '85-95%']
+                    };
+                    
+                    // Verifica se esistono parole chiave per questo servizio
+                    const serviceKeywords = keywordsMap[service.id] || [];
+                    
+                    // Controlla se la parola attuale o parte di una frase sono parole chiave
+                    const isKeyword = serviceKeywords.some((keyword: string) => 
+                      word.toLowerCase().includes(keyword.toLowerCase()) || 
+                      (i < service.description.split(' ').length - 1 && 
+                        `${word} ${service.description.split(' ')[i+1]}`.toLowerCase().includes(keyword.toLowerCase()))
+                    );
+                    
+                    // Evidenzia la parola se è una keyword
+                    return isKeyword ? 
+                      <span key={i} className="text-[var(--aqua-green)] font-semibold">{word} </span> : 
+                      <span key={i}>{word} </span>;
+                  })}
+                </p>
                 
                 <motion.div 
                   className="mt-6 flex items-center text-[var(--aqua-green)] font-medium"

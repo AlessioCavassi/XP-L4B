@@ -36,22 +36,22 @@ const Header: React.FC = () => {
   const navItems = [
     { name: 'Home', path: '/' },
     { name: 'Servizi', path: '/servizi' },
-    { name: 'Case Studies', path: '/case-studies' },
     { name: 'Chi Siamo', path: '/chi-siamo' },
-    { name: 'Blog', path: '/blog' },
+    // { name: 'Blog', path: '/blog' }, // Temporaneamente disabilitato
     { name: 'Contatti', path: '/contatti' },
   ];
 
   return (
     <header
-      className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-[var(--purple-deep)] bg-opacity-90 backdrop-blur-md shadow-lg' : 'bg-transparent'}`}
+      className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-[#1a0d2e] bg-opacity-95 backdrop-blur-md shadow-lg' : 'bg-[#1a0d2e] bg-opacity-80'}`}
     >
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <Logo className="h-12 w-12" />
-            <span className="ml-2 text-xl font-heading hidden md:block">XP-L4B</span>
+            <div className="w-28 h-auto flex items-center justify-start overflow-hidden">
+              <Logo className="w-full" useHorizontal={true} animated={false} />
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
@@ -60,7 +60,7 @@ const Header: React.FC = () => {
               <Link
                 key={item.name}
                 href={item.path}
-                className="text-[var(--foreground)] hover:text-[var(--aqua-green)] font-body transition-colors duration-200"
+                className="font-body transition-colors duration-200 text-white hover:text-[var(--aqua-green)]"
               >
                 {item.name}
               </Link>
@@ -105,7 +105,7 @@ const Header: React.FC = () => {
                 <Link
                   key={item.name}
                   href={item.path}
-                  className="text-[var(--foreground)] hover:text-[var(--aqua-green)] font-body transition-colors duration-200 py-2"
+                  className={`font-body transition-colors duration-200 py-2 ${scrolled ? 'text-white hover:text-[var(--aqua-green)]' : 'text-[var(--foreground)] hover:text-[var(--aqua-green)]'}`}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.name}

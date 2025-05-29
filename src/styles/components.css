@@ -1,0 +1,138 @@
+/* Componenti specifici e animazioni */
+
+/* Text color utility classes with high specificity */
+.text-white {
+  color: white !important;
+}
+
+.text-accent {
+  color: var(--accent) !important;
+}
+
+/* Specific component text colors */
+[data-component-name="MobileOptimizedPage"] {
+  color: white !important;
+}
+
+p.text-white, 
+div p.text-white,
+[data-component-name="MobileOptimizedPage"] p {
+  color: white !important;
+}
+
+
+/* Play mode (will be toggled via JS) */
+.play-mode {
+  --background: #2D2655;
+  --foreground: #ffffff;
+  /* Animazioni più accentuate */
+  --transition-speed: 0.3s;
+  --border-radius: 12px;
+  --card-shadow: 0 8px 25px rgba(101, 191, 176, 0.25);
+  --card-hover-transform: translateY(-10px) scale(1.03);
+}
+
+/* Play Mode specifici stili per elementi interattivi */
+.play-mode .interactive {
+  transform: scale(1.02);
+  transition: all 0.35s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+}
+
+.play-mode button:hover, 
+.play-mode a:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 20px rgba(101, 191, 176, 0.4);
+}
+
+.play-mode button, 
+.play-mode a {
+  transition: transform 0.4s cubic-bezier(0.17, 0.67, 0.83, 0.67), 
+              background-color 0.3s ease, 
+              box-shadow 0.3s ease;
+}
+
+/* Corporate Mode - stile più sobrio e professionale */
+body:not(.play-mode) {
+  --transition-speed: 0.5s;
+  --border-radius: 4px;
+  --card-shadow: 0 5px 15px rgba(45, 38, 85, 0.1);
+  --card-hover-transform: translateY(-5px);
+}
+
+body:not(.play-mode) .interactive {
+  transition: all 0.5s ease;
+}
+
+body:not(.play-mode) .interactive:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(45, 38, 85, 0.15);
+}
+
+.play-mode .interactive:hover {
+  transform: translateY(-12px) scale(1.07);
+  box-shadow: 0 15px 35px rgba(101, 191, 176, 0.4);
+}
+
+.play-mode button, 
+.play-mode a {
+  transition: transform 0.4s cubic-bezier(0.17, 0.67, 0.83, 0.67), 
+              background-color 0.3s ease, 
+              box-shadow 0.3s ease;
+}
+
+/* Stili per sezioni espandibili */
+.overflow-hidden p {
+  color: var(--text-on-light) !important;
+  font-weight: 600 !important;
+}
+
+/* Apply default strong style but allow override with emerald-text class */
+.overflow-hidden strong:not(.WHITE-text) {
+  color: var(--text-on-light) !important;
+  font-weight: 700 !important;
+}
+
+/* Emerald green text for emphasized elements */
+.emerald-text,
+strong.emerald-text,
+.overflow-hidden strong.emerald-text,
+[data-component-name="MobileOptimizedPage"] strong.emerald-text {
+  color: #65BFB0 !important;
+  font-weight: bold !important;
+}
+
+/* Fix for h1 in MotionComponent to ensure aqua green color */
+[data-component-name="MotionComponent"],
+[data-component-name="MotionComponent"] h1 {
+  color: #65BFB0 !important;
+  -webkit-text-fill-color: #65BFB0 !important;
+}
+
+/* 3D Cube Styles */
+.perspective-800 {
+  perspective: 800px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+/* Cube with special glow effect */
+.cube-glow {
+  box-shadow: 0 0 15px rgba(101, 191, 176, 0.5);
+}
+
+.cube-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: rgba(29, 24, 54, 0.9);
+  backdrop-filter: blur(3px);
+  border: 1px solid rgba(101, 191, 176, 0.3);
+  cursor: none !important; /* Forza il custom cursor in Play Mode */
+}
