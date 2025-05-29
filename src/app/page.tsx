@@ -1,34 +1,18 @@
 'use client';
 
-import { Suspense, useEffect, useState } from 'react';
-import { useSearchParams } from 'next/navigation';
+import { Suspense } from 'react';
 import dynamic from 'next/dynamic';
 
-// Import components with SSR disabled to avoid window is not defined errors
-const ComingSoon = dynamic(() => import('../components/ComingSoon'), {
-  ssr: false,
-});
-
+// Import HomePage with SSR disabled to avoid window is not defined errors
 const HomePage = dynamic(() => import('../components/HomePage'), {
   ssr: false,
 });
 
-// Un componente client wrapper che usa useSearchParams all'interno di un Suspense boundary
+// Un componente client wrapper che ora mostra sempre la HomePage
 function HomeContentWrapper() {
-  const searchParams = useSearchParams();
-  const showFullParam = searchParams.get('full');
-  const [isLocalDevelopment, setIsLocalDevelopment] = useState(false);
-  
-  useEffect(() => {
-    // Controlla se siamo in ambiente di sviluppo locale
-    const host = window.location.hostname;
-    const isLocal = host === 'localhost' || host === '127.0.0.1' || host.includes('ngrok');
-    setIsLocalDevelopment(isLocal);
-  }, []);
-  
-  // In ambiente di sviluppo locale o con il parametro 'full', mostra la HomePage completa
-  // In produzione, mostra la pagina Coming Soon a meno che non sia specificato 'full'
-  return (isLocalDevelopment || showFullParam) ? <HomePage /> : <ComingSoon />;
+  // Non abbiamo più bisogno di controllare i parametri URL o l'ambiente
+  // Mostriamo sempre la HomePage completa
+  return <HomePage />;
 }
 
 // Componente principale che avvolge HomeContentWrapper in un Suspense boundary
