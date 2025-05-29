@@ -14,7 +14,7 @@ export function OrganizationJsonLd() {
       caption: 'XP-L4B - enhance & engage'
     },
     slogan: 'enhance & engage',
-    description: 'XP-L4B è leader in formazione gamificata e tecnologie VR/AR. Trasformiamo ogni attività in un\'esperienza coinvolgente con soluzioni innovative che aumentano il coinvolgimento e la produttività del 50-60%.',
+    description: 'XP-L4B è leader in sviluppo competenze tramite gamification, serious games e tecnologie VR/AR. Trasformiamo ogni attività in un\'esperienza coinvolgente con soluzioni innovative che aumentano il coinvolgimento e la produttività del 50-60%.',
     address: {
       '@type': 'PostalAddress',
       addressCountry: 'IT',
@@ -33,14 +33,17 @@ export function OrganizationJsonLd() {
       availableLanguage: ['Italian', 'English']
     },
     knowsAbout: [
-      'Formazione Gamificata',
+      'Sviluppo Competenze',
+      'Gamification',
+      'Serious Games',
+      'Game-Based Learning',
       'Realtà Virtuale',
       'Realtà Aumentata',
       'AI Prompting',
       'Team Building',
       'Employee Engagement'
     ],
-    keywords: 'formazione gamificata, VR, AR, realtà virtuale, realtà aumentata, engagement, gamification, teambuilding, AI prompting'
+    keywords: 'sviluppo competenze, gamification, serious games, game-based learning, VR, AR, realtà virtuale, realtà aumentata, engagement, teambuilding, AI prompting'
   };
 
   return <script
@@ -59,7 +62,7 @@ export function WebSiteJsonLd() {
       '@type': 'SearchAction',
       target: 'https://www.xpl4b.com/search?q={search_term_string}'
     },
-    description: 'XP-L4B è leader in formazione gamificata e tecnologie VR/AR che aumentano il coinvolgimento e la produttività del 50-60%',
+    description: 'XP-L4B è leader in sviluppo competenze tramite gamification, serious games e tecnologie VR/AR che aumentano il coinvolgimento e la produttività del 50-60%',
     inLanguage: 'it-IT'
   };
 

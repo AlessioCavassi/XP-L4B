@@ -22,9 +22,9 @@ const exo2 = Exo_2({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.xpl4b.com'),
-  title: "XP-L4B | Formazione Gamificata & Tecnologie VR/AR",
-  description: "XP-L4B è leader in formazione gamificata e tecnologie VR/AR. Trasformiamo ogni attività in un'esperienza coinvolgente con soluzioni innovative che aumentano il coinvolgimento e la produttività del 50-60%.",
-  keywords: ["formazione gamificata", "VR", "AR", "realtà virtuale", "realtà aumentata", "engagement", "gamification", "teambuilding", "AI prompting", "formazione aziendale", "XP-L4B"],
+  title: "XP-L4B | Sviluppo competenze tramite gamification, Serious games & Tecnologie VR/AR",
+  description: "XP-L4B è leader in sviluppo competenze tramite gamification e tecnologie VR/AR. Trasformiamo ogni attività in un'esperienza coinvolgente con soluzioni innovative che aumentano il coinvolgimento e la produttività del 50-60%.",
+  keywords: ["sviluppo competenze", "gamification", "serious games", "game-based learning", "VR", "AR", "realtà virtuale", "realtà aumentata", "engagement", "teambuilding", "AI prompting", "XP-L4B"],
   applicationName: "XP-L4B",
   authors: [{ name: "XP-L4B Team" }],
   generator: "Next.js",
@@ -36,8 +36,8 @@ export const metadata: Metadata = {
     telephone: true,
   },
   openGraph: {
-    title: "XP-L4B | Formazione Gamificata & Tecnologie VR/AR",
-    description: "Trasformiamo ogni attività in un'esperienza coinvolgente con soluzioni innovative per la formazione e l'engagement aziendale. L'83% dei dipendenti che partecipano ai nostri programmi mostrano maggiore motivazione.",
+    title: "XP-L4B | Sviluppo competenze tramite gamification, Serious games & Tecnologie VR/AR",
+    description: "Trasformiamo ogni attività in un'esperienza coinvolgente con serious games e game-based learning per l'engagement aziendale. L'83% dei dipendenti che partecipano ai nostri programmi mostrano maggiore motivazione.",
     url: "https://www.xpl4b.com/",
     siteName: "XP-L4B",
     images: [
@@ -53,8 +53,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "XP-L4B | Formazione Gamificata & Tecnologie VR/AR",
-    description: "Trasformiamo ogni attività in un'esperienza coinvolgente con tecnologie innovative VR/AR e formazione gamificata",
+    title: "XP-L4B | Sviluppo competenze tramite gamification, Serious games & Tecnologie VR/AR",
+    description: "Trasformiamo ogni attività in un'esperienza coinvolgente con tecnologie innovative VR/AR, gamification e serious games",
     creator: "@XPL4B",
     images: ["/logo_XP_L4B_rgb_trasp_vert_col_payoff.png"],
   },
