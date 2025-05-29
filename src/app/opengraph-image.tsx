@@ -25,7 +25,7 @@ export default function Image() {
         <div style={{ fontSize: 70, fontWeight: 'bold', marginBottom: 20, color: '#00F0FF' }}>XP-L4B</div>
         <div style={{ textAlign: 'center', marginBottom: 20 }}>Formazione Gamificata & Tecnologie VR/AR</div>
         <div style={{ fontSize: 24, opacity: 0.8, maxWidth: 800, textAlign: 'center' }}>
-          Trasformiamo ogni attività in un'esperienza coinvolgente
+          Trasformiamo ogni attività in un&apos;esperienza coinvolgente
         </div>
         <div style={{ fontSize: 18, marginTop: 30, color: '#00F0FF' }}>enhance & engage</div>
       </div>
