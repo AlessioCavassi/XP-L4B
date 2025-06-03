@@ -10,6 +10,9 @@ const ComingSoon = () => {
   useEffect(() => {
     if (typeof window === 'undefined') return;
     
+    // Store the current ref value in a variable
+    const mountNode = mountRef.current;
+    
     // Scene setup
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -17,7 +20,7 @@ const ComingSoon = () => {
     
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setPixelRatio(window.devicePixelRatio);
-    mountRef.current?.appendChild(renderer.domElement);
+    mountNode?.appendChild(renderer.domElement);
     
     // Create a 3D cube with XP Lab colors
     const geometry = new THREE.BoxGeometry(2, 2, 2);
@@ -71,8 +74,8 @@ const ComingSoon = () => {
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
       }
-      if (mountRef.current) {
-        mountRef.current.removeChild(renderer.domElement);
+      if (mountNode && renderer.domElement.parentNode === mountNode) {
+        mountNode.removeChild(renderer.domElement);
       }
       renderer.dispose();
     };
