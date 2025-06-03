@@ -3,10 +3,10 @@ import { motion } from 'framer-motion';
 
 const HeroSection: React.FC = () => {
   return (
-    <section className="hero-section relative w-full min-h-[80vh] flex items-center justify-center overflow-hidden bg-transparent">
+    <section className="hero-section relative w-full min-h-[80vh] flex items-center justify-center overflow-hidden bg-transparent pt-24 md:pt-0">
       
       {/* Content */}
-      <div className="relative z-10 text-center px-4 max-w-4xl">
+      <div className="relative z-10 text-center px-4 max-w-4xl mt-16 md:mt-0">
         <motion.h1 
           className="text-3xl md:text-5xl lg:text-6xl font-heading mb-6 text-[var(--aqua-green)] drop-shadow-lg"
           initial={{ opacity: 0, y: -20 }}

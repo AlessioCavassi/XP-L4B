@@ -1,3 +1,5 @@
+"use client";
+
 import { Organization, WebSite, WithContext } from 'schema-dts';
 
 export function OrganizationJsonLd() {
@@ -46,10 +48,15 @@ export function OrganizationJsonLd() {
     keywords: 'sviluppo competenze, gamification, serious games, game-based learning, VR, AR, realtà virtuale, realtà aumentata, engagement, teambuilding, AI prompting'
   };
 
-  return <script
-    type="application/ld+json"
-    dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationData) }}
-  />;
+  // Serializzazione stabile per evitare problemi di idratazione
+  const jsonString = JSON.stringify(organizationData);
+  
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: jsonString }}
+    />
+  );
 }
 
 export function WebSiteJsonLd() {
@@ -66,8 +73,13 @@ export function WebSiteJsonLd() {
     inLanguage: 'it-IT'
   };
 
-  return <script
-    type="application/ld+json"
-    dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteData) }}
-  />;
+  // Serializzazione stabile per evitare problemi di idratazione
+  const jsonString = JSON.stringify(websiteData);
+  
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: jsonString }}
+    />
+  );
 }
