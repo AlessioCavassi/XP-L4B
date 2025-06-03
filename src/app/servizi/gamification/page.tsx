@@ -149,7 +149,7 @@ export default function GamificationPage() {
                   </div>
                   <h3 className="text-xl font-heading mb-4 text-[var(--purple-deep)]">Onboarding</h3>
                   <p className="text-gray-700 mb-4">
-                    Trasformiamo il processo di inserimento dei nuovi dipendenti in un'avventura coinvolgente con missioni progressive, ricompense e feedback immediato.
+                    Trasformiamo il processo di inserimento dei nuovi dipendenti in un&apos;avventura coinvolgente con missioni progressive, ricompense e feedback immediato.
                   </p>
                   <ul className="text-sm text-gray-600 space-y-2">
                     <li className="flex items-start">
