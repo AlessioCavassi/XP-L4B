@@ -253,13 +253,13 @@ const MobileOptimizedPage: React.FC = () => {
       `}</style>
       {/* Rimosso il container globale di particelle per gestire le particelle sezione per sezione */}
       {/* Hero Section ottimizzata con migliore contrasto - utilizzo variabili CSS coerenti */}
-      <section className="min-h-[90vh] flex flex-col justify-center items-center p-4 relative bg-[var(--purple-deep)]/70 backdrop-blur-sm" style={{ zIndex: 2 }}>
+      <section className="min-h-[90vh] flex flex-col justify-center items-center p-4 pt-32 relative bg-[var(--purple-deep)]/70 backdrop-blur-sm" style={{ zIndex: 2 }}>
         {/* Particelle locali per Hero Section */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           <MobileParticlesBackground />
         </div>
         <motion.h1 
-          className="font-heading text-3xl font-bold mb-4 text-center text-[var(--aqua-green)] drop-shadow-md"
+          className="font-heading text-3xl font-bold mb-4 text-center text-[var(--aqua-green)] drop-shadow-md mt-16"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
