@@ -63,9 +63,9 @@ export default function ServiziPage() {
                 transition={{ duration: 0.6 }}
                 className="bg-white p-8 rounded-xl shadow-xl"
               >
-                <h3 className="text-2xl font-heading mb-4 text-[var(--purple-deep)]">Formazione Gamificata</h3>
+                <h3 className="text-2xl font-heading mb-4 text-[var(--purple-deep)]">Sviluppo Competenze con Gamification</h3>
                 <p className="mb-4 text-gray-700">
-                  L&apos;83% dei dipendenti che partecipano ad attività ludiche sono più motivati. Le nostre sessioni formative gamificate aumentano il coinvolgimento e la produttività in azienda del 50-60%.
+                  L&apos;83% dei dipendenti che partecipano ad attività ludiche sono più motivati. I nostri percorsi di game-based learning aumentano il coinvolgimento e la produttività in azienda del 50-60%.
                 </p>
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-start">
