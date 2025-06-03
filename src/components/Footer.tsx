@@ -31,50 +31,89 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
               Siamo qui per trasformare la tua visione in realt&agrave;. Contattaci per scoprire come possiamo aiutarti a creare esperienze straordinarie per il tuo pubblico.
             </p>
             <div className="flex space-x-3" data-component-name="Footer">
+              {/* LinkedIn - supporto per app nativa */}
               <a 
-                href="https://www.linkedin.com/company/xp-l4b/" 
-                target="_blank" 
-                rel="noopener noreferrer"
+                href="linkedin://company/xp-l4b"
+                onClick={(e) => {
+                  e.preventDefault();
+                  // Prova ad aprire l'app, se fallisce apre il sito web
+                  setTimeout(() => {
+                    window.location.href = "https://www.linkedin.com/company/xp-l4b/";
+                  }, 500);
+                  window.location.href = "linkedin://company/xp-l4b";
+                }}
                 className="bg-[var(--purple-light)]/20 p-2 rounded-full hover:bg-[var(--purple-light)]/40 transition-colors duration-300 text-[var(--purple-deep)]"
                 aria-label="LinkedIn"
                 data-component-name="Footer"
               >
                 <FaLinkedin size={18} />
               </a>
+              
+              {/* Twitter/X - supporto per app nativa */}
               <a 
-                href="https://x.com/XPL4Bsrl" 
-                target="_blank" 
-                rel="noopener noreferrer"
+                href="twitter://user?screen_name=XPL4Bsrl"
+                onClick={(e) => {
+                  e.preventDefault();
+                  // Prova ad aprire l'app, se fallisce apre il sito web
+                  setTimeout(() => {
+                    window.location.href = "https://x.com/XPL4Bsrl";
+                  }, 500);
+                  window.location.href = "twitter://user?screen_name=XPL4Bsrl";
+                }}
                 className="bg-[var(--purple-light)]/20 p-2 rounded-full hover:bg-[var(--purple-light)]/40 transition-colors duration-300 text-[var(--purple-deep)]"
                 aria-label="X (Twitter)"
                 data-component-name="Footer"
               >
                 <FaTwitter size={18} />
               </a>
+              
+              {/* Instagram - supporto per app nativa */}
               <a 
-                href="https://www.instagram.com/xpl4b2/" 
-                target="_blank" 
-                rel="noopener noreferrer"
+                href="instagram://user?username=xpl4b2"
+                onClick={(e) => {
+                  e.preventDefault();
+                  // Prova ad aprire l'app, se fallisce apre il sito web
+                  setTimeout(() => {
+                    window.location.href = "https://www.instagram.com/xpl4b2/";
+                  }, 500);
+                  window.location.href = "instagram://user?username=xpl4b2";
+                }}
                 className="bg-[var(--purple-light)]/20 p-2 rounded-full hover:bg-[var(--purple-light)]/40 transition-colors duration-300 text-[var(--purple-deep)]"
                 aria-label="Instagram"
                 data-component-name="Footer"
               >
                 <FaInstagram size={18} />
               </a>
+              
+              {/* Threads - supporto per app nativa */}
               <a 
-                href="https://www.threads.com/@xpl4b2?xmt=AQF0moURoz-eovJbApLk5xKnzjmwiWVhSSXQqFezcIOQpes" 
-                target="_blank" 
-                rel="noopener noreferrer"
+                href="threads://user?username=xpl4b2"
+                onClick={(e) => {
+                  e.preventDefault();
+                  // Prova ad aprire l'app, se fallisce apre il sito web
+                  setTimeout(() => {
+                    window.location.href = "https://www.threads.com/@xpl4b2";
+                  }, 500);
+                  window.location.href = "threads://user?username=xpl4b2";
+                }}
                 className="bg-[var(--purple-light)]/20 p-2 rounded-full hover:bg-[var(--purple-light)]/40 transition-colors duration-300 text-[var(--purple-deep)]"
                 aria-label="Threads"
                 data-component-name="Footer"
               >
                 <PiThreadsLogoBold size={18} />
               </a>
+              
+              {/* YouTube - supporto per app nativa */}
               <a 
-                href="https://www.youtube.com/@XP-L4B" 
-                target="_blank" 
-                rel="noopener noreferrer"
+                href="vnd.youtube://user/XP-L4B"
+                onClick={(e) => {
+                  e.preventDefault();
+                  // Prova ad aprire l'app, se fallisce apre il sito web
+                  setTimeout(() => {
+                    window.location.href = "https://www.youtube.com/@XP-L4B";
+                  }, 500);
+                  window.location.href = "vnd.youtube://user/XP-L4B";
+                }}
                 className="bg-[var(--purple-light)]/20 p-2 rounded-full hover:bg-[var(--purple-light)]/40 transition-colors duration-300 text-[var(--purple-deep)]"
                 aria-label="YouTube"
                 data-component-name="Footer"
