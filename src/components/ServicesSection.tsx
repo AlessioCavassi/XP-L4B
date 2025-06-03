@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaVrCardboard, FaGamepad, FaLaptopCode, FaChalkboardTeacher, FaUsers, FaChartLine, FaGlasses } from 'react-icons/fa';
+import { FaVrCardboard, FaLaptopCode, FaChalkboardTeacher, FaUsers, FaChartLine, FaGlasses } from 'react-icons/fa';
 import Link from 'next/link';
 
 interface Service {

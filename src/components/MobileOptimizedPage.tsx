@@ -163,7 +163,7 @@ const flipCardsData = [
       <>
         <div className="text-4xl mb-4">🎓</div>
         <h3 className="text-xl font-bold text-white mb-2">SVILUPPO COMPOTENZE</h3>
-        <p className="text-sm font-medium text-white/90">Trasforma l'apprendimento in un'esperienza coinvolgente</p>
+        <p className="text-sm font-medium text-white/90">Trasforma l&apos;apprendimento in un&apos;esperienza coinvolgente</p>
       </>
     ),
     back: (
@@ -171,7 +171,7 @@ const flipCardsData = [
         <h3 className="text-xl font-bold mb-3 text-accent" data-component-name="FlipCard">Sviluppo Competenze</h3>
         <p className="text-sm font-medium text-white" data-component-name="FlipCard">
           Il 70% degli investimenti in metodi tradizionali è inefficiente. 
-          I nostri percorsi gamificati aumentano l'efficacia dell'apprendimento del 50-60% e migliorano la ritenzione delle informazioni.
+          I nostri percorsi gamificati aumentano l&apos;efficacia dell&apos;apprendimento del 50-60% e migliorano la ritenzione delle informazioni.
         </p>
       </>
     ),

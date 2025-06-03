@@ -63,7 +63,7 @@ export default function DigitalEngagementPage() {
                     </div>
                     <h2 className="text-3xl font-heading mb-6">Portal Gate</h2>
                     <p className="mb-6">
-                      Portal Gate integra elementi ludici nei processi aziendali quotidiani per trasformare attività ordinarie in esperienze coinvolgenti. Questa innovativa piattaforma sfrutta l'affinità con il gaming dell'85-95% della forza lavoro under 40, creando un ambiente di lavoro più dinamico e stimolante.
+                      Portal Gate integra elementi ludici nei processi aziendali quotidiani per trasformare attività ordinarie in esperienze coinvolgenti. Questa innovativa piattaforma sfrutta l&apos;affinità con il gaming dell&apos;85-95% della forza lavoro under 40, creando un ambiente di lavoro più dinamico e stimolante.
                     </p>
                     <ul className="space-y-2 mb-6">
                       <li className="flex items-start">
@@ -94,7 +94,7 @@ export default function DigitalEngagementPage() {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="bg-white p-8 rounded-xl shadow-xl"
               >
-                <h3 className="text-2xl font-heading mb-4 text-[var(--purple-deep)]">Il problema dell'engagement</h3>
+                <h3 className="text-2xl font-heading mb-4 text-[var(--purple-deep)]">Il problema dell&apos;engagement</h3>
                 <p className="mb-6 text-gray-700">
                   Solo il 5% delle persone si sentono realmente coinvolte sul lavoro in Italia. Questo dato allarmante si traduce in:
                 </p>
@@ -135,7 +135,7 @@ export default function DigitalEngagementPage() {
                   </div>
                   <h4 className="text-xl font-heading mb-4 text-[var(--purple-deep)]">Apprendimento continuo</h4>
                   <p className="text-gray-700 mb-4">
-                    Trasformiamo l'apprendimento in un processo costante e coinvolgente, integrato nel flusso di lavoro quotidiano.
+                    Trasformiamo l&apos;apprendimento in un processo costante e coinvolgente, integrato nel flusso di lavoro quotidiano.
                   </p>
                   <ul className="text-sm text-gray-600 space-y-2">
                     <li className="flex items-start">
@@ -163,7 +163,7 @@ export default function DigitalEngagementPage() {
                   </div>
                   <h4 className="text-xl font-heading mb-4 text-[var(--purple-deep)]">Comunicazione interna</h4>
                   <p className="text-gray-700 mb-4">
-                    Rivoluzioniamo il modo in cui le informazioni circolano all'interno dell'azienda, rendendolo interattivo e coinvolgente.
+                    Rivoluzioniamo il modo in cui le informazioni circolano all&apos;interno dell&apos;azienda, rendendolo interattivo e coinvolgente.
                   </p>
                   <ul className="text-sm text-gray-600 space-y-2">
                     <li className="flex items-start">
@@ -238,7 +238,7 @@ export default function DigitalEngagementPage() {
                 </div>
                 <div className="bg-white/10 p-6 rounded-lg text-center">
                   <div className="text-4xl font-bold font-heading mb-2 text-[var(--aqua-green)]">+85%</div>
-                  <p>Aumento del senso di appartenenza all'azienda</p>
+                  <p>Aumento del senso di appartenenza all&apos;azienda</p>
                 </div>
               </div>
               
@@ -274,7 +274,7 @@ export default function DigitalEngagementPage() {
               <div className="flex flex-col md:flex-row gap-8">
                 <div className="flex-1 p-6 bg-[var(--purple-deep)]/5 rounded-lg">
                   <p className="italic text-gray-700 mb-4">
-                    "Grazie a Portal Gate abbiamo trasformato la nostra intranet aziendale in un ambiente coinvolgente che ha rivitalizzato la comunicazione interna. I nostri dipendenti sono più informati, connessi e motivati."
+                    &quot;Grazie a Portal Gate abbiamo trasformato la nostra intranet aziendale in un ambiente coinvolgente che ha rivitalizzato la comunicazione interna. I nostri dipendenti sono più informati, connessi e motivati.&quot;
                   </p>
                   <div className="flex items-center">
                     <div className="w-10 h-10 bg-[var(--purple-deep)] rounded-full flex items-center justify-center mr-3">
@@ -289,7 +289,7 @@ export default function DigitalEngagementPage() {
                 
                 <div className="flex-1 p-6 bg-[var(--purple-deep)]/5 rounded-lg">
                   <p className="italic text-gray-700 mb-4">
-                    "Il Digital Engagement ha rivoluzionato il nostro approccio all'apprendimento continuo. I contenuti integrati nel flusso di lavoro hanno aumentato del 78% la partecipazione ai percorsi di sviluppo professionale interni."
+                    &quot;Il Digital Engagement ha rivoluzionato il nostro approccio all&apos;apprendimento continuo. I contenuti integrati nel flusso di lavoro hanno aumentato del 78% la partecipazione ai percorsi di sviluppo professionale interni.&quot;
                   </p>
                   <div className="flex items-center">
                     <div className="w-10 h-10 bg-[var(--purple-deep)] rounded-full flex items-center justify-center mr-3">
