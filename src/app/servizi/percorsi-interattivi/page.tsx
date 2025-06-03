@@ -96,7 +96,7 @@ export default function PercorsiInterattiviPage() {
               >
                 <h3 className="text-2xl font-heading mb-4 text-[var(--purple-deep)]">Il nostro approccio</h3>
                 <p className="mb-6 text-gray-700">
-                  Sviluppiamo percorsi interattivi che combinano diverse metodologie per massimizzare l'apprendimento e la ritenzione delle competenze:
+                  Sviluppiamo percorsi interattivi che combinano diverse metodologie per massimizzare l&apos;apprendimento e la ritenzione delle competenze:
                 </p>
                 
                 <div className="space-y-6 mb-8">
@@ -114,7 +114,7 @@ export default function PercorsiInterattiviPage() {
                   </div>
                   <div className="bg-[var(--purple-light)]/10 p-6 rounded-lg">
                     <h4 className="text-xl font-medium mb-2 text-[var(--purple-deep)]">4. Misurazione dei Risultati</h4>
-                    <p>Monitoriamo l'apprendimento e l'applicazione pratica delle competenze</p>
+                    <p>Monitoriamo l&apos;apprendimento e l&apos;applicazione pratica delle competenze</p>
                   </div>
                 </div>
               </motion.div>

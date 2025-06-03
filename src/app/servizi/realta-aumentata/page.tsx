@@ -135,7 +135,7 @@ export default function RealtaAumentataPage() {
                 </div>
                 <div className="bg-white/10 p-6 rounded-lg">
                   <h4 className="text-xl font-medium mb-2">Training Tecnico</h4>
-                  <p className="text-white/90">Apprendimento pratico con overlay informativi contestuali che guidano l'acquisizione di competenze sul campo.</p>
+                  <p className="text-white/90">Apprendimento pratico con overlay informativi contestuali che guidano l&apos;acquisizione di competenze sul campo.</p>
                 </div>
                 <div className="bg-white/10 p-6 rounded-lg">
                   <h4 className="text-xl font-medium mb-2">Marketing & Eventi</h4>
