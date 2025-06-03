@@ -4,12 +4,6 @@ import React, { useEffect } from 'react';
 import ContactSection from '@/components/ContactSection';
 import ParticlesBackground from '@/components/ParticlesBackground';
 
-export const metadata = {
-  title: 'Contattaci | XP-L4B',
-  description: 'Contatta il team di XP-L4B per scoprire come possiamo trasformare le tue attività in esperienze coinvolgenti attraverso gamification, VR e AR.',
-  keywords: 'contatti, XP-L4B, gamification, realtà virtuale, realtà aumentata',
-};
-
 export default function ContactPage() {
   // Inietta uno stile globale direttamente nel documento per forzare i colori
   useEffect(() => {
