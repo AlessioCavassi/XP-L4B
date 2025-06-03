@@ -35,7 +35,7 @@ export default function ContattiPage() {
               </h1>
               <div className="w-24 h-1 bg-[var(--aqua-green)] mx-auto mb-6"></div>
               <p className="text-xl text-white/80 max-w-3xl mx-auto">
-                Sei pronto a trasformare la tua formazione? Parliamo del tuo progetto.
+                Sei pronto a trasformare il tuo approccio all'apprendimento? Parliamo del tuo progetto.
               </p>
             </motion.div>
           </div>

@@ -92,7 +92,7 @@ export default function ServiziPage() {
               >
                 <h3 className="text-2xl font-heading mb-4 text-[var(--purple-deep)]">Tecnologie VR/AR</h3>
                 <p className="mb-4 text-gray-700">
-                  Soluzioni immersive per formazione, marketing e customer experience. Le nostre tecnologie includono:
+                  Soluzioni immersive per apprendimento, marketing e customer experience. Le nostre tecnologie includono:
                 </p>
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-start">

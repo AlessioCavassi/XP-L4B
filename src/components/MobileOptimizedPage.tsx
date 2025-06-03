@@ -31,8 +31,8 @@ const serviceData = [
   },
   {
     id: 4,
-    title: 'Formazione Interattiva',
-    description: 'Programmi formativi in competenze critiche: AI prompting, team work, problem solving e time management. Ritenzione informazioni: fino al 90% vs 20% formazione tradizionale.',
+    title: 'SVILUPPO COMPOTENZE',
+    description: 'Programmi di sviluppo in competenze critiche: AI prompting, team work, problem solving e time management. Ritenzione informazioni: fino al 90% vs 20% metodi tradizionali.',
     icon: '👨‍🏫',
     color: 'var(--purple-deep)'
   },
@@ -121,7 +121,7 @@ const aboutSections = [
     content: (
       <div className="space-y-2">
         <div className="bg-[var(--purple-deep)] p-3 rounded-lg border-l-4 border-[var(--aqua-green)] text-sm text-white font-medium shadow-md">
-          <strong className="emerald-text">70%</strong> di investimenti in percorsi di formazione inefficienti e noiosi
+          <strong className="emerald-text">70%</strong> di investimenti in percorsi di apprendimento inefficienti e noiosi
         </div>
         <div className="bg-[var(--purple-deep)] p-3 rounded-lg border-l-4 border-[var(--aqua-green)] text-sm text-white font-medium shadow-md">
           Solo il <strong className="emerald-text">5%</strong> delle persone si sentono coinvolte sul lavoro in Italia
@@ -162,16 +162,16 @@ const flipCardsData = [
     front: (
       <>
         <div className="text-4xl mb-4">🎓</div>
-        <h3 className="text-xl font-bold text-white mb-2">SVILUPPO COMPETENZE</h3>
-        <p className="text-sm font-medium text-white/90">Trasforma la formazione in un&apos;esperienza coinvolgente</p>
+        <h3 className="text-xl font-bold text-white mb-2">SVILUPPO COMPOTENZE</h3>
+        <p className="text-sm font-medium text-white/90">Trasforma l'apprendimento in un'esperienza coinvolgente</p>
       </>
     ),
     back: (
       <>
-        <h3 className="text-xl font-bold mb-3 text-accent" data-component-name="FlipCard">Formazione Efficace</h3>
+        <h3 className="text-xl font-bold mb-3 text-accent" data-component-name="FlipCard">Sviluppo Competenze</h3>
         <p className="text-sm font-medium text-white" data-component-name="FlipCard">
-          Il 70% degli investimenti in formazione è inefficiente. 
-          I nostri percorsi gamificati aumentano l&apos;efficacia dell&apos;apprendimento del 50-60% e migliorano la ritenzione delle informazioni.
+          Il 70% degli investimenti in metodi tradizionali è inefficiente. 
+          I nostri percorsi gamificati aumentano l'efficacia dell'apprendimento del 50-60% e migliorano la ritenzione delle informazioni.
         </p>
       </>
     ),

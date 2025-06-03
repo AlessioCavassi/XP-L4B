@@ -19,13 +19,13 @@ const BlogSection: React.FC = () => {
   const blogPosts: BlogPost[] = [
     {
       id: 1,
-      title: 'AI Prompting: Rivoluzionare la formazione con l\'intelligenza artificiale',
-      excerpt: 'Come le tecniche di AI prompting integrate con Vision Pro stanno trasformando l\'apprendimento aziendale, riducendo del 70% gli investimenti formativi inefficaci.',
+      title: 'AI Prompting: Rivoluzionare l\'apprendimento con l\'intelligenza artificiale',
+      excerpt: 'Come le tecniche di AI prompting integrate con Vision Pro stanno trasformando l\'apprendimento aziendale, riducendo del 70% gli investimenti in metodi tradizionali inefficaci.',
       date: '20 Aprile 2025',
       author: 'Alessio Cavatassi',
-      category: 'AI & Formazione',
+      category: 'AI & Apprendimento',
       image: '/blog/ai-training.jpg',
-      slug: 'ai-prompting-formazione-aziendale'
+      slug: 'ai-prompting-apprendimento-aziendale'
     },
     {
       id: 2,
@@ -49,13 +49,13 @@ const BlogSection: React.FC = () => {
     },
     {
       id: 4,
-      title: 'SafetyVR: Formazione sulla sicurezza senza rischi',
+      title: 'SafetyVR: Apprendimento sulla sicurezza senza rischi',
       excerpt: 'La nostra piattaforma SafetyVR riduce gli incidenti sul lavoro del 70% simulando situazioni di pericolo in un ambiente sicuro e completamente immersivo.',
       date: '20 Febbraio 2025',
       author: 'Team Tecnico',
       category: 'Realtà Virtuale',
       image: '/blog/safety-vr.jpg',
-      slug: 'safety-vr-formazione-sicurezza'
+      slug: 'safety-vr-apprendimento-sicurezza'
     },
   ];
 

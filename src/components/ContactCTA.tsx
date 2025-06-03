@@ -27,11 +27,11 @@ const ContactCTA: React.FC = () => {
               </span>
               
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading mb-6 text-white leading-tight">
-                Pronti a <span className="text-[var(--aqua-green)]">rivoluzionare</span> l&apos;engagement e la formazione?
+                Pronti a <span className="text-[var(--aqua-green)]">rivoluzionare</span> l&apos;engagement e lo sviluppo professionale?
               </h2>
               
               <p className="text-xl text-white mb-10 max-w-3xl mx-auto">
-                L&apos;83% dei dipendenti che partecipano ai nostri programmi gamificati mostrano una maggiore motivazione e produttività. Inizia oggi il tuo percorso verso un&apos;esperienza formativa coinvolgente.
+                L&apos;83% dei dipendenti che partecipano ai nostri programmi gamificati mostrano una maggiore motivazione e produttività. Inizia oggi il tuo percorso verso un&apos;esperienza di apprendimento coinvolgente.
               </p>
               
               <div className="flex justify-center">

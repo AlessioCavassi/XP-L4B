@@ -1,0 +1,100 @@
+/* 
+ * Fix globali per problemi di contrasto nel sito XP-L4B
+ * Questo file risolve i problemi di sovrapposizione di stili 
+ * e garantisce la leggibilità dei testi in tutto il sito
+ */
+
+/* ===========================================
+   FIX SEZIONE CONTATTI 
+   =========================================== */
+
+/* Fix per il contrasto del pulsante nella sezione contatti */
+button[type="submit"].bg-\[var\(--aqua-green\)\],
+#contatti button[type="submit"],
+.bg-\[var\(--aqua-green\)\].font-heading {
+  color: black !important; 
+  font-weight: 700 !important;
+  text-shadow: none !important;
+}
+
+/* Fix per il testo bianco nella sezione contatti */
+#contatti p, 
+#contatti h3, 
+#contatti h4, 
+#contatti label {
+  color: white !important;
+}
+
+/* Fix per il titolo accent nella call-to-action */
+#contatti .bg-white\/10 h4 {
+  color: var(--aqua-green) !important;
+}
+
+/* ===========================================
+   FIX SEZIONE CHI SIAMO 
+   =========================================== */
+
+/* Fix per i box bianchi con titoli in viola */
+.bg-white h3.text-\[var\(--purple-deep\)\] {
+  color: var(--purple-deep) !important;
+  font-weight: 600 !important;
+}
+
+/* Fix per i testi nei box bianchi */
+.bg-white p.text-gray-700 {
+  color: #4a5568 !important; /* Grigio più scuro per migliore leggibilità */
+}
+
+/* Fix per i box delle competenze */
+.bg-\[var\(--purple-light\)\]\/10 p.font-medium {
+  color: var(--purple-deep) !important;
+  font-weight: 500 !important;
+}
+
+/* ===========================================
+   FIX PAGINE SERVIZI 
+   =========================================== */
+
+/* Fix per tutti i paragrafi nei box colorati delle pagine servizi */
+.bg-\[var\(--purple-light\)\]\/10 p {
+  color: var(--purple-deep) !important;
+  font-weight: 400 !important;
+}
+
+/* Fix per i paragrafi nelle hero section delle pagine servizi */
+.text-xl.text-gray-700 {
+  color: #4a5568 !important;
+}
+
+/* Fix per migliorare il contrasto del testo nei box viola scuro */
+.bg-\[var\(--purple-deep\)\] p {
+  color: white !important;
+}
+
+/* Fix specifici per i problemi di contrasto nelle pagine servizi su mobile */
+@media (max-width: 768px) {
+  /* Garantisce che tutti i paragrafi nei box colorati delle pagine servizi siano visibili su mobile */
+  .bg-\[var\(--purple-light\)\]\/10 p,
+  .bg-white p {
+    color: var(--purple-deep) !important;
+    text-shadow: none !important;
+  }
+}
+
+/* Miglioramento contrasto generale */
+.text-\[var\(--purple-deep\)\] {
+  color: var(--purple-deep) !important;
+}
+
+/* Fix specifico per tutti gli elementi testuali in sezioni scure */
+.bg-\[var\(--purple-deep\)\] h1,
+.bg-\[var\(--purple-deep\)\] h2,
+.bg-\[var\(--purple-deep\)\] h3,
+.bg-\[var\(--purple-deep\)\] h4,
+.bg-\[var\(--purple-deep\)\] p,
+.bg-\[var\(--purple-deep\)\] span,
+.bg-\[var\(--purple-deep\)\] li,
+.bg-\[var\(--purple-deep\)\] ul,
+.bg-\[var\(--purple-deep\)\] ol {
+  color: white !important;
+}

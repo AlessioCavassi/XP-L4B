@@ -19,10 +19,10 @@ const CaseStudiesSection: React.FC = () => {
   const caseStudies: CaseStudy[] = [
     {
       id: 1,
-      title: 'Formazione immersiva per sicurezza sul lavoro',
+      title: 'Apprendimento immersivo per sicurezza sul lavoro',
       client: 'GrandTech Manufacturing',
-      description: 'Sviluppo di SafetyVR, un programma di formazione immersiva compatibile con Vision Pro per simulare situazioni di pericolo senza rischi reali, sfruttando il fatto che l\'85-95% dei giovani dipendenti ha dimestichezza con i videogiochi.',
-      results: ['Riduzione del 70% negli incidenti sul lavoro', 'Aumento del 65% nella ritenzione delle procedure di sicurezza', 'Tempi di formazione ridotti del 40%'],
+      description: 'Sviluppo di SafetyVR, un programma di apprendimento immersivo compatibile con Vision Pro per simulare situazioni di pericolo senza rischi reali, sfruttando il fatto che l\'85-95% dei giovani dipendenti ha dimestichezza con i videogiochi.',
+      results: ['Riduzione del 70% negli incidenti sul lavoro', 'Aumento del 65% nella ritenzione delle procedure di sicurezza', 'Tempi di apprendimento ridotti del 40%'],
       image: '/case-studies/vr-training.jpg',
       category: 'vr',
       color: 'var(--purple-light)'
@@ -41,7 +41,7 @@ const CaseStudiesSection: React.FC = () => {
       id: 3,
       title: 'App AR con Object Recognition',
       client: 'ExpoTech Events',
-      description: 'ARStudio con Object Recognition per trasformare fiere ed eventi in esperienze interattive, contrastando il dato che il 70% degli investimenti in formazione tradizionale risultano inefficaci.',
+      description: 'ARStudio con Object Recognition per trasformare fiere ed eventi in esperienze interattive, contrastando il dato che il 70% degli investimenti in metodi tradizionali di apprendimento risultano inefficaci.',
       results: ['Aumento del 85% nel tempo di permanenza agli stand', '300% lead generation rispetto agli approcci tradizionali', '+78% di interazione con i contenuti digitali'],
       image: '/case-studies/ar-expo.jpg',
       category: 'ar',
@@ -51,7 +51,7 @@ const CaseStudiesSection: React.FC = () => {
       id: 4,
       title: 'Onboarding gamificato con Portal Gate',
       client: 'StartupInnovation',
-      description: 'Sistema di onboarding gamificato attraverso Portal Gate, sfruttando il dato che l\'83% dei dipendenti in aziende con attività ludiche è più motivato. Include percorsi formativi in AI prompting, problem solving e time management.',
+      description: 'Sistema di onboarding gamificato attraverso Portal Gate, sfruttando il dato che l\'83% dei dipendenti in aziende con attività ludiche è più motivato. Include percorsi di sviluppo delle competenze in AI prompting, problem solving e time management.',
       results: ['Riduzione del 50% nel tempo di produttività', 'Aumento del 72% nella conoscenza aziendale', 'Feedback positivo dal 95% dei nuovi assunti'],
       image: '/case-studies/gamified-onboarding.jpg',
       category: 'gamification',

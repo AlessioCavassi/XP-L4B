@@ -175,8 +175,8 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
                 </Link>
               </li>
               <li>
-                <Link href="/servizi/formazione-interattiva" className="text-[var(--purple-deep)]/70 hover:text-[var(--purple-deep)] transition-colors duration-300">
-                  Formazione Interattiva
+                <Link href="/servizi/percorsi-interattivi" className="text-[var(--purple-deep)]/70 hover:text-[var(--purple-deep)] transition-colors duration-300">
+                  Percorsi Interattivi
                 </Link>
               </li>
               <li>

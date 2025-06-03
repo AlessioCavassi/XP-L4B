@@ -35,7 +35,7 @@ export default function ChiSiamoPage() {
               </h1>
               <div className="w-24 h-1 bg-[var(--aqua-green)] mx-auto mb-6"></div>
               <p className="text-xl text-white/80 max-w-3xl mx-auto">
-                Un team appassionato di esperti in formazione, gaming e tecnologie immersive. L&#39;azienda supporta la creazione di eventi gaming aziendali, sia digitali che in presenza.
+                Un team appassionato di esperti in sviluppo professionale, gaming e tecnologie immersive. L&#39;azienda supporta la creazione di eventi gaming aziendali, sia digitali che in presenza.
               </p>
             </motion.div>
           </div>

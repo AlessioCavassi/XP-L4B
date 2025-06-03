@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaVrCardboard, FaGamepad, FaLaptopCode, FaChalkboardTeacher, FaUsers, FaChartLine } from 'react-icons/fa';
+import { FaVrCardboard, FaGamepad, FaLaptopCode, FaChalkboardTeacher, FaUsers, FaChartLine, FaGlasses } from 'react-icons/fa';
+import Link from 'next/link';
 
 interface Service {
   id: number;
@@ -8,6 +9,7 @@ interface Service {
   description: string;
   icon: React.ReactNode;
   color: string;
+  url: string;
 }
 
 const ServicesSection: React.FC = () => {
@@ -18,44 +20,50 @@ const ServicesSection: React.FC = () => {
     {
       id: 1,
       title: 'Realtà Virtuale',
-      description: 'Collaboriamo con aziende partner per produrre ed utilizzare tecnologie inversive di realtà virtuale. SafetyVR è una piattaforma innovativa progettata per rivoluzionare la formazione sulla sicurezza sul lavoro attraverso la Realtà Virtuale (VR). Coinvolge i dipendenti in ambienti realistici e privi di rischi, dove possono esercitarsi epadroneggiare le procedure di sicurezza essenziali.',
+      description: 'Sviluppiamo progetti in Realtà Virtuale come SafetyVR per l\'apprendimento sulla sicurezza. Scenari realistici ma privi di rischi. Massimizza l\'acquisizione delle competenze con la VR.',
       icon: <FaVrCardboard size={40} />,
-      color: 'var(--aqua-green)' // Cambiato da purple-light ad aqua-green per migliore contrasto
+      color: 'var(--aqua-green)', // Mantenuto lo stesso colore per coerenza
+      url: '/servizi/realta-virtuale'
     },
     {
       id: 2,
       title: 'Realtà Aumentata',
-      description: 'Forniamo e ideamo soluzione di realtà aumentata 3DToMe, ARStudio e Object Recognition arricchiscono l\'ambiente fisico con overlay informativi. Applicazioni: manutenzione industriale, training tecnico, eventi e marketing. ROI tipico: +300% engagement rispetto ai metodi tradizionali.',
-      icon: <FaGamepad size={40} />,
-      color: 'var(--aqua-green)' // Mantenuto aqua-green per coerenza con il tema tecnologico
+      description: 'Soluzioni in Realtà Aumentata come 3DToMe, ARStudio e Object Recognition. Percorsi di apprendimento, manuali di supporto e contenuti aumentati. Engagement aumentato del +300%.',
+      icon: <FaGlasses size={40} />,
+      color: 'var(--purple-light)', // Cambiato da aqua-green a purple-light per differenziare
+      url: '/servizi/realta-aumentata'
     },
     {
       id: 3,
       title: 'Gamification',
       description: 'Meccaniche di gioco applicate ai processi aziendali: sistemi di punti, badge, classifiche e ricompense. Casi d\'uso: onboarding, corsi formativi, incentivazione team. Risultato: +83% motivazione e +72% performance misurabile.',
       icon: <FaLaptopCode size={40} />,
-      color: 'var(--blue)' // Mantenuto blu per differenziare le categorie
+      color: 'var(--blue)', // Mantenuto blu per differenziare le categorie
+      url: '/servizi/gamification'
     },
     {
       id: 4,
       title: 'Percorsi di reskilling e upskilling',
       description: 'Analizziamo il mercato del lavoro e delle competenze e creiamo percorsi di reskilling e upskilling.',
       icon: <FaChalkboardTeacher size={40} />,
-      color: 'var(--blue)' // Cambiato da purple-deep a blue per migliore leggibilità
+      color: 'var(--blue)', // Cambiato da purple-deep a blue per migliore leggibilità
+      url: '/servizi/percorsi-interattivi'
     },
     {
       id: 5,
       title: 'Team Building Digitale',
       description: 'Spatial Assistance creano ambienti virtuali condivisi per team remoti o ibridi. Ideale per: kick-off progetti, brainstorming, collaborative problem solving. Riduzione del 30% nel turnover dei dipendenti nei team partecipanti.',
       icon: <FaUsers size={40} />,
-      color: 'var(--aqua-green)' // Cambiato da purple-light ad aqua-green per migliore contrasto
+      color: 'var(--aqua-green)', // Cambiato da purple-light ad aqua-green per migliore contrasto
+      url: '/servizi/team-building'
     },
     {
       id: 6,
       title: 'Digital Engagement',
-      description: 'Portal Gate integra elementi ludici nei processi aziendali quotidiani. Applicazioni: formazione continua, gestione progetti, comunicazione interna. Sfrutta l\'affinità con il gaming dell\'85-95% della forza lavoro under 40.',
+      description: 'Portal Gate integra elementi ludici nei processi aziendali quotidiani. Applicazioni: apprendimento continuo, gestione progetti, comunicazione interna. Sfrutta l\'affinità con il gaming dell\'85-95% della forza lavoro under 40.',
       icon: <FaChartLine size={40} />,
-      color: 'var(--blue)' // Mantenuto blu per coerenza con il tema digitale
+      color: 'var(--blue)', // Mantenuto blu per coerenza con il tema digitale
+      url: '/servizi/digital-engagement'
     },
   ];
 
@@ -114,7 +122,7 @@ const ServicesSection: React.FC = () => {
             </div>
             <div className="bg-white/5 p-4 rounded-lg">
               <h4 className="text-white text-xl font-heading mb-2">90%</h4>
-              <p className="text-white !important text-sm"><span className="text-[var(--aqua-green)]">Miglioramento dei risultati</span> rispetto alla formazione traadizionale</p>
+              <p className="text-white !important text-sm"><span className="text-[var(--aqua-green)]">Miglioramento dei risultati</span> rispetto ai metodi tradizionali di apprendimento</p>
             </div>
           </div>
         </motion.div>
@@ -156,7 +164,7 @@ const ServicesSection: React.FC = () => {
                   {service.description.split(' ').map((word, i) => {
                     // Parole da evidenziare per ciascun servizio
                     const keywordsMap: Record<number, string[]> = {
-                      1: ['SafetyVR', 'Realtà Virtuale', 'formazione', 'sicurezza', 'realistici', 'privi di rischi'],
+                      1: ['SafetyVR', 'Realtà Virtuale', 'apprendimento', 'sicurezza', 'realistici', 'privi di rischi'],
                       2: ['Realtà Aumentata', '3DToMe', 'ARStudio', 'Object Recognition', '+300%', 'engagement'],
                       3: ['Gamification', 'punti', 'badge', 'classifiche', 'ricompense', '+83%', 'motivazione', '+72%', 'performance'],
                       4: ['reskilling', 'upskilling', 'competenze', 'mercato del lavoro'],
@@ -187,10 +195,12 @@ const ServicesSection: React.FC = () => {
                   animate={{ opacity: activeService === service.id ? 1 : 0 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <span>Scopri di più</span>
-                  <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                  </svg>
+                  <Link href={service.url} className="flex items-center hover:text-[var(--blue)] transition-colors duration-300">
+                    <span>Scopri di più</span>
+                    <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                  </Link>
                 </motion.div>
               </div>
             </motion.div>

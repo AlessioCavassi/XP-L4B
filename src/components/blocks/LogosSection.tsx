@@ -23,6 +23,18 @@ const partnerLogos = {
       description: "LevelUP MTA",
       image: "/images/logos/LevelUP_MTA_LogoBianco.png",
       className: "h-16 w-auto bg-[var(--purple-deep)] p-2 rounded-lg"
+    },
+    {
+      id: "fclex-logo",
+      description: "FC Lex",
+      image: "/images/logos/e_fclex_logo_negativo.png",
+      className: "h-16 w-auto"
+    },
+    {
+      id: "creator-service",
+      description: "Creator Service",
+      image: "/images/logos/logo-creator-service.png",
+      className: "h-24 w-auto scale-125"
     }
   ]
 };
