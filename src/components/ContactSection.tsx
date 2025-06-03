@@ -50,7 +50,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ isInPopup = false }) =>
         message: '',
         service: '',
       });
-    }, 500);
+    }, 5000);
   };
 
   return (
@@ -58,12 +58,16 @@ const ContactSection: React.FC<ContactSectionProps> = ({ isInPopup = false }) =>
       id={!isInPopup ? "contatti" : undefined}
       className={`relative ${isInPopup ? 'py-12' : 'py-20'} bg-[var(--purple-deep)] overflow-hidden text-white`}
     >
-      {/* Risolve il problema di sovrapposizione stili per il pulsante */}
+      {/* Soluzione per forzare i colori corretti e risolvere problemi di contrasto */}
       <style dangerouslySetInnerHTML={{ __html: `
-        #contatti button[type="submit"], button.bg-[var(--aqua-green)] {
-          color: black !important;
-          font-weight: bold !important;
-          text-shadow: none !important;
+        #contatti p, #contattaci-section p, .contact-section p { color: white !important; }
+        #contatti h3, #contattaci-section h3, .contact-section h3 { color: white !important; }
+        #contatti h4, #contattaci-section h4, .contact-section h4 { color: white !important; }
+        #contatti .text-accent, #contattaci-section .text-accent, .contact-section .text-accent { color: #65BFB0 !important; }
+        #contatti button[type="submit"], #contattaci-section button[type="submit"], .contact-section button[type="submit"], button.bg-[var(--aqua-green)] { 
+          color: black !important; 
+          font-weight: bold !important; 
+          text-shadow: none !important; 
         }
       `}} />
       {/* Background elements */}
@@ -90,7 +94,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ isInPopup = false }) =>
           >
             <div className="bg-[var(--aqua-green)]/20 p-6 rounded-lg mb-6">
               <h3 className="text-2xl font-heading mb-3 text-white">TRASFORMA L&apos;ENGAGEMENT DELLA TUA AZIENDA</h3>
-              <p className="mb-4 text-white">L&apos;83% dei dipendenti che partecipano a programmi gamificati mostrano una maggiore motivazione. Contattaci oggi per iniziare il tuo percorso verso un&apos;esperienza formativa rivoluzionaria.</p>
+              <p className="mb-4 text-white">L&apos;83% dei dipendenti che partecipano a programmi gamificati mostrano una maggiore motivazione. Contattaci oggi per iniziare il tuo percorso verso un&apos;esperienza di apprendimento rivoluzionaria.</p>
             </div>
             
             {formStatus.submitted && formStatus.success ? (
@@ -213,6 +217,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ isInPopup = false }) =>
                   <motion.button
                     type="submit"
                     className="bg-[var(--aqua-green)] hover:bg-[var(--blue)] text-black font-bold font-heading py-3 px-8 rounded-full transition-all duration-300 text-lg interactive w-full shadow-lg"
+                    style={{ color: "#000000", fontWeight: "bold", textShadow: "none" }}
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                   >
