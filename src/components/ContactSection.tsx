@@ -54,10 +54,18 @@ const ContactSection: React.FC<ContactSectionProps> = ({ isInPopup = false }) =>
   };
 
   return (
-    <section 
-      id={!isInPopup ? "contatti" : undefined}
-      className={`relative ${isInPopup ? 'py-12' : 'py-20'} bg-[var(--purple-deep)] text-white overflow-hidden`}
-    >
+      <section 
+        id={!isInPopup ? "contatti" : undefined}
+        className={`relative ${isInPopup ? 'py-12' : 'py-20'} bg-[var(--purple-deep)] overflow-hidden`}
+      >
+        {/* Soluzione drastica per forzare i colori del testo */}
+        <style dangerouslySetInnerHTML={{ __html: `
+          #contatti p, #contattaci-section p, .contact-section p { color: white !important; }
+          #contatti h3, #contattaci-section h3, .contact-section h3 { color: white !important; }
+          #contatti h4, #contattaci-section h4, .contact-section h4 { color: white !important; }
+          #contatti .text-accent, #contattaci-section .text-accent, .contact-section .text-accent { color: #65BFB0 !important; }
+          #contatti button[type="submit"], #contattaci-section button[type="submit"], .contact-section button[type="submit"] { color: black !important; font-weight: bold !important; }
+        `}} />
       {/* Background elements */}
       <div className="polygon-bg opacity-10"></div>
       
@@ -81,8 +89,8 @@ const ContactSection: React.FC<ContactSectionProps> = ({ isInPopup = false }) =>
             transition={{ duration: 0.6 }}
           >
             <div className="bg-[var(--aqua-green)]/20 p-6 rounded-lg mb-6">
-              <h3 className="text-2xl font-heading mb-3">TRASFORMA L&apos;ENGAGEMENT DELLA TUA AZIENDA</h3>
-              <p className="text-white/90 mb-4">L&apos;83% dei dipendenti che partecipano a programmi gamificati mostrano una maggiore motivazione. Contattaci oggi per iniziare il tuo percorso verso un&apos;esperienza formativa rivoluzionaria.</p>
+              <h3 className="text-2xl font-heading mb-3 text-white" data-component-name="ContactSection">TRASFORMA L&apos;ENGAGEMENT DELLA TUA AZIENDA</h3>
+              <p className="mb-4 text-white" data-component-name="ContactSection">L&apos;83% dei dipendenti che partecipano a programmi gamificati mostrano una maggiore motivazione. Contattaci oggi per iniziare il tuo percorso verso un&apos;esperienza formativa rivoluzionaria.</p>
             </div>
             
             {formStatus.submitted && formStatus.success ? (
@@ -201,10 +209,11 @@ const ContactSection: React.FC<ContactSectionProps> = ({ isInPopup = false }) =>
                 </div>
 
                 <div className="pt-4">
-                  <p className="text-white/80 text-sm mb-4">Compila il form per ricevere una consulenza gratuita su come migliorare l&apos;engagement nella tua azienda!</p>
+                  <p className="text-sm mb-4 text-white" data-component-name="ContactSection">Compila il form per ricevere una consulenza gratuita su come migliorare l&apos;engagement nella tua azienda!</p>
                   <motion.button
                     type="submit"
-                    className="bg-[var(--aqua-green)] hover:bg-[var(--blue)] text-[var(--purple-deep)] font-heading py-3 px-8 rounded-full transition-all duration-300 text-lg interactive w-full"
+                    className="bg-[var(--aqua-green)] hover:bg-[var(--blue)] font-heading py-3 px-8 rounded-full transition-all duration-300 text-lg interactive w-full shadow-lg"
+                    style={{ color: "#000000", fontWeight: "bold", textShadow: "none" }}
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                   >
@@ -231,8 +240,8 @@ const ContactSection: React.FC<ContactSectionProps> = ({ isInPopup = false }) =>
                   <FaPhone size={24} />
                 </div>
                 <div>
-                  <h4 className="text-lg font-heading mb-1">Telefono</h4>
-                  <p className="text-white/80">+39 3518800106</p>
+                  <h4 className="text-lg font-heading mb-1 text-white" data-component-name="ContactSection">Telefono</h4>
+                  <p className="text-white" data-component-name="ContactSection">+39 3518800106</p>
                 </div>
               </div>
               
@@ -241,8 +250,8 @@ const ContactSection: React.FC<ContactSectionProps> = ({ isInPopup = false }) =>
                   <FaEnvelope size={24} />
                 </div>
                 <div>
-                  <h4 className="text-lg font-heading mb-1">Email</h4>
-                  <p className="text-white/80">riccardo@xpl4b.com</p>
+                  <h4 className="text-lg font-heading mb-1 text-white" data-component-name="ContactSection">Email</h4>
+                  <p className="text-white" data-component-name="ContactSection">riccardo@xpl4b.com</p>
                 </div>
               </div>
 
@@ -271,17 +280,17 @@ const ContactSection: React.FC<ContactSectionProps> = ({ isInPopup = false }) =>
               </div>
 
               <div className="mt-8 bg-[var(--purple-light)]/20 p-4 rounded-lg">
-                <h4 className="text-lg font-heading mb-4">Orari di disponibilità</h4>
-                <div className="space-y-2 text-white/80">
-                  <p>Lunedì - Venerdì: 9:00 - 18:00</p>
-                  <p>Sabato - Domenica: Su appuntamento</p>
+                <h4 className="text-lg font-heading mb-4 text-white" data-component-name="ContactSection">Orari di disponibilità</h4>
+                <div className="space-y-2">
+                  <p className="text-white" data-component-name="ContactSection">Lunedì - Venerdì: 9:00 - 18:00</p>
+                  <p className="text-white" data-component-name="ContactSection">Sabato - Domenica: Su appuntamento</p>
                 </div>
-                <p className="text-white/80 mt-4 text-sm italic">Risposta garantita entro 24 ore lavorative</p>
+                <p className="mt-4 text-sm italic text-white" data-component-name="ContactSection">Risposta garantita entro 24 ore lavorative</p>
               </div>
               
               <div className="mt-8 bg-white/10 p-6 rounded-lg border border-[var(--aqua-green)]/30">
-                <h4 className="text-lg font-heading mb-2 text-center text-[var(--aqua-green)]">PRONTI A TRASFORMARE L&apos;ENGAGEMENT?</h4>
-                <p className="text-white/90 text-center">Scopri come possiamo aiutarti a passare dal 5% al 90% di coinvolgimento del tuo team</p>
+                <h4 className="text-lg font-heading mb-2 text-center text-accent" data-component-name="ContactSection">PRONTI A TRASFORMARE L&apos;ENGAGEMENT?</h4>
+                <p className="text-center text-white" data-component-name="ContactSection">Scopri come possiamo aiutarti a passare dal 5% al 90% di coinvolgimento del tuo team</p>
               </div>
             </div>
           </motion.div>
