@@ -36,7 +36,7 @@ export default function RealtaVirtualePage() {
               </h1>
               <div className="w-24 h-1 bg-[var(--aqua-green)] mx-auto mb-6"></div>
               <p className="text-xl text-white/80 max-w-3xl mx-auto">
-                Sviluppiamo esperienze immersive in Realtà Virtuale che trasformano l'apprendimento e l'engagement aziendale.
+                Sviluppiamo esperienze immersive in Realtà Virtuale che trasformano l&apos;apprendimento e l&apos;engagement aziendale.
               </p>
             </motion.div>
           </div>
@@ -63,7 +63,7 @@ export default function RealtaVirtualePage() {
                     </div>
                     <h2 className="text-3xl font-heading mb-6">SafetyVR</h2>
                     <p className="mb-6">
-                      SafetyVR è la nostra piattaforma progettata per rivoluzionare l'apprendimento sulla sicurezza attraverso la Realtà Virtuale. Coinvolge i partecipanti in scenari realistici ma privi di rischi, dove possono esercitarsi e padroneggiare le procedure essenziali.
+                      SafetyVR è la nostra piattaforma progettata per rivoluzionare l&apos;apprendimento sulla sicurezza attraverso la Realtà Virtuale. Coinvolge i partecipanti in scenari realistici ma privi di rischi, dove possono esercitarsi e padroneggiare le procedure essenziali.
                     </p>
                     <ul className="space-y-2 mb-6">
                       <li className="flex items-start">
@@ -106,7 +106,7 @@ export default function RealtaVirtualePage() {
                   </div>
                   <div className="bg-[var(--purple-light)]/10 p-6 rounded-lg">
                     <h4 className="text-xl font-medium mb-2 text-[var(--purple-deep)]">4x</h4>
-                    <p>Più veloce dell'apprendimento in aula</p>
+                    <p>Più veloce dell&apos;apprendimento in aula</p>
                   </div>
                   <div className="bg-[var(--purple-light)]/10 p-6 rounded-lg">
                     <h4 className="text-xl font-medium mb-2 text-[var(--purple-deep)]">-40%</h4>
@@ -114,7 +114,7 @@ export default function RealtaVirtualePage() {
                   </div>
                   <div className="bg-[var(--purple-light)]/10 p-6 rounded-lg">
                     <h4 className="text-xl font-medium mb-2 text-[var(--purple-deep)]">275%</h4>
-                    <p>Aumento della fiducia nell'applicare nuove competenze</p>
+                    <p>Aumento della fiducia nell&apos;applicare nuove competenze</p>
                   </div>
                 </div>
               </motion.div>
@@ -135,7 +135,7 @@ export default function RealtaVirtualePage() {
                 </div>
                 <div className="bg-white/10 p-6 rounded-lg">
                   <h4 className="text-xl font-medium mb-2">Sviluppo Competenze</h4>
-                  <p className="text-white/90">Acquisizione di competenze tecniche attraverso l'esercitazione pratica in ambienti virtuali.</p>
+                  <p className="text-white/90">Acquisizione di competenze tecniche attraverso l&apos;esercitazione pratica in ambienti virtuali.</p>
                 </div>
                 <div className="bg-white/10 p-6 rounded-lg">
                   <h4 className="text-xl font-medium mb-2">Onboarding</h4>
@@ -168,7 +168,7 @@ export default function RealtaVirtualePage() {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-3xl md:text-4xl font-heading mb-6 text-[var(--purple-deep)]">
-                Pronto a trasformare l'esperienza dei tuoi team?
+                Pronto a trasformare l&apos;esperienza dei tuoi team?
               </h2>
               <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-10">
                 Scopri come la Realtà Virtuale può rivoluzionare i processi nella tua azienda e creare esperienze di apprendimento immersive.

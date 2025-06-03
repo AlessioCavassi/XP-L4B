@@ -96,7 +96,7 @@ export default function TeamBuildingPage() {
               >
                 <h3 className="text-2xl font-heading mb-4 text-[var(--purple-deep)]">Perché scegliere il Team Building Digitale?</h3>
                 <p className="mb-6 text-gray-700">
-                  Il Team Building Digitale offre vantaggi unici rispetto alle attività tradizionali, specialmente in un'era di lavoro ibrido e remoto:
+                  Il Team Building Digitale offre vantaggi unici rispetto alle attività tradizionali, specialmente in un&apos;era di lavoro ibrido e remoto:
                 </p>
                 
                 <div className="grid grid-cols-1 gap-6 mb-8">
@@ -119,7 +119,7 @@ export default function TeamBuildingPage() {
                       </div>
                       <div>
                         <h4 className="text-xl font-medium mb-2 text-[var(--purple-deep)]">Esperienze Immersive</h4>
-                        <p>Crea esperienze coinvolgenti che stimolano l'interazione naturale tra i partecipanti</p>
+                        <p>Crea esperienze coinvolgenti che stimolano l&apos;interazione naturale tra i partecipanti</p>
                       </div>
                     </div>
                   </div>
@@ -131,7 +131,7 @@ export default function TeamBuildingPage() {
                       </div>
                       <div>
                         <h4 className="text-xl font-medium mb-2 text-[var(--purple-deep)]">Misurazione Risultati</h4>
-                        <p>Offre metriche tangibili per valutare l'efficacia delle attività e l'evoluzione del team</p>
+                        <p>Offre metriche tangibili per valutare l&apos;efficacia delle attività e l&apos;evoluzione del team</p>
                       </div>
                     </div>
                   </div>
