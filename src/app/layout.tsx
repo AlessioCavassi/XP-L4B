@@ -1,15 +1,6 @@
 import type { Metadata } from "next";
 import { Oxanium, Exo_2 } from "next/font/google";
-
-// Import CSS files in the correct order
 import "./globals.css";
-import "@/styles/theme.css";
-import "@/styles/base.css";
-import "@/styles/desktop.css";
-import "@/styles/mobile.css";
-import "@/styles/components.css";
-import "@/styles/contact-button-fix.css";
-
 import ParticlesBackground from "@/components/ParticlesBackground";
 import { OrganizationJsonLd, WebSiteJsonLd } from "./jsonld";
 

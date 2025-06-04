@@ -20,6 +20,69 @@ div p.text-white,
   color: white !important;
 }
 
+/* Stili per il contenuto espandibile */
+.expandable-content-inner {
+  color: var(--purple-deep) !important;
+}
+
+.expandable-content-inner div {
+  background-color: transparent !important;
+  color: var(--purple-deep) !important;
+}
+
+.expandable-content-inner .text-white {
+  color: var(--purple-deep) !important;
+  background-color: transparent !important;
+}
+
+/* Rimuovi opacità dagli sfondi */
+.expandable-content-inner [class*="bg-"] {
+  opacity: 1 !important;
+  background-color: transparent !important;
+}
+
+/* Stile per i punti elenco */
+.expandable-content-inner .flex.items-start {
+  color: var(--purple-deep) !important;
+}
+
+/* Stile per il testo forte */
+.expandable-content-inner strong {
+  color: var(--aqua-green) !important;
+}
+
+/* Stili specifici per i paragrafi in MobileOptimizedPage */
+[data-component-name="MobileOptimizedPage"] {
+  background-color: var(--purple-deep) !important;
+  color: white !important;
+  border: 2px solid var(--aqua-green) !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5) !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2) !important;
+}
+
+/* Rimuovi eventuali opacità */
+[data-component-name="MobileOptimizedPage"] {
+  opacity: 1 !important;
+}
+
+/* Stile per i paragrafi all'interno di MobileOptimizedPage */
+[data-component-name="MobileOptimizedPage"] p {
+  background-color: var(--purple-deep) !important;
+  color: white !important;
+  border: 2px solid var(--aqua-green) !important;
+  padding: 0.75rem 1rem !important;
+  border-radius: 0.5rem !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5) !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2) !important;
+}
+
+/* Stile per i div con sfondo viola */
+[data-component-name="MobileOptimizedPage"] div[style*="background"],
+[data-component-name="MobileOptimizedPage"] div.bg-\[var\(--purple-deep\)\] {
+  background-color: var(--purple-deep) !important;
+  opacity: 1 !important;
+}
+
 
 /* Play mode (will be toggled via JS) */
 .play-mode {
@@ -101,8 +164,21 @@ strong.emerald-text,
   font-weight: bold !important;
 }
 
-/* Fix for h1 in MotionComponent to ensure aqua green color */
-[data-component-name="MotionComponent"],
+/* Stile per il MotionComponent con sfondo viola */
+[data-component-name="MotionComponent"] {
+  background-color: var(--purple-deep) !important;
+  color: white !important;
+  -webkit-text-fill-color: white !important;
+  opacity: 1 !important;
+}
+
+/* Stile per gli elementi interni */
+[data-component-name="MotionComponent"] span {
+  color: var(--aqua-green) !important;
+  -webkit-text-fill-color: var(--aqua-green) !important;
+}
+
+/* Manteniamo lo stile esistente per h1 */
 [data-component-name="MotionComponent"] h1 {
   color: #65BFB0 !important;
   -webkit-text-fill-color: #65BFB0 !important;

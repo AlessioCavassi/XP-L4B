@@ -190,14 +190,21 @@ const ServicesSection: React.FC = () => {
                 </p>
                 
                 <motion.div 
-                  className="mt-6 flex items-center text-[var(--aqua-green)] font-medium"
+                  className="mt-6 flex items-center"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: activeService === service.id ? 1 : 0 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <Link href={service.url} className="flex items-center hover:text-[var(--blue)] transition-colors duration-300">
+                  <Link 
+                    href={service.url} 
+                    className="flex items-center bg-[var(--aqua-green)] text-[var(--purple-deep)] px-4 py-2 rounded-full text-sm font-bold font-heading shadow-md hover:shadow-lg transition-all duration-300"
+                    style={{
+                      textShadow: '0 1px 1px rgba(255,255,255,0.5)',
+                      border: '2px solid rgba(255,255,255,0.3)'
+                    }}
+                  >
                     <span>Scopri di più</span>
-                    <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                     </svg>
                   </Link>

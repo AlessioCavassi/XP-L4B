@@ -52,10 +52,15 @@ const ContactPopup: React.FC<ContactPopupProps> = ({ isOpen, onClose }) => {
               {/* Close button */}
               <button
                 className="absolute top-4 right-4 text-white bg-[var(--purple-light)] hover:bg-[var(--aqua-green)] hover:text-[var(--purple-deep)] p-2 rounded-full z-10 transition-colors duration-300"
-                onClick={onClose}
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  onClose();
+                }}
                 aria-label="Chiudi"
+                data-component-name="ContactPopup"
               >
-                <IoMdClose size={24} />
+                <IoMdClose size={24} data-component-name="IoMdClose" />
               </button>
               
               {/* Contact form */}

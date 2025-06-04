@@ -2,7 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-/* I file CSS organizzati vengono importati tramite layout.tsx per evitare problemi di compatibilità con il processo di build su Vercel */
+/* Importa i file CSS organizzati */
+@import "../styles/theme.css";
+@import "../styles/base.css";
+@import "../styles/desktop.css";
+@import "../styles/mobile.css";
+@import "../styles/components.css";
+@import "../styles/contact-button-fix.css"; /* Fix per il contrasto dei pulsanti nella sezione contatti */
 
 /* 
  * Sistema CSS organizzato per XP-Lab

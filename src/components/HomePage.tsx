@@ -110,7 +110,11 @@ const HomePage: React.FC = () => {
         {/* Sezione Blog rimossa e spostata in una pagina dedicata */}
         
         {/* Contact CTA Section */}
-        <ContactCTA />
+        <section id="contatti" className="py-20 bg-gradient-to-br from-[var(--purple-deep)] to-[var(--purple-light)]">
+          <div className="container mx-auto px-4">
+            <ContactCTA />
+          </div>
+        </section>
       </main>
       
       <Footer className={isMobile ? 'mt-0' : ''} />

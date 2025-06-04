@@ -80,8 +80,10 @@ const ExpandableContent: React.FC<ExpandableContentProps> = ({
                 transition={{ duration: 0.3 }}
                 className="overflow-hidden"
               >
-                <div className="p-4 border-t border-[var(--purple-light)]/30 bg-white text-[var(--purple-deep)]">
-                  {section.content}
+                <div className="p-4 border-t border-[var(--purple-light)]/30 bg-white">
+                  <div className="expandable-content-inner space-y-3 text-[var(--purple-deep)]">
+                    {section.content}
+                  </div>
                 </div>
               </motion.div>
             )}

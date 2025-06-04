@@ -58,10 +58,10 @@ const aboutSections = [
     title: 'La Nostra Missione',
     content: (
       <div className="space-y-3">
-        <p className="text-sm font-bold text-white bg-[var(--purple-deep)]/90 p-3 rounded-lg shadow-sm" data-component-name="MobileOptimizedPage">
+        <p className="text-sm font-bold text-white !bg-[var(--purple-deep)] p-3 rounded-lg shadow-sm" data-component-name="MobileOptimizedPage" style={{ backgroundColor: 'var(--purple-deep)' }}>
           &quot;Trasformare ogni attività in una esperienza coinvolgente&quot; - questa è la missione che guida XP-L4B.
         </p>
-        <p className="text-sm font-bold text-white bg-[var(--purple-deep)]/90 p-3 rounded-lg shadow-sm" data-component-name="MobileOptimizedPage">
+        <p className="text-sm font-bold text-white !bg-[var(--purple-deep)] p-3 rounded-lg shadow-sm" data-component-name="MobileOptimizedPage" style={{ backgroundColor: 'var(--purple-deep)' }}>
           L&apos;83% dei dipendenti che partecipano ad attività ludiche sono più motivati. Le nostre sessioni formative gamificate aumentano il coinvolgimento e la produttività in azienda del 50-60%.
         </p>
       </div>
@@ -201,6 +201,17 @@ const flipCardsData = [
 ];
 
 const MobileOptimizedPage: React.FC = () => {
+  // Funzione per lo scorrimento alla sezione contatti
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contatti');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      // Se la sezione contatti non è trovata, reindirizza alla home con l'ancora
+      window.location.href = '/#contatti';
+    }
+  };
+
   const [isMobile, setIsMobile] = useState(false);
   
   useEffect(() => {
@@ -270,7 +281,7 @@ const MobileOptimizedPage: React.FC = () => {
         </motion.h1>
         
         <motion.p
-          className="font-body text-white text-base font-medium mb-6 text-center bg-[var(--purple-deep)]/90 backdrop-blur-sm p-4 rounded-lg shadow-md border border-[var(--aqua-green)]/50"
+          className="font-body text-white text-base font-medium mb-6 text-center bg-[var(--purple-deep)] backdrop-blur-md p-4 rounded-lg shadow-md border-2 border-[var(--aqua-green)]/80"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.6 }}
@@ -310,7 +321,7 @@ const MobileOptimizedPage: React.FC = () => {
           transition={{ delay: 0.8, duration: 0.6 }}
         >
           <span 
-            className="font-body text-sm mt-4 text-center max-w-xs font-medium block"
+            className="font-body text-sm mt-4 text-center max-w-xs font-medium block bg-[var(--purple-deep)] backdrop-blur-md p-4 rounded-lg shadow-md border-2 border-[var(--aqua-green)]/80"
             style={{ color: 'white', textShadow: '0 1px 2px rgba(0,0,0,0.5)' }}
             data-component-name="MotionComponent"
           >
@@ -338,7 +349,14 @@ const MobileOptimizedPage: React.FC = () => {
         </div>
         <h2 className="font-heading text-2xl font-bold mb-2 text-center text-[var(--aqua-green)] drop-shadow-md">I NOSTRI SERVIZI</h2>
         <div className="w-full flex justify-center mb-6">
-          <p className="font-body text-sm font-medium text-center text-white bg-[var(--purple-deep)]/90 py-2 px-4 rounded-lg shadow-sm border border-[var(--aqua-green)]/30 max-w-[90%] mx-auto">
+          <p 
+            className="font-body text-sm font-medium text-center text-white bg-[var(--purple-deep)] py-2 px-4 rounded-lg shadow-sm border-2 border-[var(--aqua-green)] max-w-[90%] mx-auto"
+            style={{
+              backgroundColor: 'var(--purple-deep)',
+              borderColor: 'var(--aqua-green)',
+              textShadow: '0 1px 2px rgba(0,0,0,0.5)'
+            }}
+          >
             Swipe per esplorare i nostri servizi principali
           </p>
         </div>
@@ -416,6 +434,7 @@ const MobileOptimizedPage: React.FC = () => {
           </p>
           
           <motion.button
+            onClick={scrollToContact}
             className="w-full max-w-xs bg-[var(--aqua-green)] text-[var(--purple-deep)] font-bold py-5 px-8 rounded-full shadow-xl text-lg"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}

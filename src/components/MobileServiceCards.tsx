@@ -102,9 +102,17 @@ const MobileServiceCards: React.FC<MobileServiceCardsProps> = ({ services }) => 
                 </div>
                 
                 <motion.button
-                  className="mt-4 self-end px-4 py-2 bg-[var(--aqua-green)] text-[var(--purple-deep)] rounded-full text-sm font-bold font-heading"
-                  style={{ fontFamily: 'var(--font-heading)' }}
-                  whileHover={{ scale: 1.05 }}
+                  className="mt-4 self-end px-4 py-2 bg-[var(--aqua-green)] text-[var(--purple-deep)] rounded-full text-sm font-bold font-heading shadow-md hover:shadow-lg transition-all duration-300"
+                  style={{
+                    fontFamily: 'var(--font-heading)',
+                    textShadow: '0 1px 1px rgba(255,255,255,0.5)',
+                    border: '2px solid rgba(255,255,255,0.3)'
+                  }}
+                  whileHover={{ 
+                    scale: 1.05,
+                    backgroundColor: 'var(--blue)',
+                    color: 'white'
+                  }}
                   whileTap={{ scale: 0.95 }}
                 >
                   Scopri di più
