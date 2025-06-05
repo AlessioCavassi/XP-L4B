@@ -31,7 +31,7 @@ const serviceData = [
   },
   {
     id: 4,
-    title: 'SVILUPPO COMPOTENZE',
+    title: 'SVILUPPO COMPETENZE',
     description: 'Programmi di sviluppo in competenze critiche: AI prompting, team work, problem solving e time management. Ritenzione informazioni: fino al 90% vs 20% metodi tradizionali.',
     icon: '👨‍🏫',
     color: 'var(--purple-deep)'
@@ -162,7 +162,7 @@ const flipCardsData = [
     front: (
       <>
         <div className="text-4xl mb-4">🎓</div>
-        <h3 className="text-xl font-bold text-white mb-2">SVILUPPO COMPOTENZE</h3>
+        <h3 className="text-xl font-bold text-white mb-2">SVILUPPO COMPETENZE</h3>
         <p className="text-sm font-medium text-white/90">Trasforma l&apos;apprendimento in un&apos;esperienza coinvolgente</p>
       </>
     ),
