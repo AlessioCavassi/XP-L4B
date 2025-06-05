@@ -142,6 +142,7 @@ const ServicesSection: React.FC = () => {
               onMouseEnter={() => setActiveService(service.id)}
               onMouseLeave={() => setActiveService(null)}
               className="bg-white/10 backdrop-blur-md rounded-xl p-6 cursor-pointer transition-all duration-300 border border-white/20 relative overflow-hidden interactive"
+              onClick={() => window.location.href = service.url}
             >
               <div 
                 className="absolute inset-0 opacity-0 transition-opacity duration-300" 
@@ -192,8 +193,9 @@ const ServicesSection: React.FC = () => {
                 <motion.div 
                   className="mt-6 flex items-center"
                   initial={{ opacity: 0 }}
-                  animate={{ opacity: activeService === service.id ? 1 : 0 }}
+                  animate={{ opacity: 1 }}
                   transition={{ duration: 0.3 }}
+                  data-component-name="LinkComponent"
                 >
                   <Link 
                     href={service.url} 

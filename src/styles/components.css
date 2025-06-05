@@ -178,10 +178,17 @@ strong.emerald-text,
   -webkit-text-fill-color: var(--aqua-green) !important;
 }
 
-/* Manteniamo lo stile esistente per h1 */
+/* Regole per parole e testi evidenziati in MotionComponent */
 [data-component-name="MotionComponent"] h1 {
   color: #65BFB0 !important;
   -webkit-text-fill-color: #65BFB0 !important;
+}
+
+/* Fix per il colore del testo nel link di download in MobileOptimizedPage */
+[data-component-name="MobileOptimizedPage"].bg-\[var\(--aqua-green\)\] {
+  color: white !important;
+  -webkit-text-fill-color: white !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2) !important;
 }
 
 /* 3D Cube Styles */

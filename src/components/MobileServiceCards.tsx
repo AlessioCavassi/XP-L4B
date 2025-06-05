@@ -8,6 +8,7 @@ interface Service {
   description: string;
   icon: string;
   color: string;
+  url?: string; // Aggiungo l'url opzionale per la navigazione
 }
 
 interface MobileServiceCardsProps {
@@ -75,9 +76,24 @@ const MobileServiceCards: React.FC<MobileServiceCardsProps> = ({ services }) => 
                 background: `linear-gradient(135deg, rgba(45, 38, 85, 0.95), rgba(45, 38, 85, 0.98))`,
                 borderLeft: `4px solid ${service.color}`,
                 boxShadow: '0 4px 15px rgba(0,0,0,0.4)',
-                backdropFilter: 'blur(5px)'
+                backdropFilter: 'blur(5px)',
+                cursor: 'pointer'
               }}
               whileTap={{ scale: 0.98 }}
+              onClick={() => {
+                // Mappa gli ID dei servizi agli URL corretti
+                const serviceUrls = {
+                  1: '/servizi/realta-virtuale',
+                  2: '/servizi/realta-aumentata',
+                  3: '/servizi/gamification',
+                  4: '/servizi/percorsi-interattivi',
+                  5: '/servizi/team-building',
+                  6: '/servizi/digital-engagement'
+                };
+                // Usa l'url specifico del servizio se disponibile, altrimenti usa la mappa
+                const targetUrl = service.url || serviceUrls[service.id as keyof typeof serviceUrls] || '/';
+                window.location.href = targetUrl;
+              }}
             >
               <div className="flex flex-col h-full">
                 <div className="flex items-center mb-4">
@@ -108,6 +124,7 @@ const MobileServiceCards: React.FC<MobileServiceCardsProps> = ({ services }) => 
                     textShadow: '0 1px 1px rgba(255,255,255,0.5)',
                     border: '2px solid rgba(255,255,255,0.3)'
                   }}
+                  data-component-name="LinkComponent"
                   whileHover={{ 
                     scale: 1.05,
                     backgroundColor: 'var(--blue)',

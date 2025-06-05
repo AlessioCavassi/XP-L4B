@@ -201,15 +201,10 @@ const flipCardsData = [
 ];
 
 const MobileOptimizedPage: React.FC = () => {
-  // Funzione per lo scorrimento alla sezione contatti
+  // Funzione per reindirizzare alla pagina contatti
   const scrollToContact = () => {
-    const contactSection = document.getElementById('contatti');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
-    } else {
-      // Se la sezione contatti non è trovata, reindirizza alla home con l'ancora
-      window.location.href = '/#contatti';
-    }
+    // Reindirizza alla pagina contatti come il link in MobileOptimizedPage
+    window.location.href = '/contatti';
   };
 
   const [isMobile, setIsMobile] = useState(false);
@@ -270,14 +265,14 @@ const MobileOptimizedPage: React.FC = () => {
           <MobileParticlesBackground />
         </div>
         <motion.h1 
-          className="font-heading text-3xl font-bold mb-4 text-center text-[var(--aqua-green)] drop-shadow-md mt-16"
+          className="font-heading text-3xl font-bold mb-4 text-center text-[var(--aqua-green)] drop-shadow-md mt-16 bg-[var(--purple-deep)] p-4 rounded-lg shadow-md border border-[var(--aqua-green)]/30"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           style={{ color: 'var(--aqua-green)' }}
           data-component-name="MotionComponent"
         >
-          TRASFORMIAMO OGNI ATTIVITÀ IN UN&apos;ESPERIENZA COINVOLGENTE
+          <span className="text-white">TRASFORMIAMO</span> OGNI ATTIVITÀ IN <span className="text-white">UN&apos;ESPERIENZA</span> <span className="text-white">COINVOLGENTE</span>
         </motion.h1>
         
         <motion.p
@@ -287,7 +282,7 @@ const MobileOptimizedPage: React.FC = () => {
           transition={{ delay: 0.3, duration: 0.6 }}
           style={{ color: 'white' }} // Forza il colore bianco anche a livello inline
         >
-          <span className="font-heading text-[var(--aqua-green)] font-bold text-lg drop-shadow-md block mb-1">La nostra missione:</span> <span className="font-body" style={{ color: 'white', textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>Coinvolgere le persone attraverso innovazione digitale e il potere del gioco.</span>
+          <span className="font-heading text-[var(--aqua-green)] font-bold text-lg drop-shadow-md block mb-1">La nostra missione:</span> <span className="font-body" style={{ color: 'white', textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}><span className="text-[var(--aqua-green)] font-bold">Coinvolgere</span> le persone attraverso <span className="text-[var(--aqua-green)] font-bold">innovazione digitale</span> e il <span className="text-[var(--aqua-green)] font-bold">potere del gioco</span>.</span>
         </motion.p>
         
         <motion.div
@@ -299,8 +294,8 @@ const MobileOptimizedPage: React.FC = () => {
           <a 
             href="/documents/xp-lab-presentazione.pdf"
             download
-            className="bg-[var(--aqua-green)] hover:bg-[var(--blue)] text-[var(--purple-deep)] font-heading font-bold py-3 px-6 rounded-full transition-all duration-300 text-base md:text-lg text-center"
-            style={{ minWidth: '280px', width: '80%', maxWidth: '320px', display: 'block' }}
+            className="bg-[var(--aqua-green)] hover:bg-[var(--blue)] text-white font-heading font-bold py-3 px-6 rounded-full transition-all duration-300 text-base md:text-lg text-center shadow-md"
+            style={{ minWidth: '280px', width: '80%', maxWidth: '320px', display: 'block', color: 'white', WebkitTextFillColor: 'white', textShadow: '0 1px 2px rgba(0,0,0,0.2)' }}
             data-component-name="MobileOptimizedPage"
           >
             SCARICA LA NOSTRA PRESENTAZIONE
@@ -321,11 +316,11 @@ const MobileOptimizedPage: React.FC = () => {
           transition={{ delay: 0.8, duration: 0.6 }}
         >
           <span 
-            className="font-body text-sm mt-4 text-center max-w-xs font-medium block bg-[var(--purple-deep)] backdrop-blur-md p-4 rounded-lg shadow-md border-2 border-[var(--aqua-green)]/80"
+            className="font-body text-sm mt-4 text-center max-w-xs font-medium block bg-[var(--purple-deep)] backdrop-blur-md p-4 rounded-lg shadow-md border-2 border-[var(--aqua-green)]" 
             style={{ color: 'white', textShadow: '0 1px 2px rgba(0,0,0,0.5)' }}
-            data-component-name="MotionComponent"
+            data-component-name="MobileOptimizedPage"
           >
-            Siamo esperti nella creazione di esperienze ludiche e videoludiche che fondono gamification, realtà virtuale e intelligenza artificiale per rendere i team più produttivi e coinvolgere e ispirare il tuo pubblico.
+            Siamo esperti nella creazione di <span className="text-[var(--aqua-green)] font-medium">esperienze ludiche</span> e videoludiche che fondono <span className="text-[var(--aqua-green)] font-medium">gamification</span>, <span className="text-[var(--aqua-green)] font-medium">realtà virtuale</span> e <span className="text-[var(--aqua-green)] font-medium">intelligenza artificiale</span> per rendere i team più <span className="text-[var(--aqua-green)]">produttivi</span> e <span className="text-[var(--aqua-green)]">coinvolgere</span> e <span className="text-[var(--aqua-green)]">ispirare</span> il tuo pubblico.
           </span>
         </motion.div>
         
@@ -372,7 +367,7 @@ const MobileOptimizedPage: React.FC = () => {
         </div>
         <h2 className="font-heading text-2xl font-bold mb-2 text-center text-[var(--aqua-green)] drop-shadow-sm">Chi Siamo</h2>
         <div className="w-full flex justify-center mb-6">
-          <p className="font-body text-sm text-center text-white font-medium bg-[var(--purple-deep)]/90 py-2 px-4 rounded-lg shadow-sm border border-[var(--aqua-green)]/30 max-w-[90%] mx-auto">
+          <p className="font-body text-sm text-center text-white font-medium bg-[var(--purple-deep)] py-2 px-4 rounded-lg shadow-sm border border-[var(--aqua-green)]/30 max-w-[90%] mx-auto" data-component-name="MobileOptimizedPage">
             Tocca per espandere le sezioni
           </p>
         </div>
@@ -391,7 +386,7 @@ const MobileOptimizedPage: React.FC = () => {
         </h2>
         <div className="w-16 h-1 bg-[var(--aqua-green)] mx-auto mb-4"></div>
         <div className="w-full flex justify-center mb-8">
-          <p className="font-body text-sm font-medium text-center text-white bg-[var(--purple-deep)]/90 py-2 px-4 rounded-lg shadow-sm border border-[var(--aqua-green)]/30 max-w-[90%] mx-auto">
+          <p className="font-body text-sm font-medium text-center text-white bg-[var(--purple-deep)] py-2 px-4 rounded-lg shadow-md border border-[var(--aqua-green)] max-w-[90%] mx-auto" data-component-name="MobileOptimizedPage">
             Tocca le carte per scoprire dati e statistiche sul nostro impatto
           </p>
         </div>
@@ -422,7 +417,7 @@ const MobileOptimizedPage: React.FC = () => {
       </section>
       
       {/* CTA con colori coerenti dalla palette principale */}
-      <section className="py-16 px-4 bg-[var(--purple-deep)]/80 backdrop-blur-sm relative overflow-hidden" style={{ zIndex: 1 }}>
+      <section className="py-16 px-4 bg-[var(--purple-deep)] relative overflow-hidden" style={{ zIndex: 1 }} data-component-name="MobileOptimizedPage">
         {/* Elementi decorativi semplificati */}
         <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--aqua-green)]/20 rounded-full blur-xl"></div>
         <div className="absolute bottom-0 left-0 w-32 h-32 bg-[var(--aqua-green)]/20 rounded-full blur-xl"></div>
