@@ -1,5 +1,5 @@
-// Remove 'use client' and make this a server component
-import { Organization, WebSite, WithContext } from 'schema-dts';
+// Server component - no client directive needed
+// TypeScript types are only used at compile time, not at runtime
 
 // Pre-compute the JSON-LD content to ensure stable output
 const ORGANIZATION_JSON_LD = JSON.stringify({

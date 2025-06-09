@@ -76,19 +76,19 @@ const aboutSections = [
         <div className="flex items-start gap-2">
           <span className="text-[var(--aqua-green)] text-lg">•</span>
           <div className="text-white bg-[var(--purple-deep)]/90 p-2 rounded-lg shadow-sm flex-1" data-component-name="<div />">
-            <strong className="emerald-text">Engagement</strong>: Le persone sono al centro di ogni esperienza. Questo valore promuove la partecipazione attiva, la motivazione intrinseca e l'empowerment dei team e dei singoli individui.
+            <strong className="emerald-text">Engagement</strong>: Le persone sono al centro di ogni esperienza. Questo valore promuove la partecipazione attiva, la motivazione intrinseca e l&apos;empowerment dei team e dei singoli individui.
           </div>
         </div>
         <div className="flex items-start gap-2">
           <span className="text-[var(--aqua-green)] text-lg">•</span>
           <div className="text-white bg-[var(--purple-deep)]/90 p-2 rounded-lg shadow-sm flex-1">
-            <strong className="emerald-text">Collaborazione</strong>: La gamification funziona meglio quando c'è co-creazione: soluzioni creative nascono da ambienti in cui le persone si sentono libere di sperimentare, sbagliare e migliorare insieme.
+            <strong className="emerald-text">Collaborazione</strong>: La gamification funziona meglio quando c&apos;è co-creazione: soluzioni creative nascono da ambienti in cui le persone si sentono libere di sperimentare, sbagliare e migliorare insieme.
           </div>
         </div>
         <div className="flex items-start gap-2">
           <span className="text-[var(--aqua-green)] text-lg">•</span>
           <div className="text-white bg-[var(--purple-deep)]/90 p-2 rounded-lg shadow-sm flex-1">
-            <strong className="emerald-text">Obiettivi comuni</strong>: Crediamo nell'unione delle energie e delle competenze per raggiungere insieme ambizioni significative. Questo valore garantisce che ogni membro del team sappia chiaramente cosa stiamo costruendo insieme e perché, favorendo coesione e senso d'appartenenza.
+            <strong className="emerald-text">Obiettivi comuni</strong>: Crediamo nell&apos;unione delle energie e delle competenze per raggiungere insieme ambizioni significative. Questo valore garantisce che ogni membro del team sappia chiaramente cosa stiamo costruendo insieme e perché, favorendo coesione e senso d&apos;appartenenza.
           </div>
         </div>
       </div>
