@@ -75,20 +75,20 @@ const aboutSections = [
       <div className="space-y-3 text-sm">
         <div className="flex items-start gap-2">
           <span className="text-[var(--aqua-green)] text-lg">•</span>
-          <div className="text-white bg-[var(--purple-deep)]/90 p-2 rounded-lg shadow-sm flex-1">
-            <strong className="emerald-text">Innovazione</strong>: Esploriamo costantemente nuove tecnologie e metodologie per offrire esperienze all&apos;avanguardia.
+          <div className="text-white bg-[var(--purple-deep)]/90 p-2 rounded-lg shadow-sm flex-1" data-component-name="<div />">
+            <strong className="emerald-text">Engagement</strong>: Le persone sono al centro di ogni esperienza. Questo valore promuove la partecipazione attiva, la motivazione intrinseca e l'empowerment dei team e dei singoli individui.
           </div>
         </div>
         <div className="flex items-start gap-2">
           <span className="text-[var(--aqua-green)] text-lg">•</span>
           <div className="text-white bg-[var(--purple-deep)]/90 p-2 rounded-lg shadow-sm flex-1">
-            <strong className="emerald-text">Coinvolgimento</strong>: Crediamo che l&apos;apprendimento e la crescita avvengano attraverso esperienze coinvolgenti e memorabili.
+            <strong className="emerald-text">Collaborazione</strong>: La gamification funziona meglio quando c'è co-creazione: soluzioni creative nascono da ambienti in cui le persone si sentono libere di sperimentare, sbagliare e migliorare insieme.
           </div>
         </div>
         <div className="flex items-start gap-2">
           <span className="text-[var(--aqua-green)] text-lg">•</span>
           <div className="text-white bg-[var(--purple-deep)]/90 p-2 rounded-lg shadow-sm flex-1">
-            <strong className="emerald-text">Risultati Misurabili</strong>: Ogni nostra soluzione è orientata a generare risultati concreti e misurabili per i nostri clienti.
+            <strong className="emerald-text">Obiettivi comuni</strong>: Crediamo nell'unione delle energie e delle competenze per raggiungere insieme ambizioni significative. Questo valore garantisce che ogni membro del team sappia chiaramente cosa stiamo costruendo insieme e perché, favorendo coesione e senso d'appartenenza.
           </div>
         </div>
       </div>
