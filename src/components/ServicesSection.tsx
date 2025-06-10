@@ -15,12 +15,12 @@ interface Service {
 const ServicesSection: React.FC = () => {
   const [activeService, setActiveService] = useState<number | null>(null);
 
-  // Services data
+  // Services data with highlighted key terms
   const services: Service[] = [
     {
       id: 1,
       title: 'Realtà Virtuale',
-      description: 'Sviluppiamo progetti in Realtà Virtuale come SafetyVR per l\'apprendimento sulla sicurezza. Scenari realistici ma privi di rischi. Massimizza l\'acquisizione delle competenze con la VR.',
+      description: 'Sviluppiamo esperienze immersive in Realtà Virtuale pensate per trasformare la formazione, la comunicazione e il marketing aziendale. Grazie alla collaborazione con la nostra azienda partner, uniamo competenze tecniche e creative per offrire progetti altamente personalizzati, innovativi e di forte impatto.',
       icon: <FaVrCardboard size={40} />,
       color: 'var(--aqua-green)', // Mantenuto lo stesso colore per coerenza
       url: '/servizi/realta-virtuale'
@@ -28,7 +28,7 @@ const ServicesSection: React.FC = () => {
     {
       id: 2,
       title: 'Realtà Aumentata',
-      description: 'Soluzioni in Realtà Aumentata come 3DToMe, ARStudio e Object Recognition. Percorsi di apprendimento, manuali di supporto e contenuti aumentati. Engagement aumentato del +300%.',
+      description: 'Progettiamo soluzioni in Realtà Aumentata che arricchiscono l\'ambiente reale fisico con contenuti digitali interattivi, offrendo nuove modalità di comunicazione, formazione e coinvolgimento del pubblico. In collaborazione con la nostra azienda partner, integriamo creatività e tecnologia per sviluppare esperienze personalizzate e di alta qualità.',
       icon: <FaGlasses size={40} />,
       color: 'var(--purple-light)', // Cambiato da aqua-green a purple-light per differenziare
       url: '/servizi/realta-aumentata'
@@ -36,7 +36,7 @@ const ServicesSection: React.FC = () => {
     {
       id: 3,
       title: 'Gamification',
-      description: 'Meccaniche di gioco applicate ai processi aziendali: sistemi di punti, badge, classifiche e ricompense. Casi d\'uso: onboarding, corsi formativi, incentivazione team. Risultato: +83% motivazione e +72% performance misurabile.',
+      description: 'Soluzioni su misura per coinvolgere dipendenti, ottimizzare processi e fidelizzare clienti. Aumenta engagement, produttività e risultati con dinamiche game-based.',
       icon: <FaLaptopCode size={40} />,
       color: 'var(--blue)', // Mantenuto blu per differenziare le categorie
       url: '/servizi/gamification'
@@ -51,8 +51,8 @@ const ServicesSection: React.FC = () => {
     },
     {
       id: 5,
-      title: 'Team Building Digitale',
-      description: 'Spatial Assistance creano ambienti virtuali condivisi per team remoti o ibridi. Ideale per: kick-off progetti, brainstorming, collaborative problem solving. Riduzione del 30% nel turnover dei dipendenti nei team partecipanti.',
+      title: 'RIUNIONI LUDICHE E DIGITALI',
+      description: 'Soluzioni di gamification professionale per riunioni coinvolgenti e team building virtuali efficaci, con strumenti misurabili per migliorare collaborazione e performance. Trasforma l\'interazione del tuo team!',
       icon: <FaUsers size={40} />,
       color: 'var(--aqua-green)', // Cambiato da purple-light ad aqua-green per migliore contrasto
       url: '/servizi/team-building'
@@ -165,12 +165,12 @@ const ServicesSection: React.FC = () => {
                   {service.description.split(' ').map((word, i) => {
                     // Parole da evidenziare per ciascun servizio
                     const keywordsMap: Record<number, string[]> = {
-                      1: ['SafetyVR', 'Realtà Virtuale', 'apprendimento', 'sicurezza', 'realistici', 'privi di rischi'],
-                      2: ['Realtà Aumentata', '3DToMe', 'ARStudio', 'Object Recognition', '+300%', 'engagement'],
-                      3: ['Gamification', 'punti', 'badge', 'classifiche', 'ricompense', '+83%', 'motivazione', '+72%', 'performance'],
-                      4: ['reskilling', 'upskilling', 'competenze', 'mercato del lavoro'],
-                      5: ['Spatial Assistance', 'ambienti virtuali condivisi', 'team remoti', 'kick-off', 'brainstorming', '30%', 'turnover'],
-                      6: ['Portal Gate', 'ludici', 'processi aziendali', 'gaming', '85-95%']
+                      1: ['esperienze immersive', 'Realtà Virtuale', 'trasformare', 'formazione', 'comunicazione', 'marketing', 'progetti', 'personalizzati', 'innovativi', 'forte impatto'],
+                      2: ['Realtà Aumentata', 'contenuti digitali interattivi', 'comunicazione', 'formazione', 'coinvolgimento', 'esperienze personalizzate', 'alta qualità'],
+                      3: ['Soluzioni su misura', 'coinvolgere dipendenti', 'ottimizzare processi', 'fidelizzare clienti', 'engagement', 'produttività', 'risultati', 'game-based'],
+                      4: ['mercato del lavoro', 'competenze', 'reskilling', 'upskilling'],
+                      5: ['gamification professionale', 'riunioni coinvolgenti', 'team building', 'virtuali', 'strumenti misurabili', 'collaborazione', 'performance', 'Trasforma', 'interazione'],
+                      6: ['Portal Gate', 'elementi ludici', 'processi aziendali', 'apprendimento continuo', 'gaming', '85-95%']
                     };
                     
                     // Verifica se esistono parole chiave per questo servizio

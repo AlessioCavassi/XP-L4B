@@ -17,15 +17,7 @@ const HeroSection: React.FC = () => {
           <span className="text-white">TRASFORMIAMO</span> OGNI ATTIVITÀ IN <span className="text-white">UN&apos;ESPERIENZA</span> <span className="text-white">COINVOLGENTE</span>
         </motion.h1>
         
-        <motion.p 
-          className="text-lg md:text-xl font-medium text-white mb-4 max-w-2xl mx-auto leading-relaxed bg-[var(--purple-deep)] p-4 rounded-lg shadow-lg border border-[var(--aqua-green)]/30 shadow-md"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-        >
-          <span className="font-bold text-[var(--aqua-green)] text-xl md:text-2xl drop-shadow-md">La nostra missione:</span> Elevare il <span className="text-[var(--aqua-green)] font-bold">potenziale umano</span> nelle organizzazioni attraverso l&apos;<span className="text-[var(--aqua-green)] font-bold">innovazione digitale</span> e il <span className="text-[var(--aqua-green)] font-bold">potere del gioco</span>.
-        </motion.p>
-        
+
         <motion.p 
           className="text-lg md:text-xl text-white font-medium mb-8 max-w-2xl mx-auto leading-relaxed border-l-4 border-[var(--aqua-green)] pl-4 p-4 bg-[var(--purple-deep)] rounded-r-lg shadow-lg"
           initial={{ opacity: 0 }}

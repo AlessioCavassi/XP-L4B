@@ -275,16 +275,7 @@ const MobileOptimizedPage: React.FC = () => {
           <span className="text-white">TRASFORMIAMO</span> OGNI ATTIVITÀ IN <span className="text-white">UN&apos;ESPERIENZA</span> <span className="text-white">COINVOLGENTE</span>
         </motion.h1>
         
-        <motion.p
-          className="font-body text-white text-base font-medium mb-6 text-center bg-[var(--purple-deep)] backdrop-blur-md p-4 rounded-lg shadow-md border-2 border-[var(--aqua-green)]/80"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3, duration: 0.6 }}
-          style={{ color: 'white' }} // Forza il colore bianco anche a livello inline
-        >
-          <span className="font-heading text-[var(--aqua-green)] font-bold text-lg drop-shadow-md block mb-1">La nostra missione:</span> <span className="font-body" style={{ color: 'white', textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}><span className="text-[var(--aqua-green)] font-bold">Coinvolgere</span> le persone attraverso <span className="text-[var(--aqua-green)] font-bold">innovazione digitale</span> e il <span className="text-[var(--aqua-green)] font-bold">potere del gioco</span>.</span>
-        </motion.p>
-        
+
         <motion.div
           className="w-full flex flex-col items-center gap-6 mt-6 mb-4"
           initial={{ opacity: 0, y: 20 }}

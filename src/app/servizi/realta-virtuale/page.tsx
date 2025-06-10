@@ -8,7 +8,7 @@ import ParticlesBackground from '@/components/ParticlesBackground';
 import MobileNavSwipe from '@/components/MobileNavSwipe';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { FaVrCardboard, FaArrowRight } from 'react-icons/fa';
+import { FaVrCardboard, FaGlasses, FaArrowRight } from 'react-icons/fa';
 
 export default function RealtaVirtualePage() {
   return (
@@ -50,6 +50,7 @@ export default function RealtaVirtualePage() {
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+              {/* SafetyVR Section */}
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -58,31 +59,85 @@ export default function RealtaVirtualePage() {
               >
                 <div className="p-1 bg-gradient-to-br from-[var(--aqua-green)] to-[var(--purple-light)] rounded-xl">
                   <div className="bg-[var(--purple-deep)] p-8 rounded-xl text-white h-full flex flex-col justify-center">
-                    <div className="inline-block mb-6 p-4 rounded-full" style={{ backgroundColor: 'rgba(0, 255, 200, 0.25)' }}>
-                      <FaVrCardboard size={60} style={{ color: 'var(--aqua-green)' }} />
+                    <div className="flex items-center mb-6 gap-4">
+                      <div className="inline-block p-4 rounded-full" style={{ backgroundColor: 'rgba(0, 255, 200, 0.25)' }}>
+                        <FaVrCardboard size={60} style={{ color: 'var(--aqua-green)' }} />
+                      </div>
+                      <h3 className="text-2xl font-heading text-white">PRODOTTO VR</h3>
                     </div>
                     <h2 className="text-3xl font-heading mb-6">SafetyVR</h2>
                     <p className="mb-6">
-                      SafetyVR è la nostra piattaforma progettata per rivoluzionare l&apos;apprendimento sulla sicurezza attraverso la Realtà Virtuale. Coinvolge i partecipanti in scenari realistici ma privi di rischi, dove possono esercitarsi e padroneggiare le procedure essenziali.
+                      SafetyVR è la nostra piattaforma progettata per rivoluzionare l&apos;apprendimento sulla sicurezza attraverso la Realtà Virtuale. Coinvolge i partecipanti in scenari realistici ma privi di rischi, dove possono esercitarsi e padroneggiare le procedure essenziali in un ambiente controllato.
                     </p>
+                    
+                    <h4 className="text-xl font-heading mb-3 text-[var(--aqua-green)]">Applicazioni principali</h4>
                     <ul className="space-y-2 mb-6">
                       <li className="flex items-start">
                         <span className="text-[var(--aqua-green)] mr-2">✓</span>
-                        <span>Scenari realistici e interattivi</span>
+                        <span><strong>Industria:</strong> Scenari realistici e interattivi per la formazione sulla sicurezza in ambienti industriali</span>
                       </li>
                       <li className="flex items-start">
                         <span className="text-[var(--aqua-green)] mr-2">✓</span>
-                        <span>Apprendimento pratico senza rischi</span>
+                        <span><strong>Formazione:</strong> Apprendimento pratico senza rischi con procedure di emergenza simulata</span>
                       </li>
                       <li className="flex items-start">
                         <span className="text-[var(--aqua-green)] mr-2">✓</span>
-                        <span>Monitoraggio delle performance</span>
+                        <span><strong>Analisi:</strong> Monitoraggio delle performance e raccolta dati sulle decisioni prese dagli utenti</span>
                       </li>
                       <li className="flex items-start">
                         <span className="text-[var(--aqua-green)] mr-2">✓</span>
-                        <span>Personalizzazione per ogni settore</span>
+                        <span><strong>Flessibilità:</strong> Personalizzazione del sistema per ogni settore e tipo di rischio</span>
                       </li>
                     </ul>
+                    <p className="text-sm bg-white/10 p-3 rounded italic">
+                      Le simulazioni in VR migliorano la ritenzione dell&apos;apprendimento del 76% rispetto ai metodi tradizionali e riducono gli errori nelle procedure operative del 40%.
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Portal Gate Section */}
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              >
+                <div className="p-1 bg-gradient-to-br from-[var(--purple-light)] to-[var(--blue)] rounded-xl">
+                  <div className="bg-[var(--purple-deep)] p-8 rounded-xl text-white h-full flex flex-col justify-center">
+                    <div className="flex items-center mb-6 gap-4">
+                      <div className="inline-block p-4 rounded-full" style={{ backgroundColor: 'rgba(124, 58, 237, 0.25)' }}>
+                        <FaGlasses size={60} style={{ color: 'var(--purple-light)' }} />
+                      </div>
+                      <h3 className="text-2xl font-heading text-white">PRODOTTO SPATIAL</h3>
+                    </div>
+                    <h2 className="text-3xl font-heading mb-6">Portal Gate</h2>
+                    <p className="mb-6">
+                      PortalGate è un&apos;app di Spatial Computing sviluppata e pubblicata da dilium, che consente agli utenti di esplorare mondi surreali e immersivi camminando attraverso portali digitali nel loro ambiente fisico. Disponibile su Apple Vision Pro, iOS e Android, permette di interagire e visualizzare contenuti 360° e vivere esperienze uniche.
+                    </p>
+                    
+                    <h4 className="text-xl font-heading mb-3 text-[var(--purple-light)]">Casi d&apos;uso</h4>
+                    <ul className="space-y-2 mb-6">
+                      <li className="flex items-start">
+                        <span className="text-[var(--purple-light)] mr-2">✓</span>
+                        <span><strong>Didattica:</strong> Ambienti educativi e interattivi per un&apos;esperienza immersiva a 360° che porta l&apos;apprendimento a un livello superiore</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-[var(--purple-light)] mr-2">✓</span>
+                        <span><strong>Eventi e turismo:</strong> Esplorazione di punti di interesse e luoghi culturali attraverso esperienze immersive a 360°</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-[var(--purple-light)] mr-2">✓</span>
+                        <span><strong>Collaborazione Duomo di Milano:</strong> Esperienza esclusiva con la Veneranda Fabbrica del Duomo per esplorare guglie e cattedrale</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-[var(--purple-light)] mr-2">✓</span>
+                        <span><strong>Contenuti personalizzati:</strong> Realizzazione professionale di video 360° con partner di fiducia</span>
+                      </li>
+                    </ul>
+                    <p className="text-sm bg-white/10 p-3 rounded italic">
+                      In collaborazione con le istituzioni lombarde, organizziamo operazioni congiunte di marketing per presentare e promuovere i contenuti attraverso comunicati stampa condivisi.
+                    </p>
                   </div>
                 </div>
               </motion.div>
