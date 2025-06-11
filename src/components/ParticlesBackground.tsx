@@ -1,99 +1,132 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { GiDiceSixFacesSix, GiDiamondHard, GiCrystalGrowth, GiGoldBar, GiTwoCoins, GiCutDiamond } from 'react-icons/gi';
+import ParticleItem, { ItemType } from './ParticleItem';
 
-type ItemType = 'dice' | 'gem' | 'coin';
+// Definire diverse densità e tipi di particelle per diverse sezioni
+type SectionType = 'hero' | 'services' | 'about' | 'logos' | 'contact' | 'generic';
 
-interface GameItem {
-  type: ItemType;
-  size: number;
-  top: string;
-  left: string;
-  duration: number;
-  rotation: number;
-  color: string;
+interface ParticlesBackgroundProps {
+  sectionType?: SectionType;
+  className?: string;
+  style?: React.CSSProperties;
+  count?: number; // Numero personalizzabile di particelle
 }
 
-const ParticlesBackground: React.FC = () => {
-  const [gameItems, setGameItems] = useState<GameItem[]>([]);
+const ParticlesBackground: React.FC<ParticlesBackgroundProps> = ({ 
+  sectionType = 'generic', 
+  className = '',
+  style = {},
+  count
+}) => {
+  const [items, setItems] = useState<Array<{
+    id: string;
+    type: ItemType;
+    size: number;
+    initialX: number;
+    initialY: number;
+    color: string;
+  }>>([]);
   const [isClient, setIsClient] = useState(false);
   
-  // Generate random game items on the client side only
+  // Configurazione uniforme per tutte le sezioni
+  // Tutte le sezioni avranno lo stesso numero di particelle e le stesse dimensioni
+  const UNIFORM_COUNT = 20; // Numero standard di particelle per ogni sezione
+  const UNIFORM_TYPES = ['dice', 'gem', 'coin'] as ItemType[];
+  const UNIFORM_COLOR = ['#FFFFFF']; // Bianco puro per tutte le particelle
+  const UNIFORM_SIZES = { min: 20, max: 30 }; // Dimensioni uniformi
+  
+  const sectionConfig = {
+    hero: {
+      particleCount: UNIFORM_COUNT,
+      types: UNIFORM_TYPES,
+      colorScheme: UNIFORM_COLOR,
+      sizes: UNIFORM_SIZES
+    },
+    services: {
+      particleCount: UNIFORM_COUNT,
+      types: UNIFORM_TYPES,
+      colorScheme: UNIFORM_COLOR,
+      sizes: UNIFORM_SIZES
+    },
+    about: {
+      particleCount: UNIFORM_COUNT,
+      types: UNIFORM_TYPES,
+      colorScheme: UNIFORM_COLOR,
+      sizes: UNIFORM_SIZES
+    },
+    logos: {
+      particleCount: UNIFORM_COUNT,
+      types: UNIFORM_TYPES,
+      colorScheme: UNIFORM_COLOR,
+      sizes: UNIFORM_SIZES
+    },
+    contact: {
+      particleCount: UNIFORM_COUNT,
+      types: UNIFORM_TYPES,
+      colorScheme: UNIFORM_COLOR,
+      sizes: UNIFORM_SIZES
+    },
+    generic: {
+      particleCount: UNIFORM_COUNT,
+      types: UNIFORM_TYPES,
+      colorScheme: UNIFORM_COLOR,
+      sizes: UNIFORM_SIZES
+    }
+  };
+  
   useEffect(() => {
-    // Set this to true to indicate we're on the client
+    // Generate particles only on the client side
     setIsClient(true);
     
-    // Possible types and colors - solo bianco e nero
-    const types: ItemType[] = ['dice', 'gem', 'coin']; // Distribuzione uniforme
-    const monochromeColors = ['#ffffff', '#f8f8f8', '#e0e0e0', '#222222', '#333333', '#111111'];
+    const config = sectionConfig[sectionType];
     
-    // Generate random game items - numero ridotto
-    const newItems = Array.from({ length: 15 }).map(() => {
-      const type = types[Math.floor(Math.random() * types.length)];
-      // Tutti gli elementi usano la palette in bianco e nero
-      const color = monochromeColors[Math.floor(Math.random() * monochromeColors.length)];
+    // Se è specificato un count personalizzato, lo utilizziamo
+    const numParticles = count !== undefined ? count : config.particleCount;
+    
+    const newItems = Array.from({ length: numParticles }).map((_, index) => {
+      const type = config.types[Math.floor(Math.random() * config.types.length)];
+      const color = config.colorScheme[Math.floor(Math.random() * config.colorScheme.length)];
       
-      // Make dice smaller than other elements
+      // Dimensioni specifiche per tipo e sezione
+      const minSize = config.sizes.min;
+      const maxSize = config.sizes.max;
+      const size = minSize + Math.random() * (maxSize - minSize);
+      
+      // Distribuzione casuale all'interno della sezione
       return {
+        id: `particle-${sectionType}-${index}-${Date.now()}`,
         type,
-        size: type === 'dice' ? Math.random() * 12 + 8 : Math.random() * 20 + 15, // Dice are smaller now
-        top: `${Math.random() * 100}%`,
-        left: `${Math.random() * 100}%`,
-        duration: Math.random() * 25 + 20,
-        rotation: Math.random() * 360,
+        size,
+        initialX: 5 + Math.random() * 90, // Keep within 5%-95% of container
+        initialY: 5 + Math.random() * 90, // Keep within 5%-95% of container
         color,
       };
     });
     
-    setGameItems(newItems);
-  }, []);
-  
-  // Function to render the appropriate icon based on item type
-  const renderIcon = (item: GameItem, index: number) => {
-    let Icon;
-    
-    // Select a random icon based on the item type
-    if (item.type === 'dice') {
-      Icon = GiDiceSixFacesSix;
-    } else if (item.type === 'gem') {
-      // Alternate between different gem types
-      Icon = index % 3 === 0 ? GiDiamondHard : index % 3 === 1 ? GiCrystalGrowth : GiCutDiamond;
-    } else {
-      // Alternate between different coin types
-      Icon = index % 2 === 0 ? GiTwoCoins : GiGoldBar;
-    }
-    
-    return <Icon size={item.size} color={item.color} />;
-  };
-  
+    setItems(newItems);
+  }, [sectionType, count]);
+
   return (
-    <div className="fixed inset-0 w-full h-full overflow-hidden pointer-events-none z-0">
-      {/* Animated game items in the background */}
-      {isClient && gameItems.map((item, i) => (
-        <motion.div
-          key={i}
-          className="absolute particle-item"
-          style={{
-            top: item.top,
-            left: item.left,
-          }}
-          initial={{ opacity: 0, y: 0, rotate: item.rotation }}
-          animate={{
-            y: [0, -120, 0],
-            opacity: [0.15, 0.4, 0.15], // Opacità ridotta per essere più sottile
-            rotate: [item.rotation, item.rotation + 360, item.rotation],
-            scale: [0.8, 1, 0.8],
-          }}
-          transition={{
-            repeat: Infinity,
-            duration: item.duration,
-            ease: "easeInOut",
-          }}
-        >
-          {renderIcon(item, i)}
-        </motion.div>
+    <div 
+      className={`relative w-full h-full overflow-hidden ${className}`}
+      style={{ 
+        zIndex: 100, // z-index molto alto per essere sempre visibile
+        pointerEvents: 'none', // Permette di cliccare attraverso le particelle
+        ...style
+      }}
+    >
+      {/* Each particle is now a completely independent component with its own physics */}
+      {isClient && items.map((item, index) => (
+        <ParticleItem
+          key={item.id}
+          index={index}
+          type={item.type}
+          size={item.size}
+          initialX={item.initialX}
+          initialY={item.initialY}
+          color={item.color}
+        />
       ))}
     </div>
   );

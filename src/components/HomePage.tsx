@@ -39,7 +39,6 @@ const HomePage: React.FC = () => {
       color: '#333333',
     }}>
       <CustomCursor />
-      <ParticlesBackground />
       <ParallaxLogo />
       <Header />
       
@@ -49,12 +48,18 @@ const HomePage: React.FC = () => {
       {/* Versione desktop - nascosta su dispositivi mobili */}
       <main className="hidden md:block">
         {/* Hero Section */}
-        <section id="hero" className="py-20">
+        <section id="hero" className="py-20 relative">
+          <div className="absolute inset-0">
+            <ParticlesBackground sectionType="hero" />
+          </div>
           <HeroSection />
         </section>
         
         {/* Services Section */}
-        <section id="services" className="py-20" style={{ background: '#ffffff' }}>
+        <section id="services" className="py-20 relative" style={{ background: '#ffffff' }}>
+          <div className="absolute inset-0">
+            <ParticlesBackground sectionType="services" />
+          </div>
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
@@ -73,7 +78,10 @@ const HomePage: React.FC = () => {
         </section>
         
         {/* About Section */}
-        <section id="about" className="py-20">
+        <section id="about" className="py-20 relative">
+          <div className="absolute inset-0">
+            <ParticlesBackground sectionType="about" />
+          </div>
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
@@ -105,12 +113,20 @@ const HomePage: React.FC = () => {
         </section>
         
         {/* Technologies Section */}
-        <LogosSection />
+        <div className="relative">
+          <div className="absolute inset-0">
+            <ParticlesBackground sectionType="logos" />
+          </div>
+          <LogosSection />
+        </div>
         
         {/* Sezione Blog rimossa e spostata in una pagina dedicata */}
         
         {/* Contact CTA Section */}
-        <section id="contatti" className="py-20 bg-gradient-to-br from-[var(--purple-deep)] to-[var(--purple-light)]">
+        <section id="contatti" className="py-20 relative bg-gradient-to-br from-[var(--purple-deep)] to-[var(--purple-light)]">
+          <div className="absolute inset-0">
+            <ParticlesBackground sectionType="contact" />
+          </div>
           <div className="container mx-auto px-4">
             <ContactCTA />
           </div>
