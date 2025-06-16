@@ -36,50 +36,17 @@ const ParticlesBackground: React.FC<ParticlesBackgroundProps> = ({
   const UNIFORM_COLOR = ['#FFFFFF']; // Bianco puro per tutte le particelle
   const UNIFORM_SIZES = { min: 20, max: 30 }; // Dimensioni uniformi
   
-  const sectionConfig = {
-    hero: {
-      particleCount: UNIFORM_COUNT,
-      types: UNIFORM_TYPES,
-      colorScheme: UNIFORM_COLOR,
-      sizes: UNIFORM_SIZES
-    },
-    services: {
-      particleCount: UNIFORM_COUNT,
-      types: UNIFORM_TYPES,
-      colorScheme: UNIFORM_COLOR,
-      sizes: UNIFORM_SIZES
-    },
-    about: {
-      particleCount: UNIFORM_COUNT,
-      types: UNIFORM_TYPES,
-      colorScheme: UNIFORM_COLOR,
-      sizes: UNIFORM_SIZES
-    },
-    logos: {
-      particleCount: UNIFORM_COUNT,
-      types: UNIFORM_TYPES,
-      colorScheme: UNIFORM_COLOR,
-      sizes: UNIFORM_SIZES
-    },
-    contact: {
-      particleCount: UNIFORM_COUNT,
-      types: UNIFORM_TYPES,
-      colorScheme: UNIFORM_COLOR,
-      sizes: UNIFORM_SIZES
-    },
-    generic: {
-      particleCount: UNIFORM_COUNT,
-      types: UNIFORM_TYPES,
-      colorScheme: UNIFORM_COLOR,
-      sizes: UNIFORM_SIZES
-    }
-  };
-  
   useEffect(() => {
     // Generate particles only on the client side
     setIsClient(true);
     
-    const config = sectionConfig[sectionType];
+    // Utilizziamo una configurazione statica per tutte le sezioni
+    const config = {
+      particleCount: UNIFORM_COUNT,
+      types: UNIFORM_TYPES,
+      colorScheme: UNIFORM_COLOR,
+      sizes: UNIFORM_SIZES
+    };
     
     // Se è specificato un count personalizzato, lo utilizziamo
     const numParticles = count !== undefined ? count : config.particleCount;
@@ -105,7 +72,11 @@ const ParticlesBackground: React.FC<ParticlesBackgroundProps> = ({
     });
     
     setItems(newItems);
-  }, [sectionType, count, sectionConfig]);
+  }, [sectionType, count]);
+  
+  // Commento ESLint per disabilitare l'avviso della dipendenza mancante
+  // Usiamo questa soluzione perché sectionConfig è un oggetto statico
+  // eslint-disable-next-line react-hooks/exhaustive-deps
 
   return (
     <div 
