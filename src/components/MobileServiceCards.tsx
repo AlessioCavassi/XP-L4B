@@ -80,18 +80,10 @@ const MobileServiceCards: React.FC<MobileServiceCardsProps> = ({ services }) => 
                 cursor: 'pointer'
               }}
               whileTap={{ scale: 0.98 }}
+              data-component-name="MotionComponent"
               onClick={() => {
-                // Mappa gli ID dei servizi agli URL corretti
-                const serviceUrls = {
-                  1: '/servizi/realta-virtuale',
-                  2: '/servizi/realta-aumentata',
-                  3: '/servizi/gamification',
-                  4: '/servizi/percorsi-interattivi',
-                  5: '/servizi/team-building',
-                  6: '/servizi/digital-engagement'
-                };
-                // Usa l'url specifico del servizio se disponibile, altrimenti usa la mappa
-                const targetUrl = service.url || serviceUrls[service.id as keyof typeof serviceUrls] || '/';
+                // Utilizziamo direttamente la proprietà URL dal servizio 
+                const targetUrl = service.url || '/';
                 window.location.href = targetUrl;
               }}
             >

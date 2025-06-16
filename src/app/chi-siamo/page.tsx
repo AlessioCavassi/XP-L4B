@@ -80,28 +80,29 @@ export default function ChiSiamoPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="bg-white p-8 rounded-xl shadow-xl"
+                data-component-name="MotionComponent"
               >
-                <h3 className="text-2xl font-heading mb-4 text-[var(--purple-deep)]">I Nostri Valori</h3>
-                <ul className="space-y-4">
-                  <li className="flex items-start">
-                    <span className="text-[var(--aqua-green)] mr-3 text-xl">●</span>
+                <h3 className="text-2xl font-heading mb-4 text-[var(--purple-deep)]">VALORI</h3>
+                <ul className="space-y-6">
+                  <li className="flex flex-col items-start">
+                    <span className="text-[var(--aqua-green)] mb-1 text-xl">●</span>
                     <div>
-                      <h4 className="font-bold mb-1">Innovazione</h4>
-                      <p className="text-gray-700">Esploriamo costantemente nuove tecnologie e metodologie per offrire esperienze all&apos;avanguardia.</p>
+                      <h4 className="font-bold mb-2 text-[var(--purple-deep)]">Engagement</h4>
+                      <p className="text-gray-700">Le persone sono al centro di ogni esperienza. Questo valore promuove la partecipazione attiva, la motivazione intrinseca e l&apos;empowerment dei team e dei singoli individui.</p>
                     </div>
                   </li>
-                  <li className="flex items-start">
-                    <span className="text-[var(--aqua-green)] mr-3 text-xl">●</span>
+                  <li className="flex flex-col items-start">
+                    <span className="text-[var(--aqua-green)] mb-1 text-xl">●</span>
                     <div>
-                      <h4 className="font-bold mb-1">Coinvolgimento</h4>
-                      <p className="text-gray-700">Crediamo che l&apos;apprendimento e la crescita avvengano attraverso esperienze coinvolgenti e memorabili.</p>
+                      <h4 className="font-bold mb-2 text-[var(--purple-deep)]">Collaborazione</h4>
+                      <p className="text-gray-700">La gamification funziona meglio quando c&apos;è co-creazione: soluzioni creative nascono da ambienti in cui le persone si sentono libere di sperimentare, sbagliare e migliorare insieme.</p>
                     </div>
                   </li>
-                  <li className="flex items-start">
-                    <span className="text-[var(--aqua-green)] mr-3 text-xl">●</span>
+                  <li className="flex flex-col items-start">
+                    <span className="text-[var(--aqua-green)] mb-1 text-xl">●</span>
                     <div>
-                      <h4 className="font-bold mb-1">Risultati Misurabili</h4>
-                      <p className="text-gray-700">Ogni nostra soluzione è orientata a generare risultati concreti e misurabili per i nostri clienti.</p>
+                      <h4 className="font-bold mb-2 text-[var(--purple-deep)]">Obiettivi comuni</h4>
+                      <p className="text-gray-700">Crediamo nell&apos;unione delle energie e delle competenze per raggiungere insieme ambizioni significative. Questo valore garantisce che ogni membro del team sappia chiaramente cosa stiamo costruendo insieme e perché, favorendo coesione e senso d&apos;appartenenza.</p>
                     </div>
                   </li>
                 </ul>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Oxanium, Exo_2 } from "next/font/google";
 import "./globals.css";
 import ParticlesBackground from "@/components/ParticlesBackground";
+import MotionGradientEffect from "@/components/MotionGradientEffect";
 import { OrganizationJsonLd, WebSiteJsonLd } from "./jsonld";
 
 // Font per titoli/headings - Oxanium è un font geometrico perfetto per l'estetica videoludica
@@ -94,6 +95,7 @@ export default function RootLayout({
         <div className="hidden md:block">
           <ParticlesBackground />
         </div>
+        <MotionGradientEffect />
         {children}
       </body>
     </html>

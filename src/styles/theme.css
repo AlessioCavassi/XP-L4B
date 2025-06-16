@@ -2,10 +2,15 @@
 :root {
   /* Brand Colors */
   --purple-deep: #2D2655;
+  --purple-deep-rgb: 45, 38, 85;
   --purple-light: #594694;
+  --purple-light-rgb: 89, 70, 148;
   --blue: #2F92B3;
+  --blue-rgb: 47, 146, 179;
   --aqua-green: #65BFB0;
+  --aqua-green-rgb: 101, 191, 176;
   --gray: #B3B3B3;
+  --gray-rgb: 179, 179, 179;
   
   /* Semantic Colors */
   --background: #ffffff;

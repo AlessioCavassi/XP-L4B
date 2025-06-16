@@ -6,49 +6,55 @@ import MobileParticlesBackground from './MobileParticlesBackground';
 import { FaGamepad, FaUsers, FaRocket, FaChartLine } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
-// Servizi completi dal sito originale
+// Servizi completi dal sito originale - allineati con la versione desktop ma ottimizzati per mobile
 const serviceData = [
   {
     id: 1,
     title: 'Realtà Virtuale',
-    description: 'SafetyVR trasforma la formazione sulla sicurezza riducendo incidenti del 70%. Ideale per settori ad alto rischio: manifatturiero, sanitario, edile.',
+    description: 'Sviluppiamo esperienze immersive in Realtà Virtuale per trasformare la formazione, la comunicazione e il marketing aziendale. Progetti personalizzati di forte impatto.',
     icon: '🥽',
-    color: 'var(--purple-light)'
+    color: 'var(--aqua-green)',
+    url: '/servizi/realta-virtuale'
   },
   {
     id: 2,
     title: 'Realtà Aumentata',
-    description: 'ARStudio e Object Recognition arricchiscono l\'ambiente fisico con overlay informativi. Applicazioni: manutenzione industriale, training tecnico, eventi e marketing.',
+    description: 'Arricchiamo l&apos;ambiente reale con contenuti digitali interattivi, ideali per comunicazione, formazione e coinvolgimento del pubblico. Esperienze personalizzate di alta qualità.',
     icon: '📱',
-    color: 'var(--blue)'
+    color: 'var(--purple-light)',
+    url: '/servizi/realta-aumentata'
   },
   {
     id: 3,
     title: 'Gamification',
-    description: 'Meccaniche di gioco applicate ai processi aziendali: sistemi di punti, badge, classifiche e ricompense. Risultato: +83% motivazione e +72% performance misurabile.',
+    description: 'Soluzioni su misura per coinvolgere dipendenti, ottimizzare processi e fidelizzare clienti. Aumentiamo engagement, produttività e risultati con dinamiche game-based.',
     icon: '🎮',
-    color: 'var(--aqua-green)'
+    color: 'var(--blue)',
+    url: '/servizi/gamification'
   },
   {
     id: 4,
-    title: 'SVILUPPO COMPETENZE',
-    description: 'Programmi di sviluppo in competenze critiche: AI prompting, team work, problem solving e time management. Ritenzione informazioni: fino al 90% vs 20% metodi tradizionali.',
+    title: 'Percorsi di reskilling',
+    description: 'Analizziamo il mercato del lavoro e delle competenze per creare percorsi di reskilling e upskilling efficaci e mirati alle esigenze aziendali.',
     icon: '👨‍🏫',
-    color: 'var(--purple-deep)'
+    color: 'var(--blue)',
+    url: '/servizi/percorsi-interattivi'
   },
   {
     id: 5,
-    title: 'Team Building Digitale',
-    description: '3DToMe e Spatial Assistance creano ambienti virtuali condivisi per team remoti o ibridi. Ideale per: kick-off progetti, brainstorming, collaborative problem solving.',
+    title: 'Riunioni Ludiche',
+    description: 'Gamification professionale per riunioni coinvolgenti e team building virtuali efficaci. Strumenti misurabili per migliorare collaborazione e performance del team.',
     icon: '👥',
-    color: 'var(--purple-light)'
+    color: 'var(--aqua-green)',
+    url: '/servizi/team-building'
   },
   {
     id: 6,
     title: 'Digital Engagement',
-    description: 'Portal Gate integra elementi ludici nei processi aziendali quotidiani. Applicazioni: formazione continua, gestione progetti, comunicazione interna.',
+    description: 'Portal Gate integra elementi ludici nei processi aziendali quotidiani per apprendimento continuo e comunicazione interna. Per l&apos;85-95% della forza lavoro under 40.',
     icon: '📈',
-    color: 'var(--blue)'
+    color: 'var(--blue)',
+    url: '/servizi/digital-engagement'
   }
 ];
 
@@ -59,10 +65,10 @@ const aboutSections = [
     content: (
       <div className="space-y-3">
         <p className="text-sm font-bold text-white !bg-[var(--purple-deep)] p-3 rounded-lg shadow-sm" data-component-name="MobileOptimizedPage" style={{ backgroundColor: 'var(--purple-deep)' }}>
-          &quot;Trasformare ogni attività in una esperienza coinvolgente&quot; - questa è la missione che guida XP-L4B.
+          "Trasformare ogni attività in un&apos;esperienza coinvolgente" - questa è la missione che guida XP-L4B.
         </p>
         <p className="text-sm font-bold text-white !bg-[var(--purple-deep)] p-3 rounded-lg shadow-sm" data-component-name="MobileOptimizedPage" style={{ backgroundColor: 'var(--purple-deep)' }}>
-          L&apos;83% dei dipendenti che partecipano ad attività ludiche sono più motivati. Le nostre sessioni formative gamificate aumentano il coinvolgimento e la produttività in azienda del 50-60%.
+          L&apos;83% dei dipendenti che partecipano ad attività ludiche mostra maggiore motivazione. Le nostre sessioni gamificate aumentano produttività e coinvolgimento del 50-60%.
         </p>
       </div>
     ),
@@ -76,19 +82,19 @@ const aboutSections = [
         <div className="flex items-start gap-2">
           <span className="text-[var(--aqua-green)] text-lg">•</span>
           <div className="text-white bg-[var(--purple-deep)]/90 p-2 rounded-lg shadow-sm flex-1" data-component-name="<div />">
-            <strong className="emerald-text">Engagement</strong>: Le persone sono al centro di ogni esperienza. Questo valore promuove la partecipazione attiva, la motivazione intrinseca e l&apos;empowerment dei team e dei singoli individui.
+            <strong className="emerald-text">Engagement</strong>: Le persone al centro di ogni esperienza. Promuoviamo partecipazione attiva, motivazione intrinseca e l&apos;empowerment dei team.
           </div>
         </div>
         <div className="flex items-start gap-2">
           <span className="text-[var(--aqua-green)] text-lg">•</span>
           <div className="text-white bg-[var(--purple-deep)]/90 p-2 rounded-lg shadow-sm flex-1">
-            <strong className="emerald-text">Collaborazione</strong>: La gamification funziona meglio quando c&apos;è co-creazione: soluzioni creative nascono da ambienti in cui le persone si sentono libere di sperimentare, sbagliare e migliorare insieme.
+            <strong className="emerald-text">Collaborazione</strong>: La gamification funziona meglio con la co-creazione: soluzioni creative nascono dove le persone possono sperimentare liberamente.
           </div>
         </div>
         <div className="flex items-start gap-2">
           <span className="text-[var(--aqua-green)] text-lg">•</span>
           <div className="text-white bg-[var(--purple-deep)]/90 p-2 rounded-lg shadow-sm flex-1">
-            <strong className="emerald-text">Obiettivi comuni</strong>: Crediamo nell&apos;unione delle energie e delle competenze per raggiungere insieme ambizioni significative. Questo valore garantisce che ogni membro del team sappia chiaramente cosa stiamo costruendo insieme e perché, favorendo coesione e senso d&apos;appartenenza.
+            <strong className="emerald-text">Obiettivi comuni</strong>: Uniamo energie e competenze per raggiungere ambizioni significative. Garantiamo che ogni membro conosca cosa costruiamo insieme.
           </div>
         </div>
       </div>
@@ -100,7 +106,7 @@ const aboutSections = [
     title: 'Competenze Sviluppate',
     content: (
       <div>
-        <p className="text-sm text-[var(--purple-deep)] font-bold mb-3">Attraverso i nostri percorsi e alle tecnologie dei nostri partner, aiutiamo a sviluppare competenze essenziali per il successo::</p>
+        <p className="text-sm text-[var(--purple-deep)] font-bold mb-3">Attraverso i nostri percorsi e le tecnologie dei partner, sviluppiamo queste competenze chiave:</p>
         <div className="grid grid-cols-2 gap-3">
           <div className="bg-[var(--purple-deep)] p-2 rounded text-xs font-bold text-white text-center shadow-md border border-[var(--aqua-green)]">AI prompting</div>
           <div className="bg-[var(--purple-deep)] p-2 rounded text-xs font-bold text-white text-center shadow-md border border-[var(--aqua-green)]">Comunicazione</div>
@@ -121,13 +127,13 @@ const aboutSections = [
     content: (
       <div className="space-y-2">
         <div className="bg-[var(--purple-deep)] p-3 rounded-lg border-l-4 border-[var(--aqua-green)] text-sm text-white font-medium shadow-md">
-          <strong className="emerald-text">70%</strong> di investimenti in percorsi di apprendimento inefficienti e noiosi
+          <strong className="emerald-text">70%</strong> degli investimenti formativi tradizionali risultano inefficaci
         </div>
         <div className="bg-[var(--purple-deep)] p-3 rounded-lg border-l-4 border-[var(--aqua-green)] text-sm text-white font-medium shadow-md">
-          Solo il <strong className="emerald-text">5%</strong> delle persone si sentono coinvolte sul lavoro in Italia
+          Solo il <strong className="emerald-text">5%</strong> delle persone si sente coinvolto sul lavoro in Italia
         </div>
         <div className="bg-[var(--purple-deep)] p-3 rounded-lg border-l-4 border-[var(--aqua-green)] text-sm text-white font-medium shadow-md">
-          Il welfare aziendale è efficace solo nel <strong className="emerald-text">6%</strong> delle imprese italiane
+          Il welfare aziendale è efficace solo nel <strong className="emerald-text">6%</strong> delle aziende italiane
         </div>
       </div>
     ),
@@ -143,15 +149,15 @@ const flipCardsData = [
       <>
         <div className="text-4xl mb-4">👨‍💼</div>
         <h3 className="text-xl font-bold text-white mb-2">Employer Branding</h3>
-        <p className="text-sm font-medium text-white/90">Scopri come migliorare l&apos;immagine aziendale e il coinvolgimento</p>
+        <p className="text-sm font-medium text-white/90">Migliora l&apos;immagine e il coinvolgimento aziendale</p>
       </>
     ),
     back: (
       <>
         <h3 className="text-xl font-bold mb-3 text-accent" data-component-name="FlipCard">Employer Branding</h3>
         <p className="text-sm font-medium text-white" data-component-name="FlipCard">
-          Il 95% delle persone in Italia non si sente coinvolto sul lavoro. 
-          Le nostre soluzioni gamificate migliorano l&apos;immagine aziendale e aumentano il senso di appartenenza del 60%.
+          Il 95% delle persone in Italia non si sente coinvolto. 
+          Le nostre soluzioni aumentano il senso di appartenenza del 60%.
         </p>
       </>
     ),
@@ -162,16 +168,16 @@ const flipCardsData = [
     front: (
       <>
         <div className="text-4xl mb-4">🎓</div>
-        <h3 className="text-xl font-bold text-white mb-2">SVILUPPO COMPETENZE</h3>
-        <p className="text-sm font-medium text-white/90">Trasforma l&apos;apprendimento in un&apos;esperienza coinvolgente</p>
+        <h3 className="text-xl font-bold text-white mb-2">Sviluppo Competenze</h3>
+        <p className="text-sm font-medium text-white/90">Trasforma l&apos;apprendimento con la gamification</p>
       </>
     ),
     back: (
       <>
         <h3 className="text-xl font-bold mb-3 text-accent" data-component-name="FlipCard">Sviluppo Competenze</h3>
         <p className="text-sm font-medium text-white" data-component-name="FlipCard">
-          Il 70% degli investimenti in metodi tradizionali è inefficiente. 
-          I nostri percorsi gamificati aumentano l&apos;efficacia dell&apos;apprendimento del 50-60% e migliorano la ritenzione delle informazioni.
+          Il 70% dei metodi tradizionali è inefficace. 
+          I nostri percorsi aumentano l&apos;apprendimento del 50-60%.
         </p>
       </>
     ),
@@ -183,15 +189,14 @@ const flipCardsData = [
       <>
         <div className="text-4xl mb-4">🤖</div>
         <h3 className="text-xl font-bold text-white mb-2">AI Prompting</h3>
-        <p className="text-sm font-medium text-white/90">Sviluppa competenze nell&apos;era dell&apos;intelligenza artificiale</p>
+        <p className="text-sm font-medium text-white/90">Competenze per l&apos;era dell&apos;intelligenza artificiale</p>
       </>
     ),
     back: (
       <>
         <h3 className="text-xl font-bold mb-3 text-accent" data-component-name="FlipCard">AI Prompting</h3>
         <p className="text-sm font-medium text-white" data-component-name="FlipCard">
-          Le aziende faticano a comunicare con le nuove generazioni in modo efficace.
-          Sviluppa competenze di AI prompting attraverso workshop interattivi e simulazioni pratiche.
+          Sviluppa abili conversazioni con l&apos;AI attraverso workshop interattivi e simulazioni pratiche per il business.
         </p>
       </>
     ),
