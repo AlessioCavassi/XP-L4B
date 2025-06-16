@@ -105,7 +105,7 @@ const ParticlesBackground: React.FC<ParticlesBackgroundProps> = ({
     });
     
     setItems(newItems);
-  }, [sectionType, count]);
+  }, [sectionType, count, sectionConfig]);
 
   return (
     <div 

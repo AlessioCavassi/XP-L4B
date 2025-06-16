@@ -65,7 +65,7 @@ const aboutSections = [
     content: (
       <div className="space-y-3">
         <p className="text-sm font-bold text-white !bg-[var(--purple-deep)] p-3 rounded-lg shadow-sm" data-component-name="MobileOptimizedPage" style={{ backgroundColor: 'var(--purple-deep)' }}>
-          "Trasformare ogni attività in un&apos;esperienza coinvolgente" - questa è la missione che guida XP-L4B.
+          &quot;Trasformare ogni attività in un&apos;esperienza coinvolgente&quot; - questa è la missione che guida XP-L4B.
         </p>
         <p className="text-sm font-bold text-white !bg-[var(--purple-deep)] p-3 rounded-lg shadow-sm" data-component-name="MobileOptimizedPage" style={{ backgroundColor: 'var(--purple-deep)' }}>
           L&apos;83% dei dipendenti che partecipano ad attività ludiche mostra maggiore motivazione. Le nostre sessioni gamificate aumentano produttività e coinvolgimento del 50-60%.
