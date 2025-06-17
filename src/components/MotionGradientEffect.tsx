@@ -44,8 +44,8 @@ const MotionGradientEffect: React.FC = () => {
         element.setAttribute('data-original-shadow', originalBoxShadow);
       }
       
-      // Set initial properties
-      element.style.background = 'transparent';
+      // NON MODIFICARE il background, per permettere al gradiente CSS di funzionare
+      // element.style.background = 'transparent';
     });
 
     // Clean up on component unmount

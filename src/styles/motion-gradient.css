@@ -14,6 +14,7 @@
 [data-component-name="MotionComponent"] {
   position: relative;
   z-index: 1;
+  background: transparent !important;
 }
 
 [data-component-name="MotionComponent"]::before {
@@ -27,12 +28,12 @@
   z-index: -1;
   background: linear-gradient(
     -45deg,
-    rgba(var(--purple-deep-rgb), 0.95),
-    rgba(var(--aqua-green-rgb), 0.85),
-    rgba(var(--purple-light-rgb), 0.90),
-    rgba(var(--purple-deep-rgb), 0.95)
-  );
-  background-size: 400% 400%;
+    rgba(45, 38, 85, 0.98),
+    rgba(94, 234, 212, 0.9),
+    rgba(124, 58, 237, 0.95),
+    rgba(45, 38, 85, 0.98)
+  ) !important;
+  background-size: 400% 400% !important;
   animation: gradient-animation 8s ease infinite;
   backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -73,14 +74,16 @@
 }
 
 /* Migliora il contrasto per le frecce e le icone all'interno dei MotionComponent */
-[data-component-name="MotionComponent"] svg {
-  color: white;
-  stroke: white;
-  fill: none;
+[data-component-name="MotionComponent"] svg,
+[data-component-name="MotionComponent"] svg path,
+[data-component-name="MotionComponent"] a svg {
+  color: white !important;
+  stroke: white !important;
+  fill: none !important;
   filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.8));
+  opacity: 1 !important;
+  font-weight: bold !important;
   z-index: 2;
-  opacity: 1;
-  font-weight: bold;
   position: relative;
   font-weight: bold;
 }

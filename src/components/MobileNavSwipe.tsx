@@ -68,6 +68,7 @@ const MobileNavSwipe: React.FC<MobileNavSwipeProps> = ({ navItems }) => {
         initial={{ y: 100 }}
         animate={{ y: 0 }}
         transition={{ type: "spring", stiffness: 260, damping: 20 }}
+        data-component-name="MotionComponent"
       >
         <div className="flex justify-between w-full relative">
           {/* Pagination indicators */}
