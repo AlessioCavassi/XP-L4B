@@ -243,8 +243,9 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
         animate={{ opacity: 1 }}
         transition={{ delay: 1 }}
         aria-label="Torna in cima"
+        data-component-name="MotionComponent"
       >
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" data-component-name="MotionComponent">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
         </svg>
       </motion.a>

@@ -19,7 +19,7 @@ const serviceData = [
   {
     id: 2,
     title: 'Realtà Aumentata',
-    description: 'Arricchiamo l&apos;ambiente reale con contenuti digitali interattivi, ideali per comunicazione, formazione e coinvolgimento del pubblico. Esperienze personalizzate di alta qualità.',
+    description: "Arricchiamo l'ambiente reale con contenuti digitali interattivi, ideali per comunicazione, formazione e coinvolgimento del pubblico. Esperienze personalizzate di alta qualità.",
     icon: '📱',
     color: 'var(--purple-light)',
     url: '/servizi/realta-aumentata'
