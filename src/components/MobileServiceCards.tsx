@@ -45,7 +45,7 @@ const MobileServiceCards: React.FC<MobileServiceCardsProps> = ({ services }) => 
   };
 
   return (
-    <div className="relative w-full py-6">
+    <div className="relative w-full py-6 max-w-md mx-auto">
       <motion.div 
         ref={carousel}
         className="overflow-hidden"

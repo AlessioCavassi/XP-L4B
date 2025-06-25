@@ -34,17 +34,6 @@ const AboutSection: React.FC = () => {
     },
     {
       id: 2,
-      name: 'Bianca Surdu',
-      role: 'Direttore creativo',
-      bio: 'Bianca is a creative strategist with a passion for digital storytelling and brand engagement.',
-      image: '/placeholder-profile.jpg',
-      social: {
-        linkedin: 'https://www.linkedin.com/in/bianca-surdu-1a042032b',
-        email: 'bianca@xpl4b.com'
-      }
-    },
-    {
-      id: 3,
       name: 'Alessio Cavatassi',
       role: 'AI Training & Digital Marketing Specialist',
       bio: 'Alessio integrates innovative AI technologies with digital marketing strategies to create impactful training experiences.',
