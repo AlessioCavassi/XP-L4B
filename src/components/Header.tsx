@@ -82,7 +82,7 @@ const Header: React.FC = () => {
           <div className="md:hidden">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="text-[var(--foreground)] p-2"
+              className="text-white p-2"
               aria-label="Toggle menu"
             >
               <div className="w-6 h-0.5 bg-current mb-1.5"></div>
@@ -105,7 +105,7 @@ const Header: React.FC = () => {
                 <Link
                   key={item.name}
                   href={item.path}
-                  className={`font-body transition-colors duration-200 py-2 ${scrolled ? 'text-white hover:text-[var(--aqua-green)]' : 'text-[var(--foreground)] hover:text-[var(--aqua-green)]'}`}
+                  className={`font-body transition-colors duration-200 py-2 ${scrolled ? 'text-white hover:text-[var(--aqua-green)]' : 'text-white hover:text-[var(--aqua-green)]'}`}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.name}
