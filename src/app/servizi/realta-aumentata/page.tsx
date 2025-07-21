@@ -63,7 +63,7 @@ export default function RealtaAumentataPage() {
                     </div>
                     <h2 className="text-3xl font-heading mb-6 text-white">Le Nostre Tecnologie AR</h2>
                     <p className="mb-6 text-white">
-                      Sviluppiamo soluzioni innovative in Realtà Aumentata che trasformano il modo in cui interagiamo con l'ambiente circostante, aggiungendo layer informativi contestuali e interattivi.
+                      Sviluppiamo soluzioni innovative in Realtà Aumentata che trasformano il modo in cui interagiamo con l&apos;ambiente circostante, aggiungendo layer informativi contestuali e interattivi.
                     </p>
                     <ul className="space-y-2 mb-6">
                       <li className="flex items-start">
@@ -98,14 +98,14 @@ export default function RealtaAumentataPage() {
                   <h3 className="text-2xl font-heading font-bold text-[var(--purple-deep)] mb-2">Vantaggi della Realtà Aumentata</h3>
                   <div className="w-16 h-1 bg-[var(--aqua-green)] mx-auto mb-4"></div>
                   <p className="text-[var(--purple-light)] max-w-2xl mx-auto">
-                    Le soluzioni in Realtà Aumentata offrono vantaggi misurabili per le aziende che puntano all'innovazione e all'efficienza.
+                    Le soluzioni in Realtà Aumentata offrono vantaggi misurabili per le aziende che puntano all&apos;innovazione e all&apos;efficienza.
                   </p>
                 </div>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="bg-gradient-to-br from-white to-[var(--purple-light)]/5 p-6 rounded-xl border border-[var(--purple-light)]/10 hover:shadow-lg transition-all duration-300">
                     <h4 className="text-3xl font-heading font-bold text-[var(--purple-deep)] mb-3">+300%</h4>
-                    <p className="text-[#2D2655] leading-relaxed">Aumento dell'engagement rispetto a metodi tradizionali</p>
+                    <p className="text-[#2D2655] leading-relaxed">Aumento dell&apos;engagement rispetto a metodi tradizionali</p>
                   </div>
                   
                   <div className="bg-gradient-to-br from-white to-[var(--purple-light)]/5 p-6 rounded-xl border border-[var(--purple-light)]/10 hover:shadow-lg transition-all duration-300">
@@ -193,10 +193,10 @@ export default function RealtaAumentataPage() {
                 <div className="col-span-2">
                   <div className="space-y-6">
                     <p className="text-[#2D2655] leading-relaxed">
-                      Un'azienda manifatturiera leader nel settore automobilistico ha implementato la nostra soluzione Object Recognition per supportare i tecnici durante le procedure di manutenzione complesse.
+                      Un&apos;azienda manifatturiera leader nel settore automobilistico ha implementato la nostra soluzione Object Recognition per supportare i tecnici durante le procedure di manutenzione complesse.
                     </p>
                     <p className="text-[#2D2655] leading-relaxed">
-                      I tecnici, equipaggiati con dispositivi AR, possono semplicemente inquadrare i componenti da manutenere per ricevere immediatamente istruzioni dettagliate, video tutorial e modelli 3D sovrapposti all'oggetto reale.
+                      I tecnici, equipaggiati con dispositivi AR, possono semplicemente inquadrare i componenti da manutenere per ricevere immediatamente istruzioni dettagliate, video tutorial e modelli 3D sovrapposti all&apos;oggetto reale.
                     </p>
                   </div>
                   

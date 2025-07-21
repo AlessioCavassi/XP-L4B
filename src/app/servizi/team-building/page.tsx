@@ -98,7 +98,7 @@ export default function TeamBuildingPage() {
                   <h3 className="text-2xl font-heading font-bold text-[var(--purple-deep)] mb-2">Perché scegliere il Team Building Digitale?</h3>
                   <div className="w-16 h-1 bg-[var(--aqua-green)] mx-auto mb-4"></div>
                   <p className="text-gray-700 max-w-2xl mx-auto">
-                    Il Team Building Digitale offre vantaggi unici rispetto alle attività tradizionali, specialmente in un'era di lavoro ibrido e remoto:
+                    Il Team Building Digitale offre vantaggi unici rispetto alle attività tradizionali, specialmente in un&apos;era di lavoro ibrido e remoto:
                   </p>
                 </div>
                 
@@ -122,7 +122,7 @@ export default function TeamBuildingPage() {
                       </div>
                       <div>
                         <h4 className="text-xl font-heading font-bold text-[var(--purple-deep)] mb-2">Esperienze Immersive</h4>
-                        <p className="text-[#2D2655] leading-relaxed">Crea esperienze coinvolgenti che stimolano l'interazione naturale tra i partecipanti</p>
+                        <p className="text-[#2D2655] leading-relaxed">Crea esperienze coinvolgenti che stimolano l&apos;interazione naturale tra i partecipanti</p>
                       </div>
                     </div>
                   </div>
@@ -134,7 +134,7 @@ export default function TeamBuildingPage() {
                       </div>
                       <div>
                         <h4 className="text-xl font-heading font-bold text-[var(--purple-deep)] mb-2">Misurazione Risultati</h4>
-                        <p className="text-[#2D2655] leading-relaxed">Offre metriche tangibili per valutare l'efficacia delle attività e l'evoluzione del team</p>
+                        <p className="text-[#2D2655] leading-relaxed">Offre metriche tangibili per valutare l&apos;efficacia delle attività e l&apos;evoluzione del team</p>
                       </div>
                     </div>
                   </div>
