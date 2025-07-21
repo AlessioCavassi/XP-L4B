@@ -29,24 +29,17 @@ const ParticlesBackground: React.FC<ParticlesBackgroundProps> = ({
   }>>([]);
   const [isClient, setIsClient] = useState(false);
   
-  // Configurazione uniforme per tutte le sezioni
-  // Tutte le sezioni avranno lo stesso numero di particelle e le stesse dimensioni
-  const UNIFORM_COUNT = 20; // Numero standard di particelle per ogni sezione
-  const UNIFORM_TYPES = ['dice', 'gem', 'coin'] as ItemType[];
-  const UNIFORM_COLOR = ['#FFFFFF']; // Bianco puro per tutte le particelle
-  const UNIFORM_SIZES = { min: 20, max: 30 }; // Dimensioni uniformi
+  // Configurazione come oggetto useMemo per evitare ricreazioni non necessarie
+  const config = React.useMemo(() => ({
+    particleCount: 20, // Numero standard di particelle per ogni sezione
+    types: ['dice', 'gem', 'coin'] as ItemType[],
+    colorScheme: ['#FFFFFF'], // Bianco puro per tutte le particelle
+    sizes: { min: 20, max: 30 } // Dimensioni uniformi
+  }), []); // Nessuna dipendenza, l'oggetto è costante
   
   useEffect(() => {
     // Generate particles only on the client side
     setIsClient(true);
-    
-    // Utilizziamo una configurazione statica per tutte le sezioni
-    const config = {
-      particleCount: UNIFORM_COUNT,
-      types: UNIFORM_TYPES,
-      colorScheme: UNIFORM_COLOR,
-      sizes: UNIFORM_SIZES
-    };
     
     // Se è specificato un count personalizzato, lo utilizziamo
     const numParticles = count !== undefined ? count : config.particleCount;
@@ -72,7 +65,9 @@ const ParticlesBackground: React.FC<ParticlesBackgroundProps> = ({
     });
     
     setItems(newItems);
-  }, [sectionType, count, UNIFORM_COUNT, UNIFORM_TYPES, UNIFORM_COLOR, UNIFORM_SIZES]);
+  // Dipendenze semplificate - solo sectionType e count possono cambiare
+  // config è stabile grazie a useMemo
+  }, [sectionType, count, config]);
 
   return (
     <div 
