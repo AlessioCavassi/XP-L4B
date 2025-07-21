@@ -72,11 +72,7 @@ const ParticlesBackground: React.FC<ParticlesBackgroundProps> = ({
     });
     
     setItems(newItems);
-  }, [sectionType, count]);
-  
-  // Commento ESLint per disabilitare l'avviso della dipendenza mancante
-  // Usiamo questa soluzione perché sectionConfig è un oggetto statico
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [sectionType, count, UNIFORM_COUNT, UNIFORM_TYPES, UNIFORM_COLOR, UNIFORM_SIZES]);
 
   return (
     <div 

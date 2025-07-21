@@ -149,7 +149,7 @@ export default function RealtaAumentataPage() {
                 
                 <div className="bg-white/5 p-6 rounded-xl border border-white/5 hover:bg-white/10 transition-all duration-300">
                   <h4 className="text-xl font-heading font-medium text-white mb-3">Training Tecnico</h4>
-                  <p className="text-white/80 leading-relaxed">Apprendimento pratico con overlay informativi contestuali che guidano l'acquisizione di competenze sul campo.</p>
+                  <p className="text-white/80 leading-relaxed">Apprendimento pratico con overlay informativi contestuali che guidano l&apos;acquisizione di competenze sul campo.</p>
                 </div>
                 
                 <div className="bg-white/5 p-6 rounded-xl border border-white/5 hover:bg-white/10 transition-all duration-300">
