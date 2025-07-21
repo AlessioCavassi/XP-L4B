@@ -1,0 +1,5 @@
+/* Stili specifici per la sezione Vantaggi della Realtà Virtuale */
+.vr-benefits .benefit-item p {
+  color: #2D2655 !important;
+  -webkit-text-fill-color: #2D2655 !important;
+}

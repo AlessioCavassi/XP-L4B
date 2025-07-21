@@ -62,25 +62,25 @@ export default function PercorsiInterattiviPage() {
                       <FaChalkboardTeacher size={60} className="text-[var(--blue)]" />
                     </div>
                     <h2 className="text-3xl font-heading mb-6">Reskilling e Upskilling</h2>
-                    <p className="mb-6">
+                    <p className="mb-6 text-white/90">
                       Analizziamo il mercato del lavoro e delle competenze per creare percorsi personalizzati di reskilling e upskilling che preparano i team alle sfide del futuro, integrando tecnologie immersive e metodologie coinvolgenti.
                     </p>
-                    <ul className="space-y-2 mb-6">
+                    <ul className="space-y-3 mb-6">
                       <li className="flex items-start">
-                        <span className="text-[var(--aqua-green)] mr-2">✓</span>
-                        <span>Analisi delle competenze future</span>
+                        <span className="text-[var(--aqua-green)] font-bold mr-3 text-xl">✓</span>
+                        <span className="text-white/90">Analisi delle competenze future</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-[var(--aqua-green)] mr-2">✓</span>
-                        <span>Percorsi personalizzati</span>
+                        <span className="text-[var(--aqua-green)] font-bold mr-3 text-xl">✓</span>
+                        <span className="text-white/90">Percorsi personalizzati</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-[var(--aqua-green)] mr-2">✓</span>
-                        <span>Tecnologie immersive integrate</span>
+                        <span className="text-[var(--aqua-green)] font-bold mr-3 text-xl">✓</span>
+                        <span className="text-white/90">Tecnologie immersive integrate</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-[var(--aqua-green)] mr-2">✓</span>
-                        <span>Monitoraggio continuo dei progressi</span>
+                        <span className="text-[var(--aqua-green)] font-bold mr-3 text-xl">✓</span>
+                        <span className="text-white/90">Monitoraggio continuo dei progressi</span>
                       </li>
                     </ul>
                   </div>
@@ -92,29 +92,35 @@ export default function PercorsiInterattiviPage() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="bg-white p-8 rounded-xl shadow-xl"
+                className="bg-white p-8 rounded-xl shadow-xl border border-[var(--purple-light)]/20"
               >
-                <h3 className="text-2xl font-heading mb-4 text-[var(--purple-deep)]">Il nostro approccio</h3>
-                <p className="mb-6 text-gray-700">
-                  Sviluppiamo percorsi interattivi che combinano diverse metodologie per massimizzare l&apos;apprendimento e la ritenzione delle competenze:
-                </p>
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-heading font-bold text-[var(--purple-deep)] mb-2">Il nostro approccio</h3>
+                  <div className="w-16 h-1 bg-[var(--aqua-green)] mx-auto mb-4"></div>
+                  <p className="text-gray-700 max-w-2xl mx-auto">
+                    Sviluppiamo percorsi interattivi che combinano diverse metodologie per massimizzare l&apos;apprendimento e la ritenzione delle competenze.
+                  </p>
+                </div>
                 
-                <div className="space-y-6 mb-8">
-                  <div className="bg-[var(--purple-light)]/10 p-6 rounded-lg">
-                    <h4 className="text-xl font-medium mb-2 text-[var(--purple-deep)]">1. Analisi e Mappatura</h4>
-                    <p>Identifichiamo le competenze attuali e future necessarie per il successo aziendale</p>
+                <div className="space-y-6">
+                  <div className="bg-gradient-to-br from-white to-[var(--purple-light)]/5 p-6 rounded-xl border border-[var(--purple-light)]/10 hover:shadow-lg transition-all duration-300">
+                    <h4 className="text-xl font-heading font-bold text-[var(--purple-deep)] mb-3">1. Analisi e Mappatura</h4>
+                    <p className="text-[#2D2655] leading-relaxed">Identifichiamo le competenze attuali e future necessarie per il successo aziendale</p>
                   </div>
-                  <div className="bg-[var(--purple-light)]/10 p-6 rounded-lg">
-                    <h4 className="text-xl font-medium mb-2 text-[var(--purple-deep)]">2. Progettazione Personalizzata</h4>
-                    <p>Creiamo percorsi su misura che integrano tecnologie immersive e metodologie interattive</p>
+                  
+                  <div className="bg-gradient-to-br from-white to-[var(--purple-light)]/5 p-6 rounded-xl border border-[var(--purple-light)]/10 hover:shadow-lg transition-all duration-300">
+                    <h4 className="text-xl font-heading font-bold text-[var(--purple-deep)] mb-3">2. Progettazione Personalizzata</h4>
+                    <p className="text-[#2D2655] leading-relaxed">Creiamo percorsi su misura che integrano tecnologie immersive e metodologie interattive</p>
                   </div>
-                  <div className="bg-[var(--purple-light)]/10 p-6 rounded-lg">
-                    <h4 className="text-xl font-medium mb-2 text-[var(--purple-deep)]">3. Implementazione Coinvolgente</h4>
-                    <p>Realizziamo sessioni ad alto impatto con esperienze pratiche e gamificate</p>
+                  
+                  <div className="bg-gradient-to-br from-white to-[var(--purple-light)]/5 p-6 rounded-xl border border-[var(--purple-light)]/10 hover:shadow-lg transition-all duration-300">
+                    <h4 className="text-xl font-heading font-bold text-[var(--purple-deep)] mb-3">3. Implementazione Coinvolgente</h4>
+                    <p className="text-[#2D2655] leading-relaxed">Realizziamo sessioni ad alto impatto con esperienze pratiche e gamificate</p>
                   </div>
-                  <div className="bg-[var(--purple-light)]/10 p-6 rounded-lg">
-                    <h4 className="text-xl font-medium mb-2 text-[var(--purple-deep)]">4. Misurazione dei Risultati</h4>
-                    <p>Monitoriamo l&apos;apprendimento e l&apos;applicazione pratica delle competenze</p>
+                  
+                  <div className="bg-gradient-to-br from-white to-[var(--purple-light)]/5 p-6 rounded-xl border border-[var(--purple-light)]/10 hover:shadow-lg transition-all duration-300">
+                    <h4 className="text-xl font-heading font-bold text-[var(--purple-deep)] mb-3">4. Misurazione dei Risultati</h4>
+                    <p className="text-[#2D2655] leading-relaxed">Monitoriamo l&apos;apprendimento e l&apos;applicazione pratica delle competenze</p>
                   </div>
                 </div>
               </motion.div>

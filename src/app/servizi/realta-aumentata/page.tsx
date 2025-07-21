@@ -61,26 +61,26 @@ export default function RealtaAumentataPage() {
                     <div className="inline-block mb-6 p-4 rounded-full" style={{ backgroundColor: 'rgba(161, 99, 247, 0.25)' }}>
                       <FaGlasses size={60} className="text-[var(--purple-light)]" />
                     </div>
-                    <h2 className="text-3xl font-heading mb-6">Le Nostre Tecnologie AR</h2>
-                    <p className="mb-6">
-                      Sviluppiamo soluzioni innovative in Realtà Aumentata che trasformano il modo in cui interagiamo con l&apos;ambiente circostante, aggiungendo layer informativi contestuali e interattivi.
+                    <h2 className="text-3xl font-heading mb-6 text-white">Le Nostre Tecnologie AR</h2>
+                    <p className="mb-6 text-white">
+                      Sviluppiamo soluzioni innovative in Realtà Aumentata che trasformano il modo in cui interagiamo con l'ambiente circostante, aggiungendo layer informativi contestuali e interattivi.
                     </p>
                     <ul className="space-y-2 mb-6">
                       <li className="flex items-start">
                         <span className="text-[var(--aqua-green)] mr-2">✓</span>
-                        <span>3DToMe - Modelli 3D contestuali</span>
+                        <span className="text-white"><strong className="text-[var(--aqua-green)]">3DToMe:</strong> Modelli 3D contestuali</span>
                       </li>
                       <li className="flex items-start">
                         <span className="text-[var(--aqua-green)] mr-2">✓</span>
-                        <span>ARStudio - Creazione contenuti aumentati</span>
+                        <span className="text-white"><strong className="text-[var(--aqua-green)]">ARStudio:</strong> Creazione contenuti aumentati</span>
                       </li>
                       <li className="flex items-start">
                         <span className="text-[var(--aqua-green)] mr-2">✓</span>
-                        <span>Object Recognition - Riconoscimento intelligente</span>
+                        <span className="text-white"><strong className="text-[var(--aqua-green)]">Object Recognition:</strong> Riconoscimento intelligente</span>
                       </li>
                       <li className="flex items-start">
                         <span className="text-[var(--aqua-green)] mr-2">✓</span>
-                        <span>Spatial Support - Assistenza tecnica remota</span>
+                        <span className="text-white"><strong className="text-[var(--aqua-green)]">Spatial Support:</strong> Assistenza tecnica remota</span>
                       </li>
                     </ul>
                   </div>
@@ -92,29 +92,35 @@ export default function RealtaAumentataPage() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="bg-white p-8 rounded-xl shadow-xl"
+                className="bg-white p-8 rounded-xl shadow-xl border border-[var(--purple-light)]/20"
               >
-                <h3 className="text-2xl font-heading mb-4 text-[var(--purple-deep)]">Vantaggi della Realtà Aumentata</h3>
-                <p className="mb-6 text-gray-700">
-                  Le soluzioni in Realtà Aumentata offrono vantaggi misurabili per le aziende che puntano all&apos;innovazione e all&apos;efficienza:
-                </p>
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-heading font-bold text-[var(--purple-deep)] mb-2">Vantaggi della Realtà Aumentata</h3>
+                  <div className="w-16 h-1 bg-[var(--aqua-green)] mx-auto mb-4"></div>
+                  <p className="text-[var(--purple-light)] max-w-2xl mx-auto">
+                    Le soluzioni in Realtà Aumentata offrono vantaggi misurabili per le aziende che puntano all'innovazione e all'efficienza.
+                  </p>
+                </div>
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                  <div className="bg-[var(--purple-light)]/10 p-6 rounded-lg">
-                    <h4 className="text-xl font-medium mb-2 text-[var(--purple-deep)]">+300%</h4>
-                    <p>Aumento dell&apos;engagement rispetto a metodi tradizionali</p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="bg-gradient-to-br from-white to-[var(--purple-light)]/5 p-6 rounded-xl border border-[var(--purple-light)]/10 hover:shadow-lg transition-all duration-300">
+                    <h4 className="text-3xl font-heading font-bold text-[var(--purple-deep)] mb-3">+300%</h4>
+                    <p className="text-[#2D2655] leading-relaxed">Aumento dell'engagement rispetto a metodi tradizionali</p>
                   </div>
-                  <div className="bg-[var(--purple-light)]/10 p-6 rounded-lg">
-                    <h4 className="text-xl font-medium mb-2 text-[var(--purple-deep)]">-60%</h4>
-                    <p>Riduzione dei tempi di apprendimento tecnico</p>
+                  
+                  <div className="bg-gradient-to-br from-white to-[var(--purple-light)]/5 p-6 rounded-xl border border-[var(--purple-light)]/10 hover:shadow-lg transition-all duration-300">
+                    <h4 className="text-3xl font-heading font-bold text-[var(--purple-deep)] mb-3">-60%</h4>
+                    <p className="text-[#2D2655] leading-relaxed">Riduzione dei tempi di apprendimento tecnico</p>
                   </div>
-                  <div className="bg-[var(--purple-light)]/10 p-6 rounded-lg">
-                    <h4 className="text-xl font-medium mb-2 text-[var(--purple-deep)]">+45%</h4>
-                    <p>Miglioramento nella ritenzione delle informazioni</p>
+                  
+                  <div className="bg-gradient-to-br from-white to-[var(--purple-light)]/5 p-6 rounded-xl border border-[var(--purple-light)]/10 hover:shadow-lg transition-all duration-300">
+                    <h4 className="text-3xl font-heading font-bold text-[var(--purple-deep)] mb-3">+45%</h4>
+                    <p className="text-[#2D2655] leading-relaxed">Miglioramento nella ritenzione delle informazioni</p>
                   </div>
-                  <div className="bg-[var(--purple-light)]/10 p-6 rounded-lg">
-                    <h4 className="text-xl font-medium mb-2 text-[var(--purple-deep)]">7x</h4>
-                    <p>Maggiore ROI rispetto ai metodi tradizionali</p>
+                  
+                  <div className="bg-gradient-to-br from-white to-[var(--purple-light)]/5 p-6 rounded-xl border border-[var(--purple-light)]/10 hover:shadow-lg transition-all duration-300">
+                    <h4 className="text-3xl font-heading font-bold text-[var(--purple-deep)] mb-3">7x</h4>
+                    <p className="text-[#2D2655] leading-relaxed">Maggiore ROI rispetto ai metodi tradizionali</p>
                   </div>
                 </div>
               </motion.div>
@@ -125,30 +131,40 @@ export default function RealtaAumentataPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="bg-[var(--purple-deep)] p-8 rounded-xl shadow-xl text-white"
+              className="bg-gradient-to-br from-[var(--purple-deep)] to-[#1e1a3a] p-8 rounded-xl shadow-xl text-white border border-[var(--purple-light)]/20"
             >
-              <h3 className="text-2xl font-heading mb-6">Applicazioni della Realtà Aumentata</h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="bg-white/10 p-6 rounded-lg">
-                  <h4 className="text-xl font-medium mb-2">Manutenzione Industriale</h4>
-                  <p className="text-white/90">Guide passo-passo in AR per operazioni di manutenzione complesse, riducendo errori e tempi di intervento.</p>
+              <div className="text-center mb-10">
+                <h3 className="text-2xl font-heading font-bold text-white mb-2">Applicazioni della Realtà Aumentata</h3>
+                <div className="w-16 h-1 bg-[var(--aqua-green)] mx-auto mb-4"></div>
+                <p className="text-white/80 max-w-3xl mx-auto">
+                  Scopri come la Realtà Aumentata sta trasformando i settori industriali con soluzioni innovative e misurabili.
+                </p>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+                <div className="bg-white/5 p-6 rounded-xl border border-white/5 hover:bg-white/10 transition-all duration-300">
+                  <h4 className="text-xl font-heading font-medium text-white mb-3">Manutenzione Industriale</h4>
+                  <p className="text-white/80 leading-relaxed">Guide passo-passo in AR per operazioni di manutenzione complesse, riducendo errori e tempi di intervento.</p>
                 </div>
-                <div className="bg-white/10 p-6 rounded-lg">
-                  <h4 className="text-xl font-medium mb-2">Training Tecnico</h4>
-                  <p className="text-white/90">Apprendimento pratico con overlay informativi contestuali che guidano l&apos;acquisizione di competenze sul campo.</p>
+                
+                <div className="bg-white/5 p-6 rounded-xl border border-white/5 hover:bg-white/10 transition-all duration-300">
+                  <h4 className="text-xl font-heading font-medium text-white mb-3">Training Tecnico</h4>
+                  <p className="text-white/80 leading-relaxed">Apprendimento pratico con overlay informativi contestuali che guidano l'acquisizione di competenze sul campo.</p>
                 </div>
-                <div className="bg-white/10 p-6 rounded-lg">
-                  <h4 className="text-xl font-medium mb-2">Marketing & Eventi</h4>
-                  <p className="text-white/90">Esperienze immersive per eventi, fiere e campagne di marketing con contenuti interattivi che aumentano il coinvolgimento.</p>
+                
+                <div className="bg-white/5 p-6 rounded-xl border border-white/5 hover:bg-white/10 transition-all duration-300">
+                  <h4 className="text-xl font-heading font-medium text-white mb-3">Marketing & Eventi</h4>
+                  <p className="text-white/80 leading-relaxed">Esperienze immersive per eventi, fiere e campagne di marketing con contenuti interattivi che aumentano il coinvolgimento.</p>
                 </div>
               </div>
               
-              <div className="mt-10 text-center">
+              <div className="text-center">
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
+                  className="inline-block"
                 >
-                  <Link href="/contatti" className="bg-[var(--purple-light)] text-black font-bold font-heading py-3 px-8 rounded-full inline-flex items-center shadow-lg">
+                  <Link href="/contatti" className="bg-[var(--aqua-green)] hover:bg-[#4daea0] text-[var(--purple-deep)] font-bold font-heading py-3 px-8 rounded-full inline-flex items-center shadow-lg transition-colors duration-300">
                     RICHIEDI UNA DIMOSTRAZIONE
                     <FaArrowRight className="ml-2" />
                   </Link>
@@ -159,32 +175,39 @@ export default function RealtaAumentataPage() {
         </section>
         
         {/* Case Study */}
-        <section className="py-20 bg-[var(--purple-light)]/10">
+        <section className="py-20 bg-gradient-to-b from-[var(--purple-light)]/5 to-white">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="bg-white p-8 rounded-xl shadow-xl"
+              className="bg-white p-8 rounded-xl shadow-xl border border-[var(--purple-light)]/20"
             >
-              <h3 className="text-2xl font-heading mb-4 text-[var(--purple-deep)]">Case Study: Object Recognition</h3>
+              <div className="text-center mb-8">
+                <h3 className="text-2xl font-heading font-bold text-[var(--purple-deep)] mb-2">Case Study: Object Recognition</h3>
+                <div className="w-16 h-1 bg-[var(--aqua-green)] mx-auto mb-4"></div>
+              </div>
+              
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <div className="col-span-2">
-                  <p className="mb-4 text-gray-700">
-                    Un&apos;azienda manifatturiera leader nel settore automobilistico ha implementato la nostra soluzione Object Recognition per supportare i tecnici durante le procedure di manutenzione complesse.
-                  </p>
-                  <p className="mb-4 text-gray-700">
-                    I tecnici, equipaggiati con dispositivi AR, possono semplicemente inquadrare i componenti da manutenere per ricevere immediatamente istruzioni dettagliate, video tutorial e modelli 3D sovrapposti all&apos;oggetto reale.
-                  </p>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                    <div className="bg-[var(--purple-light)]/10 p-4 rounded-lg">
-                      <h4 className="font-medium mb-2 text-[var(--purple-deep)]">Sfida</h4>
-                      <p className="text-sm">Ridurre il tempo di apprendimento dei nuovi tecnici e migliorare la precisione nelle operazioni di manutenzione.</p>
+                  <div className="space-y-6">
+                    <p className="text-[#2D2655] leading-relaxed">
+                      Un'azienda manifatturiera leader nel settore automobilistico ha implementato la nostra soluzione Object Recognition per supportare i tecnici durante le procedure di manutenzione complesse.
+                    </p>
+                    <p className="text-[#2D2655] leading-relaxed">
+                      I tecnici, equipaggiati con dispositivi AR, possono semplicemente inquadrare i componenti da manutenere per ricevere immediatamente istruzioni dettagliate, video tutorial e modelli 3D sovrapposti all'oggetto reale.
+                    </p>
+                  </div>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                    <div className="bg-gradient-to-br from-white to-[var(--purple-light)]/5 p-6 rounded-xl border border-[var(--purple-light)]/10">
+                      <h4 className="font-heading font-medium text-[var(--purple-deep)] mb-3 text-lg">Sfida</h4>
+                      <p className="text-[#2D2655] leading-relaxed">Ridurre il tempo di apprendimento dei nuovi tecnici e migliorare la precisione nelle operazioni di manutenzione.</p>
                     </div>
-                    <div className="bg-[var(--purple-light)]/10 p-4 rounded-lg">
-                      <h4 className="font-medium mb-2 text-[var(--purple-deep)]">Soluzione</h4>
-                      <p className="text-sm">Implementazione di Object Recognition per identificare componenti e fornire guide contestuali in tempo reale.</p>
+                    <div className="bg-gradient-to-br from-white to-[var(--purple-light)]/5 p-6 rounded-xl border border-[var(--purple-light)]/10">
+                      <h4 className="font-heading font-medium text-[var(--purple-deep)] mb-3 text-lg">Soluzione</h4>
+                      <p className="text-[#2D2655] leading-relaxed">Implementazione di Object Recognition per identificare componenti e fornire guide contestuali in tempo reale.</p>
                     </div>
                   </div>
                 </div>

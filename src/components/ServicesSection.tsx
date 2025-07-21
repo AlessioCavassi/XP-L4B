@@ -141,14 +141,18 @@ const ServicesSection: React.FC = () => {
               whileHover="hover"
               onMouseEnter={() => setActiveService(service.id)}
               onMouseLeave={() => setActiveService(null)}
-              className="bg-white/10 backdrop-blur-md rounded-xl p-6 cursor-pointer transition-all duration-300 border border-white/20 relative overflow-hidden interactive"
+              className="bg-white/25 backdrop-blur-md rounded-xl p-6 cursor-pointer transition-all duration-300 border border-white/30 relative overflow-hidden interactive shadow-xl"
+              style={{
+                backgroundColor: 'rgba(255, 255, 255, 0.25)',
+                backdropFilter: 'blur(8px)'
+              }}
               onClick={() => window.location.href = service.url}
             >
               <div 
                 className="absolute inset-0 opacity-0 transition-opacity duration-300" 
                 style={{
                   background: `linear-gradient(135deg, ${service.color}20, ${service.color}40)`,
-                  opacity: activeService === service.id ? 0.3 : 0,
+                  opacity: activeService === service.id ? 0.5 : 0,
                 }}
               ></div>
 
@@ -161,7 +165,7 @@ const ServicesSection: React.FC = () => {
                 </div>
 
                 <h3 className="text-xl font-heading text-white mb-4">{service.title}</h3>
-                <p className="text-white !important">
+                <p className="text-white !important font-medium" style={{ textShadow: '0px 1px 2px rgba(0,0,0,0.3)' }}>
                   {service.description.split(' ').map((word, i) => {
                     // Parole da evidenziare per ciascun servizio
                     const keywordsMap: Record<number, string[]> = {

@@ -65,22 +65,22 @@ export default function TeamBuildingPage() {
                     <p className="mb-6">
                       Spatial Assistance crea ambienti virtuali condivisi per team remoti o ibridi, permettendo una collaborazione naturale e coinvolgente. Questi spazi virtuali favoriscono il senso di appartenenza e la coesione del team, anche a distanza.
                     </p>
-                    <ul className="space-y-2 mb-6">
+                    <ul className="space-y-3 mb-6">
                       <li className="flex items-start">
-                        <span className="text-[var(--aqua-green)] mr-2">✓</span>
-                        <span>Riduzione del 30% nel turnover dei dipendenti</span>
+                        <span className="text-[var(--aqua-green)] font-bold mr-3 text-xl">✓</span>
+                        <span className="text-white/90">Riduzione del 30% nel turnover dei dipendenti</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-[var(--aqua-green)] mr-2">✓</span>
-                        <span>Aumento del 45% nella produttività dei team</span>
+                        <span className="text-[var(--aqua-green)] font-bold mr-3 text-xl">✓</span>
+                        <span className="text-white/90">Aumento del 45% nella produttività dei team</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-[var(--aqua-green)] mr-2">✓</span>
-                        <span>Miglioramento della comunicazione interna</span>
+                        <span className="text-[var(--aqua-green)] font-bold mr-3 text-xl">✓</span>
+                        <span className="text-white/90">Miglioramento della comunicazione interna</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-[var(--aqua-green)] mr-2">✓</span>
-                        <span>Maggiore coinvolgimento nelle attività di gruppo</span>
+                        <span className="text-[var(--aqua-green)] font-bold mr-3 text-xl">✓</span>
+                        <span className="text-white/90">Maggiore coinvolgimento nelle attività di gruppo</span>
                       </li>
                     </ul>
                   </div>
@@ -92,46 +92,49 @@ export default function TeamBuildingPage() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="bg-white p-8 rounded-xl shadow-xl"
+                className="bg-white p-8 rounded-xl shadow-xl border border-[var(--purple-light)]/20"
               >
-                <h3 className="text-2xl font-heading mb-4 text-[var(--purple-deep)]">Perché scegliere il Team Building Digitale?</h3>
-                <p className="mb-6 text-gray-700">
-                  Il Team Building Digitale offre vantaggi unici rispetto alle attività tradizionali, specialmente in un&apos;era di lavoro ibrido e remoto:
-                </p>
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-heading font-bold text-[var(--purple-deep)] mb-2">Perché scegliere il Team Building Digitale?</h3>
+                  <div className="w-16 h-1 bg-[var(--aqua-green)] mx-auto mb-4"></div>
+                  <p className="text-gray-700 max-w-2xl mx-auto">
+                    Il Team Building Digitale offre vantaggi unici rispetto alle attività tradizionali, specialmente in un'era di lavoro ibrido e remoto:
+                  </p>
+                </div>
                 
-                <div className="grid grid-cols-1 gap-6 mb-8">
-                  <div className="bg-[var(--purple-light)]/10 p-6 rounded-lg">
+                <div className="space-y-6">
+                  <div className="bg-gradient-to-br from-white to-[var(--purple-light)]/5 p-6 rounded-xl border border-[var(--purple-light)]/10 hover:shadow-lg transition-all duration-300">
                     <div className="flex items-start">
-                      <div className="bg-[var(--purple-deep)] rounded-full p-2 mr-4 mt-1">
-                        <FaPuzzlePiece className="text-white" size={16} />
+                      <div className="bg-[var(--aqua-green)]/10 p-3 rounded-full mr-4">
+                        <FaPuzzlePiece className="text-[var(--aqua-green)]" size={20} />
                       </div>
                       <div>
-                        <h4 className="text-xl font-medium mb-2 text-[var(--purple-deep)]">Flessibilità e Inclusività</h4>
-                        <p>Permette la partecipazione di team distribuiti geograficamente, senza limitazioni logistiche</p>
+                        <h4 className="text-xl font-heading font-bold text-[var(--purple-deep)] mb-2">Flessibilità e Inclusività</h4>
+                        <p className="text-[#2D2655] leading-relaxed">Permette la partecipazione di team distribuiti geograficamente, senza limitazioni logistiche</p>
                       </div>
                     </div>
                   </div>
                   
-                  <div className="bg-[var(--purple-light)]/10 p-6 rounded-lg">
+                  <div className="bg-gradient-to-br from-white to-[var(--purple-light)]/5 p-6 rounded-xl border border-[var(--purple-light)]/10 hover:shadow-lg transition-all duration-300">
                     <div className="flex items-start">
-                      <div className="bg-[var(--purple-deep)] rounded-full p-2 mr-4 mt-1">
-                        <FaHandshake className="text-white" size={16} />
+                      <div className="bg-[var(--aqua-green)]/10 p-3 rounded-full mr-4">
+                        <FaHandshake className="text-[var(--aqua-green)]" size={20} />
                       </div>
                       <div>
-                        <h4 className="text-xl font-medium mb-2 text-[var(--purple-deep)]">Esperienze Immersive</h4>
-                        <p>Crea esperienze coinvolgenti che stimolano l&apos;interazione naturale tra i partecipanti</p>
+                        <h4 className="text-xl font-heading font-bold text-[var(--purple-deep)] mb-2">Esperienze Immersive</h4>
+                        <p className="text-[#2D2655] leading-relaxed">Crea esperienze coinvolgenti che stimolano l'interazione naturale tra i partecipanti</p>
                       </div>
                     </div>
                   </div>
                   
-                  <div className="bg-[var(--purple-light)]/10 p-6 rounded-lg">
+                  <div className="bg-gradient-to-br from-white to-[var(--purple-light)]/5 p-6 rounded-xl border border-[var(--purple-light)]/10 hover:shadow-lg transition-all duration-300">
                     <div className="flex items-start">
-                      <div className="bg-[var(--purple-deep)] rounded-full p-2 mr-4 mt-1">
-                        <FaRegLightbulb className="text-white" size={16} />
+                      <div className="bg-[var(--aqua-green)]/10 p-3 rounded-full mr-4">
+                        <FaRegLightbulb className="text-[var(--aqua-green)]" size={20} />
                       </div>
                       <div>
-                        <h4 className="text-xl font-medium mb-2 text-[var(--purple-deep)]">Misurazione Risultati</h4>
-                        <p>Offre metriche tangibili per valutare l&apos;efficacia delle attività e l&apos;evoluzione del team</p>
+                        <h4 className="text-xl font-heading font-bold text-[var(--purple-deep)] mb-2">Misurazione Risultati</h4>
+                        <p className="text-[#2D2655] leading-relaxed">Offre metriche tangibili per valutare l'efficacia delle attività e l'evoluzione del team</p>
                       </div>
                     </div>
                   </div>
@@ -146,79 +149,83 @@ export default function TeamBuildingPage() {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="mb-20"
             >
-              <h3 className="text-2xl font-heading mb-8 text-center text-[var(--purple-deep)]">Attività di Team Building Digitale</h3>
+              <div className="text-center mb-12">
+                <h3 className="text-2xl font-heading font-bold text-[var(--purple-deep)] mb-2">Attività di Team Building Digitale</h3>
+                <div className="w-16 h-1 bg-[var(--aqua-green)] mx-auto mb-4"></div>
+              </div>
+              
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="bg-[var(--purple-deep)] p-8 rounded-xl shadow-lg text-white">
-                  <h4 className="text-xl font-heading mb-4 border-b border-white/20 pb-4">Kick-off Progetti</h4>
-                  <p className="mb-6">
+                <div className="bg-gradient-to-br from-[var(--purple-deep)] to-[#1e1a40] p-8 rounded-xl shadow-lg text-white border border-[var(--purple-light)]/20 hover:shadow-xl transition-all duration-300">
+                  <h4 className="text-xl font-heading font-bold mb-4 border-b border-white/20 pb-4">Kick-off Progetti</h4>
+                  <p className="mb-6 text-white/90">
                     Iniziare un nuovo progetto con il piede giusto è fondamentale. I nostri ambienti virtuali facilitano sessioni di kick-off coinvolgenti dove ogni membro può:
                   </p>
-                  <ul className="space-y-2 text-white/90">
+                  <ul className="space-y-3">
                     <li className="flex items-start">
-                      <span className="text-[var(--aqua-green)] mr-2">•</span>
-                      <span>Comprendere obiettivi e visione del progetto</span>
+                      <span className="text-[var(--aqua-green)] font-bold mr-3 mt-1">•</span>
+                      <span className="text-white/90">Comprendere obiettivi e visione del progetto</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-[var(--aqua-green)] mr-2">•</span>
-                      <span>Definire ruoli e responsabilità in modo interattivo</span>
+                      <span className="text-[var(--aqua-green)] font-bold mr-3 mt-1">•</span>
+                      <span className="text-white/90">Definire ruoli e responsabilità in modo interattivo</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-[var(--aqua-green)] mr-2">•</span>
-                      <span>Sviluppare un senso di appartenenza al team</span>
+                      <span className="text-[var(--aqua-green)] font-bold mr-3 mt-1">•</span>
+                      <span className="text-white/90">Sviluppare un senso di appartenenza al team</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-[var(--aqua-green)] mr-2">•</span>
-                      <span>Creare una roadmap condivisa e visualizzata</span>
+                      <span className="text-[var(--aqua-green)] font-bold mr-3 mt-1">•</span>
+                      <span className="text-white/90">Creare una roadmap condivisa e visualizzata</span>
                     </li>
                   </ul>
                 </div>
                 
-                <div className="bg-[var(--purple-deep)] p-8 rounded-xl shadow-lg text-white">
-                  <h4 className="text-xl font-heading mb-4 border-b border-white/20 pb-4">Brainstorming Collaborativo</h4>
-                  <p className="mb-6">
+                <div className="bg-gradient-to-br from-[var(--purple-deep)] to-[#1e1a40] p-8 rounded-xl shadow-lg text-white border border-[var(--purple-light)]/20 hover:shadow-xl transition-all duration-300">
+                  <h4 className="text-xl font-heading font-bold mb-4 border-b border-white/20 pb-4">Brainstorming Collaborativo</h4>
+                  <p className="mb-6 text-white/90">
                     Le sessioni di brainstorming nei nostri spazi virtuali superano le limitazioni dei tradizionali incontri online, offrendo:
                   </p>
-                  <ul className="space-y-2 text-white/90">
+                  <ul className="space-y-3">
                     <li className="flex items-start">
-                      <span className="text-[var(--aqua-green)] mr-2">•</span>
-                      <span>Lavagne virtuali condivise e interattive</span>
+                      <span className="text-[var(--aqua-green)] font-bold mr-3 mt-1">•</span>
+                      <span className="text-white/90">Lavagne virtuali condivise e interattive</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-[var(--aqua-green)] mr-2">•</span>
-                      <span>Possibilità di creare e manipolare oggetti 3D</span>
+                      <span className="text-[var(--aqua-green)] font-bold mr-3 mt-1">•</span>
+                      <span className="text-white/90">Possibilità di creare e manipolare oggetti 3D</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-[var(--aqua-green)] mr-2">•</span>
-                      <span>Tecniche di ideazione guidate e facilitate</span>
+                      <span className="text-[var(--aqua-green)] font-bold mr-3 mt-1">•</span>
+                      <span className="text-white/90">Tecniche di ideazione guidate e facilitate</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-[var(--aqua-green)] mr-2">•</span>
-                      <span>Sistemi di votazione e prioritizzazione delle idee</span>
+                      <span className="text-[var(--aqua-green)] font-bold mr-3 mt-1">•</span>
+                      <span className="text-white/90">Sistemi di votazione e prioritizzazione delle idee</span>
                     </li>
                   </ul>
                 </div>
                 
-                <div className="bg-[var(--purple-deep)] p-8 rounded-xl shadow-lg text-white">
-                  <h4 className="text-xl font-heading mb-4 border-b border-white/20 pb-4">Problem Solving Collaborativo</h4>
-                  <p className="mb-6">
+                <div className="bg-gradient-to-br from-[var(--purple-deep)] to-[#1e1a40] p-8 rounded-xl shadow-lg text-white border border-[var(--purple-light)]/20 hover:shadow-xl transition-all duration-300">
+                  <h4 className="text-xl font-heading font-bold mb-4 border-b border-white/20 pb-4">Problem Solving Collaborativo</h4>
+                  <p className="mb-6 text-white/90">
                     Affrontare sfide complesse richiede una collaborazione efficace. I nostri ambienti virtuali facilitano:
                   </p>
-                  <ul className="space-y-2 text-white/90">
+                  <ul className="space-y-3">
                     <li className="flex items-start">
-                      <span className="text-[var(--aqua-green)] mr-2">•</span>
-                      <span>Simulazioni realistiche dei problemi da risolvere</span>
+                      <span className="text-[var(--aqua-green)] font-bold mr-3 mt-1">•</span>
+                      <span className="text-white/90">Simulazioni realistiche dei problemi da risolvere</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-[var(--aqua-green)] mr-2">•</span>
-                      <span>Metodologie strutturate di problem-solving</span>
+                      <span className="text-[var(--aqua-green)] font-bold mr-3 mt-1">•</span>
+                      <span className="text-white/90">Metodologie strutturate di problem-solving</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-[var(--aqua-green)] mr-2">•</span>
-                      <span>Esercizi di pensiero laterale e creativo</span>
+                      <span className="text-[var(--aqua-green)] font-bold mr-3 mt-1">•</span>
+                      <span className="text-white/90">Esercizi di pensiero laterale e creativo</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-[var(--aqua-green)] mr-2">•</span>
-                      <span>Feedback immediato sulle soluzioni proposte</span>
+                      <span className="text-[var(--aqua-green)] font-bold mr-3 mt-1">•</span>
+                      <span className="text-white/90">Feedback immediato sulle soluzioni proposte</span>
                     </li>
                   </ul>
                 </div>

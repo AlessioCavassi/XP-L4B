@@ -8,6 +8,7 @@ import ParticlesBackground from '@/components/ParticlesBackground';
 import MobileNavSwipe from '@/components/MobileNavSwipe';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import './vr-styles.css';
 import { FaVrCardboard, FaGlasses, FaArrowRight } from 'react-icons/fa';
 
 export default function RealtaVirtualePage() {
@@ -65,7 +66,7 @@ export default function RealtaVirtualePage() {
                       </div>
                       <h3 className="text-2xl font-heading text-white">PRODOTTO VR</h3>
                     </div>
-                    <h2 className="text-3xl font-heading mb-6">SafetyVR</h2>
+                    <h2 className="text-3xl font-heading mb-6 text-white">SafetyVR</h2>
                     <p className="mb-6">
                       SafetyVR è la nostra piattaforma progettata per rivoluzionare l&apos;apprendimento sulla sicurezza attraverso la Realtà Virtuale. Coinvolge i partecipanti in scenari realistici ma privi di rischi, dove possono esercitarsi e padroneggiare le procedure essenziali in un ambiente controllato.
                     </p>
@@ -74,22 +75,22 @@ export default function RealtaVirtualePage() {
                     <ul className="space-y-2 mb-6">
                       <li className="flex items-start">
                         <span className="text-[var(--aqua-green)] mr-2">✓</span>
-                        <span><strong>Industria:</strong> Scenari realistici e interattivi per la formazione sulla sicurezza in ambienti industriali</span>
+                        <span className="text-white"><strong className="text-[var(--aqua-green)]">Industria:</strong> Scenari realistici e interattivi per la formazione sulla sicurezza in ambienti industriali</span>
                       </li>
                       <li className="flex items-start">
                         <span className="text-[var(--aqua-green)] mr-2">✓</span>
-                        <span><strong>Formazione:</strong> Apprendimento pratico senza rischi con procedure di emergenza simulata</span>
+                        <span className="text-white"><strong className="text-[var(--aqua-green)]">Formazione:</strong> Apprendimento pratico senza rischi con procedure di emergenza simulata</span>
                       </li>
                       <li className="flex items-start">
                         <span className="text-[var(--aqua-green)] mr-2">✓</span>
-                        <span><strong>Analisi:</strong> Monitoraggio delle performance e raccolta dati sulle decisioni prese dagli utenti</span>
+                        <span className="text-white"><strong className="text-[var(--aqua-green)]">Analisi:</strong> Monitoraggio delle performance e raccolta dati sulle decisioni prese dagli utenti</span>
                       </li>
                       <li className="flex items-start">
                         <span className="text-[var(--aqua-green)] mr-2">✓</span>
-                        <span><strong>Flessibilità:</strong> Personalizzazione del sistema per ogni settore e tipo di rischio</span>
+                        <span className="text-white"><strong className="text-[var(--aqua-green)]">Flessibilità:</strong> Personalizzazione del sistema per ogni settore e tipo di rischio</span>
                       </li>
                     </ul>
-                    <p className="text-sm bg-white/10 p-3 rounded italic">
+                    <p className="text-sm bg-white/10 p-3 rounded italic text-white">
                       Le simulazioni in VR migliorano la ritenzione dell&apos;apprendimento del 76% rispetto ai metodi tradizionali e riducono gli errori nelle procedure operative del 40%.
                     </p>
                   </div>
@@ -111,8 +112,8 @@ export default function RealtaVirtualePage() {
                       </div>
                       <h3 className="text-2xl font-heading text-white">PRODOTTO SPATIAL</h3>
                     </div>
-                    <h2 className="text-3xl font-heading mb-6">Portal Gate</h2>
-                    <p className="mb-6">
+                    <h2 className="text-3xl font-heading mb-6 text-white">Portal Gate</h2>
+                    <p className="mb-6 text-white">
                       PortalGate è un&apos;app di Spatial Computing sviluppata e pubblicata da dilium, che consente agli utenti di esplorare mondi surreali e immersivi camminando attraverso portali digitali nel loro ambiente fisico. Disponibile su Apple Vision Pro, iOS e Android, permette di interagire e visualizzare contenuti 360° e vivere esperienze uniche.
                     </p>
                     
@@ -120,22 +121,22 @@ export default function RealtaVirtualePage() {
                     <ul className="space-y-2 mb-6">
                       <li className="flex items-start">
                         <span className="text-[var(--purple-light)] mr-2">✓</span>
-                        <span><strong>Didattica:</strong> Ambienti educativi e interattivi per un&apos;esperienza immersiva a 360° che porta l&apos;apprendimento a un livello superiore</span>
+                        <span className="text-white"><strong className="text-[var(--purple-light)]">Didattica:</strong> Ambienti educativi e interattivi per un&apos;esperienza immersiva a 360° che porta l&apos;apprendimento a un livello superiore</span>
                       </li>
                       <li className="flex items-start">
                         <span className="text-[var(--purple-light)] mr-2">✓</span>
-                        <span><strong>Eventi e turismo:</strong> Esplorazione di punti di interesse e luoghi culturali attraverso esperienze immersive a 360°</span>
+                        <span className="text-white"><strong className="text-[var(--purple-light)]">Eventi e turismo:</strong> Esplorazione di punti di interesse e luoghi culturali attraverso esperienze immersive a 360°</span>
                       </li>
                       <li className="flex items-start">
                         <span className="text-[var(--purple-light)] mr-2">✓</span>
-                        <span><strong>Collaborazione Duomo di Milano:</strong> Esperienza esclusiva con la Veneranda Fabbrica del Duomo per esplorare guglie e cattedrale</span>
+                        <span className="text-white"><strong className="text-[var(--purple-light)]">Collaborazione Duomo di Milano:</strong> Esperienza esclusiva con la Veneranda Fabbrica del Duomo per esplorare guglie e cattedrale</span>
                       </li>
                       <li className="flex items-start">
                         <span className="text-[var(--purple-light)] mr-2">✓</span>
-                        <span><strong>Contenuti personalizzati:</strong> Realizzazione professionale di video 360° con partner di fiducia</span>
+                        <span className="text-white"><strong className="text-[var(--purple-light)]">Contenuti personalizzati:</strong> Realizzazione professionale di video 360° con partner di fiducia</span>
                       </li>
                     </ul>
-                    <p className="text-sm bg-white/10 p-3 rounded italic">
+                    <p className="text-sm bg-white/10 p-3 rounded italic text-white">
                       In collaborazione con le istituzioni lombarde, organizziamo operazioni congiunte di marketing per presentare e promuovere i contenuti attraverso comunicati stampa condivisi.
                     </p>
                   </div>
@@ -147,29 +148,35 @@ export default function RealtaVirtualePage() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="bg-white p-8 rounded-xl shadow-xl"
+                className="bg-white p-8 rounded-xl shadow-xl border border-[var(--purple-light)]/20"
               >
-                <h3 className="text-2xl font-heading mb-4 text-[var(--purple-deep)]">Vantaggi della Realtà Virtuale</h3>
-                <p className="text-gray-700 mb-6">
-                  La Realtà Virtuale offre vantaggi unici che superano i metodi tradizionali, creando esperienze memorabili che migliorano significativamente i risultati:
-                </p>
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-heading font-bold text-[var(--purple-deep)] mb-2">Vantaggi della Realtà Virtuale</h3>
+                  <div className="w-16 h-1 bg-[var(--aqua-green)] mx-auto mb-4"></div>
+                  <p className="text-[var(--purple-light)] max-w-2xl mx-auto">
+                    La realtà virtuale rivoluziona la formazione con un tasso di ritenzione del 75%, nettamente superiore al 5-10% dei metodi tradizionali.
+                  </p>
+                </div>
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                  <div className="bg-[var(--purple-light)]/10 p-6 rounded-lg">
-                    <h4 className="text-xl font-medium mb-2 text-[var(--purple-deep)]">+76%</h4>
-                    <p>Miglioramento della ritenzione rispetto ai metodi tradizionali</p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="bg-gradient-to-br from-white to-[var(--purple-light)]/5 p-6 rounded-xl border border-[var(--purple-light)]/10 hover:shadow-lg transition-all duration-300">
+                    <h4 className="text-3xl font-heading font-bold text-[var(--purple-deep)] mb-3">+76%</h4>
+                    <p className="text-[#2D2655] leading-relaxed">Miglioramento della ritenzione rispetto ai metodi tradizionali</p>
                   </div>
-                  <div className="bg-[var(--purple-light)]/10 p-6 rounded-lg">
-                    <h4 className="text-xl font-medium mb-2 text-[var(--purple-deep)]">4x</h4>
-                    <p>Più veloce dell&apos;apprendimento in aula</p>
+                  
+                  <div className="bg-gradient-to-br from-white to-[var(--purple-light)]/5 p-6 rounded-xl border border-[var(--purple-light)]/10 hover:shadow-lg transition-all duration-300">
+                    <h4 className="text-3xl font-heading font-bold text-[var(--purple-deep)] mb-3">4x</h4>
+                    <p className="text-[#2D2655] leading-relaxed">Più veloce dell&apos;apprendimento in aula tradizionale</p>
                   </div>
-                  <div className="bg-[var(--purple-light)]/10 p-6 rounded-lg">
-                    <h4 className="text-xl font-medium mb-2 text-[var(--purple-deep)]">-40%</h4>
-                    <p>Riduzione degli errori nelle procedure operative</p>
+                  
+                  <div className="bg-gradient-to-br from-white to-[var(--purple-light)]/5 p-6 rounded-xl border border-[var(--purple-light)]/10 hover:shadow-lg transition-all duration-300">
+                    <h4 className="text-3xl font-heading font-bold text-[var(--purple-deep)] mb-3">-40%</h4>
+                    <p className="text-[#2D2655] leading-relaxed">Riduzione degli errori nelle procedure operative</p>
                   </div>
-                  <div className="bg-[var(--purple-light)]/10 p-6 rounded-lg">
-                    <h4 className="text-xl font-medium mb-2 text-[var(--purple-deep)]">275%</h4>
-                    <p>Aumento della fiducia nell&apos;applicare nuove competenze</p>
+                  
+                  <div className="bg-gradient-to-br from-white to-[var(--purple-light)]/5 p-6 rounded-xl border border-[var(--purple-light)]/10 hover:shadow-lg transition-all duration-300">
+                    <h4 className="text-3xl font-heading font-bold text-[var(--purple-deep)] mb-3">275%</h4>
+                    <p className="text-[#2D2655] leading-relaxed">Aumento della fiducia nell&apos;applicare nuove competenze</p>
                   </div>
                 </div>
               </motion.div>

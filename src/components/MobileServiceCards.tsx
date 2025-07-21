@@ -73,10 +73,10 @@ const MobileServiceCards: React.FC<MobileServiceCardsProps> = ({ services }) => 
                   : 'scale-95 opacity-90'
               }`}
               style={{
-                background: `linear-gradient(135deg, rgba(45, 38, 85, 0.95), rgba(45, 38, 85, 0.98))`,
+                background: `linear-gradient(135deg, rgba(255, 255, 255, 0.25), rgba(45, 38, 85, 0.85))`,
                 borderLeft: `4px solid ${service.color}`,
-                boxShadow: '0 4px 15px rgba(0,0,0,0.4)',
-                backdropFilter: 'blur(5px)',
+                boxShadow: '0 8px 20px rgba(0,0,0,0.5)',
+                backdropFilter: 'blur(8px)',
                 cursor: 'pointer'
               }}
               whileTap={{ scale: 0.98 }}
@@ -99,10 +99,11 @@ const MobileServiceCards: React.FC<MobileServiceCardsProps> = ({ services }) => 
                 </div>
                 <div className="text-white">
                   <span 
-                    className="mobile-service-desc font-body text-sm font-medium flex-grow drop-shadow-lg leading-relaxed text-white" 
+                    className="mobile-service-desc font-body text-sm font-bold flex-grow drop-shadow-lg leading-relaxed text-white" 
                     style={{ 
                       color: 'white',
-                      fontFamily: 'var(--font-body)'
+                      fontFamily: 'var(--font-body)',
+                      textShadow: '0px 1px 3px rgba(0,0,0,0.5)'
                     }}
                   >
                     {service.description}

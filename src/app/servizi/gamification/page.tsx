@@ -65,22 +65,22 @@ export default function GamificationPage() {
                     <p className="mb-6">
                       La Gamification integra dinamiche tipiche dei giochi per rendere più coinvolgenti processi formativi e lavorativi. Implementiamo meccaniche come punti, badge, classifiche e ricompense per stimolare la partecipazione attiva e il miglioramento continuo.
                     </p>
-                    <ul className="space-y-2 mb-6">
+                    <ul className="space-y-3 mb-6">
                       <li className="flex items-start">
-                        <span className="text-[var(--aqua-green)] mr-2">✓</span>
-                        <span>Sistemi di punti e ricompense</span>
+                        <span className="text-[var(--aqua-green)] font-bold mr-3 text-xl">✓</span>
+                        <span className="text-white/90">Sistemi di punti e ricompense</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-[var(--aqua-green)] mr-2">✓</span>
-                        <span>Badge e achievement per competenze</span>
+                        <span className="text-[var(--aqua-green)] font-bold mr-3 text-xl">✓</span>
+                        <span className="text-white/90">Badge e achievement per competenze</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-[var(--aqua-green)] mr-2">✓</span>
-                        <span>Classifiche e competizione costruttiva</span>
+                        <span className="text-[var(--aqua-green)] font-bold mr-3 text-xl">✓</span>
+                        <span className="text-white/90">Classifiche e competizione costruttiva</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-[var(--aqua-green)] mr-2">✓</span>
-                        <span>Percorsi e missioni personalizzate</span>
+                        <span className="text-[var(--aqua-green)] font-bold mr-3 text-xl">✓</span>
+                        <span className="text-white/90">Percorsi e missioni personalizzate</span>
                       </li>
                     </ul>
                   </div>
@@ -92,29 +92,35 @@ export default function GamificationPage() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="bg-white p-8 rounded-xl shadow-xl"
+                className="bg-white p-8 rounded-xl shadow-xl border border-[var(--purple-light)]/20"
               >
-                <h3 className="text-2xl font-heading mb-4 text-[var(--purple-deep)]">Risultati Misurabili</h3>
-                <p className="mb-6 text-gray-700">
-                  La Gamification genera risultati concreti e misurabili, creando un impatto significativo su motivazione e performance:
-                </p>
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-heading font-bold text-[var(--purple-deep)] mb-2">Risultati Misurabili</h3>
+                  <div className="w-16 h-1 bg-[var(--aqua-green)] mx-auto mb-4"></div>
+                  <p className="text-gray-700 max-w-2xl mx-auto">
+                    La Gamification genera risultati concreti e misurabili, creando un impatto significativo su motivazione e performance.
+                  </p>
+                </div>
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                  <div className="bg-[var(--purple-light)]/10 p-6 rounded-lg">
-                    <h4 className="text-xl font-medium mb-2 text-[var(--purple-deep)]">+83%</h4>
-                    <p>Aumento della motivazione dei dipendenti</p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="bg-gradient-to-br from-white to-[var(--purple-light)]/5 p-6 rounded-xl border border-[var(--purple-light)]/10 hover:shadow-lg transition-all duration-300">
+                    <h4 className="text-3xl font-heading font-bold text-[var(--purple-deep)] mb-3">+83%</h4>
+                    <p className="text-[#2D2655] leading-relaxed">Aumento della motivazione dei dipendenti</p>
                   </div>
-                  <div className="bg-[var(--purple-light)]/10 p-6 rounded-lg">
-                    <h4 className="text-xl font-medium mb-2 text-[var(--purple-deep)]">+72%</h4>
-                    <p>Miglioramento della performance misurabile</p>
+                  
+                  <div className="bg-gradient-to-br from-white to-[var(--purple-light)]/5 p-6 rounded-xl border border-[var(--purple-light)]/10 hover:shadow-lg transition-all duration-300">
+                    <h4 className="text-3xl font-heading font-bold text-[var(--purple-deep)] mb-3">+72%</h4>
+                    <p className="text-[#2D2655] leading-relaxed">Miglioramento della performance misurabile</p>
                   </div>
-                  <div className="bg-[var(--purple-light)]/10 p-6 rounded-lg">
-                    <h4 className="text-xl font-medium mb-2 text-[var(--purple-deep)]">-25%</h4>
-                    <p>Riduzione del turnover aziendale</p>
+                  
+                  <div className="bg-gradient-to-br from-white to-[var(--purple-light)]/5 p-6 rounded-xl border border-[var(--purple-light)]/10 hover:shadow-lg transition-all duration-300">
+                    <h4 className="text-3xl font-heading font-bold text-[var(--purple-deep)] mb-3">-25%</h4>
+                    <p className="text-[#2D2655] leading-relaxed">Riduzione del turnover aziendale</p>
                   </div>
-                  <div className="bg-[var(--purple-light)]/10 p-6 rounded-lg">
-                    <h4 className="text-xl font-medium mb-2 text-[var(--purple-deep)]">+68%</h4>
-                    <p>Incremento di coinvolgimento nei processi formativi</p>
+                  
+                  <div className="bg-gradient-to-br from-white to-[var(--purple-light)]/5 p-6 rounded-xl border border-[var(--purple-light)]/10 hover:shadow-lg transition-all duration-300">
+                    <h4 className="text-3xl font-heading font-bold text-[var(--purple-deep)] mb-3">+68%</h4>
+                    <p className="text-[#2D2655] leading-relaxed">Incremento di coinvolgimento nei processi formativi</p>
                   </div>
                 </div>
               </motion.div>
