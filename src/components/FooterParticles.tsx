@@ -1,10 +1,8 @@
 'use client';
 
 import React, { useEffect, useRef } from 'react';
-import { motion, useAnimation } from 'framer-motion';
 
 const FooterParticles = () => {
-  const controls = useAnimation();
   const particlesRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -13,7 +11,7 @@ const FooterParticles = () => {
       if (particlesRef.current) {
         const particles = Array.from(particlesRef.current.children) as HTMLElement[];
         
-        particles.forEach((particle, i) => {
+        particles.forEach((particle) => {
           particle.style.left = `${Math.random() * 100}%`;
           particle.style.top = `${Math.random() * 100}%`;
           
