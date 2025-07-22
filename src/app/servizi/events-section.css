@@ -1,0 +1,122 @@
+/* Stili per la sezione eventi */
+.events-section {
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.events-section * {
+  color: #2D2655 !important;
+  -webkit-text-fill-color: #2D2655 !important;
+}
+
+/* Titolo della sezione */
+.events-section h3 {
+  position: relative;
+  display: inline-block;
+  font-size: 2rem !important;
+  margin-bottom: 2rem !important;
+  background: linear-gradient(90deg, #2D2655, #6D28D9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent !important;
+  color: transparent !important;
+}
+
+.events-section h3:after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #00B2A9, #2D2655);
+  border-radius: 2px;
+}
+
+/* Card degli eventi */
+.events-section .event-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.95) !important;
+  border: 1px solid rgba(233, 213, 255, 0.5) !important;
+  border-radius: 16px !important;
+  padding: 2rem !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Effetto hover sulle card */
+.events-section .event-card:hover {
+  transform: translateY(-8px) scale(1.02) !important;
+  box-shadow: 0 20px 40px rgba(45, 38, 85, 0.15) !important;
+  border-color: rgba(109, 40, 217, 0.3) !important;
+}
+
+/* Titolo della card */
+.events-section .event-card h4 {
+  font-size: 1.4rem !important;
+  margin-bottom: 1rem !important;
+  position: relative;
+  padding-bottom: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.events-section .event-card h4:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: #00B2A9;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.events-section .event-card:hover h4:after {
+  width: 60px;
+  background: #6D28D9;
+}
+
+/* Testo della card */
+.events-section .event-card p {
+  font-size: 1.05rem !important;
+  line-height: 1.7 !important;
+  opacity: 0.9;
+  transition: all 0.3s ease;
+}
+
+.events-section .event-card:hover p {
+  opacity: 1;
+}
+
+/* Effetto decorativo */
+.events-section .event-card:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #00B2A9, #6D28D9);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.events-section .event-card:hover:before {
+  transform: scaleX(1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .events-section .event-card {
+    margin-bottom: 1.5rem;
+  }
+  
+  .events-section h3 {
+    font-size: 1.8rem !important;
+  }
+}

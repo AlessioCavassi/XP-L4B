@@ -1,9 +1,25 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence, useInView } from 'framer-motion';
 import Logo from './Logo';
-import { FaLinkedin, FaTwitter, FaInstagram, FaEnvelope, FaPhone, FaMapMarkerAlt, FaYoutube } from 'react-icons/fa';
+import WaveDivider from './WaveDivider';
+import FooterParticles from './FooterParticles';
+import FooterLoader from './FooterLoader';
+import dynamic from 'next/dynamic';
+
+const FooterGlow = dynamic(() => import('./FooterGlow'), {
+  ssr: false,
+  loading: () => null,
+});
+import { FaArrowUp, FaLinkedin, FaYoutube, FaTwitter, FaInstagram, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 import { PiThreadsLogoBold } from 'react-icons/pi';
+
+// Motion components
+const MotionFooter = motion.footer;
+const MotionButton = motion.button;
+const MotionDiv = motion.div;
+const MotionA = motion.a;
+const MotionLi = motion.li;
 
 interface FooterProps {
   className?: string;
@@ -11,245 +27,355 @@ interface FooterProps {
 
 const Footer: React.FC<FooterProps> = ({ className = '' }) => {
   const year = new Date().getFullYear();
-  
+  const [isVisible, setIsVisible] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
+  const footerRef = useRef<HTMLElement>(null);
+  const isInView = useInView(footerRef, { once: true, margin: "-100px" });
+
+  // Handle scroll for parallax and back-to-top button
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+      setIsVisible(window.scrollY > 300);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: [0.16, 0.77, 0.47, 0.97],
+        when: "beforeChildren",
+        staggerChildren: 0.08,
+        delayChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { 
+      opacity: 0, 
+      y: 15,
+      filter: 'blur(2px)'
+    },
+    visible: (i: number) => ({
+      opacity: 1,
+      y: 0,
+      filter: 'blur(0px)',
+      transition: {
+        duration: 0.6,
+        ease: [0.19, 1.0, 0.22, 1.0],
+        delay: i * 0.05
+      }
+    })
+  };
+
+  // Social links data
+  const socialLinks = [
+    {
+      name: 'LinkedIn',
+      href: 'https://www.linkedin.com/company/xp-l4b/',
+      icon: FaLinkedin,
+      color: 'from-[#0A66C2] to-[#004182]'
+    },
+    {
+      name: 'YouTube',
+      href: 'https://www.youtube.com/@xpl4b',
+      icon: FaYoutube,
+      color: 'from-[#FF0000] to-[#CC0000]',
+      nativeHref: 'vnd.youtube://channel/UCXQ0hX9dQ5Q5Q5Q5Q'
+    },
+    {
+      name: 'Twitter',
+      href: 'https://x.com/XPL4Bsrl',
+      icon: FaTwitter,
+      color: 'from-[#1DA1F2] to-[#1A8CD8]',
+      nativeHref: 'twitter://user?screen_name=XPL4Bsrl'
+    },
+    {
+      name: 'Instagram',
+      href: 'https://www.instagram.com/xpl4b2/',
+      icon: FaInstagram,
+      color: 'from-[#E1306C] to-[#C13584]',
+      nativeHref: 'instagram://user?username=xpl4b2'
+    },
+    {
+      name: 'Threads',
+      href: 'https://www.threads.com/@xpl4b2',
+      icon: PiThreadsLogoBold,
+      color: 'from-gray-900 to-gray-600',
+      nativeHref: 'threads://user?username=xpl4b2'
+    }
+  ];
+
+  // Menu links
+  const menuLinks = [
+    { name: 'Home', href: '/' },
+    { name: 'Chi Siamo', href: '/chi-siamo' },
+    { name: 'Servizi', href: '/servizi' },
+    { name: 'Contatti', href: '/contatti' },
+    { name: 'Blog', href: '/blog' },
+  ];
+
+  // Service links
+  const serviceLinks = [
+    { name: 'Realtà Virtuale', href: '/servizi/realta-virtuale' },
+    { name: 'Realtà Aumentata', href: '/servizi/realta-aumentata' },
+    { name: 'Gamification', href: '/servizi/gamification' },
+    { name: 'Percorsi di reskilling e upskilling', href: '/servizi/reskilling' },
+    { name: 'Riunioni ludiche e digitali', href: '/servizi/riunioni-digitali' },
+    { name: 'Digital Engagement', href: '/servizi/digital-engagement' },
+  ];
+
   return (
-    <footer className={`bg-white text-[var(--purple-deep)] border-t border-[var(--purple-light)]/20 relative overflow-hidden ${className}`}>
-      {/* Background pattern */}
-      <div className="polygon-bg opacity-5"></div>
+    <MotionFooter 
+      ref={footerRef}
+      className={`bg-gradient-to-b from-white to-[#f9f5ff] text-[var(--purple-deep)] relative overflow-hidden ${className}`}
+      initial="hidden"
+      animate={isInView ? "visible" : "hidden"}
+      variants={containerVariants}
+      style={{
+        transform: isInView 
+          ? `translateY(${Math.min(scrollY * 0.1, 50)}px)` 
+          : 'translateY(0)'
+      }}
+    >
+      <FooterGlow className="" />
+      <FooterLoader />
       
-      {/* Top section with columns */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          {/* Column 1: About */}
-          <div>
-            <div className="flex items-center mb-6">
-              <div className="w-28 h-auto flex items-center justify-start overflow-hidden">
-                <Logo className="w-full" useHorizontal={true} animated={false} />
-              </div>
+      {/* Back to top button */}
+      <AnimatePresence>
+        {isVisible && (
+          <MotionButton
+            onClick={scrollToTop}
+            className="fixed bottom-6 right-6 z-50 p-4 bg-gradient-to-br from-[#6D28D9] to-[#00B2A9] text-white rounded-full shadow-2xl hover:shadow-[0_0_20px_rgba(109,40,217,0.5)] transition-all duration-300 group"
+            initial={{ opacity: 0, y: 20, scale: 0.9 }}
+            animate={{ 
+              opacity: 1, 
+              y: 0, 
+              scale: 1,
+              boxShadow: '0 4px 14px 0 rgba(0, 0, 0, 0.1)'
+            }}
+            exit={{ opacity: 0, y: 20, scale: 0.9 }}
+            whileHover={{ 
+              scale: 1.1, 
+              y: -5,
+              boxShadow: '0 8px 25px 0 rgba(109, 40, 217, 0.3)'
+            }}
+            whileTap={{ 
+              scale: 0.95,
+              boxShadow: '0 2px 10px 0 rgba(0, 0, 0, 0.1)'
+            }}
+            aria-label="Torna su"
+          >
+            <MotionDiv
+              className="relative w-6 h-6 flex items-center justify-center"
+              animate={isVisible ? "visible" : "hidden"}
+              variants={{
+                visible: {
+                  y: [0, -3, 0],
+                  transition: {
+                    duration: 1.5,
+                    repeat: Infinity,
+                    repeatType: "loop"
+                  }
+                },
+                hidden: { y: 0 }
+              }}
+            >
+              <FaArrowUp className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
+            </MotionDiv>
+            <span className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-black/80 text-white text-xs font-medium px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+              Torna su
+            </span>
+          </MotionButton>
+        )}
+      </AnimatePresence>
+
+      <WaveDivider />
+      <FooterParticles />
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+          {/* Column 1: Logo and Description */}
+          <MotionDiv 
+            className="mb-8 lg:mb-0"
+            variants={itemVariants}
+            custom={0}
+          >
+            <div className="mb-4">
+              <Logo className="w-full" useHorizontal={true} animated={false} />
             </div>
-            <p className="text-[var(--purple-deep)]/70 mb-6">
-              Siamo qui per trasformare la tua visione in realt&agrave;. Contattaci per scoprire come possiamo aiutarti a creare esperienze straordinarie per il tuo pubblico.
+            <p className="text-[var(--purple-deep)]/70 mb-4">
+              Trasformiamo la formazione aziendale in esperienze coinvolgenti e memorabili attraverso la gamification e le tecnologie immersive.
             </p>
-            <div className="flex space-x-3" data-component-name="Footer">
-              {/* LinkedIn - supporto per app nativa */}
-              <a 
-                href="linkedin://company/xp-l4b"
-                onClick={(e) => {
-                  e.preventDefault();
-                  // Prova ad aprire l'app, se fallisce apre il sito web
-                  setTimeout(() => {
-                    window.location.href = "https://www.linkedin.com/company/xp-l4b/";
-                  }, 500);
-                  window.location.href = "linkedin://company/xp-l4b";
-                }}
-                className="bg-[var(--purple-light)]/20 p-2 rounded-full hover:bg-[var(--purple-light)]/40 transition-colors duration-300 text-[var(--purple-deep)]"
-                aria-label="LinkedIn"
-                data-component-name="Footer"
-              >
-                <FaLinkedin size={18} />
-              </a>
-              
-              {/* Twitter/X - supporto per app nativa */}
-              <a 
-                href="twitter://user?screen_name=XPL4Bsrl"
-                onClick={(e) => {
-                  e.preventDefault();
-                  // Prova ad aprire l'app, se fallisce apre il sito web
-                  setTimeout(() => {
-                    window.location.href = "https://x.com/XPL4Bsrl";
-                  }, 500);
-                  window.location.href = "twitter://user?screen_name=XPL4Bsrl";
-                }}
-                className="bg-[var(--purple-light)]/20 p-2 rounded-full hover:bg-[var(--purple-light)]/40 transition-colors duration-300 text-[var(--purple-deep)]"
-                aria-label="X (Twitter)"
-                data-component-name="Footer"
-              >
-                <FaTwitter size={18} />
-              </a>
-              
-              {/* Instagram - supporto per app nativa */}
-              <a 
-                href="instagram://user?username=xpl4b2"
-                onClick={(e) => {
-                  e.preventDefault();
-                  // Prova ad aprire l'app, se fallisce apre il sito web
-                  setTimeout(() => {
-                    window.location.href = "https://www.instagram.com/xpl4b2/";
-                  }, 500);
-                  window.location.href = "instagram://user?username=xpl4b2";
-                }}
-                className="bg-[var(--purple-light)]/20 p-2 rounded-full hover:bg-[var(--purple-light)]/40 transition-colors duration-300 text-[var(--purple-deep)]"
-                aria-label="Instagram"
-                data-component-name="Footer"
-              >
-                <FaInstagram size={18} />
-              </a>
-              
-              {/* Threads - supporto per app nativa */}
-              <a 
-                href="threads://user?username=xpl4b2"
-                onClick={(e) => {
-                  e.preventDefault();
-                  // Prova ad aprire l'app, se fallisce apre il sito web
-                  setTimeout(() => {
-                    window.location.href = "https://www.threads.com/@xpl4b2";
-                  }, 500);
-                  window.location.href = "threads://user?username=xpl4b2";
-                }}
-                className="bg-[var(--purple-light)]/20 p-2 rounded-full hover:bg-[var(--purple-light)]/40 transition-colors duration-300 text-[var(--purple-deep)]"
-                aria-label="Threads"
-                data-component-name="Footer"
-              >
-                <PiThreadsLogoBold size={18} />
-              </a>
-              
-              {/* YouTube - supporto per app nativa */}
-              <a 
-                href="vnd.youtube://user/XP-L4B"
-                onClick={(e) => {
-                  e.preventDefault();
-                  // Prova ad aprire l'app, se fallisce apre il sito web
-                  setTimeout(() => {
-                    window.location.href = "https://www.youtube.com/@XP-L4B";
-                  }, 500);
-                  window.location.href = "vnd.youtube://user/XP-L4B";
-                }}
-                className="bg-[var(--purple-light)]/20 p-2 rounded-full hover:bg-[var(--purple-light)]/40 transition-colors duration-300 text-[var(--purple-deep)]"
-                aria-label="YouTube"
-                data-component-name="Footer"
-              >
-                <FaYoutube size={18} />
-              </a>
+            <div className="flex space-x-3">
+              {socialLinks.map((social, index) => (
+                <MotionA
+                  key={social.name}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative p-2 rounded-full group"
+                  aria-label={social.name}
+                  whileHover={{ scale: 1.1, y: -3 }}
+                  whileTap={{ scale: 0.95 }}
+                  variants={itemVariants}
+                  custom={index + 1}
+                  onClick={social.nativeHref ? (e) => {
+                    e.preventDefault();
+                    setTimeout(() => {
+                      window.location.href = social.href;
+                    }, 500);
+                    window.location.href = social.nativeHref;
+                  } : undefined}
+                >
+                  <div className={`absolute inset-0 bg-gradient-to-br ${social.color} rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300`}></div>
+                  <social.icon className={`relative w-5 h-5 text-[var(--purple-deep)]/70 group-hover:text-white transition-colors duration-300 ${social.name === 'Threads' ? 'scale-110' : ''}`} />
+                </MotionA>
+              ))}
             </div>
-          </div>
+          </MotionDiv>
 
-          {/* Column 2: Quick Links - visibile solo su desktop */}
-          <div className="hidden md:block">
-            <h3 className="text-xl font-heading mb-6 text-[var(--purple-deep)]">Menu</h3>
-            <ul className="space-y-3">
-              <li>
-                <Link href="/" className="text-[var(--purple-deep)]/70 hover:text-[var(--purple-deep)] transition-colors duration-300">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link href="/servizi" className="text-[var(--purple-deep)]/70 hover:text-[var(--purple-deep)] transition-colors duration-300">
-                  Servizi
-                </Link>
-              </li>
-              <li>
-                <Link href="/chi-siamo" className="text-[var(--purple-deep)]/70 hover:text-[var(--purple-deep)] transition-colors duration-300">
-                  Chi Siamo
-                </Link>
-              </li>
-              <li>
-                <Link href="/blog" className="text-[var(--purple-deep)]/70 hover:text-[var(--purple-deep)] transition-colors duration-300">
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link href="/contatti" className="text-[var(--purple-deep)]/70 hover:text-[var(--purple-deep)] transition-colors duration-300">
-                  Contatti
-                </Link>
-              </li>
+          {/* Column 2: Menu */}
+          <MotionDiv 
+            className="mb-8 lg:mb-0"
+            variants={itemVariants}
+            custom={1}
+          >
+            <h3 className="text-lg font-bold text-[var(--purple-deep)] mb-4">Menu</h3>
+            <ul className="space-y-2">
+              {menuLinks.map((link, index) => (
+                <MotionLi 
+                  key={link.name}
+                  variants={itemVariants}
+                  custom={index + 1}
+                  whileHover={{ x: 5 }}
+                  className="group relative"
+                >
+                  <Link 
+                    href={link.href}
+                    className="relative inline-flex items-center text-[var(--purple-deep)]/70 hover:text-[var(--purple-deep)] transition-all duration-300 group-hover:font-medium hover:pl-2"
+                  >
+                    <span className="absolute left-0 top-1/2 w-1.5 h-1.5 bg-gradient-to-r from-[#6D28D9] to-[#00B2A9] rounded-full -translate-x-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 transform group-hover:scale-110"></span>
+                    <span className="relative">
+                      {link.name}
+                      <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#6D28D9] to-[#00B2A9] transition-all duration-300 group-hover:w-full"></span>
+                    </span>
+                  </Link>
+                </MotionLi>
+              ))}
             </ul>
-          </div>
+          </MotionDiv>
 
-          {/* Column 3: Services - visibile solo su desktop */}
-          <div className="hidden md:block">
-            <h3 className="text-lg font-heading mb-6">SERVIZI</h3>
-            <ul className="space-y-3">
-              <li>
-                <Link href="/servizi/realta-virtuale" className="text-[var(--purple-deep)]/70 hover:text-[var(--purple-deep)] transition-colors duration-300">
-                  Realtà Virtuale
-                </Link>
-              </li>
-              <li>
-                <Link href="/servizi/realta-aumentata" className="text-[var(--purple-deep)]/70 hover:text-[var(--purple-deep)] transition-colors duration-300">
-                  Realtà Aumentata
-                </Link>
-              </li>
-              <li>
-                <Link href="/servizi/gamification" className="text-[var(--purple-deep)]/70 hover:text-[var(--purple-deep)] transition-colors duration-300">
-                  Gamification
-                </Link>
-              </li>
-              <li>
-                <Link href="/servizi/percorsi-interattivi" className="text-[var(--purple-deep)]/70 hover:text-[var(--purple-deep)] transition-colors duration-300">
-                  Percorsi Interattivi
-                </Link>
-              </li>
-              <li>
-                <Link href="/servizi/team-building" className="text-[var(--purple-deep)]/70 hover:text-[var(--purple-deep)] transition-colors duration-300">
-                  Team Building Digitale
-                </Link>
-              </li>
+          {/* Column 3: Services */}
+          <MotionDiv 
+            className="mb-8 lg:mb-0"
+            variants={itemVariants}
+            custom={2}
+          >
+            <h3 className="text-lg font-bold text-[var(--purple-deep)] mb-4">Servizi</h3>
+            <ul className="space-y-2">
+              {serviceLinks.map((link, index) => (
+                <MotionLi 
+                  key={link.name}
+                  variants={itemVariants}
+                  custom={index + 1}
+                  whileHover={{ x: 5 }}
+                  className="group relative"
+                >
+                  <Link 
+                    href={link.href}
+                    className="relative inline-flex items-center text-[var(--purple-deep)]/70 hover:text-[var(--purple-deep)] transition-all duration-300 group-hover:font-medium hover:pl-2"
+                  >
+                    <span className="absolute left-0 top-1/2 w-1.5 h-1.5 bg-gradient-to-r from-[#6D28D9] to-[#00B2A9] rounded-full -translate-x-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 transform group-hover:scale-110"></span>
+                    <span className="relative">
+                      {link.name}
+                      <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#6D28D9] to-[#00B2A9] transition-all duration-300 group-hover:w-full"></span>
+                    </span>
+                  </Link>
+                </MotionLi>
+              ))}
             </ul>
-          </div>
+          </MotionDiv>
 
           {/* Column 4: Contact */}
-          <div>
-            <h3 className="text-lg font-heading mb-6 text-[var(--purple-deep)]">CONTATTI</h3>
-            <ul className="space-y-4">
-              <li className="flex items-start">
-                <FaMapMarkerAlt className="text-[var(--aqua-green)] mt-1 mr-3" />
-                <span className="text-[var(--purple-deep)]/70">Via Giotto 3<br />20844 Triuggio (MB), Italia</span>
-              </li>
-              <li className="flex items-center">
-                <FaPhone className="text-[var(--aqua-green)] mr-3" />
-                <span className="text-[var(--purple-deep)]/70">+39 3518800106</span>
-              </li>
-              <li className="flex items-center">
-                <FaEnvelope className="text-[var(--aqua-green)] mr-3" />
-                <a href="mailto:riccardo@xpl4b.com" className="text-[var(--purple-deep)]/70 hover:text-[var(--purple-deep)] transition-colors duration-300">
-                  riccardo@xpl4b.com
+          <MotionDiv 
+            variants={itemVariants}
+            custom={3}
+          >
+            <h3 className="text-lg font-bold text-[var(--purple-deep)] mb-4">Contatti</h3>
+            <ul className="space-y-3">
+              <MotionLi 
+                className="flex items-start space-x-3"
+                variants={itemVariants}
+                custom={1}
+              >
+                <FaMapMarkerAlt className="text-[var(--aqua-green)] mt-1 flex-shrink-0" />
+                <span className="text-[var(--purple-deep)]/70">
+                  Via Giotto 3<br />20844 Triuggio (MB), Italia
+                </span>
+              </MotionLi>
+              <MotionLi 
+                className="flex items-start space-x-3"
+                variants={itemVariants}
+                custom={2}
+              >
+                <FaPhone className="text-[var(--aqua-green)] mt-1 flex-shrink-0" />
+                <a 
+                  href="tel:+393518800106" 
+                  className="text-[var(--purple-deep)]/70 hover:text-[var(--purple-deep)] transition-colors duration-300 relative group"
+                >
+                  <span className="relative">
+                    +39 351 880 0106
+                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#6D28D9] to-[#00B2A9] transition-all duration-300 group-hover:w-full"></span>
+                  </span>
                 </a>
-              </li>
+              </MotionLi>
+              <MotionLi 
+                className="flex items-start space-x-3"
+                variants={itemVariants}
+                custom={3}
+              >
+                <FaEnvelope className="text-[var(--aqua-green)] mt-1 flex-shrink-0" />
+                <a 
+                  href="mailto:info@riccardomangano.org" 
+                  className="text-[var(--purple-deep)]/70 hover:text-[var(--purple-deep)] transition-colors duration-300 relative group"
+                >
+                  <span className="relative">
+                    info@riccardomangano.org
+                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#6D28D9] to-[#00B2A9] transition-all duration-300 group-hover:w-full"></span>
+                  </span>
+                </a>
+              </MotionLi>
             </ul>
-          </div>
+          </MotionDiv>
         </div>
-      </div>
 
-      {/* Bottom section with copyright */}
-      <div className="border-t border-white/10">
-        <div className="container mx-auto px-4 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-[var(--purple-deep)]/50 text-sm">
-              &copy; {year} XP-L4B s.r.l. - P.IVA 14225710962<br />
-              Tutti i diritti riservati.
-            </p>
-            <div className="flex space-x-4 mt-4 md:mt-0">
-              <Link href="/privacy" className="text-[var(--purple-deep)]/50 text-sm hover:text-[var(--purple-deep)] transition-colors duration-300">
-                Privacy Policy
-              </Link>
-              <Link href="/termini" className="text-[var(--purple-deep)]/50 text-sm hover:text-[var(--purple-deep)] transition-colors duration-300">
-                Termini e Condizioni
-              </Link>
-              <Link href="/cookies" className="text-[var(--purple-deep)]/50 text-sm hover:text-[var(--purple-deep)] transition-colors duration-300">
-                Cookie Policy
-              </Link>
-            </div>
-          </div>
-        </div>
+        {/* Copyright */}
+        <MotionDiv 
+          className="mt-12 pt-6 border-t border-[var(--purple-deep)]/10 text-center text-[var(--purple-deep)]/60 text-sm"
+          variants={itemVariants}
+          custom={4}
+        >
+          <p>&copy; {year} XP-L4B. Tutti i diritti riservati.</p>
+        </MotionDiv>
       </div>
-
-      {/* Back to top button */}
-      <motion.a
-        href="#top"
-        className="bg-[var(--purple-deep)] hover:bg-[var(--purple-light)] text-white w-10 h-10 rounded-full flex items-center justify-center fixed bottom-8 right-8 shadow-lg z-50 transition-colors duration-300"
-        whileHover={{ y: -5 }}
-        whileTap={{ scale: 0.9 }}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1 }}
-        aria-label="Torna in cima"
-        data-component-name="MotionComponent"
-      >
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" data-component-name="MotionComponent">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
-        </svg>
-      </motion.a>
-    </footer>
+    </MotionFooter>
   );
 };
 

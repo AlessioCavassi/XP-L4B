@@ -3,6 +3,7 @@
 import React from 'react';
 import Header from '@/components/Header';
 import ServicesSection from '@/components/ServicesSection';
+import './events-section.css';
 import Footer from '@/components/Footer';
 import CustomCursor from '@/components/CustomCursor';
 import ParticlesBackground from '@/components/ParticlesBackground';
@@ -63,22 +64,22 @@ export default function ServiziPage() {
                 transition={{ duration: 0.6 }}
                 className="bg-white p-8 rounded-xl shadow-xl"
               >
-                <h3 className="text-2xl font-heading mb-4 text-[var(--purple-deep)]">Sviluppo Competenze con Gamification</h3>
-                <p className="mb-4 text-gray-700">
-                  L&apos;83% dei dipendenti che partecipano ad attività ludiche sono più motivati. I nostri percorsi di game-based learning aumentano il coinvolgimento e la produttività in azienda del 50-60%.
+                <h3 className="text-2xl font-heading mb-6 text-[#2D2655] font-bold">Sviluppo Competenze con Gamification</h3>
+                <p className="mb-6 text-[#2D2655] leading-relaxed text-lg">
+                  <span className="font-bold text-[#00B2A9] text-xl">L&apos;83% dei dipendenti</span><span className="text-[#2D2655]"> che partecipano ad attività ludiche sono più motivati. I nostri percorsi di </span><span className="font-semibold text-[#2D2655]">game-based learning</span><span className="text-[#2D2655]"> aumentano il coinvolgimento e la produttività in azienda del </span><span className="font-bold text-[#00B2A9]">50-60%</span><span className="text-[#2D2655]">.</span>
                 </p>
-                <ul className="space-y-2 mb-6">
-                  <li className="flex items-start">
-                    <span className="text-[var(--aqua-green)] mr-2">✓</span>
-                    <span>Sviluppo di competenze trasversali</span>
+                <ul className="space-y-3 mb-6">
+                  <li className="flex items-start group">
+                    <span className="text-[var(--aqua-green)] mr-3 text-xl font-bold">✓</span>
+                    <span className="text-[#2D2655] text-base group-hover:text-[#00B2A9] transition-colors">Sviluppo di competenze trasversali</span>
                   </li>
-                  <li className="flex items-start">
-                    <span className="text-[var(--aqua-green)] mr-2">✓</span>
-                    <span>Employer Branding e Employee engagement</span>
+                  <li className="flex items-start group">
+                    <span className="text-[var(--aqua-green)] mr-3 text-xl font-bold">✓</span>
+                    <span className="text-[#2D2655] text-base group-hover:text-[#00B2A9] transition-colors">Employer Branding e Employee engagement</span>
                   </li>
-                  <li className="flex items-start">
-                    <span className="text-[var(--aqua-green)] mr-2">✓</span>
-                    <span>Team building efficace</span>
+                  <li className="flex items-start group">
+                    <span className="text-[var(--aqua-green)] mr-3 text-xl font-bold">✓</span>
+                    <span className="text-[#2D2655] text-base group-hover:text-[#00B2A9] transition-colors">Team building efficace</span>
                   </li>
                 </ul>
               </motion.div>
@@ -90,57 +91,62 @@ export default function ServiziPage() {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="bg-white p-8 rounded-xl shadow-xl"
               >
-                <h3 className="text-2xl font-heading mb-4 text-[var(--purple-deep)]">Tecnologie VR/AR</h3>
-                <p className="mb-4 text-gray-700">
-                  Soluzioni immersive per apprendimento, marketing e customer experience. Le nostre tecnologie includono:
+                <h3 className="text-2xl font-heading mb-6 text-[#2D2655] font-bold">Tecnologie VR/AR</h3>
+                <p className="mb-6 text-[#2D2655] leading-relaxed text-lg">
+                  <span className="font-semibold text-[#2D2655]">Soluzioni immersive</span><span className="text-[#2D2655]"> per apprendimento, marketing e customer experience. Le nostre tecnologie includono:</span>
                 </p>
-                <ul className="space-y-2 mb-6">
-                  <li className="flex items-start">
-                    <span className="text-[var(--aqua-green)] mr-2">✓</span>
-                    <span>SafetyVR e Spatial Plan</span>
+                <ul className="space-y-3 mb-6">
+                  <li className="flex items-start group">
+                    <span className="text-[var(--aqua-green)] mr-3 text-xl font-bold">✓</span>
+                    <span className="text-[#2D2655] text-base group-hover:text-[#00B2A9] transition-colors">SafetyVR e Spatial Plan</span>
                   </li>
-                  <li className="flex items-start">
-                    <span className="text-[var(--aqua-green)] mr-2">✓</span>
-                    <span>Object Recognition e 3DToMe</span>
+                  <li className="flex items-start group">
+                    <span className="text-[var(--aqua-green)] mr-3 text-xl font-bold">✓</span>
+                    <span className="text-[#2D2655] text-base group-hover:text-[#00B2A9] transition-colors">Object Recognition e 3DToMe</span>
                   </li>
-                  <li className="flex items-start">
-                    <span className="text-[var(--aqua-green)] mr-2">✓</span>
-                    <span>Spatial Assistance e Portal Gate</span>
+                  <li className="flex items-start group">
+                    <span className="text-[var(--aqua-green)] mr-3 text-xl font-bold">✓</span>
+                    <span className="text-[#2D2655] text-base group-hover:text-[#00B2A9] transition-colors">Spatial Assistance e Portal Gate</span>
                   </li>
-                  <li className="flex items-start">
-                    <span className="text-[var(--aqua-green)] mr-2">✓</span>
-                    <span>AR Studio e Spatial Support</span>
+                  <li className="flex items-start group">
+                    <span className="text-[var(--aqua-green)] mr-3 text-xl font-bold">✓</span>
+                    <span className="text-[#2D2655] text-base group-hover:text-[#00B2A9] transition-colors">AR Studio e Spatial Support</span>
                   </li>
                 </ul>
               </motion.div>
             </div>
             
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="mt-16 bg-white p-8 rounded-xl shadow-xl"
-            >
-              <h3 className="text-2xl font-heading mb-4 text-[var(--purple-deep)]">Eventi e Tornei Gaming</h3>
-              <p className="mb-4 text-gray-700">
-                Creiamo esperienze memorabili attraverso eventi e tornei gaming che aumentano la motivazione e il coinvolgimento dei team aziendali.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-                <div className="bg-[var(--purple-light)]/10 p-6 rounded-lg">
-                  <h4 className="text-xl font-medium mb-2 text-[var(--purple-deep)]">Team Building</h4>
-                  <p>Rafforza le relazioni tra colleghi attraverso sfide collaborative in ambiente virtuale.</p>
+            <div className="events-section">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="mt-16 bg-white p-8 rounded-xl shadow-xl relative z-10"
+              >
+                <h3 className="text-2xl font-heading mb-6 font-bold">Eventi e Tornei Gaming</h3>
+                <p className="mb-6 leading-relaxed text-lg">
+                  Creiamo esperienze memorabili attraverso eventi e tornei gaming che aumentano la motivazione e il coinvolgimento dei team aziendali.
+                </p>
+                
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+                  <div className="event-card p-6">
+                    <h4 className="text-xl font-bold mb-3 font-heading">Team Building</h4>
+                    <p className="text-base">Rafforza le relazioni tra colleghi attraverso sfide collaborative in ambiente virtuale.</p>
+                  </div>
+                  
+                  <div className="event-card p-6">
+                    <h4 className="text-xl font-bold mb-3 font-heading">Competizioni Aziendali</h4>
+                    <p className="text-base">Stimola lo spirito competitivo e premia le performance attraverso tornei personalizzati.</p>
+                  </div>
+                  
+                  <div className="event-card p-6">
+                    <h4 className="text-xl font-bold mb-3 font-heading">Eventi Corporate</h4>
+                    <p className="text-base">Arricchisci meeting, conferenze e convention con esperienze interattive memorabili.</p>
+                  </div>
                 </div>
-                <div className="bg-[var(--purple-light)]/10 p-6 rounded-lg">
-                  <h4 className="text-xl font-medium mb-2 text-[var(--purple-deep)]">Competizioni Aziendali</h4>
-                  <p>Stimola lo spirito competitivo e premia le performance attraverso tornei personalizzati.</p>
-                </div>
-                <div className="bg-[var(--purple-light)]/10 p-6 rounded-lg">
-                  <h4 className="text-xl font-medium mb-2 text-[var(--purple-deep)]">Eventi Corporate</h4>
-                  <p>Arricchisci meeting, conferenze e convention con esperienze interattive memorabili.</p>
-                </div>
-              </div>
-            </motion.div>
+              </motion.div>
+            </div>
           </div>
         </section>
       </main>

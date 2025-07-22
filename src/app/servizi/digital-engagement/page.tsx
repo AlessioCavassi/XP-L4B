@@ -68,19 +68,19 @@ export default function DigitalEngagementPage() {
                     <ul className="space-y-2 mb-6">
                       <li className="flex items-start">
                         <span className="text-[var(--aqua-green)] mr-2">✓</span>
-                        <span data-component-name="DigitalEngagementPage">Apprendimento continuo integrato nei processi</span>
+                        <span className="text-white">Apprendimento continuo integrato nei processi</span>
                       </li>
                       <li className="flex items-start">
                         <span className="text-[var(--aqua-green)] mr-2">✓</span>
-                        <span>Gestione progetti con elementi gamificati</span>
+                        <span className="text-white">Gestione progetti con elementi gamificati</span>
                       </li>
                       <li className="flex items-start">
                         <span className="text-[var(--aqua-green)] mr-2">✓</span>
-                        <span>Comunicazione interna coinvolgente</span>
+                        <span className="text-white">Comunicazione interna coinvolgente</span>
                       </li>
                       <li className="flex items-start">
                         <span className="text-[var(--aqua-green)] mr-2">✓</span>
-                        <span>Integrazione con sistemi aziendali esistenti</span>
+                        <span className="text-white">Integrazione con sistemi aziendali esistenti</span>
                       </li>
                     </ul>
                   </div>
@@ -100,21 +100,21 @@ export default function DigitalEngagementPage() {
                 </p>
                 
                 <div className="space-y-6 mb-8">
-                  <div className="bg-[var(--purple-light)]/10 p-6 rounded-lg">
+                  <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-[var(--aqua-green)]">
                     <h4 className="text-xl font-medium mb-2 text-[var(--purple-deep)]">Bassa produttività</h4>
-                    <p>Dipendenti disimpegnati sono in media il 18% meno produttivi, con un impatto diretto sui risultati aziendali</p>
+                    <p className="text-gray-800">Dipendenti disimpegnati sono in media il 18% meno produttivi, con un impatto diretto sui risultati aziendali</p>
                   </div>
-                  <div className="bg-[var(--purple-light)]/10 p-6 rounded-lg">
+                  <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-[var(--blue)]">
                     <h4 className="text-xl font-medium mb-2 text-[var(--purple-deep)]">Alto turnover</h4>
-                    <p>Il 40% dei dipendenti non coinvolti considera di cambiare lavoro entro un anno</p>
+                    <p className="text-gray-800">Il 40% dei dipendenti non coinvolti considera di cambiare lavoro entro un anno</p>
                   </div>
-                  <div className="bg-[var(--purple-light)]/10 p-6 rounded-lg">
+                  <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-[var(--purple-light)]">
                     <h4 className="text-xl font-medium mb-2 text-[var(--purple-deep)]">Welfare inefficace</h4>
-                    <p>Solo nel 6% delle imprese italiane il welfare aziendale produce effetti positivi concreti</p>
+                    <p className="text-gray-800">Solo nel 6% delle imprese italiane il welfare aziendale produce effetti positivi concreti</p>
                   </div>
-                  <div className="bg-[var(--purple-light)]/10 p-6 rounded-lg">
+                  <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-[var(--purple-deep)]">
                     <h4 className="text-xl font-medium mb-2 text-[var(--purple-deep)]">Gap generazionale</h4>
-                    <p>Le aziende faticano a comunicare efficacemente con le nuove generazioni digitali</p>
+                    <p className="text-gray-800">Le aziende faticano a comunicare efficacemente con le nuove generazioni digitali</p>
                   </div>
                 </div>
               </motion.div>
@@ -254,67 +254,6 @@ export default function DigitalEngagementPage() {
                 </motion.div>
               </div>
             </motion.div>
-          </div>
-        </section>
-        
-        {/* Testimonial section */}
-        <section className="py-20 bg-[var(--purple-light)]/10">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="bg-white p-8 rounded-xl shadow-xl"
-            >
-              <h3 className="text-2xl font-heading mb-8 text-center text-[var(--purple-deep)]">
-                La voce dei nostri clienti
-              </h3>
-              
-              <div className="flex flex-col md:flex-row gap-8">
-                <div className="flex-1 p-6 bg-[var(--purple-deep)]/5 rounded-lg">
-                  <p className="italic text-gray-700 mb-4">
-                    &quot;Grazie a Portal Gate abbiamo trasformato la nostra intranet aziendale in un ambiente coinvolgente che ha rivitalizzato la comunicazione interna. I nostri dipendenti sono più informati, connessi e motivati.&quot;
-                  </p>
-                  <div className="flex items-center">
-                    <div className="w-10 h-10 bg-[var(--purple-deep)] rounded-full flex items-center justify-center mr-3">
-                      <span className="text-white font-bold">AB</span>
-                    </div>
-                    <div>
-                      <p className="font-medium text-[var(--purple-deep)]">Alessandro Bianchi</p>
-                      <p className="text-sm text-gray-600">HR Director, Tech Solutions Italia</p>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="flex-1 p-6 bg-[var(--purple-deep)]/5 rounded-lg">
-                  <p className="italic text-gray-700 mb-4">
-                    &quot;Il Digital Engagement ha rivoluzionato il nostro approccio all&apos;apprendimento continuo. I contenuti integrati nel flusso di lavoro hanno aumentato del 78% la partecipazione ai percorsi di sviluppo professionale interni.&quot;
-                  </p>
-                  <div className="flex items-center">
-                    <div className="w-10 h-10 bg-[var(--purple-deep)] rounded-full flex items-center justify-center mr-3">
-                      <span className="text-white font-bold">MR</span>
-                    </div>
-                    <div>
-                      <p className="font-medium text-[var(--purple-deep)]">Marco Rossi</p>
-                      <p className="text-sm text-gray-600">Learning & Development Manager, Global Retail</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-            
-            <div className="mt-16 text-center">
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Link href="/servizi" className="bg-[var(--purple-deep)] text-white font-heading py-3 px-8 rounded-full inline-flex items-center shadow-lg">
-                  ESPLORA TUTTI I SERVIZI
-                  <FaArrowRight className="ml-2" />
-                </Link>
-              </motion.div>
-            </div>
           </div>
         </section>
       </main>
