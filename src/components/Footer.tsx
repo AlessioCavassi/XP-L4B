@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence, useInView } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import Logo from './Logo';
 import WaveDivider from './WaveDivider';
 import FooterParticles from './FooterParticles';
@@ -15,7 +15,6 @@ import { FaArrowUp, FaLinkedin, FaYoutube, FaTwitter, FaInstagram, FaEnvelope, F
 import { PiThreadsLogoBold } from 'react-icons/pi';
 
 // Motion components
-const MotionFooter = motion.footer;
 const MotionButton = motion.button;
 const MotionDiv = motion.div;
 const MotionA = motion.a;
@@ -28,14 +27,11 @@ interface FooterProps {
 const Footer: React.FC<FooterProps> = ({ className = '' }) => {
   const year = new Date().getFullYear();
   const [isVisible, setIsVisible] = useState(false);
-  const [scrollY, setScrollY] = useState(0);
   const footerRef = useRef<HTMLElement>(null);
-  const isInView = useInView(footerRef, { once: true, margin: "-100px" });
 
-  // Handle scroll for parallax and back-to-top button
+  // Handle scroll for back-to-top button
   useEffect(() => {
     const handleScroll = () => {
-      setScrollY(window.scrollY);
       setIsVisible(window.scrollY > 300);
     };
 
@@ -48,22 +44,6 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
       top: 0,
       behavior: 'smooth',
     });
-  };
-
-  // Animation variants
-  const containerVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.8,
-        ease: [0.16, 0.77, 0.47, 0.97],
-        when: "beforeChildren",
-        staggerChildren: 0.08,
-        delayChildren: 0.1
-      }
-    }
   };
 
   const itemVariants = {
@@ -228,7 +208,7 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
                   whileTap={{ scale: 0.95 }}
                   variants={itemVariants}
                   custom={index + 1}
-                  onClick={social.nativeHref ? (e) => {
+                  onClick={social.nativeHref ? (e: React.MouseEvent<HTMLAnchorElement>) => {
                     e.preventDefault();
                     setTimeout(() => {
                       window.location.href = social.href;
