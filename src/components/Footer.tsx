@@ -136,23 +136,15 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
     { name: 'Realtà Virtuale', href: '/servizi/realta-virtuale' },
     { name: 'Realtà Aumentata', href: '/servizi/realta-aumentata' },
     { name: 'Gamification', href: '/servizi/gamification' },
-    { name: 'Percorsi di reskilling e upskilling', href: '/servizi/reskilling' },
-    { name: 'Riunioni ludiche e digitali', href: '/servizi/riunioni-digitali' },
+    { name: 'Percorsi di reskilling e upskilling', href: '/servizi/percorsi-interattivi' },
+    { name: 'Riunioni ludiche e digitali', href: '/servizi/team-building' },
     { name: 'Digital Engagement', href: '/servizi/digital-engagement' },
   ];
 
   return (
-    <MotionFooter 
+    <footer 
       ref={footerRef}
       className={`bg-gradient-to-b from-white to-[#f9f5ff] text-[var(--purple-deep)] relative overflow-hidden ${className}`}
-      initial="hidden"
-      animate={isInView ? "visible" : "hidden"}
-      variants={containerVariants}
-      style={{
-        transform: isInView 
-          ? `translateY(${Math.min(scrollY * 0.1, 50)}px)` 
-          : 'translateY(0)'
-      }}
     >
       <FooterGlow className="" />
       <FooterLoader />
@@ -375,7 +367,7 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
           <p>&copy; {year} XP-L4B. Tutti i diritti riservati.</p>
         </MotionDiv>
       </div>
-    </MotionFooter>
+    </footer>
   );
 };
 
