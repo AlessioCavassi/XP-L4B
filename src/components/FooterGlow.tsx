@@ -8,7 +8,7 @@ interface FooterGlowProps {
 
 export default function FooterGlow({ className = '' }: FooterGlowProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const animationFrameId = useRef<number>();
+  const animationFrameId = useRef<number | null>(null);
   const time = useRef(0);
 
   useEffect(() => {
@@ -62,7 +62,9 @@ export default function FooterGlow({ className = '' }: FooterGlowProps) {
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       
       // Continua l'animazione
-      animationFrameId.current = requestAnimationFrame(draw);
+      if (animationFrameId.current === null) {
+        animationFrameId.current = requestAnimationFrame(draw);
+      }
     };
 
     // Gestisci il ridimensionamento della finestra
@@ -76,8 +78,9 @@ export default function FooterGlow({ className = '' }: FooterGlowProps) {
     // Pulizia al momento dello smontaggio del componente
     return () => {
       window.removeEventListener('resize', handleResize);
-      if (animationFrameId.current) {
+      if (animationFrameId.current !== null) {
         cancelAnimationFrame(animationFrameId.current);
+        animationFrameId.current = null;
       }
     };
   }, []);
