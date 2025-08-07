@@ -29,8 +29,8 @@ const MobileParticlesBackground: React.FC = () => {
     const types: ItemType[] = ['dice', 'gem', 'coin']; // Distribuzione uniforme
     const monochromeColors = ['#ffffff', '#f8f8f8', '#e0e0e0', '#222222', '#333333', '#111111'];
     
-    // Genera elementi di gioco casuali - numero ridotto per migliorare le prestazioni
-    const newItems = Array.from({ length: 12 }).map(() => {
+    // Genera elementi di gioco casuali - numero ulteriormente ridotto per un aspetto più pulito
+    const newItems = Array.from({ length: 6 }).map(() => {
       const type = types[Math.floor(Math.random() * types.length)];
       // Tutti gli elementi usano la palette in bianco e nero
       const color = monochromeColors[Math.floor(Math.random() * monochromeColors.length)];
@@ -38,7 +38,7 @@ const MobileParticlesBackground: React.FC = () => {
       // Make dice smaller than other elements
       return {
         type,
-        size: type === 'dice' ? Math.random() * 18 + 12 : Math.random() * 25 + 20, // Dimensioni ridotte per tutte le particelle
+        size: type === 'dice' ? Math.random() * 15 + 10 : Math.random() * 20 + 15, // Dimensioni ulteriormente ridotte
         top: `${Math.random() * 100}%`,
         left: `${Math.random() * 100}%`,
         duration: Math.random() * 20 + 15, // Durata più breve per mobile
@@ -82,7 +82,7 @@ const MobileParticlesBackground: React.FC = () => {
           initial={{ opacity: 0, y: 0, rotate: item.rotation }}
           animate={{
             y: [0, -80, 0],
-            opacity: [0.25, 0.5, 0.25], // Ridotta opacità per essere meno invadente
+            opacity: [0.15, 0.3, 0.15], // Ulteriormente ridotta opacità per un effetto più sottile
             rotate: [item.rotation, item.rotation + 360, item.rotation],
             scale: [0.8, 1, 0.8],
           }}

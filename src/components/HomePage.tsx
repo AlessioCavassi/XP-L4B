@@ -7,7 +7,6 @@ import AboutSection from './AboutSection';
 import ServicesSection from './ServicesSection';
 import ContactCTA from './ContactCTA';
 import Footer from './Footer';
-import CustomCursor from './CustomCursor';
 import ParticlesBackground from './ParticlesBackground';
 import ParallaxLogo from './ParallaxLogo';
 import LogosSection from './blocks/LogosSection';
@@ -38,8 +37,7 @@ const HomePage: React.FC = () => {
       backgroundAttachment: 'fixed',
       color: '#333333',
     }}>
-      <CustomCursor />
-      <ParallaxLogo />
+<ParallaxLogo />
       <Header />
       
       {/* Versione mobile ottimizzata - visibile solo su dispositivi mobili */}

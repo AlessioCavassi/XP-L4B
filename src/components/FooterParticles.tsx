@@ -40,9 +40,9 @@ const FooterParticles = () => {
   }, []);
 
   // Genera le particelle
-  const particles = Array.from({ length: 15 }, (_, i) => {
-    const size = Math.random() * 10 + 5;
-    const opacity = Math.random() * 0.2 + 0.1;
+  const particles = Array.from({ length: 8 }, (_, i) => {
+    const size = Math.random() * 8 + 4; // Leggermente più piccole
+    const opacity = Math.random() * 0.1 + 0.03; // Più trasparenti
     const color = i % 3 === 0 ? '#00B2A9' : i % 2 === 0 ? '#6D28D9' : '#2D2655';
     
     return (

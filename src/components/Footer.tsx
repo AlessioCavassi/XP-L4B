@@ -340,11 +340,12 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
 
         {/* Copyright */}
         <MotionDiv 
-          className="mt-12 pt-6 border-t border-[var(--purple-deep)]/10 text-center text-[var(--purple-deep)]/60 text-sm"
+          className="mt-12 pt-6 border-t border-[var(--purple-deep)]/10 text-center text-[var(--purple-deep)]/60 text-sm space-y-1"
           variants={itemVariants}
           custom={4}
         >
           <p>&copy; {year} XP-L4B. Tutti i diritti riservati.</p>
+          <p>P.IVA 14225710962</p>
         </MotionDiv>
       </div>
     </footer>

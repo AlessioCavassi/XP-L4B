@@ -31,10 +31,10 @@ const ParticlesBackground: React.FC<ParticlesBackgroundProps> = ({
   
   // Configurazione come oggetto useMemo per evitare ricreazioni non necessarie
   const config = React.useMemo(() => ({
-    particleCount: 20, // Numero standard di particelle per ogni sezione
+    particleCount: 15, // Ridotto da 20 a 10 per un effetto più sottile
     types: ['dice', 'gem', 'coin'] as ItemType[],
     colorScheme: ['#FFFFFF'], // Bianco puro per tutte le particelle
-    sizes: { min: 20, max: 30 } // Dimensioni uniformi
+    sizes: { min: 18, max: 28 } // Dimensioni leggermente ridotte
   }), []); // Nessuna dipendenza, l'oggetto è costante
   
   useEffect(() => {

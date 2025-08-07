@@ -83,7 +83,7 @@ const ParticleItem: React.FC<ParticleItemProps> = ({
         y: [0, -floatAmplitude, 0],
         rotate: [rotationStart, rotationStart + 180, rotationStart + 360],
         scale: [0.8, 1, 0.8],
-        opacity: [0.6, 0.8, 0.6],
+        opacity: 0.5, // Reduced from 0.6 for more transparency
       }}
       transition={{
         repeat: Infinity,
