@@ -3,7 +3,6 @@
 import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import CustomCursor from '@/components/CustomCursor';
 import ParticlesBackground from '@/components/ParticlesBackground';
 import MobileNavSwipe from '@/components/MobileNavSwipe';
 import { motion } from 'framer-motion';
@@ -16,8 +15,7 @@ export default function BlogPage() {
       backgroundAttachment: 'fixed',
       color: '#333333',
     }}>
-      <CustomCursor />
-      <ParticlesBackground />
+<ParticlesBackground />
       <Header />
       
       <main>

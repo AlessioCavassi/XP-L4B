@@ -3,7 +3,6 @@
 import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import CustomCursor from '@/components/CustomCursor';
 import ParticlesBackground from '@/components/ParticlesBackground';
 import MobileNavSwipe from '@/components/MobileNavSwipe';
 import Link from 'next/link';
@@ -18,8 +17,7 @@ export default function RealtaVirtualePage() {
       backgroundAttachment: 'fixed',
       color: '#333333',
     }}>
-      <CustomCursor />
-      <ParticlesBackground />
+<ParticlesBackground />
       <Header />
       
       <main>

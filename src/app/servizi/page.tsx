@@ -5,7 +5,6 @@ import Header from '@/components/Header';
 import ServicesSection from '@/components/ServicesSection';
 import './events-section.css';
 import Footer from '@/components/Footer';
-import CustomCursor from '@/components/CustomCursor';
 import ParticlesBackground from '@/components/ParticlesBackground';
 import MobileNavSwipe from '@/components/MobileNavSwipe';
 import { motion } from 'framer-motion';
@@ -17,8 +16,7 @@ export default function ServiziPage() {
       backgroundAttachment: 'fixed',
       color: '#333333',
     }}>
-      <CustomCursor />
-      <ParticlesBackground />
+<ParticlesBackground />
       <Header />
       
       <main>
