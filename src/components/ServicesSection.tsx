@@ -93,7 +93,7 @@ const ServicesSection: React.FC = () => {
   };
 
   return (
-    <section id="servizi" className="py-20 bg-gradient-to-b from-[var(--purple-deep)] to-[var(--purple-light)] relative overflow-hidden">
+    <section id="servizi" className="py-20 bg-black relative overflow-hidden">
       {/* Background elements */}
       <div className="polygon-bg opacity-5"></div>
 
@@ -141,9 +141,9 @@ const ServicesSection: React.FC = () => {
               whileHover="hover"
               onMouseEnter={() => setActiveService(service.id)}
               onMouseLeave={() => setActiveService(null)}
-              className="bg-white/25 backdrop-blur-md rounded-xl p-6 cursor-pointer transition-all duration-300 border border-white/30 relative overflow-hidden interactive shadow-xl"
+              className="bg-[var(--purple-deep)]/30 backdrop-blur-md rounded-xl p-6 cursor-pointer transition-all duration-300 border border-[var(--aqua-green)]/30 relative overflow-hidden interactive shadow-xl"
               style={{
-                backgroundColor: 'rgba(255, 255, 255, 0.25)',
+                backgroundColor: 'rgba(45, 38, 85, 0.3)',
                 backdropFilter: 'blur(8px)'
               }}
               onClick={() => window.location.href = service.url}

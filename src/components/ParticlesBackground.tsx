@@ -25,17 +25,20 @@ const ParticlesBackground: React.FC<ParticlesBackgroundProps> = ({
     size: number;
     initialX: number;
     initialY: number;
+    depth: number; // Aggiunto per l'effetto parallasse
+    opacity: number; // Aggiunto per la variazione di opacità
     color: string;
   }>>([]);
   const [isClient, setIsClient] = useState(false);
   
   // Configurazione come oggetto useMemo per evitare ricreazioni non necessarie
   const config = React.useMemo(() => ({
-    particleCount: 15, // Ridotto da 20 a 10 per un effetto più sottile
+    particleCount: 25, // Aumentato il numero di particelle
     types: ['dice', 'gem', 'coin'] as ItemType[],
-    colorScheme: ['#FFFFFF'], // Bianco puro per tutte le particelle
-    sizes: { min: 18, max: 28 } // Dimensioni leggermente ridotte
-  }), []); // Nessuna dipendenza, l'oggetto è costante
+    colorScheme: ['#FFFFFF', '#e0e0e0', '#f8f8f8'], // Sfumature di bianco
+    sizes: { min: 15, max: 35 }, // Maggiore varietà di dimensioni
+    depths: { min: -500, max: 500 } // Profondità 3D (in pixel)
+  }), []);
   
   useEffect(() => {
     // Generate particles only on the client side
@@ -53,13 +56,19 @@ const ParticlesBackground: React.FC<ParticlesBackgroundProps> = ({
       const maxSize = config.sizes.max;
       const size = minSize + Math.random() * (maxSize - minSize);
       
-      // Distribuzione casuale all'interno della sezione
+      // Profondità casuale per l'effetto 3D
+      const depth = config.depths.min + Math.random() * (config.depths.max - config.depths.min);
+      // Opacità basata sulla profondità (più scure in lontananza)
+      const opacity = 0.3 + (0.7 * (1 - (depth - config.depths.min) / (config.depths.max - config.depths.min)));
+      
       return {
         id: `particle-${sectionType}-${index}-${Date.now()}`,
         type,
         size,
         initialX: 5 + Math.random() * 90, // Keep within 5%-95% of container
         initialY: 5 + Math.random() * 90, // Keep within 5%-95% of container
+        depth,
+        opacity,
         color,
       };
     });
@@ -87,6 +96,8 @@ const ParticlesBackground: React.FC<ParticlesBackgroundProps> = ({
           size={item.size}
           initialX={item.initialX}
           initialY={item.initialY}
+          depth={item.depth}
+          opacity={item.opacity}
           color={item.color}
         />
       ))}

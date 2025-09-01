@@ -37,7 +37,7 @@ const AboutSection: React.FC = () => {
       name: 'Alessio Cavatassi',
       role: 'AI Training & Digital Marketing Specialist',
       bio: 'Alessio integrates innovative AI technologies with digital marketing strategies to create impactful training experiences.',
-      image: '/placeholder-profile.jpg',
+      image: '/Ale.jpg',
       social: {
         linkedin: 'https://www.linkedin.com/in/alessiocavatassi',
         email: 'alessio@xpl4b.com'
@@ -62,7 +62,7 @@ const AboutSection: React.FC = () => {
 
   return (
     <>
-      <section id="chi-siamo" className="py-20 bg-white relative overflow-hidden" data-component-name="AboutSection">
+      <section id="chi-siamo" className="py-20 bg-black relative overflow-hidden" data-component-name="AboutSection">
         {/* Grid overlay per effetto visivo */}
         <div className="grid-overlay absolute inset-0 z-0 opacity-5" data-component-name="AboutSection"></div>
         
@@ -78,13 +78,9 @@ const AboutSection: React.FC = () => {
           transition={{ duration: 0.8 }}
           className="relative mb-16 text-center"
         >
-          <h2 className="font-heading inline-block text-4xl md:text-5xl relative z-10 p-1 cyber-glitch">
-            <span className="relative inline-block">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--aqua-green)] via-[var(--blue)] to-[var(--purple-light)]">IL NOSTRO TEAM</span>
-              <span className="absolute -inset-1 bg-[var(--purple-deep)]/10 skew-y-3 -skew-x-3 rounded blur-xl z-[-1]"></span>
-            </span>
+          <h2 className="font-heading text-4xl md:text-5xl text-white">
+            IL NOSTRO TEAM
           </h2>
-          <div className="cyber-line"></div>
         </motion.div>
         
         {/* Cyber design grid */}
@@ -95,7 +91,7 @@ const AboutSection: React.FC = () => {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="grid grid-cols-1 md:grid-cols-3 gap-10 relative z-10"
+          className="grid grid-cols-1 md:grid-cols-2 gap-10 relative z-10 max-w-4xl mx-auto"
         >
           {teamMembers.map((member) => (
             <motion.div

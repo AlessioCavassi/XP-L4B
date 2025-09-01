@@ -33,9 +33,9 @@ const HomePage: React.FC = () => {
   
   return (
     <div className="min-h-screen" style={{
-      background: '#ffffff',
+      background: '#000000',
       backgroundAttachment: 'fixed',
-      color: '#333333',
+      color: '#ffffff',
     }}>
 <ParallaxLogo />
       <Header />
@@ -47,17 +47,11 @@ const HomePage: React.FC = () => {
       <main className="hidden md:block">
         {/* Hero Section */}
         <section id="hero" className="py-20 relative">
-          <div className="absolute inset-0">
-            <ParticlesBackground sectionType="hero" />
-          </div>
           <HeroSection />
         </section>
         
         {/* Services Section */}
-        <section id="services" className="py-20 relative" style={{ background: '#ffffff' }}>
-          <div className="absolute inset-0">
-            <ParticlesBackground sectionType="services" />
-          </div>
+        <section id="services" className="py-20 relative bg-black">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
@@ -67,7 +61,7 @@ const HomePage: React.FC = () => {
               className="mb-16 text-center"
             >
               <h2 className="text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[var(--purple-deep)] to-[var(--purple-light)]">I Nostri Servizi</h2>
-              <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+              <p className="text-xl text-white max-w-3xl mx-auto">
                 Trasformiamo ogni attività in un&apos;esperienza coinvolgente attraverso tecnologie innovative e approcci gamificati.
               </p>
             </motion.div>
@@ -77,9 +71,6 @@ const HomePage: React.FC = () => {
         
         {/* About Section */}
         <section id="about" className="py-20 relative">
-          <div className="absolute inset-0">
-            <ParticlesBackground sectionType="about" />
-          </div>
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
@@ -89,7 +80,7 @@ const HomePage: React.FC = () => {
               className="mb-16 text-center"
             >
               <h2 className="text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-[var(--purple-deep)] to-[var(--purple-light)]">Chi Siamo</h2>
-              <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-12">
+              <p className="text-xl text-white max-w-3xl mx-auto mb-12">
                 Un team appassionato ed esperto di creatività, gaming, innovazione e capitale umano.
               </p>
               
@@ -100,7 +91,7 @@ const HomePage: React.FC = () => {
                 </h2>
                 
                 <div className="cyber-line mb-8"></div>
-                <p className="text-lg text-[var(--purple-deep)]/80 mb-8">
+                <p className="text-lg text-white/80 mb-8">
                   In XP-L4B crediamo che l&apos;apprendimento e il marketing siano esperienze che possono e devono essere coinvolgenti.
                 </p>
               </div>
@@ -121,10 +112,7 @@ const HomePage: React.FC = () => {
         {/* Sezione Blog rimossa e spostata in una pagina dedicata */}
         
         {/* Contact CTA Section */}
-        <section id="contatti" className="py-20 relative bg-gradient-to-br from-[var(--purple-deep)] to-[var(--purple-light)]">
-          <div className="absolute inset-0">
-            <ParticlesBackground sectionType="contact" />
-          </div>
+        <section id="contatti" className="py-20 relative bg-black">
           <div className="container mx-auto px-4">
             <ContactCTA />
           </div>

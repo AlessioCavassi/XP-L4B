@@ -12,9 +12,9 @@ import { motion } from 'framer-motion';
 export default function ServiziPage() {
   return (
     <div className="min-h-screen" style={{
-      background: '#ffffff',
+      background: '#000000',
       backgroundAttachment: 'fixed',
-      color: '#333333',
+      color: '#ffffff',
     }}>
 <ParticlesBackground />
       <Header />
@@ -45,7 +45,7 @@ export default function ServiziPage() {
         </section>
         
         {/* Servizi Section */}
-        <section className="py-20" style={{ background: '#ffffff' }}>
+        <section className="py-20" style={{ background: '#000000' }}>
           <div className="container mx-auto px-4 relative">
             <ServicesSection />
           </div>
@@ -60,24 +60,24 @@ export default function ServiziPage() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
-                className="bg-white p-8 rounded-xl shadow-xl"
+                className="bg-[var(--purple-deep)]/30 p-8 rounded-xl shadow-xl border border-[var(--aqua-green)]/20"
               >
-                <h3 className="text-2xl font-heading mb-6 text-[#2D2655] font-bold">Sviluppo Competenze con Gamification</h3>
-                <p className="mb-6 text-[#2D2655] leading-relaxed text-lg">
-                  <span className="font-bold text-[#00B2A9] text-xl">L&apos;83% dei dipendenti</span><span className="text-[#2D2655]"> che partecipano ad attività ludiche sono più motivati. I nostri percorsi di </span><span className="font-semibold text-[#2D2655]">game-based learning</span><span className="text-[#2D2655]"> aumentano il coinvolgimento e la produttività in azienda del </span><span className="font-bold text-[#00B2A9]">50-60%</span><span className="text-[#2D2655]">.</span>
+                <h3 className="text-2xl font-heading mb-6 text-white font-bold">Sviluppo Competenze con Gamification</h3>
+                <p className="mb-6 text-white/80 leading-relaxed text-lg">
+                  <span className="font-bold text-[#00B2A9] text-xl">L&apos;83% dei dipendenti</span><span className="text-white/80"> che partecipano ad attività ludiche sono più motivati. I nostri percorsi di </span><span className="font-semibold text-white">game-based learning</span><span className="text-white/80"> aumentano il coinvolgimento e la produttività in azienda del </span><span className="font-bold text-[#00B2A9]">50-60%</span><span className="text-white/80">.</span>
                 </p>
                 <ul className="space-y-3 mb-6">
                   <li className="flex items-start group">
                     <span className="text-[var(--aqua-green)] mr-3 text-xl font-bold">✓</span>
-                    <span className="text-[#2D2655] text-base group-hover:text-[#00B2A9] transition-colors">Sviluppo di competenze trasversali</span>
+                    <span className="text-white/80 text-base group-hover:text-[#00B2A9] transition-colors">Sviluppo di competenze trasversali</span>
                   </li>
                   <li className="flex items-start group">
                     <span className="text-[var(--aqua-green)] mr-3 text-xl font-bold">✓</span>
-                    <span className="text-[#2D2655] text-base group-hover:text-[#00B2A9] transition-colors">Employer Branding e Employee engagement</span>
+                    <span className="text-white/80 text-base group-hover:text-[#00B2A9] transition-colors">Employer Branding e Employee engagement</span>
                   </li>
                   <li className="flex items-start group">
                     <span className="text-[var(--aqua-green)] mr-3 text-xl font-bold">✓</span>
-                    <span className="text-[#2D2655] text-base group-hover:text-[#00B2A9] transition-colors">Team building efficace</span>
+                    <span className="text-white/80 text-base group-hover:text-[#00B2A9] transition-colors">Team building efficace</span>
                   </li>
                 </ul>
               </motion.div>
@@ -87,28 +87,28 @@ export default function ServiziPage() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="bg-white p-8 rounded-xl shadow-xl"
+                className="bg-[var(--purple-deep)]/30 p-8 rounded-xl shadow-xl border border-[var(--aqua-green)]/20"
               >
-                <h3 className="text-2xl font-heading mb-6 text-[#2D2655] font-bold">Tecnologie VR/AR</h3>
-                <p className="mb-6 text-[#2D2655] leading-relaxed text-lg">
-                  <span className="font-semibold text-[#2D2655]">Soluzioni immersive</span><span className="text-[#2D2655]"> per apprendimento, marketing e customer experience. Le nostre tecnologie includono:</span>
+                <h3 className="text-2xl font-heading mb-6 text-white font-bold">Tecnologie VR/AR</h3>
+                <p className="mb-6 text-white/80 leading-relaxed text-lg">
+                  <span className="font-semibold text-white">Soluzioni immersive</span><span className="text-white/80"> per apprendimento, marketing e customer experience. Le nostre tecnologie includono:</span>
                 </p>
                 <ul className="space-y-3 mb-6">
                   <li className="flex items-start group">
                     <span className="text-[var(--aqua-green)] mr-3 text-xl font-bold">✓</span>
-                    <span className="text-[#2D2655] text-base group-hover:text-[#00B2A9] transition-colors">SafetyVR e Spatial Plan</span>
+                    <span className="text-white/80 text-base group-hover:text-[#00B2A9] transition-colors">SafetyVR e Spatial Plan</span>
                   </li>
                   <li className="flex items-start group">
                     <span className="text-[var(--aqua-green)] mr-3 text-xl font-bold">✓</span>
-                    <span className="text-[#2D2655] text-base group-hover:text-[#00B2A9] transition-colors">Object Recognition e 3DToMe</span>
+                    <span className="text-white/80 text-base group-hover:text-[#00B2A9] transition-colors">Object Recognition e 3DToMe</span>
                   </li>
                   <li className="flex items-start group">
                     <span className="text-[var(--aqua-green)] mr-3 text-xl font-bold">✓</span>
-                    <span className="text-[#2D2655] text-base group-hover:text-[#00B2A9] transition-colors">Spatial Assistance e Portal Gate</span>
+                    <span className="text-white/80 text-base group-hover:text-[#00B2A9] transition-colors">Spatial Assistance e Portal Gate</span>
                   </li>
                   <li className="flex items-start group">
                     <span className="text-[var(--aqua-green)] mr-3 text-xl font-bold">✓</span>
-                    <span className="text-[#2D2655] text-base group-hover:text-[#00B2A9] transition-colors">AR Studio e Spatial Support</span>
+                    <span className="text-white/80 text-base group-hover:text-[#00B2A9] transition-colors">AR Studio e Spatial Support</span>
                   </li>
                 </ul>
               </motion.div>
@@ -120,10 +120,10 @@ export default function ServiziPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.4 }}
-                className="mt-16 bg-white p-8 rounded-xl shadow-xl relative z-10"
+                className="mt-16 bg-[var(--purple-deep)]/30 p-8 rounded-xl shadow-xl border border-[var(--aqua-green)]/20 relative z-10"
               >
-                <h3 className="text-2xl font-heading mb-6 font-bold">Eventi e Tornei Gaming</h3>
-                <p className="mb-6 leading-relaxed text-lg">
+                <h3 className="text-2xl font-heading mb-6 font-bold text-white">Eventi e Tornei Gaming</h3>
+                <p className="mb-6 leading-relaxed text-lg text-white/80">
                   Creiamo esperienze memorabili attraverso eventi e tornei gaming che aumentano la motivazione e il coinvolgimento dei team aziendali.
                 </p>
                 

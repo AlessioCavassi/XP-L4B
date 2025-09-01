@@ -1,5 +1,28 @@
 /* Stili specifici per la sezione Vantaggi della Realtà Virtuale */
 .vr-benefits .benefit-item p {
-  color: #2D2655 !important;
-  -webkit-text-fill-color: #2D2655 !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Stili per garantire testo bianco su sfondo nero */
+.bg-black p, .bg-\[var\(--purple-deep\)\] p {
+  color: rgba(255, 255, 255, 0.8) !important;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Stili per i titoli su sfondo nero */
+.bg-black h1, .bg-black h2, .bg-black h3, .bg-black h4, .bg-black h5, .bg-black h6 {
+  color: var(--aqua-green) !important;
+  -webkit-text-fill-color: var(--aqua-green) !important;
+}
+
+/* Stili per le card su sfondo nero */
+.bg-black .card {
+  background-color: rgba(45, 38, 85, 0.5) !important;
+  border: 1px solid rgba(101, 191, 176, 0.3) !important;
+}
+
+/* Effetto hover per le card */
+.bg-black .card:hover {
+  box-shadow: 0 0 15px rgba(101, 191, 176, 0.3) !important;
 }

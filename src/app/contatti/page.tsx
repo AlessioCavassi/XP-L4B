@@ -11,9 +11,9 @@ import { motion } from 'framer-motion';
 export default function ContattiPage() {
   return (
     <div className="min-h-screen" style={{
-      background: '#ffffff',
+      background: '#000000',
       backgroundAttachment: 'fixed',
-      color: '#333333',
+      color: '#ffffff',
     }}>
 <ParticlesBackground />
       <Header />
@@ -44,7 +44,7 @@ export default function ContattiPage() {
         </section>
         
         {/* Contatti Section */}
-        <section className="py-10" style={{ background: '#ffffff' }}>
+        <section className="py-10" style={{ background: '#000000' }}>
           <div className="container mx-auto px-4 relative">
             <ContactSection />
           </div>

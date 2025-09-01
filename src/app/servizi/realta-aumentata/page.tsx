@@ -12,9 +12,9 @@ import { FaGlasses, FaArrowRight } from 'react-icons/fa';
 export default function RealtaAumentataPage() {
   return (
     <div className="min-h-screen" style={{
-      background: '#ffffff',
+      background: '#000000',
       backgroundAttachment: 'fixed',
-      color: '#333333',
+      color: '#ffffff',
     }}>
 <ParticlesBackground />
       <Header />
@@ -45,7 +45,7 @@ export default function RealtaAumentataPage() {
         </section>
         
         {/* Contenuto principale */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-black">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
               <motion.div
@@ -90,35 +90,35 @@ export default function RealtaAumentataPage() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="bg-white p-8 rounded-xl shadow-xl border border-[var(--purple-light)]/20"
+                className="bg-black p-8 rounded-xl shadow-xl border border-[var(--aqua-green)]/50"
               >
                 <div className="text-center mb-8">
-                  <h3 className="text-2xl font-heading font-bold text-[var(--purple-deep)] mb-2">Vantaggi della Realtà Aumentata</h3>
+                  <h3 className="text-2xl font-heading font-bold text-[var(--aqua-green)] mb-2">Vantaggi della Realtà Aumentata</h3>
                   <div className="w-16 h-1 bg-[var(--aqua-green)] mx-auto mb-4"></div>
-                  <p className="text-[var(--purple-light)] max-w-2xl mx-auto">
+                  <p className="text-white/80 max-w-2xl mx-auto">
                     Le soluzioni in Realtà Aumentata offrono vantaggi misurabili per le aziende che puntano all&apos;innovazione e all&apos;efficienza.
                   </p>
                 </div>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="bg-gradient-to-br from-white to-[var(--purple-light)]/5 p-6 rounded-xl border border-[var(--purple-light)]/10 hover:shadow-lg transition-all duration-300">
-                    <h4 className="text-3xl font-heading font-bold text-[var(--purple-deep)] mb-3">+300%</h4>
-                    <p className="text-[#2D2655] leading-relaxed">Aumento dell&apos;engagement rispetto a metodi tradizionali</p>
+                  <div className="bg-gradient-to-br from-[var(--purple-deep)]/50 to-black p-6 rounded-xl border border-[var(--aqua-green)]/30 hover:shadow-lg transition-all duration-300">
+                    <h4 className="text-3xl font-heading font-bold text-[var(--aqua-green)] mb-3">+300%</h4>
+                    <p className="text-white/80 leading-relaxed">Aumento dell&apos;engagement rispetto a metodi tradizionali</p>
                   </div>
                   
-                  <div className="bg-gradient-to-br from-white to-[var(--purple-light)]/5 p-6 rounded-xl border border-[var(--purple-light)]/10 hover:shadow-lg transition-all duration-300">
-                    <h4 className="text-3xl font-heading font-bold text-[var(--purple-deep)] mb-3">-60%</h4>
-                    <p className="text-[#2D2655] leading-relaxed">Riduzione dei tempi di apprendimento tecnico</p>
+                  <div className="bg-gradient-to-br from-[var(--purple-deep)]/50 to-black p-6 rounded-xl border border-[var(--aqua-green)]/30 hover:shadow-lg transition-all duration-300">
+                    <h4 className="text-3xl font-heading font-bold text-[var(--aqua-green)] mb-3">-60%</h4>
+                    <p className="text-white/80 leading-relaxed">Riduzione dei tempi di apprendimento tecnico</p>
                   </div>
                   
-                  <div className="bg-gradient-to-br from-white to-[var(--purple-light)]/5 p-6 rounded-xl border border-[var(--purple-light)]/10 hover:shadow-lg transition-all duration-300">
-                    <h4 className="text-3xl font-heading font-bold text-[var(--purple-deep)] mb-3">+45%</h4>
-                    <p className="text-[#2D2655] leading-relaxed">Miglioramento nella ritenzione delle informazioni</p>
+                  <div className="bg-gradient-to-br from-[var(--purple-deep)]/50 to-black p-6 rounded-xl border border-[var(--aqua-green)]/30 hover:shadow-lg transition-all duration-300">
+                    <h4 className="text-3xl font-heading font-bold text-[var(--aqua-green)] mb-3">+45%</h4>
+                    <p className="text-white/80 leading-relaxed">Miglioramento nella ritenzione delle informazioni</p>
                   </div>
                   
-                  <div className="bg-gradient-to-br from-white to-[var(--purple-light)]/5 p-6 rounded-xl border border-[var(--purple-light)]/10 hover:shadow-lg transition-all duration-300">
-                    <h4 className="text-3xl font-heading font-bold text-[var(--purple-deep)] mb-3">7x</h4>
-                    <p className="text-[#2D2655] leading-relaxed">Maggiore ROI rispetto ai metodi tradizionali</p>
+                  <div className="bg-gradient-to-br from-[var(--purple-deep)]/50 to-black p-6 rounded-xl border border-[var(--aqua-green)]/30 hover:shadow-lg transition-all duration-300">
+                    <h4 className="text-3xl font-heading font-bold text-[var(--aqua-green)] mb-3">7x</h4>
+                    <p className="text-white/80 leading-relaxed">Maggiore ROI rispetto ai metodi tradizionali</p>
                   </div>
                 </div>
               </motion.div>
@@ -173,39 +173,39 @@ export default function RealtaAumentataPage() {
         </section>
         
         {/* Case Study */}
-        <section className="py-20 bg-gradient-to-b from-[var(--purple-light)]/5 to-white">
+        <section className="py-20 bg-black border-t border-[var(--aqua-green)]/20">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="bg-white p-8 rounded-xl shadow-xl border border-[var(--purple-light)]/20"
+              className="bg-[var(--purple-deep)]/30 p-8 rounded-xl shadow-xl border border-[var(--aqua-green)]/30"
             >
               <div className="text-center mb-8">
-                <h3 className="text-2xl font-heading font-bold text-[var(--purple-deep)] mb-2">Case Study: Object Recognition</h3>
+                <h3 className="text-2xl font-heading font-bold text-[var(--aqua-green)] mb-2">Case Study: Object Recognition</h3>
                 <div className="w-16 h-1 bg-[var(--aqua-green)] mx-auto mb-4"></div>
               </div>
               
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <div className="col-span-2">
                   <div className="space-y-6">
-                    <p className="text-[#2D2655] leading-relaxed">
+                    <p className="text-white/80 leading-relaxed">
                       Un&apos;azienda manifatturiera leader nel settore automobilistico ha implementato la nostra soluzione Object Recognition per supportare i tecnici durante le procedure di manutenzione complesse.
                     </p>
-                    <p className="text-[#2D2655] leading-relaxed">
+                    <p className="text-white/80 leading-relaxed">
                       I tecnici, equipaggiati con dispositivi AR, possono semplicemente inquadrare i componenti da manutenere per ricevere immediatamente istruzioni dettagliate, video tutorial e modelli 3D sovrapposti all&apos;oggetto reale.
                     </p>
                   </div>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-                    <div className="bg-gradient-to-br from-white to-[var(--purple-light)]/5 p-6 rounded-xl border border-[var(--purple-light)]/10">
-                      <h4 className="font-heading font-medium text-[var(--purple-deep)] mb-3 text-lg">Sfida</h4>
-                      <p className="text-[#2D2655] leading-relaxed">Ridurre il tempo di apprendimento dei nuovi tecnici e migliorare la precisione nelle operazioni di manutenzione.</p>
+                    <div className="bg-gradient-to-br from-[var(--purple-deep)]/40 to-black p-6 rounded-xl border border-[var(--aqua-green)]/30">
+                      <h4 className="font-heading font-medium text-[var(--aqua-green)] mb-3 text-lg">Sfida</h4>
+                      <p className="text-white/80 leading-relaxed">Ridurre il tempo di apprendimento dei nuovi tecnici e migliorare la precisione nelle operazioni di manutenzione.</p>
                     </div>
-                    <div className="bg-gradient-to-br from-white to-[var(--purple-light)]/5 p-6 rounded-xl border border-[var(--purple-light)]/10">
-                      <h4 className="font-heading font-medium text-[var(--purple-deep)] mb-3 text-lg">Soluzione</h4>
-                      <p className="text-[#2D2655] leading-relaxed">Implementazione di Object Recognition per identificare componenti e fornire guide contestuali in tempo reale.</p>
+                    <div className="bg-gradient-to-br from-[var(--purple-deep)]/40 to-black p-6 rounded-xl border border-[var(--aqua-green)]/30">
+                      <h4 className="font-heading font-medium text-[var(--aqua-green)] mb-3 text-lg">Soluzione</h4>
+                      <p className="text-white/80 leading-relaxed">Implementazione di Object Recognition per identificare componenti e fornire guide contestuali in tempo reale.</p>
                     </div>
                   </div>
                 </div>

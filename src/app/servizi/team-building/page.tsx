@@ -12,11 +12,11 @@ import { FaUsers, FaArrowRight, FaPuzzlePiece, FaHandshake, FaRegLightbulb } fro
 export default function TeamBuildingPage() {
   return (
     <div className="min-h-screen" style={{
-      background: '#ffffff',
+      background: '#000000',
       backgroundAttachment: 'fixed',
-      color: '#333333',
+      color: '#ffffff',
     }}>
-<ParticlesBackground />
+      <ParticlesBackground />
       <Header />
       
       <main>
@@ -45,7 +45,7 @@ export default function TeamBuildingPage() {
         </section>
         
         {/* Contenuto principale */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-black">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
               <motion.div
@@ -90,49 +90,49 @@ export default function TeamBuildingPage() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="bg-white p-8 rounded-xl shadow-xl border border-[var(--purple-light)]/20"
+                className="bg-black p-8 rounded-xl shadow-xl border border-[var(--aqua-green)]/50"
               >
                 <div className="text-center mb-8">
-                  <h3 className="text-2xl font-heading font-bold text-[var(--purple-deep)] mb-2">Perché scegliere il Team Building Digitale?</h3>
+                  <h3 className="text-2xl font-heading font-bold text-[var(--aqua-green)] mb-2">Perché scegliere il Team Building Digitale?</h3>
                   <div className="w-16 h-1 bg-[var(--aqua-green)] mx-auto mb-4"></div>
-                  <p className="text-gray-700 max-w-2xl mx-auto">
+                  <p className="text-white/80 max-w-2xl mx-auto">
                     Il Team Building Digitale offre vantaggi unici rispetto alle attività tradizionali, specialmente in un&apos;era di lavoro ibrido e remoto:
                   </p>
                 </div>
                 
                 <div className="space-y-6">
-                  <div className="bg-gradient-to-br from-white to-[var(--purple-light)]/5 p-6 rounded-xl border border-[var(--purple-light)]/10 hover:shadow-lg transition-all duration-300">
+                  <div className="bg-gradient-to-br from-[var(--purple-deep)]/50 to-black p-6 rounded-xl border border-[var(--aqua-green)]/30 hover:shadow-lg transition-all duration-300">
                     <div className="flex items-start">
                       <div className="bg-[var(--aqua-green)]/10 p-3 rounded-full mr-4">
                         <FaPuzzlePiece className="text-[var(--aqua-green)]" size={20} />
                       </div>
                       <div>
-                        <h4 className="text-xl font-heading font-bold text-[var(--purple-deep)] mb-2">Flessibilità e Inclusività</h4>
-                        <p className="text-[#2D2655] leading-relaxed">Permette la partecipazione di team distribuiti geograficamente, senza limitazioni logistiche</p>
+                        <h4 className="text-xl font-heading font-bold text-[var(--aqua-green)] mb-2">Flessibilità e Inclusività</h4>
+                        <p className="text-white/80 leading-relaxed">Permette la partecipazione di team distribuiti geograficamente, senza limitazioni logistiche</p>
                       </div>
                     </div>
                   </div>
                   
-                  <div className="bg-gradient-to-br from-white to-[var(--purple-light)]/5 p-6 rounded-xl border border-[var(--purple-light)]/10 hover:shadow-lg transition-all duration-300">
+                  <div className="bg-gradient-to-br from-[var(--purple-deep)]/50 to-black p-6 rounded-xl border border-[var(--aqua-green)]/30 hover:shadow-lg transition-all duration-300">
                     <div className="flex items-start">
                       <div className="bg-[var(--aqua-green)]/10 p-3 rounded-full mr-4">
                         <FaHandshake className="text-[var(--aqua-green)]" size={20} />
                       </div>
                       <div>
-                        <h4 className="text-xl font-heading font-bold text-[var(--purple-deep)] mb-2">Esperienze Immersive</h4>
-                        <p className="text-[#2D2655] leading-relaxed">Crea esperienze coinvolgenti che stimolano l&apos;interazione naturale tra i partecipanti</p>
+                        <h4 className="text-xl font-heading font-bold text-[var(--aqua-green)] mb-2">Esperienze Immersive</h4>
+                        <p className="text-white/80 leading-relaxed">Crea esperienze coinvolgenti che stimolano l&apos;interazione naturale tra i partecipanti</p>
                       </div>
                     </div>
                   </div>
                   
-                  <div className="bg-gradient-to-br from-white to-[var(--purple-light)]/5 p-6 rounded-xl border border-[var(--purple-light)]/10 hover:shadow-lg transition-all duration-300">
+                  <div className="bg-gradient-to-br from-[var(--purple-deep)]/50 to-black p-6 rounded-xl border border-[var(--aqua-green)]/30 hover:shadow-lg transition-all duration-300">
                     <div className="flex items-start">
                       <div className="bg-[var(--aqua-green)]/10 p-3 rounded-full mr-4">
                         <FaRegLightbulb className="text-[var(--aqua-green)]" size={20} />
                       </div>
                       <div>
-                        <h4 className="text-xl font-heading font-bold text-[var(--purple-deep)] mb-2">Misurazione Risultati</h4>
-                        <p className="text-[#2D2655] leading-relaxed">Offre metriche tangibili per valutare l&apos;efficacia delle attività e l&apos;evoluzione del team</p>
+                        <h4 className="text-xl font-heading font-bold text-[var(--aqua-green)] mb-2">Misurazione Risultati</h4>
+                        <p className="text-white/80 leading-relaxed">Offre metriche tangibili per valutare l&apos;efficacia delle attività e l&apos;evoluzione del team</p>
                       </div>
                     </div>
                   </div>
@@ -148,7 +148,7 @@ export default function TeamBuildingPage() {
               className="mb-20"
             >
               <div className="text-center mb-12">
-                <h3 className="text-2xl font-heading font-bold text-[var(--purple-deep)] mb-2">Attività di Team Building Digitale</h3>
+                <h3 className="text-2xl font-heading font-bold text-[var(--aqua-green)] mb-2">Attività di Team Building Digitale</h3>
                 <div className="w-16 h-1 bg-[var(--aqua-green)] mx-auto mb-4"></div>
               </div>
               
@@ -258,7 +258,7 @@ export default function TeamBuildingPage() {
         </section>
         
         {/* Call to action */}
-        <section className="py-20 bg-[var(--purple-light)]/10">
+        <section className="py-20 bg-gradient-to-br from-[var(--purple-deep)] to-black border-t border-[var(--aqua-green)]/30">
           <div className="container mx-auto px-4 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -266,17 +266,17 @@ export default function TeamBuildingPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-3xl md:text-4xl font-heading mb-6 text-[var(--purple-deep)]">
+              <h2 className="text-3xl md:text-4xl font-heading mb-6 text-[var(--aqua-green)]">
                 Scopri come trasformare il tuo team
               </h2>
-              <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-10">
+              <p className="text-xl text-white/80 max-w-3xl mx-auto mb-10">
                 Esplora i nostri altri servizi e scopri come possiamo aiutarti a creare un ambiente di lavoro più coinvolgente ed efficace
               </p>
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Link href="/servizi" className="bg-[var(--purple-deep)] text-white font-heading py-3 px-8 rounded-full inline-flex items-center shadow-lg">
+                <Link href="/servizi" className="bg-[var(--aqua-green)] text-black font-heading py-3 px-8 rounded-full inline-flex items-center shadow-lg hover:bg-[var(--blue)] hover:text-white transition-all duration-300">
                   ESPLORA ALTRI SERVIZI
                   <FaArrowRight className="ml-2" />
                 </Link>

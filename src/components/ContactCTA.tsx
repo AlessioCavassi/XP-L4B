@@ -8,7 +8,7 @@ const ContactCTA: React.FC = () => {
 
   return (
     <>
-      <section id="contact" className="relative py-24 overflow-hidden bg-gradient-to-br from-[var(--purple-deep)] to-[var(--purple-light)]">
+      <section id="contact" className="relative py-24 overflow-hidden bg-black">
         {/* Decorative elements */}
         <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
         <div className="absolute -top-10 -right-10 w-40 h-40 bg-[var(--aqua-green)]/20 rounded-full blur-3xl"></div>

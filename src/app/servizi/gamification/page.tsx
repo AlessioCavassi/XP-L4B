@@ -12,11 +12,11 @@ import { FaLaptopCode, FaArrowRight, FaTrophy, FaUserAstronaut, FaChartLine } fr
 export default function GamificationPage() {
   return (
     <div className="min-h-screen" style={{
-      background: '#ffffff',
+      background: '#000000',
       backgroundAttachment: 'fixed',
-      color: '#333333',
+      color: '#ffffff',
     }}>
-<ParticlesBackground />
+      <ParticlesBackground />
       <Header />
       
       <main>
@@ -45,7 +45,7 @@ export default function GamificationPage() {
         </section>
         
         {/* Contenuto principale */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-black">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
               <motion.div
@@ -90,35 +90,35 @@ export default function GamificationPage() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="bg-white p-8 rounded-xl shadow-xl border border-[var(--purple-light)]/20"
+                className="bg-black p-8 rounded-xl shadow-xl border border-[var(--aqua-green)]/50"
               >
                 <div className="text-center mb-8">
-                  <h3 className="text-2xl font-heading font-bold text-[var(--purple-deep)] mb-2">Risultati Misurabili</h3>
+                  <h3 className="text-2xl font-heading font-bold text-[var(--aqua-green)] mb-2">Risultati Misurabili</h3>
                   <div className="w-16 h-1 bg-[var(--aqua-green)] mx-auto mb-4"></div>
-                  <p className="text-gray-700 max-w-2xl mx-auto">
+                  <p className="text-white/80 max-w-2xl mx-auto">
                     La Gamification genera risultati concreti e misurabili, creando un impatto significativo su motivazione e performance.
                   </p>
                 </div>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="bg-gradient-to-br from-white to-[var(--purple-light)]/5 p-6 rounded-xl border border-[var(--purple-light)]/10 hover:shadow-lg transition-all duration-300">
-                    <h4 className="text-3xl font-heading font-bold text-[var(--purple-deep)] mb-3">+83%</h4>
-                    <p className="text-[#2D2655] leading-relaxed">Aumento della motivazione dei dipendenti</p>
+                  <div className="bg-gradient-to-br from-[var(--purple-deep)]/50 to-black p-6 rounded-xl border border-[var(--aqua-green)]/30 hover:shadow-lg transition-all duration-300">
+                    <h4 className="text-3xl font-heading font-bold text-[var(--aqua-green)] mb-3">+83%</h4>
+                    <p className="text-white/80 leading-relaxed">Aumento della motivazione dei dipendenti</p>
                   </div>
                   
-                  <div className="bg-gradient-to-br from-white to-[var(--purple-light)]/5 p-6 rounded-xl border border-[var(--purple-light)]/10 hover:shadow-lg transition-all duration-300">
-                    <h4 className="text-3xl font-heading font-bold text-[var(--purple-deep)] mb-3">+72%</h4>
-                    <p className="text-[#2D2655] leading-relaxed">Miglioramento della performance misurabile</p>
+                  <div className="bg-gradient-to-br from-[var(--purple-deep)]/50 to-black p-6 rounded-xl border border-[var(--aqua-green)]/30 hover:shadow-lg transition-all duration-300">
+                    <h4 className="text-3xl font-heading font-bold text-[var(--aqua-green)] mb-3">+72%</h4>
+                    <p className="text-white/80 leading-relaxed">Miglioramento della performance misurabile</p>
                   </div>
                   
-                  <div className="bg-gradient-to-br from-white to-[var(--purple-light)]/5 p-6 rounded-xl border border-[var(--purple-light)]/10 hover:shadow-lg transition-all duration-300">
-                    <h4 className="text-3xl font-heading font-bold text-[var(--purple-deep)] mb-3">-25%</h4>
-                    <p className="text-[#2D2655] leading-relaxed">Riduzione del turnover aziendale</p>
+                  <div className="bg-gradient-to-br from-[var(--purple-deep)]/50 to-black p-6 rounded-xl border border-[var(--aqua-green)]/30 hover:shadow-lg transition-all duration-300">
+                    <h4 className="text-3xl font-heading font-bold text-[var(--aqua-green)] mb-3">-25%</h4>
+                    <p className="text-white/80 leading-relaxed">Riduzione del turnover aziendale</p>
                   </div>
                   
-                  <div className="bg-gradient-to-br from-white to-[var(--purple-light)]/5 p-6 rounded-xl border border-[var(--purple-light)]/10 hover:shadow-lg transition-all duration-300">
-                    <h4 className="text-3xl font-heading font-bold text-[var(--purple-deep)] mb-3">+68%</h4>
-                    <p className="text-[#2D2655] leading-relaxed">Incremento di coinvolgimento nei processi formativi</p>
+                  <div className="bg-gradient-to-br from-[var(--purple-deep)]/50 to-black p-6 rounded-xl border border-[var(--aqua-green)]/30 hover:shadow-lg transition-all duration-300">
+                    <h4 className="text-3xl font-heading font-bold text-[var(--aqua-green)] mb-3">+68%</h4>
+                    <p className="text-white/80 leading-relaxed">Incremento di coinvolgimento nei processi formativi</p>
                   </div>
                 </div>
               </motion.div>
@@ -132,10 +132,10 @@ export default function GamificationPage() {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="text-center mb-12"
               >
-                <h2 className="text-3xl md:text-4xl font-heading mb-6 text-[var(--purple-deep)]">
+                <h2 className="text-3xl md:text-4xl font-heading mb-6 text-[var(--aqua-green)]">
                   Ambiti di Applicazione
                 </h2>
-                <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+                <p className="text-xl text-white/80 max-w-3xl mx-auto">
                   La Gamification può essere implementata efficacemente in diversi contesti aziendali
                 </p>
               </motion.div>
@@ -146,16 +146,16 @@ export default function GamificationPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.1 }}
-                  className="bg-white p-8 rounded-xl shadow-lg border-t-4 border-[var(--blue)]"
+                  className="bg-[var(--purple-deep)]/30 p-8 rounded-xl shadow-lg border-t-4 border-[var(--blue)]"
                 >
                   <div className="w-16 h-16 bg-[var(--blue)]/10 rounded-full flex items-center justify-center mb-6">
                     <FaUserAstronaut size={30} className="text-[var(--blue)]" />
                   </div>
-                  <h3 className="text-xl font-heading mb-4 text-[var(--purple-deep)]">Onboarding</h3>
-                  <p className="text-gray-700 mb-4">
+                  <h3 className="text-xl font-heading mb-4 text-[var(--aqua-green)]">Onboarding</h3>
+                  <p className="text-white/80 mb-4">
                     Trasformiamo il processo di inserimento dei nuovi dipendenti in un&apos;avventura coinvolgente con missioni progressive, ricompense e feedback immediato.
                   </p>
-                  <ul className="text-sm text-gray-600 space-y-2">
+                  <ul className="text-sm text-white/70 space-y-2">
                     <li className="flex items-start">
                       <span className="text-[var(--blue)] mr-2">•</span>
                       <span>Accelerazione della curva di apprendimento</span>
@@ -176,16 +176,16 @@ export default function GamificationPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.2 }}
-                  className="bg-white p-8 rounded-xl shadow-lg border-t-4 border-[var(--aqua-green)]"
+                  className="bg-[var(--purple-deep)]/30 p-8 rounded-xl shadow-lg border-t-4 border-[var(--aqua-green)]"
                 >
                   <div className="w-16 h-16 bg-[var(--aqua-green)]/10 rounded-full flex items-center justify-center mb-6">
                     <FaTrophy size={30} className="text-[var(--aqua-green)]" />
                   </div>
-                  <h3 className="text-xl font-heading mb-4 text-[var(--purple-deep)]">Corsi Formativi</h3>
-                  <p className="text-gray-700 mb-4">
+                  <h3 className="text-xl font-heading mb-4 text-[var(--aqua-green)]">Corsi Formativi</h3>
+                  <p className="text-white/80 mb-4">
                     Trasformiamo corsi e percorsi formativi in esperienze gamificate con livelli progressivi, sfide e riconoscimenti per competenze acquisite.
                   </p>
-                  <ul className="text-sm text-gray-600 space-y-2">
+                  <ul className="text-sm text-white/70 space-y-2">
                     <li className="flex items-start">
                       <span className="text-[var(--aqua-green)] mr-2">•</span>
                       <span>Miglioramento della ritenzione dei contenuti</span>
@@ -206,16 +206,16 @@ export default function GamificationPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.3 }}
-                  className="bg-white p-8 rounded-xl shadow-lg border-t-4 border-[var(--purple-light)]"
+                  className="bg-[var(--purple-deep)]/30 p-8 rounded-xl shadow-lg border-t-4 border-[var(--purple-light)]"
                 >
                   <div className="w-16 h-16 bg-[var(--purple-light)]/10 rounded-full flex items-center justify-center mb-6">
                     <FaChartLine size={30} className="text-[var(--purple-light)]" />
                   </div>
-                  <h3 className="text-xl font-heading mb-4 text-[var(--purple-deep)]">Incentivazione Team</h3>
-                  <p className="text-gray-700 mb-4">
+                  <h3 className="text-xl font-heading mb-4 text-[var(--aqua-green)]">Incentivazione Team</h3>
+                  <p className="text-white/80 mb-4">
                     Sistemi di incentivazione basati su obiettivi, competizione positiva e riconoscimenti per valorizzare i risultati e favorire la collaborazione.
                   </p>
-                  <ul className="text-sm text-gray-600 space-y-2">
+                  <ul className="text-sm text-white/70 space-y-2">
                     <li className="flex items-start">
                       <span className="text-[var(--purple-light)] mr-2">•</span>
                       <span>Visualizzazione tangibile dei progressi</span>
@@ -233,35 +233,81 @@ export default function GamificationPage() {
               </div>
             </div>
             
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="bg-[var(--purple-deep)] p-8 rounded-xl shadow-xl text-white"
-            >
-              <h3 className="text-2xl font-heading mb-6 text-center">Pronti a Gamificare la Vostra Azienda?</h3>
-              <p className="text-center text-white/80 max-w-3xl mx-auto mb-10">
-                Scoprite come la Gamification può trasformare la vostra azienda, aumentando motivazione, produttività e coinvolgimento. Contattateci per una consulenza personalizzata.
-              </p>
-              
-              <div className="text-center">
+            <div className="bg-[var(--purple-deep)]/20 py-16 px-4 rounded-2xl mb-20 border border-[var(--aqua-green)]/20">
+              <div className="container mx-auto">
                 <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8 }}
+                  className="text-center mb-12"
                 >
-                  <Link href="/contatti" className="bg-[var(--blue)] text-white font-bold font-heading py-3 px-8 rounded-full inline-flex items-center shadow-lg">
-                    RICHIEDI UNA CONSULENZA
-                    <FaArrowRight className="ml-2" />
-                  </Link>
+                  <h2 className="text-3xl md:text-4xl font-heading mb-6 text-[var(--aqua-green)]">
+                    Case Study
+                  </h2>
+                  <p className="text-xl text-white/80 max-w-3xl mx-auto">
+                    Scopri come abbiamo implementato con successo soluzioni di Gamification per i nostri clienti
+                  </p>
                 </motion.div>
+              
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.1 }}
+                  >
+                    <div className="bg-[var(--purple-deep)]/30 p-6 rounded-xl shadow-lg border border-[var(--aqua-green)]/30">
+                      <div className="aspect-w-16 aspect-h-9 mb-6 bg-black/50 rounded-lg overflow-hidden">
+                        <div className="w-full h-full flex items-center justify-center bg-[var(--purple-light)]/10">
+                          <FaLaptopCode size={40} className="text-[var(--aqua-green)]" />
+                        </div>
+                      </div>
+                      <h3 className="text-xl font-heading font-bold mb-3 text-[var(--aqua-green)]">Onboarding Gamificato</h3>
+                      <p className="text-white/80 mb-4">
+                        Abbiamo creato un sistema di onboarding gamificato per una multinazionale, riducendo del 35% il tempo di inserimento e aumentando del 58% il coinvolgimento dei nuovi assunti.
+                      </p>
+                      <div className="flex justify-between items-center">
+                        <span className="text-sm text-white/60">Multinazionale IT</span>
+                        <Link href="/contatti" className="text-[var(--aqua-green)] hover:text-[var(--blue)] flex items-center">
+                          Dettagli <FaArrowRight size={12} className="ml-1" />
+                        </Link>
+                      </div>
+                    </div>
+                  </motion.div>
+                  
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                  >
+                    <div className="bg-[var(--purple-deep)]/30 p-6 rounded-xl shadow-lg border border-[var(--aqua-green)]/30">
+                      <div className="aspect-w-16 aspect-h-9 mb-6 bg-black/50 rounded-lg overflow-hidden">
+                        <div className="w-full h-full flex items-center justify-center bg-[var(--aqua-green)]/10">
+                          <FaTrophy size={40} className="text-[var(--aqua-green)]" />
+                        </div>
+                      </div>
+                      <h3 className="text-xl font-heading font-bold mb-3 text-[var(--aqua-green)]">Formazione Gamificata</h3>
+                      <p className="text-white/80 mb-4">
+                        Percorso formativo trasformato in un&apos;avventura con livelli, sfide e ricompense, aumentando del 72% il completamento dei corsi e migliorando la ritenzione delle informazioni.
+                      </p>
+                      <div className="flex justify-between items-center">
+                        <span className="text-sm text-white/60">Azienda Farmaceutica</span>
+                        <Link href="/contatti" className="text-[var(--aqua-green)] hover:text-[var(--blue)] flex items-center">
+                          Dettagli <FaArrowRight size={12} className="ml-1" />
+                        </Link>
+                      </div>
+                    </div>
+                  </motion.div>
+                </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
         
-        {/* Call to action */}
-        <section className="py-20 bg-[var(--purple-light)]/10">
+        {/* Call to Action */}
+        <section className="py-20 bg-gradient-to-br from-[var(--purple-deep)] to-black border-t border-[var(--aqua-green)]/30">
           <div className="container mx-auto px-4 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -269,21 +315,18 @@ export default function GamificationPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-3xl md:text-4xl font-heading mb-6 text-[var(--purple-deep)]">
-                Esplora i nostri altri servizi
+              <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6 text-[var(--aqua-green)]">
+                Pronto a trasformare la tua azienda con la Gamification?
               </h2>
-              <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-10">
-                Scopri la nostra gamma completa di soluzioni innovative per il coinvolgimento e lo sviluppo delle competenze
+              <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
+                Contattaci oggi per una consulenza gratuita e scopri come possiamo aiutarti a implementare strategie di gamification efficaci.
               </p>
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              <Link 
+                href="/contatti" 
+                className="inline-block bg-[var(--aqua-green)] text-black font-heading font-bold py-4 px-8 rounded-lg shadow-lg hover:bg-[var(--blue)] hover:text-white transition-all duration-300"
               >
-                <Link href="/servizi" className="bg-[var(--purple-deep)] text-white font-heading py-3 px-8 rounded-full inline-flex items-center shadow-lg">
-                  TUTTI I SERVIZI
-                  <FaArrowRight className="ml-2" />
-                </Link>
-              </motion.div>
+                RICHIEDI CONSULENZA GRATUITA
+              </Link>
             </motion.div>
           </div>
         </section>

@@ -6,8 +6,8 @@
 }
 
 .events-section * {
-  color: #2D2655 !important;
-  -webkit-text-fill-color: #2D2655 !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
 }
 
 /* Titolo della sezione */
@@ -16,7 +16,7 @@
   display: inline-block;
   font-size: 2rem !important;
   margin-bottom: 2rem !important;
-  background: linear-gradient(90deg, #2D2655, #6D28D9);
+  background: linear-gradient(90deg, #ffffff, #00B2A9);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent !important;
@@ -37,8 +37,8 @@
 /* Card degli eventi */
 .events-section .event-card {
   position: relative;
-  background: rgba(255, 255, 255, 0.95) !important;
-  border: 1px solid rgba(233, 213, 255, 0.5) !important;
+  background: rgba(45, 38, 85, 0.3) !important;
+  border: 1px solid rgba(0, 178, 169, 0.2) !important;
   border-radius: 16px !important;
   padding: 2rem !important;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);

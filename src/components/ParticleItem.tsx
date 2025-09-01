@@ -11,6 +11,8 @@ interface ParticleItemProps {
   size: number;
   initialX: number;
   initialY: number;
+  depth: number; // Aggiunto per l'effetto parallasse
+  opacity: number; // Aggiunto per la variazione di opacità
   color: string;
   index: number;
 }
@@ -21,6 +23,8 @@ const ParticleItem: React.FC<ParticleItemProps> = ({
   size, 
   initialX,
   initialY, 
+  depth,
+  opacity,
   color, 
   index 
 }) => {
@@ -28,14 +32,10 @@ const ParticleItem: React.FC<ParticleItemProps> = ({
   
   // Function to render the appropriate icon
   const renderIcon = () => {
-    // Creiamo uno stile per le icone con bordi definiti e netti
+    // Stile per le icone senza bordi neri
     const iconStyle = {
-      // Doppio effetto ombra per garantire visibilità su qualsiasi sfondo
-      filter: 'drop-shadow(-2px -2px 0 #000) drop-shadow(2px -2px 0 #000) drop-shadow(-2px 2px 0 #000) drop-shadow(2px 2px 0 #000)',
-      // Aggiungiamo anche uno stroke inverso per garantire contrasto
-      WebkitTextStroke: '1px #000',
-      // Scaliamo leggermente l'icona per dare spazio ai bordi
-      transform: 'scale(0.9)',
+      // Rimossi gli effetti di ombreggiatura e bordo nero
+      transform: 'scale(1)',
     } as React.CSSProperties;
     
     switch (type) {
@@ -59,36 +59,58 @@ const ParticleItem: React.FC<ParticleItemProps> = ({
   const floatAmplitude = 10 + Math.random() * 20;
   const rotationStart = Math.random() * 360;
 
-
+  // Calcola l'effetto di luce e prospettiva - aumentati per migliorare visibilità
+  const lightIntensity = 0.9 + (depth / 800); // Più luminoso quando è più vicino
+  const scale = 0.8 + (1.5 * (1 - (depth + 500) / 1000)); // Scala aumentata
+  const blurAmount = Math.max(0, (1 - (depth + 500) / 1000) * 7); // Sfocatura prospettica aumentata
 
   return (
     <motion.div
       ref={particleRef}
-      className="absolute particle-item"
+      className="absolute will-change-transform"
       style={{
         left: `${initialX}%`,
         top: `${initialY}%`,
-        // Effetti visivi
-        filter: 'brightness(1.7) drop-shadow(0 0 5px rgba(255, 255, 255, 0.7)) drop-shadow(0 0 3px #000)',
-        color: '#FFFFFF',
-        fontSize: `${size}px`,
-        position: 'absolute',
-        zIndex: 120,
-        pointerEvents: 'none',
-        WebkitTextStroke: '1px #000',
-        textShadow: '0 0 3px #000, 0 0 1px #000, 0 0 1px #000'
+        transform: `
+          translate3d(-50%, -50%, ${depth}px)
+          scale(${scale})
+          rotateX(${depth * 0.05}deg)
+          rotateY(${depth * 0.05}deg)
+        `,
+        zIndex: Math.floor(1 + (depth + 500) / 100),
+        opacity: opacity * lightIntensity * 1.3, // Aumentata opacità generale
+        filter: `
+          drop-shadow(0 0 ${8 + blurAmount}px rgba(101, 191, 176, ${0.5 * lightIntensity}))
+          brightness(${1.2 + (lightIntensity * 0.6)})
+          contrast(1.3)
+        `,
+        transformStyle: 'preserve-3d',
+        perspective: '1000px',
+        transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
+        textShadow: `
+          0 0 10px rgba(255,255,255,${0.5 * lightIntensity}),
+          0 0 20px rgba(101, 191, 176, ${0.6 * lightIntensity})
+        `,
+        willChange: 'transform, opacity, filter'
       }}
       initial={{ opacity: 0, rotate: rotationStart }}
       animate={{
-        y: [0, -floatAmplitude, 0],
+        y: [0, -floatAmplitude * 0.7, 0],
         rotate: [rotationStart, rotationStart + 180, rotationStart + 360],
-        scale: [0.8, 1, 0.8],
-        opacity: 0.5, // Reduced from 0.6 for more transparency
+        scale: [0.9, 1.1, 0.9],
+        opacity: [0.5, 0.8, 0.5], // Aumentata opacità nell'animazione
+        filter: [
+          'drop-shadow(0 0 8px rgba(101, 191, 176, 0.5))',
+          'drop-shadow(0 0 20px rgba(101, 191, 176, 0.8))',
+          'drop-shadow(0 0 8px rgba(101, 191, 176, 0.5))'
+        ]
       }}
       transition={{
-        repeat: Infinity,
         duration: durationBase,
-        ease: "easeInOut",
+        repeat: Infinity,
+        ease: [0.4, 0, 0.2, 1],
+        delay: index * 0.07,
+        repeatType: 'reverse'
       }}
     >
       {renderIcon()}

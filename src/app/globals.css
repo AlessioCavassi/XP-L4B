@@ -28,6 +28,9 @@
 .play-mode a:hover {
   transform: scale(1.08);
   box-shadow: 0 10px 20px rgba(101, 191, 176, 0.4);
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Corporate Mode - stile più sobrio e professionale */
@@ -47,15 +50,81 @@ body:not(.play-mode) .interactive:hover {
   box-shadow: 0 8px 15px rgba(45, 38, 85, 0.15);
 }
 
+/* Effetti di profondità e luce globale */
+:root {
+  --accent-color: 101, 191, 176;
+  --accent-glow: 0 0 50px rgba(var(--accent-color), 0.2);
+  --depth-intensity: 0.5;
+}
+
 /* Base styles */
 body {
-  background: var(--background);
+  background: 
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(var(--accent-color), 0.15) 0%,
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(var(--accent-color), 0.15) 0%,
+      transparent 25%
+    ),
+    linear-gradient(
+      to bottom right,
+      var(--purple-deep),
+      var(--purple-darker)
+    ) fixed;
   color: var(--foreground);
   font-family: var(--font-body);
   font-size: 16px;
   line-height: 1.5;
+  min-height: 100vh;
+  position: relative;
   transition: background-color 0.5s ease, color 0.5s ease;
+  overflow-x: hidden;
 }
+
+/* Effetto di profondità con pseudo-elementi */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(
+      circle at 50% 50%,
+      transparent 0%,
+      rgba(0, 0, 0, 0.9) 100%
+    );
+  pointer-events: none;
+  z-index: -1;
+  opacity: var(--depth-intensity);
+}
+
+/* Effetto di luce dinamica */
+body::after {
+  content: '';
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  background: 
+    radial-gradient(
+      circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+      rgba(var(--accent-color), 0.1) 0%,
+      transparent 30%
+    );
+  z-index: -1;
+  pointer-events: none;
+  transition: opacity 0.3s ease-out;
+  will-change: background;
+}
+
+/* Base styles moved up and merged with body styles */
 
 /* Classi di utilità per i font */
 .font-heading {

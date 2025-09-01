@@ -53,11 +53,8 @@ div p.text-white,
 
 /* Stili specifici per i paragrafi in MobileOptimizedPage */
 [data-component-name="MobileOptimizedPage"] {
-  background-color: var(--purple-deep) !important;
   color: white !important;
-  border: 2px solid var(--aqua-green) !important;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.5) !important;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2) !important;
+  opacity: 1 !important;
 }
 
 /* Rimuovi eventuali opacità */
@@ -67,13 +64,12 @@ div p.text-white,
 
 /* Stile per i paragrafi all'interno di MobileOptimizedPage */
 [data-component-name="MobileOptimizedPage"] p {
-  background-color: var(--purple-deep) !important;
+  background-color: transparent !important;
   color: white !important;
-  border: 2px solid var(--aqua-green) !important;
-  padding: 0.75rem 1rem !important;
-  border-radius: 0.5rem !important;
+  border: none !important;
+  padding: 0 !important;
   text-shadow: 0 1px 2px rgba(0,0,0,0.5) !important;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2) !important;
+  box-shadow: none !important;
 }
 
 /* Stile per i div con sfondo viola */
@@ -83,38 +79,7 @@ div p.text-white,
   opacity: 1 !important;
 }
 
-
-/* Play mode (will be toggled via JS) */
-.play-mode {
-  --background: #2D2655;
-  --foreground: #ffffff;
-  /* Animazioni più accentuate */
-  --transition-speed: 0.3s;
-  --border-radius: 12px;
-  --card-shadow: 0 8px 25px rgba(101, 191, 176, 0.25);
-  --card-hover-transform: translateY(-10px) scale(1.03);
-}
-
-/* Play Mode specifici stili per elementi interattivi */
-.play-mode .interactive {
-  transform: scale(1.02);
-  transition: all 0.35s cubic-bezier(0.17, 0.67, 0.83, 0.67);
-}
-
-.play-mode button:hover, 
-.play-mode a:hover {
-  transform: scale(1.08);
-  box-shadow: 0 10px 20px rgba(101, 191, 176, 0.4);
-}
-
-.play-mode button, 
-.play-mode a {
-  transition: transform 0.4s cubic-bezier(0.17, 0.67, 0.83, 0.67), 
-              background-color 0.3s ease, 
-              box-shadow 0.3s ease;
-}
-
-/* Corporate Mode - stile più sobrio e professionale */
+/* Stili per elementi interattivi */
 body:not(.play-mode) {
   --transition-speed: 0.5s;
   --border-radius: 4px;
@@ -164,9 +129,9 @@ strong.emerald-text,
   font-weight: bold !important;
 }
 
-/* Stile per il MotionComponent con sfondo viola */
+/* Stile per il MotionComponent senza sfondo */
 [data-component-name="MotionComponent"] {
-  background-color: var(--purple-deep) !important;
+  background-color: transparent !important;
   color: white !important;
   -webkit-text-fill-color: white !important;
   opacity: 1 !important;
