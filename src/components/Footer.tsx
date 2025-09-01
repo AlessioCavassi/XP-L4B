@@ -183,16 +183,13 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-          {/* Column 1: Logo and Description */}
+          {/* Column 1: Description */}
           <MotionDiv 
             className="mb-8 lg:mb-0"
             variants={itemVariants}
             custom={0}
           >
-            <div className="mb-4">
-              <Logo className="w-full" useHorizontal={true} animated={false} />
-            </div>
-            <p className="text-[var(--purple-deep)]/70 mb-4">
+            <p className="text-[var(--purple-deep)]/70 mb-4 mt-6">
               Trasformiamo la formazione aziendale in esperienze coinvolgenti e memorabili attraverso la gamification e le tecnologie immersive.
             </p>
             <div className="flex space-x-3">

@@ -6,7 +6,7 @@ interface ParallaxLogoProps {
   opacity?: number;
 }
 
-const ParallaxLogo: React.FC<ParallaxLogoProps> = ({ opacity = 0.35 }) => {
+const ParallaxLogo: React.FC<ParallaxLogoProps> = ({ opacity = 0.15 }) => {
   const [isMounted, setIsMounted] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const controls = useAnimation();
