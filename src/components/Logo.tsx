@@ -35,9 +35,10 @@ const Logo: React.FC<LogoProps> = ({ className = '', animated = true, useHorizon
       y.set(yPos * 50 - 25);
     };
     
-    containerRef.current.addEventListener('mousemove', handleMouseMove);
+    const container = containerRef.current;
+    container.addEventListener('mousemove', handleMouseMove);
     return () => {
-      containerRef.current?.removeEventListener('mousemove', handleMouseMove);
+      container.removeEventListener('mousemove', handleMouseMove);
     };
   }, [x, y]);
   
