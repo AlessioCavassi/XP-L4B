@@ -12,7 +12,7 @@ const serviceData = [
     id: 1,
     title: 'Realtà Virtuale',
     description: 'Sviluppiamo esperienze immersive in Realtà Virtuale per trasformare la formazione, la comunicazione e il marketing aziendale. Progetti personalizzati di forte impatto.',
-    icon: '🥽',
+    icon: '',
     color: 'var(--aqua-green)',
     url: '/servizi/realta-virtuale'
   },
@@ -20,7 +20,7 @@ const serviceData = [
     id: 2,
     title: 'Realtà Aumentata',
     description: "Arricchiamo l'ambiente reale con contenuti digitali interattivi, ideali per comunicazione, formazione e coinvolgimento del pubblico. Esperienze personalizzate di alta qualità.",
-    icon: '📱',
+    icon: '',
     color: 'var(--purple-light)',
     url: '/servizi/realta-aumentata'
   },
@@ -28,7 +28,7 @@ const serviceData = [
     id: 3,
     title: 'Gamification',
     description: 'Soluzioni su misura per coinvolgere dipendenti, ottimizzare processi e fidelizzare clienti. Aumentiamo engagement, produttività e risultati con dinamiche game-based.',
-    icon: '🎮',
+    icon: '',
     color: 'var(--blue)',
     url: '/servizi/gamification'
   },
@@ -36,7 +36,7 @@ const serviceData = [
     id: 4,
     title: 'Percorsi di reskilling',
     description: 'Analizziamo il mercato del lavoro e delle competenze per creare percorsi di reskilling e upskilling efficaci e mirati alle esigenze aziendali.',
-    icon: '👨‍🏫',
+    icon: '',
     color: 'var(--blue)',
     url: '/servizi/percorsi-interattivi'
   },
@@ -44,7 +44,7 @@ const serviceData = [
     id: 5,
     title: 'Riunioni Ludiche',
     description: 'Gamification professionale per riunioni coinvolgenti e team building virtuali efficaci. Strumenti misurabili per migliorare collaborazione e performance del team.',
-    icon: '👥',
+    icon: '',
     color: 'var(--aqua-green)',
     url: '/servizi/team-building'
   },
@@ -52,7 +52,7 @@ const serviceData = [
     id: 6,
     title: 'Digital Engagement',
     description: 'Portal Gate integra elementi ludici nei processi aziendali quotidiani per apprendimento continuo e comunicazione interna. Per l&apos;85-95% della forza lavoro under 40.',
-    icon: '📈',
+    icon: '',
     color: 'var(--blue)',
     url: '/servizi/digital-engagement'
   }
@@ -165,7 +165,7 @@ const flipCardsData = [
   {
     front: (
       <>
-        <div className="text-4xl mb-4">👨‍💼</div>
+        <div className="text-4xl mb-4"></div>
         <h3 className="text-xl font-bold text-white mb-2">Employer Branding</h3>
         <p className="text-sm font-medium text-white/90">Migliora l&apos;immagine e il coinvolgimento aziendale</p>
       </>
@@ -185,7 +185,7 @@ const flipCardsData = [
   {
     front: (
       <>
-        <div className="text-4xl mb-4">🎓</div>
+        <div className="text-4xl mb-4"></div>
         <h3 className="text-xl font-bold text-white mb-2">Sviluppo Competenze</h3>
         <p className="text-sm font-medium text-white/90">Trasforma l&apos;apprendimento con la gamification</p>
       </>
@@ -205,7 +205,7 @@ const flipCardsData = [
   {
     front: (
       <>
-        <div className="text-4xl mb-4">🤖</div>
+        <div className="text-4xl mb-4"></div>
         <h3 className="text-xl font-bold text-white mb-2">AI Prompting</h3>
         <p className="text-sm font-medium text-white/90">Competenze per l&apos;era dell&apos;intelligenza artificiale</p>
       </>
@@ -444,7 +444,7 @@ const MobileOptimizedPage: React.FC = () => {
           <h2 className="text-2xl font-bold mb-4 text-[var(--aqua-green)] drop-shadow-lg">Pronti a Rivoluzionare l&apos;Engagement?</h2>
           <p className="text-white mb-8 text-base font-medium max-w-xs mx-auto" style={{ textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>
             L&apos;83% dei dipendenti che partecipano ai nostri programmi gamificati mostrano una maggiore motivazione e produttività.
-          </p>
+        </p>
           
           <motion.button
             onClick={scrollToContact}

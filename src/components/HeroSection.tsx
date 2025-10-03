@@ -17,8 +17,8 @@ const HeroSection: React.FC = () => {
         
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <a 
-            href="/documents/Presentazione amministrazione sessioni e VR.pdf"
-            download
+            href="/documents/xp-lab-presentazione.pdf"
+            download="XP-LAB Presentazione.pdf"
             className="bg-white hover:bg-gray-100 text-[var(--purple-deep)] font-heading font-bold py-3 px-8 rounded-full transition-all duration-300 inline-block text-lg shadow-lg hover:shadow-xl interactive"
             data-component-name="MotionComponent"
           >
