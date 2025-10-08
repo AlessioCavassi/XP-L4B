@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -5,13 +7,16 @@ import WaveDivider from './WaveDivider';
 import FooterParticles from './FooterParticles';
 import FooterLoader from './FooterLoader';
 import dynamic from 'next/dynamic';
-
-const FooterGlow = dynamic(() => import('./FooterGlow'), {
-  ssr: false,
-  loading: () => null,
-});
 import { FaArrowUp, FaLinkedin, FaYoutube, FaTwitter, FaInstagram, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 import { PiThreadsLogoBold } from 'react-icons/pi';
+
+const FooterGlow = dynamic(
+  () => import('./FooterGlow'),
+  { 
+    ssr: false,
+    loading: () => null 
+  }
+);
 
 // Motion components
 const MotionButton = motion.button;

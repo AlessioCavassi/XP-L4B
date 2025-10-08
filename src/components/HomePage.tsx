@@ -12,6 +12,7 @@ import ParallaxLogo from './ParallaxLogo';
 import LogosSection from './blocks/LogosSection';
 import MobileNavSwipe from './MobileNavSwipe';
 import MobileOptimizedPage from './MobileOptimizedPage';
+import TopicCardsSection from './TopicCardsSection';
 import { motion } from 'framer-motion';
 
 const HomePage: React.FC = () => {
@@ -48,6 +49,11 @@ const HomePage: React.FC = () => {
         {/* Hero Section */}
         <section id="hero" className="py-20 relative">
           <HeroSection />
+        </section>
+        
+        {/* Topic Cards Section */}
+        <section className="py-16 relative bg-black">
+          <TopicCardsSection />
         </section>
         
         {/* Services Section */}
